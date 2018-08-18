@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="course">
+
+    <select id="getLocationInfo" parameterType="Int" resultType="BP2Vo">
+     <![CDATA[
+            select idx, BitProjectNum, x1, y1, x2, y2, TermNum, GroupNum from ProjectBP2Pamphlet where BitProjectNum = #{bpNum}
+        ]]>
+ </select>
+
+    <select id="getProjectInfo" parameterType="BP2Vo" resultType="PamphletVo">
+        <![CDATA[
+              select Term, GroupNum, TermNum, Category, Subject, str1, str2, str3, str4, str5, strEtc from ProjectPamphlet where TermNum=#{termNum} and GroupNum=#{groupNum}
+        ]]>
+    </select>
+
+</mapper>

@@ -1,0 +1,637 @@
+
+@media screen and (max-width:360px){html{font-size:10px;}}
+@media screen and (min-width:361px) and (max-width:399px){html{font-size:11px;}}
+@media screen and (min-width:400px) and (max-width:439px){html{font-size:12px;}}
+@media screen and (min-width:440px) and (max-width:479px){html{font-size:13px;}}
+@media screen and (min-width:480px) and (max-width:519px){html{font-size:14px;}}
+@media screen and (min-width:520px) and (max-width:559px){html{font-size:15px;}}
+@media screen and (min-width:560px) and (max-width:599px){html{font-size:16px;}}
+@media screen and (min-width:600px) and (max-width:639px){html{font-size:17px;}}
+@media screen and (min-width:640px) and (max-width:679px){html{font-size:18px;}}
+@media screen and (min-width:680px) and (max-width:719px){html{font-size:19px;}}
+@media screen and (min-width:720px) and (max-width:759px){html{font-size:20px;}}
+@media screen and (min-width:760px) and (max-width:799px){html{font-size:21px;}}
+@media screen and (min-width:800px) and (max-width:839px){html{font-size:22px;}}
+@media screen and (min-width:840px) and (max-width:879px){html{font-size:23px;}}
+@media screen and (min-width:880px) and (max-width:919px){html{font-size:24px;}}
+@media screen and (min-width:920px) and (max-width:959px){html{font-size:25px;}}
+@media screen and (min-width:960px) and (max-width:999px){html{font-size:26px;}}
+@media screen and (min-width:1000px){html{font-size:27px;}}
+
+		/*** for all media ***/
+		ul.lnb li.depth1 {
+			height:47px;
+		}
+		ul.lnb li a.depth1_1 { line-height:30px; }
+		ul.lnb li a.depth1_2 { line-height:30px; }
+		ul.lnb li a.depth1_3 { line-height:30px; }
+		ul.lnb li a.depth1_4 { line-height:30px; }
+		ul.lnb li a.depth1_5 { line-height:30px; }
+		ul.lnb li a.depth1_6 { line-height:30px; }
+		
+		ul.lnb {
+			width:100%;
+		}
+
+		div.familySite {
+			display:none;
+		} /* HIDE the familySite select-box */
+		
+		#SNB_Wrap_1702 {
+			box-shadow:2px 2px 8px #6f6f6f;
+
+		}
+		
+		@media screen and (max-width:590px) {
+			/* Member 등 상단메뉴 */
+			ul.gnb {
+				float:left;
+				margin-left:35px;
+			}
+			
+			#LNB_Wrap .lnb li a.depth1_4 {	display:none; }
+			#LNB_Wrap .lnb li a.depth1_5 {	display:none; }
+			#LNB_Wrap .lnb li a.depth1_6 {	display:none; }
+
+			ul.gnb { display:none; }
+			ul.lnb { display:none; }
+			#LogoOriginal { display:block !important; }
+			#LogoSmall { display:none !important; }
+		}
+/* MOBILE */
+@media screen and (max-width:767px) {
+	#Content_Wrap {
+		width:99%;
+	} /* 90.13% */ /* 1370px */ 
+	#Content_Wrap #Content {
+		width:81.02%;
+	} /* 1110px/1370px */
+	#Header_Wrap {
+		min-width:99%;
+	} /* 90.13% */ /* 1370px */
+	#Footer_Wrap {
+		min-width:99%;
+	}
+	#Header {
+		width:99%;
+	} /* 90.13% */ /* 1370px */
+	
+	#LogoSmall { display:block; }
+	#LogoOriginal { display:none; }
+	
+	/* 상단메뉴 */
+	ul.lnb {
+		margin-left:0;
+	} /* 과정안내 좌측 여백 180px */ 
+	#LNB_Wrap {
+		left: 20px;
+	}
+	#LNB_Wrap .lnb .depth1 > a { background:none; }
+	#LNB_Wrap .lnb li a.depth1_1 {	font-size: 17px; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_2 {	font-size: 17px; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_3 {	font-size: 17px; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_4 {	font-size: 17px; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_5 {	font-size: 17px; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_6 {	display:none; font-size: 17px; } /* 14px */
+	
+	/* Member 등 상단메뉴 */
+	ul.gnb {
+		margin-right:0;
+	}	
+	
+	#Content_Wrap .lineMap {
+		display:none;
+	}
+
+	.hGroup h4 {
+		font-size:26px !important;
+		font-weight:900;
+		padding-bottom:10px;
+		background: url("/Images/Common/ico_h4_type1.png") no-repeat 0px 4px !important;
+	} /* CourseName */ /* 216.67% !important; */ /* 26px !important */ 
+	.hGroup a {
+		margin-top: 2px;
+	}
+	#Content_Wrap .lineMap {
+		top:30px;
+	}
+	.hGroup p {
+		overflow: visible !important;
+		width: 10rem;
+	}
+	.hGroup p a {
+		font-size:14px !important;
+	} /* 116.67% !important; */ /* 14px !important; */
+
+	#Content .con_wrap {
+		padding-bottom:30px;
+	}
+	#Content h5 {
+		font-size:28px; /* 1.037rem; */ /* 28px */
+		margin-bottom:32px;
+		margin-top:32px;
+	} /* 233.34%; */ /* 28px; */       /* margin-bottom:32px; */ /*과정로드맵*/
+	ul.tapMenu li a {
+		font-size:15px;
+	}
+	.form_type1 {
+		border-top:3px solid #17538e;
+		border-radius:3px;
+	}
+	.con_wrap table {
+		box-shadow:1px 1px 5px #2f2f2f !important;
+		margin-bottom:3px;
+	}
+	.form_type1 .form_type1 table th  {
+		background-color:#ffffeb !important;
+	} /* #fffae9 */
+	.con_wrap table {
+		width:100% !important;
+		margin-left:0% !important;
+	}
+	.con_wrap table th {
+		font-size:16px;
+	} /* 13.6px; */ /* 155.56%; */ /* 18.6667px; */
+	.con_wrap table td {
+		font-size:16px;
+	} /* 12.6px; */ /* 144.45%; */ /* 17.3333px; */
+	table.th110px th {
+		width:99px;
+		padding-left:0.04rem;
+		padding-right:0.04rem;
+	}
+
+	.con_wrap dd {
+		font-size:17.33px;
+	} /* 17.3333px; */
+	.con_wrap h4 {
+		font-size:18.67px !important;
+	} /* 18.6667px !important; */
+	.con_wrap p {
+		font-size:17.33px;
+	} /* 17.3333px; */
+	.con_wrap ul {
+		font-size:17.33px;
+	} /* 17.3333px; */
+	.con_wrap table ul {
+		font-size:104.45%;
+	}
+	
+	/* green 지원하기 btn */
+	a.btn.mid.green1 {
+		font-size:21.33px !important;
+		padding:4px 30px;
+		margin-top:-2px !important;
+		margin-left:20px !important;
+	} /* 177.78% !important; */ /* 21.3333px !important; */     /* margin-top:-2px; */
+	
+	.snb_1702 li a.newdepth3 {
+		height: 1.556rem;
+		font-size:0.481rem;
+	} /* 15px */
+	.snb_1702  h3 {
+		font-size:0.741rem;
+	}
+	.snb_1702  li a.newdepth1 {
+		font-size:0.556rem;
+		padding-left:0.444rem;
+	} /* padding-left:12px */
+	.snb_1702  li a.newdepth2 {
+		font-size:0.481rem;
+	} /* 13px */
+	
+}
+
+/* TABLET */
+@media screen and (min-width:768px) and (max-width:1390px) {
+	#Content_Wrap {
+		width:99%;
+	} /* 90.13% */ /* 1370px */ 
+	#Content_Wrap #Content {
+		width:81.02%;
+	} /* 1110px/1370px */
+	#Header_Wrap {
+		min-width:99%;
+	} /* 90.13% */ /* 1370px */
+	#Footer_Wrap {
+		min-width:99%;
+	}
+	#Header {
+		width:99%;
+	} /* 90.13% */ /* 1370px */
+	
+	#LogoSmall { display:block; }
+	#LogoOriginal { display:none; }
+	
+	/* 상단메뉴 */
+	ul.lnb {
+		margin-left:0;
+	} /* 과정안내 좌측 여백 180px */ 
+	#LNB_Wrap {
+		left: 20px;
+	}
+	#LNB_Wrap .lnb .depth1 > a { background:none; }
+	#LNB_Wrap .lnb li a.depth1_1 {	font-size: 0.8rem; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_2 {	font-size: 0.8rem; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_3 {	font-size: 0.8rem; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_4 {	font-size: 0.8rem; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_5 {	font-size: 0.8rem; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_6 {	font-size: 0.8rem; } /* 14px */
+	
+	/* Member 등 상단메뉴 */
+	ul.gnb {
+		margin-right:0;
+	}	
+	
+	.hGroup h4 {
+		font-size:26px !important;
+		font-weight:900;
+		padding-bottom:10px;
+		background: url("/Images/Common/ico_h4_type1.png") no-repeat 0px 4px !important;
+	} /* CourseName */ /* 216.67% !important; */ /* 26px !important */ 
+	.hGroup a {
+		margin-top: 2px;
+	}
+	#Content_Wrap .lineMap {
+		top:30px;
+	}
+	.hGroup p {
+		overflow: visible !important;
+		width: 10rem;
+	}
+	.hGroup p a {
+		font-size:14px !important;
+	} /* 116.67% !important; */ /* 14px !important; */
+
+	#Content .con_wrap {
+		padding-bottom:30px;
+	}
+	#Content h5 {
+		font-size:1.037rem; /* 28px */
+		margin-bottom:32px;
+		margin-top:32px;
+	} /* 233.34%; */ /* 28px; */       /* margin-bottom:32px; */
+	ul.tapMenu li a {
+		font-size:15px;
+	}
+	.form_type1 {
+		border-top:3px solid #17538e;
+		border-radius:3px;
+	}
+	.con_wrap table {
+		box-shadow:1px 1px 5px #2f2f2f !important;
+		margin-bottom:3px;
+	}
+	.form_type1 .form_type1 table th  {
+		background-color:#ffffeb !important;
+	} /* #fffae9 */
+	.con_wrap table {
+		width:100% !important;
+		margin-left:0% !important;
+	}
+	.con_wrap table th {
+		font-size:0.65rem;
+	} /* 155.56%; */ /* 18.6667px; */
+	.con_wrap table td {
+		font-size:0.6rem;
+	} /* 144.45%; */ /* 17.3333px; */
+	table.th110px th {
+		width:99px;
+		padding-left:0.04rem;
+		padding-right:0.04rem;
+	}
+
+	.con_wrap dd {
+		font-size:17.33px;
+	} /* 17.3333px; */
+	.con_wrap h4 {
+		font-size:18.67px !important;
+	} /* 18.6667px !important; */
+	.con_wrap p {
+		font-size:17.33px;
+	} /* 17.3333px; */
+	.con_wrap ul {
+		font-size:17.33px;
+	} /* 17.3333px; */
+	.con_wrap table ul {
+		font-size:104.45%;
+	}
+	
+	/* green 지원하기 btn */
+	a.btn.mid.green1 {
+		font-size:21.33px !important;
+		padding:4px 30px;
+		margin-top:-2px !important;
+		margin-left:20px !important;
+	} /* 177.78% !important; */ /* 21.3333px !important; */     /* margin-top:-2px; */
+	
+	.snb_1702 li a.newdepth3 {
+		height: 1.556rem;
+		font-size:0.481rem;
+	} /* 15px */
+	.snb_1702  h3 {
+		font-size:0.741rem;
+	}
+	.snb_1702  li a.newdepth1 {
+		font-size:0.556rem;
+		padding-left:0.444rem;
+	} /* padding-left:12px */
+	.snb_1702  li a.newdepth2 {
+		font-size:0.481rem;
+	} /* 13px */
+	
+}
+
+
+/* DESKTOP */
+@media screen and (min-width:1391px) {
+	#Content_Wrap {
+		width:1370px;
+	}
+	#Content_Wrap #Content {
+		width:1110px;
+	}
+	#Header_Wrap {
+		min-width:1370px;
+	}
+	#Header {
+		width:1370px;
+	}
+	
+	#LogoSmall { display:none; }
+	#LogoOriginal { display:block; }
+	
+	/* Member 등 상단메뉴 */
+	ul.gnb {
+		margin-right:0;
+	}	
+	nav#LNB_Wrap { left: 520px; }
+	
+	ul.lnb {
+		margin-left:180px;
+	}
+	
+	#LNB_Wrap .lnb .depth1 > a { background:none; }
+	#LNB_Wrap .lnb li a.depth1_1 {	font-size: 0.8rem; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_2 {	font-size: 0.8rem; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_3 {	font-size: 0.8rem; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_4 {	font-size: 0.8rem; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_5 {	font-size: 0.8rem; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_6 {	font-size: 0.8rem; } /* 14px */
+	
+	.hGroup h4 {
+		font-size:26px !important;
+		font-weight:900;
+		padding-bottom:10px;
+		background: url("/Images/Common/ico_h4_type1.png") no-repeat 0px 5px !important;
+	}
+	.hGroup a {
+		margin-top: 2px;
+	}
+	.hGroup p {
+		overflow: visible !important;
+	}
+	.hGroup p a {
+		font-size:14px !important;
+	}
+	#Content .con_wrap {
+		padding-bottom:30px;
+	}
+	#Content h5 {
+		font-size:28px;
+		margin-bottom:32px;
+		margin-top:32px;
+	}
+	ul.tapMenu li a {
+		font-size:15px;
+	}
+	.form_type1 {
+		border-top:3px solid #17538e;
+		border-radius:3px;
+	}
+	.con_wrap table {
+		box-shadow:1px 1px 5px #2f2f2f !important;
+		margin-bottom:3px;
+	}
+	.form_type1 .form_type1 table th  {
+		background-color:#ffffeb !important;
+	} /* #fffae9 */
+	.con_wrap table {
+		width:100% !important;
+		margin-left:0% !important;
+	}
+	.con_wrap table th {
+		font-size:14pt;
+	}
+	.con_wrap table td {
+		font-size:13pt;
+	}
+	table.th110px th {
+		width:110px;
+		padding-left:0.04rem;
+		padding-right:0.04rem;
+	}
+
+	.con_wrap dd {
+		font-size:13pt;
+	}
+	.con_wrap h4 {
+		font-size:14pt !important;
+	}
+	.con_wrap p {
+		font-size:13pt;
+	}
+	.con_wrap ul {
+		font-size:13pt;
+	}
+	a.btn.mid.green1 {
+		font-size:16pt !important;
+		padding:4px 30px;
+		margin-top:-2px;
+		margin-left:20px !important;
+	}
+}
+
+/* print */
+@media print {
+	#btnMenu {
+		display:block;
+	}
+	#SNB_Wrap_1702 {
+		display:none;
+	}
+	
+	#Content {
+		float:none;
+		padding-left:10px;
+	}
+	#Content_Wrap {
+		width:1080px;
+	}
+	#Content_Wrap #Content {
+		width:1050px;
+	}
+	#Header_Wrap {
+		width:1080px;
+	}
+	#Header {
+		width:1080px;
+	}
+
+	#LogoSmall { display:block; }
+	#LogoOriginal { display:none; }
+	
+	/* 상단메뉴 */
+	ul.lnb {
+		margin-left:0;
+	} /* 과정안내 좌측 여백 180px */ 
+	#LNB_Wrap {
+		left: 20px;
+	}
+	#LNB_Wrap .lnb .depth1 > a { background:none; }
+	#LNB_Wrap .lnb li a.depth1_1 {	font-size: 0.8rem; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_2 {	font-size: 0.8rem; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_3 {	font-size: 0.8rem; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_4 {	font-size: 0.8rem; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_5 {	font-size: 0.8rem; } /* 14px */
+	#LNB_Wrap .lnb li a.depth1_6 {	font-size: 0.8rem; } /* 14px */
+	
+	/* Member 등 상단메뉴 */
+	ul.gnb {
+		margin-right:0;
+	}	
+	
+	.hGroup h4 {
+		font-size:26px !important;
+		font-weight:900;
+		padding-bottom:10px;
+		background: url("/Images/Common/ico_h4_type1.png") no-repeat 0px 4px !important;
+	} /* CourseName */ /* 216.67% !important; */ /* 26px !important */ 
+	.hGroup a {
+		margin-top: 2px;
+	}
+	#Content_Wrap .lineMap {
+		top:30px;
+	}
+	.hGroup p {
+		overflow: visible !important;
+		width: 10rem;
+	}
+	.hGroup p a {
+		font-size:14px !important;
+	} /* 116.67% !important; */ /* 14px !important; */
+
+	#Content .con_wrap {
+		padding-bottom:30px;
+	}
+	#Content h5 {
+		font-size:1.037rem; /* 28px */
+		margin-bottom:32px;
+		margin-top:32px;
+	} /* 233.34%; */ /* 28px; */       /* margin-bottom:32px; */
+	ul.tapMenu li a {
+		font-size:15px;
+	}
+	.form_type1 {
+		border-top:3px solid #17538e;
+		border-radius:3px;
+	}
+	.con_wrap table {
+		box-shadow:1px 1px 5px #2f2f2f !important;
+		margin-bottom:3px;
+	}
+	.form_type1 .form_type1 table th  {
+		background-color:#ffffeb !important;
+	} /* #fffae9 */
+	.con_wrap table {
+		width:100% !important;
+		margin-left:0% !important;
+	}
+	.con_wrap table th {
+		font-size:0.65rem;
+	} /* 155.56%; */ /* 18.6667px; */
+	.con_wrap table td {
+		font-size:0.6rem;
+	} /* 144.45%; */ /* 17.3333px; */
+	table.th110px th {
+		width:99px;
+		padding-left:0.04rem;
+		padding-right:0.04rem;
+	}
+
+	.con_wrap dd {
+		font-size:17.33px;
+	} /* 17.3333px; */
+	.con_wrap h4 {
+		font-size:18.67px !important;
+	} /* 18.6667px !important; */
+	.con_wrap p {
+		font-size:17.33px;
+	} /* 17.3333px; */
+	.con_wrap ul {
+		font-size:17.33px;
+	} /* 17.3333px; */
+	.con_wrap table ul {
+		font-size:104.45%;
+	}
+	
+	/* green 지원하기 btn */
+	a.btn.mid.green1 {
+		font-size:21.33px !important;
+		padding:4px 30px;
+		margin-top:-2px !important;
+		margin-left:20px !important;
+	} /* 177.78% !important; */ /* 21.3333px !important; */     /* margin-top:-2px; */
+	
+	.snb_1702 li a.newdepth3 {
+		height: 1.556rem;
+		font-size:0.481rem;
+	} /* 15px */
+	.snb_1702  h3 {
+		font-size:0.741rem;
+	}
+	.snb_1702  li a.newdepth1 {
+		font-size:0.556rem;
+		padding-left:0.444rem;
+	} /* padding-left:12px */
+	.snb_1702  li a.newdepth2 {
+		font-size:0.481rem;
+	} /* 13px */
+	
+	
+}
+
+
+		/* HIDE the SNB */
+		@media (max-width:879px) {
+			/* at jQuery document.ready
+			#SNB_Wrap_1702 {
+				display:none;
+			}
+			#btnMenu {
+				display:block;
+			}
+			*/
+			#Content {
+				float:none;
+				padding-left:10px;
+			}
+			#Content_Wrap #Content {
+				width:95%;
+			} /* 1110px/1370px */
+			
+		} 
+		@media (min-width:880px) {
+			#btnMenu {
+				display:none;
+			}
+		}
+		
+		/* HIDE the .hgroup */
+		@media (min-width:768px) and (max-width:1024px) {
+			#Content_Wrap .lineMap {
+				display:none;
+			}
+		} 
+
+		

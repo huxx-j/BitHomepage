@@ -1,0 +1,96 @@
+
+#Content_Wrap {
+	width:1370px;
+}
+#Content_Wrap #Content {
+	width:1110px;
+}
+#Header_Wrap {
+	min-width:1370px;
+}
+#Header {
+	width:1370px;
+}
+ul.lnb {
+	margin-left:180px;
+}
+.hGroup h4 {
+	font-size:26px !important;
+	font-weight:900;
+	padding-bottom:10px;
+	background: url("/Images/Common/ico_h4_type1.png") no-repeat 0px 5px !important;
+}
+.hGroup a {
+	margin-top: 2px;
+}
+.hGroup p {
+	overflow: visible !important;
+}
+.hGroup p a {
+	font-size:14px !important;
+}
+#Content .con_wrap {
+	padding-bottom:30px;
+}
+#Content h5 {
+	font-size:28px;
+	margin-bottom:32px;
+	margin-top:32px;
+}
+ul.tapMenu li a {
+	font-size:15px;
+}
+.form_type1 {
+	border-top:3px solid #17538e;
+	border-radius:3px;
+}
+.con_wrap table {
+	box-shadow:1px 1px 5px #2f2f2f !important;
+	margin-bottom:3px;
+}
+.form_type1 .form_type1 table th  {
+	background-color:#ffffeb !important;
+} /* #fffae9 */
+.con_wrap table {
+	width:100% !important;
+	margin-left:0% !important;
+}
+.con_wrap table th {
+	font-size:14pt;
+}
+.con_wrap table td {
+	font-size:13pt;
+}
+.con_wrap dd {
+	font-size:13pt;
+}
+.con_wrap h4 {
+	font-size:14pt !important;
+}
+.con_wrap p {
+	font-size:13pt;
+}
+.con_wrap ul {
+	font-size:13pt;
+}
+a.btn.mid.green1 {
+	font-size:16pt !important;
+	padding:4px 30px;
+	margin-top:-2px;
+	margin-left:20px !important;
+}
+
+@media print {
+	#SNB_Wrap_1702 {
+		display:none !important;
+	}
+	#Content {
+		float:none !important;
+	}
+	#Content_Wrap {
+		width:1080px;
+	}
+	#Content_Wrap #Content {
+		width:1050px;
+	}
+}
