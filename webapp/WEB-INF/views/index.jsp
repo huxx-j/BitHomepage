@@ -25,6 +25,7 @@
 <a href="${pageContext.request.contextPath}/course/license/Course_License_Expert">비트 SW Expert 자격증(미완성)</a><br/>
 <a href="${pageContext.request.contextPath}/course/license/Course_Licenses">BSPM</a><br/>
 <a href="${pageContext.request.contextPath}/member/Join_Step1">회원가입</a><br/>
-
+<a href="${pageContext.request.contextPath}/employment/employment_jobCenter">취업센터</a><br/>
+<a href="${pageContext.request.contextPath}/job/WriteRecruit">취업센터</a><br/>
 </body>
 </html>

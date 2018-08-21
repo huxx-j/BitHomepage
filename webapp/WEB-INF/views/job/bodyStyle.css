@@ -1,0 +1,85 @@
+
+
+A:active
+{
+    COLOR: lime;
+    TEXT-DECORATION: none
+}
+A:link
+{
+    COLOR: royalblue;
+    TEXT-DECORATION: none
+}
+A:visited
+{
+    COLOR: #cc6600;
+    TEXT-DECORATION: none
+}
+A:hover
+{
+    COLOR: darkblue;
+    TEXT-DECORATION: underline
+}
+TD
+{
+    COLOR: #5f5f5f;
+    FONT-FAMILY: ±¼¸², µ¸¿ò;
+    FONT-SIZE: 9pt
+}
+.l
+{
+    FONT-SIZE: 9pt
+}
+.h
+{
+    COLOR: #5f5f5f;
+    FONT-SIZE: 9pt;
+    LINE-HEIGHT: 130%
+}
+.s
+{
+    FONT-SIZE: 8pt
+}
+.ss
+{
+    FONT-SIZE: 6pt
+}
+.sss
+{
+    FONT-SIZE: 5pt
+}
+BODY
+{
+    COLOR: #5f5f5f;
+    FONT-SIZE: 9pt;
+    MARGIN: 10px 0px 20px 10px
+}
+TH
+{
+    BACKGROUND-COLOR: #dcdcdc;
+    COLOR: #000000;
+    FONT-SIZE: 9pt
+}
+INPUT
+{
+    BORDER-BOTTOM: gray 1pt outset;
+    BORDER-LEFT: gray 1pt outset;
+    BORDER-RIGHT: gray 1pt outset;
+    BORDER-TOP: gray 1pt outset;
+    COLOR: black;
+    FONT-FAMILY: ±¼¸², ±¼¸²Ã¼;
+    FONT-SIZE: 9pt;
+    TEXT-ALIGN: left
+}
+TEXTAREA
+{
+    BORDER-BOTTOM: 1px;
+    BORDER-LEFT: 1px;
+    BORDER-RIGHT: 1px;
+    BORDER-TOP: 1px
+}
+SELECT
+{
+    FONT-FAMILY: ±¼¸², ±¼¸²Ã¼, µ¸¿òÃ¼, µ¸¿ò;
+    FONT-SIZE: 9pt
+}

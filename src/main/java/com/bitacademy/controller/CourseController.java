@@ -72,5 +72,8 @@ public class CourseController {
     public PamphletVo getProjectInfo(@RequestParam("termNum") int termNum, @RequestParam("groupNum") int groupNum) {
         return courseService.getProjectInfo(termNum, groupNum);
     }
-
+    @RequestMapping(value = "/BITsupporters_2018")
+    public String BITsupporters_2018(){
+        return "course/BITsupporters_2018";
+    }
 }

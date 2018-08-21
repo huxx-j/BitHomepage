@@ -46,16 +46,16 @@
         </style>
 
         <%--<%	if TRIM(session("userid")) ="" OR isEmpty(TRIM(session("userid")))	then	%>--%>
-        <li><a href="/Member/login.asp" class="newdepth1">로그인</a></li>
-        <li><a href="/Member/IPIN/Join_step1.asp" class="newdepth1">회원가입</a></li>
+        <li><a href="${pageContext.request.contextPath}/member/login" class="newdepth1">로그인</a></li>
+        <li><a href="${pageContext.request.contextPath}/member/Join_Step1" class="newdepth1">회원가입</a></li>
    <%--     <%	else	%>
         <li><a href="/Member/Member_modify.asp" class="newdepth1">개인정보수정</a></li>
         <li><a href="javascript:mem_del();" class="newdepth1">탈퇴하기</a></li>
         <%	end if	%>--%>
 
-        <li><a href="/Member/id_pass_search_01.asp" class="newdepth1">아이디/패스워드 찾기</a></li>
+        <li><a href="${pageContext.request.contextPath}/member/id_pass_search_01" class="newdepth1">아이디/패스워드 찾기</a></li>
         <!--<li><a href="/Member/notice_list.asp" class="newdepth1">공지사항</a></li>-->
         <!--<li><a href="/Member/siteMap.asp" class="newdepth1">사이트맵</a></li>-->
-        <li><a href="/Member/policy.asp" class="newdepth1">개인정보처리방침</a></li>
+        <li><a href="${pageContext.request.contextPath}/member/policy" class="newdepth1">개인정보처리방침</a></li>
     </ul>
 </nav>

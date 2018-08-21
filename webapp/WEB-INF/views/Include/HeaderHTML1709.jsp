@@ -10,8 +10,8 @@
                 <div class="fl" style="color:#1498be; margin-top:14px;">상위1%전문가 양성을 위한 교육</div>
                 <div style="float:right; margin-top:0px;">
                     <%--<%	if TRIM(session("userid")) ="" OR isEmpty(TRIM(session("userid"))) then %>--%>
-                    <div class="fl"><a href="/Member/IPIN/Join_step1.asp"><img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Join.png" title="JOIN"/></a></div>
-                    <div class="fl"><a href="/Member/login.asp?return_url=/index.asp"><img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Login.png" title="LOGIN"/></a></div>
+                    <div class="fl"><a href="/member/IPIN/Join_step1.asp"><img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Join.png" title="JOIN"/></a></div>
+                    <div class="fl"><a href="/member/login?return_url=/index"><img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Login.png" title="LOGIN"/></a></div>
                     <%--<%	else	%>--%>
                     <%--<div class="fl"><a href="/Register/register_requestResult.asp"><img src="/Images/Btns/btn_Mypage.png" title="MyPage"/></a></div>--%>
                     <%--<div class="fl"><a href="/Member/logout.asp?return_url=/index.asp"><img src="/Images/Btns/btn_Logout.png" title="LOGOUT"/></a></div>--%>
@@ -32,7 +32,7 @@
             <!--LogoBar-->
             <div id="mainLogoBar">
                 <div style="float:left;">
-                    <a href="/"><img src="${pageContext.request.contextPath}/assets/Images/MainPage__Logo.png" style="margin-top:11px; margin-left:12px;"/></a>
+                    <a href="/index"><img src="${pageContext.request.contextPath}/assets/Images/MainPage__Logo.png" style="margin-top:11px; margin-left:12px;"/></a>
                 </div>
                 <!--
                 <div style="float:left;">
@@ -53,7 +53,7 @@
                 <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu4off.png"/>
                 <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu5off.png"/>
                 <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu6off.png"/>
-                <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu7off.png" h_ref="/Employment/employment_jobCenter.asp"/>
+                <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu7off.png" h_ref="/employment/employment_jobCenter"/>
                 <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu8off.png" h_ref="/Course/Employ/Course_Employ.asp"/>
                 <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu9off.png" h_ref="/course/license/Course_Licenses"/>
                 <div style="clear:both;"></div>

@@ -32,6 +32,20 @@ public class MemberController {
         return "member/checkid";
     }
 
+    @RequestMapping(value = "/login")
+    public String login(@RequestParam(value = "return_url", defaultValue = "/index", required = false) String return_url, Model model){
+        model.addAttribute("return_url", return_url);
+        return "member/login";
+    }
+    @RequestMapping(value = "/id_pass_search_01")
+    public String id_pass_search_01(){
+        return "member/id_pass_search_01";
+    }
+    @RequestMapping(value = "/policy")
+    public String policy(){
+        return "member/policy";
+    }
+
  /*   @ResponseBody
     @RequestMapping(value = "/chkID", method = RequestMethod.POST)
     public int chkID(@RequestParam("memid") String memid) {
