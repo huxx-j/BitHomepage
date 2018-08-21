@@ -10,13 +10,24 @@
                 <div class="fl" style="color:#1498be; margin-top:14px;">상위1%전문가 양성을 위한 교육</div>
                 <div style="float:right; margin-top:0px;">
                     <%--<%	if TRIM(session("userid")) ="" OR isEmpty(TRIM(session("userid"))) then %>--%>
-                    <div class="fl"><a href="/member/IPIN/Join_step1.asp"><img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Join.png" title="JOIN"/></a></div>
-                    <div class="fl"><a href="/member/login?return_url=/index"><img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Login.png" title="LOGIN"/></a></div>
+                    <c:choose>
+                        <c:when test="${sessionScope.authUser == null}">
+                            <div class="fl"><a href="/member/Join_Step1"><img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Join.png" title="JOIN"/></a></div>
+                            <div class="fl"><a href="/member/login?return_url=/index"><img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Login.png" title="LOGIN"/></a></div>
+                        </c:when>
+                        <c:otherwise>
+                            <div class="fl"><a href="/register/register_requestResult"><img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Mypage.png" title="MyPage"/></a></div>
+                            <div class="fl"><a href="/member/logout?return_url=/index"><img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Logout.png" title="LOGOUT"/></a></div>
+                            <div style="clear:both;"></div>
+                        </c:otherwise>
+                    </c:choose>
+                    <%--<div class="fl"><a href="/member/Join_Step1"><img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Join.png" title="JOIN"/></a></div>--%>
+                    <%--<div class="fl"><a href="/member/login?return_url=/index"><img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Login.png" title="LOGIN"/></a></div>--%>
                     <%--<%	else	%>--%>
                     <%--<div class="fl"><a href="/Register/register_requestResult.asp"><img src="/Images/Btns/btn_Mypage.png" title="MyPage"/></a></div>--%>
                     <%--<div class="fl"><a href="/Member/logout.asp?return_url=/index.asp"><img src="/Images/Btns/btn_Logout.png" title="LOGOUT"/></a></div>--%>
                     <%--<div style="clear:both;"></div>--%>
-                    <%--<%	end if	%>--%>
+                    <%--&lt;%&ndash;<%	end if	%>&ndash;%&gt;--%>
                 </div>
                 <div style="clear:both;"></div>
             </div>

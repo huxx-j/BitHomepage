@@ -5,6 +5,7 @@
   Time: 오후 5:05
   To change this template use File | Settings | File Templates.
 --%>
+<%response.sendRedirect("/index");%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -27,5 +28,6 @@
 <a href="${pageContext.request.contextPath}/member/Join_Step1">회원가입</a><br/>
 <a href="${pageContext.request.contextPath}/employment/employment_jobCenter">취업센터</a><br/>
 <a href="${pageContext.request.contextPath}/job/WriteRecruit">취업센터</a><br/>
+<a href="${pageContext.request.contextPath}/course/shortcourse/detailpage/Course_Python">파이썬</a><br/>
 </body>
 </html>

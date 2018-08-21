@@ -7,6 +7,7 @@
     <typeAliases>
         <typeAlias alias="PamphletVo" type="com.bitacademy.vo.PamphletVo"/>
         <typeAlias alias="BP2Vo" type="com.bitacademy.vo.BP2Vo"/>
+        <typeAlias alias="UserVo" type="com.bitacademy.vo.UserVo"/>
     </typeAliases>
     <mappers>
         <mapper resource="mybatis/mappers/course.xml"/>

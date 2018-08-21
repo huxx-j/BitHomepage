@@ -79,17 +79,17 @@
 
             function submit_it()
             {
-                var username1 = document.Login_Form.username.value;
+                var userID1 = document.Login_Form.loginID.value;
 
-                if (Login_Form.username.value=="")
+                if (Login_Form.loginID.value=="")
                 {
                     alert("ID를 입력해 주세요.");
-                    document.Login_Form.username.focus();
+                    document.Login_Form.loginID.focus();
                 }
-                else if (document.Login_Form.username.value.indexOf(" ")!=-1)
+                else if (document.Login_Form.loginID.value.indexOf(" ")!=-1)
                 {
                     alert("ID는 공백없이 입력해 주세요.");
-                    document.Login_Form.username.focus();
+                    document.Login_Form.loginID.focus();
                 }
                 else if (Login_Form.password.value=="")
                 {
@@ -101,13 +101,13 @@
                     alert("패스워드는 공백없이 입력해 주세요.");
                     document.Login_Form.password.focus();
                 }
-                else if (username1.search("--") > -1 ){
+                else if (userID1.search("--") > -1 ){
                     alert(" 사용할 수 없는 문자를 쓰셨습니다.");
-                    document.Login_Form.username.focus();
+                    document.Login_Form.loginID.focus();
                 }
-                else if (username1.search("'") > -1 ){
+                else if (userID1.search("'") > -1 ){
                     alert(" 사용할 수 없는 문자를 쓰셨습니다.");
-                    document.Login_Form.username.focus();
+                    document.Login_Form.loginID.focus();
                 }
                 else if (document.Login_Form.password.value.search("--") > -1 ||
                     document.Login_Form.password.value.search("'") > -1 ) {
@@ -227,11 +227,11 @@
                     </div>
 
                     <div class="section login">
-                        <form name="Login_Form" method="post" action="http://www.bitacademy.com/Member/login_ok.asp">
+                        <form name="Login_Form" method="post" action="${pageContext.request.contextPath}/member/login_ok">
                             <div style="float:left; width:353px; margin-right:30px;">
                                 <input type="hidden" name="return_url" value="${return_url}">
                                 <div class="loginBox_1704">
-                                    <input type="text" id="inputID" name="username" size="15" tabindex="1" placeHolder="아이디" onkeypress="return handleEnter(this, event)" value="<%--<%=id%>--%>">
+                                    <input type="text" id="inputID" name="loginID" size="15" tabindex="1" placeHolder="아이디" onkeypress="return handleEnter(this, event)" value="<%--<%=id%>--%>">
                                     <br/>
                                     <input type="password" id="inputPW" name="password" size="15" tabindex="2" placeHolder="비밀번호" onkeypress="if(event.keyCode==13) submit_it();">
                                     <br/>

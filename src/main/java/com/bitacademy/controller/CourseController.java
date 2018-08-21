@@ -76,4 +76,10 @@ public class CourseController {
     public String BITsupporters_2018(){
         return "course/BITsupporters_2018";
     }
+
+    @RequestMapping(value = "/shortcourse/detailpage/Course_Python")
+    public String Course_Python(){
+        return "course/shortcourse/detailpage/Course_Python";
+    }
+
 }

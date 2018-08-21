@@ -8,7 +8,12 @@
      <![CDATA[
             select count(LoginID) from Users where LoginID = #{memid}
         ]]>
- </select>
+    </select>
 
+    <select id="login_ok" parameterType="UserVo" resultType="UserVo">
+        <![CDATA[
+                select User_no, NameHan, LoginID from Users where LoginID=#{loginID} and Password=#{password}
+        ]]>
+    </select>
 
 </mapper>
