@@ -11,10 +11,6 @@
     <%--Response.AddHeader "cache-control", "no-store"--%>
     <%--Response.Expires = -1--%>
 <%--%>--%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
-
 <!DOCTYPE html>
 <!-- REDIRECTABLE TO MOBILE -->
 
@@ -48,7 +44,13 @@
         <%--Set Dbcon = Server.CreateObject("ADODB.Connection")--%>
         <%--Dbcon.Open Con_bit_db--%>
     <%--%>--%>
-
+    <script type="text/javascript">
+        // 맨 처음에 페이지 없이 열때
+        var page=${page};
+        if(page=""){
+            page=1;
+        }
+    </script>
     <%
         page = Request.QueryString("page")
         IF page="" THEN
@@ -176,6 +178,21 @@
             //location.replace("");
             //alert( "http://www.bitacademy.com/job/Interview.asp?search=" + $("#inputSearch").val() );
             if( $("#inputSearch").val().trim()=="") { alert("검색하시려면 검색어를 입력하세요."); return; }
+            var inputSearch=$("#inputSearch").val();
+            $.ajax({
+                url : "${pageContext.request.contextPath }/job/search",
+                type : "POST",
+                //contentType : "application/json",
+                data : {"id": id},
+                dataType : "json",
+                success : function(d) {
+                    location.reload();
+                    console.log(d);
+                },
+                error : function(XHR, status, error) {
+                    console.error(status + " : " + error);
+                }
+            });
             location.href = "http://www.bitacademy.com/job/Interview.asp?search=" + $("#inputSearch").val();
         }
 
@@ -403,13 +420,12 @@
                     <div id="myBox1" class="myPopup" style="display:none;"></div>
                     <div class="myBlurAll" style="display:none;"></div>
                     <%
-                        IF search<>"" THEN
-                    %>
-                    <p class="blueTxt">
-                        회사명 '<%=search%>' 으로 검색된 결과입니다 : <a href="javascript:btnCancel();" class="btnWhiteBorder" style="height:24px; margin-left:30px; padding:2px 5px; "><span style="line-height:24px;">검색취소</span></a>
-                    </p>
-                    <%
-                        END IF
+                        String search=request.getParameter("search");
+                        if (search!="") {
+                            out.print("<p class=\"blueTxt\">\n" +
+                                    "                        회사명 '${search}' 으로 검색된 결과입니다 : <a href=\"javascript:btnCancel();\" class=\"btnWhiteBorder\" style=\"height:24px; margin-left:30px; padding:2px 5px; \"><span style=\"line-height:24px;\">검색취소</span></a>\n" +
+                                    "                    </p>");
+                        }
                     %>
                     <!-- Search -->
                     <div style="height:60px; margin:20px 0 10px 0px; ">
@@ -444,29 +460,30 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <%
-                                'do while rs.eof = false
-                                FOR i=1 TO rs.PageSize STEP 1
-                                IF NOT rs.EOF THEN
-
-                                sql2 = "SELECT * FROM db_bit.dbo.InterviewImageLogoPath WHERE CompName like '%"&rs("CompName")&"%'"
-                                Set Rs2 = Dbcon.Execute(sql2)
-
-                                if Rs2.eof = false then
-                                ImagePath = Rs2("ImageLogoPath")
-                                HomepageURL = Rs2("HomepageURL")
-                                else
-                                ImagePath = ""
-                                HomepageURL = ""
-                                end if
-                                Rs2.Close
-
-                            %>
+//                            <%
+    //                                'do while rs.eof = false
+//
+//                                FOR i=1 TO rs.PageSize STEP 1
+//                                IF NOT rs.EOF THEN
+//
+//                                sql2 = "SELECT * FROM db_bit.dbo.InterviewImageLogoPath WHERE CompName like '%"&rs("CompName")&"%'"
+//                                Set Rs2 = Dbcon.Execute(sql2)
+//
+//                                if Rs2.eof = false then
+//                                ImagePath = Rs2("ImageLogoPath")
+//                                HomepageURL = Rs2("HomepageURL")
+//                                else
+//                                ImagePath = ""
+//                                HomepageURL = ""
+//                                end if
+//                                Rs2.Close
+//                            %>
+                            <c:forEach items="${list}" var="vo">
                             <tr>
-                                <td style="font-size:1.1em; font-weight:800;"><%= rs("Num") %></td>
+                                <td style="font-size:1.1em; font-weight:800;">${vo.Num}</td>
                                 <td>
-                                    <a href="#" id="a<%=rs("Num") %>" class="aOpenPopup">
-                                        <span style="font-size:1.75em; font-weight:900; text-shadow:1px 1px 1px #828282; margin-right:5px;"><%= rs("CompName") %></span>
+                                    <a href="#" id="a${vo.Num}" class="aOpenPopup">
+                                        <span style="font-size:1.75em; font-weight:900; text-shadow:1px 1px 1px #828282; margin-right:5px;">${vo.CompName}</span>
                                         <img src="<%=ImagePath%>" style="max-width:175px; max-height:39px; margin-top:0px;"/>
 
                                     </a>
@@ -480,36 +497,36 @@
                                 NEXT
                                 'loop
                             %>
+                            </c:forEach>
                             </tbody>
                         </table>
                     </div>
                     <!-- Paging -->
-                    <%
-                        Dim pagingStartNum
-                        Dim pagingEndNum
-                        Dim pagingPrevNum
-                        Dim pagingNextNum
-
-                        pagingStartNum = page - (page mod 10) + 1
-                        pagingEndNum = page - (page mod 10) + 10
-                        IF (page mod 10) = 0 THEN
-                        pagingStartNum = PagingStartNum - 10
-                        pagingEndNum = PagingEndNum - 10
-                        END IF
-                        IF pagingEndNum > totalpage THEN
-                        pagingEndNum = totalpage
-                        END IF
-
-                        pagingPrevNum = pagingStartNum - 10
-                        pagingNextNum = pagingStartNum + 10
-                        IF pagingPrevNum < 1 THEN
-                        pagingPrevNum = 1
-                        END IF
-                        IF pagingNextNum > totalpage THEN
-                        pagingNextNum = totalpage - (totalpage mod 10) + 1
-                        END IF
-
-                    %>
+//                    <%
+//                        Dim pagingStartNum
+//                        Dim pagingEndNum
+//                        Dim pagingPrevNum
+//                        Dim pagingNextNum
+//
+//                        pagingStartNum = page - (page mod 10) + 1
+//                        pagingEndNum = page - (page mod 10) + 10
+//                        IF (page mod 10) = 0 THEN
+//                        pagingStartNum = PagingStartNum - 10
+//                        pagingEndNum = PagingEndNum - 10
+//                        END IF
+//                        IF pagingEndNum > totalpage THEN
+//                        pagingEndNum = totalpage
+//                        END IF
+//
+//                        pagingPrevNum = pagingStartNum - 10
+//                        pagingNextNum = pagingStartNum + 10
+//                        IF pagingPrevNum < 1 THEN
+//                        pagingPrevNum = 1
+//                        END IF
+//                        IF pagingNextNum > totalpage THEN
+//                        pagingNextNum = totalpage - (totalpage mod 10) + 1
+//                        END IF
+//                    %>
                     <style>
                         .btnPaging {
                             border:1px solid #c9c9c9;

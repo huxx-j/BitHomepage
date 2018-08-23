@@ -491,7 +491,6 @@ Response.Expires = -1
 							IF pagingNextNum > totalpage THEN
 								pagingNextNum = totalpage - (totalpage mod 10) + 1
 							END IF
-							
 						%>
 						<style>
 							.btnPaging {
