@@ -1,5 +1,20 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+<%--<%--%>
+    <%--Session.CodePage  = 949 '한글--%>
+    <%--Response.CharSet  = "euc-kr" '한글--%>
+<%--%>--%>
+
+<%--<%--%>
+    <%--Response.AddHeader "Pragma", "no-cache"--%>
+    <%--Response.AddHeader "cache-control", "no-store"--%>
+    <%--Response.Expires = -1--%>
+<%--%>--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+
 <!DOCTYPE html>
 <!-- REDIRECTABLE TO MOBILE -->
 
@@ -7,13 +22,12 @@
 
     <!--#include virtual="/Include/config.asp"-->
     <!--#include Virtual="/Include/javaScriptFun.asp"-->
+
     <!--#include virtual="/Include/Common_Defend_1709.asp"-->
     <c:import url="/WEB-INF/views/Include/Common_Defend_1709.jsp"/>
+    <!--#include file="include/jobLoginChk.asp"-->
 
-    <%--<!--#include file="include/jobLoginChk.asp"-->--%>
-    <%--<c:import url="/WEB-INF/views/Include/jobLoginChk.jsp"/>--%>
-
-    <script type="text/javascript">
+    <script language="JavaScript1.1">
 	function right(e)
 	{
 	if (navigator.appName == 'Netscape' &&   (e.which == 3 || e.which == 2))
@@ -29,6 +43,11 @@
 	</script>
 
     <!--#include file="include/dbconn.inc"-->
+
+    <%--<%--%>
+        <%--Set Dbcon = Server.CreateObject("ADODB.Connection")--%>
+        <%--Dbcon.Open Con_bit_db--%>
+    <%--%>--%>
 
     <%
         page = Request.QueryString("page")
@@ -62,8 +81,9 @@
         'response.write "rs.AbsolutePage : " & rs.AbsolutePage & "<br/>"
         'response.write "totalNum : " & totalNum & "<br/>"
     %>
-    <link rel="stylesheet" type="text/css" href="./bodyStyle.css">
-    <link rel= "shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="/job/bodyStyle.css">
+    <link rel= "shortcut icon" href="/images/favicon.ico">
 
     <!-- #include virtual="/Include/Meta.asp"-->
     <c:import url="/WEB-INF/views/Include/Meta.jsp"/>
@@ -86,7 +106,7 @@
             <c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
             <!--#include virtual="/Include/HeaderScriptReady1709.inc"-->
             <c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
-//$(".snb_1702 .newdepth1").eq(3).addClass("on");
+            //$(".snb_1702 .newdepth1").eq(3).addClass("on");
             $(".snb_1709 a.newdepth1").eq(3).addClass("on");
 
             $("#inputSearch").keypress(function(e) {
@@ -199,7 +219,6 @@
     </script>
     <!-- #include virtual="/Include/Script_MoBon_1803.asp"-->
     <c:import url="/WEB-INF/views/Include/Script_MoBon_1803.jsp"/>
-
 </head>
 <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="font-size:10pt; margin:0;" >
 <style>
@@ -281,7 +300,6 @@
     <!-- Header_Wrap -->
     <!-- #include virtual = "/Include/HeaderHTML1709.asp"-->
     <c:import url="/WEB-INF/views/Include/HeaderHTML1709.jsp"/>
-
     <!-- //Header_Wrap -->
 
     <style>
@@ -324,7 +342,7 @@
                     <p>
                         <img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_Home.png"/>
                         <img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>홈
-                        <img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>취업지원센터
+                        <img src="${pageContext.request.contextPath}/assets/Images/Icons/cn_ArrowTriangleRight.png"/>취업지원센터
                     </p>
                     <h4 style="float:left;">면접후기</h4>
                     <div style="clear:both; height:10px;"></div>
@@ -396,7 +414,7 @@
                     <!-- Search -->
                     <div style="height:60px; margin:20px 0 10px 0px; ">
                         <input type="text" id="inputSearch" class="form-control" placeholder="(검색어를 입력하세요)" value="" style="height:32px; width:40%; font-size:1.5em; border-radius:5px; float:left;"/>
-                        <a href="javascript:btnSearch();" style="float:left;" class="aButton" ><img src="${pageContext.request.contextPath}/assets/Images/Content/Mobile/icn_Search.png" style="width:30px; margin-left:2px; border:1px solid #c9c9c9; padding:2px; border-radius:5px; box-shadow:0px 0px 3px #c9c9c9;"/></a>
+                        <a href="javascript:btnSearch();" style="float:left;" class="aButton" ><img src="/Images/Content/Mobile/icn_Search.png" style="width:30px; margin-left:2px; border:1px solid #c9c9c9; padding:2px; border-radius:5px; box-shadow:0px 0px 3px #c9c9c9;"/></a>
 
                         <!--<a href="javascript:btnSearch();" class="btn sml red" style="height:24px; margin-left:5px; padding:2px 5px;; float:left;"><span style="line-height:30px;">검색</span></a>-->
                         <div style="clear:both;"></div>
@@ -557,3 +575,10 @@
 </div>
 </body>
 </html>
+<%
+    rs.Close
+    Dbcon.Close
+    set rs=nothing
+    set Rs2=nothing
+    set Dbcon =nothing
+%>

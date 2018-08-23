@@ -1,13 +1,16 @@
-<%
-    Session.CodePage  = 949 '한글
-    Response.CharSet  = "euc-kr" '한글
-%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
-<%
-    Response.AddHeader "Pragma", "no-cache"
-    Response.AddHeader "cache-control", "no-store"
-    Response.Expires = -1
-%>
+<%--<%--%>
+    <%--Session.CodePage  = 949 '한글--%>
+    <%--Response.CharSet  = "euc-kr" '한글--%>
+<%--%>--%>
+
+<%--<%--%>
+    <%--Response.AddHeader "Pragma", "no-cache"--%>
+    <%--Response.AddHeader "cache-control", "no-store"--%>
+    <%--Response.Expires = -1--%>
+<%--%>--%>
 
 <!DOCTYPE html>
 <head>
@@ -230,20 +233,25 @@
     <link rel= "shortcut icon" href="/images/favicon.ico">
 
     <!-- #include virtual="/Include/Meta.asp"-->
+    <c:import url="/WEB-INF/views/Include/Meta.jsp"/>
     <title>비트교육센터</title>
     <!-- #include virtual="/Include/ContentStyle.asp"-->
+    <c:import url="/WEB-INF/views/Include/contentStyle.jsp"/>
     <!-- #include virtual="/Include/Script.asp"-->
-
+    <c:import url="/WEB-INF/views/Include/Script.jsp"/>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- .btn_refundView 및 .btn_refundView2는 /JS/Common.js 에 이벤트핸들러 정의 -->
     <link rel="stylesheet" type="text/css" href="/include/Common_CSS_Detail_720_1709.css" >
     <link rel="stylesheet" type="text/css" href="/include/Common_CSS_Detail_720plus_1709.css" >
 
     <!-- #include virtual="/Include/HeaderScript1709.asp"-->
+    <c:import url="/WEB-INF/views/Include/HeaderScript1709.jsp"/>
     <script type="text/javascript">
         $(document).ready(function(){
             <!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"-->
+            <c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
             <!--#include virtual="/Include/HeaderScriptReady1709.inc"-->
+            <c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
             //$(".snb_1702 .newdepth1").eq(2).addClass("on");
             $(".snb_1709 a.newdepth1").eq(2).addClass("on");
         });
@@ -251,6 +259,7 @@
 
     <!--<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">-->
     <!-- #include virtual="/Include/Script_MoBon_1803.asp"-->
+    c:import url="/WEB-INF/views/Include/Script_MoBon_1803.jsp"/>
 </head>
 <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="font-size:10pt; margin:0;" ><!--<%=StudID%><%=StudName%><%=StudTermNum%>-->
 
@@ -277,20 +286,22 @@
 <div id="Wrapper">
     <!-- Header_Wrap -->
     <!-- #include virtual = "/Include/HeaderHTML1709.asp"-->
+    <c:import url="/WEB-INF/views/Include/HeaderHTML1709.jsp"/>
     <!-- //Header_Wrap -->
 
     <div id="Container_Wrap" style="min-height:210px;">
         <div id="Content_Wrap" style="min-height:210px;">
             <!-- SNB_Wrap-->
             <!-- #include virtual = "/Include/SNB_JobCenter_1709.asp"-->
+            <c:import url="/WEB-INF/views/Include/SNB_JobCenter_1709.jsp"/>
             <!-- //SNB_Wrap-->
             <!-- Content -->
             <div id="Content">
                 <div class="hGroup1709">
                     <p>
-                        <img src="/Images/Icons/icn_Home.png"/>
-                        <img src="/Images/Icons/icn_ArrowTriangleRight.png"/>홈
-                        <img src="/Images/Icons/icn_ArrowTriangleRight.png"/>취업지원센터
+                        <img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_Home.png"/>
+                        <img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>홈
+                        <img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>취업지원센터
                     </p>
                     <h4 style="float:left;">채용정보 확인</h4>
                     <div style="clear:both; height:10px;"></div>
@@ -493,8 +504,7 @@
                     </table>
                     <br/><br/><br/><br/>
                 </div>
-
-                <div style="height:20px; background:url('/Images/Common/ico_dotted_gray.png') 0 bottom repeat-x;">
+                <div style="height:20px; background:url('${pageContext.request.contextPath}/assets/Images/Common/ico_dotted_gray.png') 0 bottom repeat-x;">
                 </div>
 
                 <div style="margin-left:0px;">
@@ -597,7 +607,14 @@
     </div>
     <!-- Footer_Wrap -->
     <!-- #include virtual="/Include/FooterHTML1709.asp"-->
+    <c:import url="/WEB-INF/views/Include/FooterHTML1709.jsp"/>
     <!-- //Footer_Wrap -->
 </div>
 </body>
 </html>
+//<%
+//    rs.Close
+//    oConn.Close
+//    set rs=nothing
+//    set oConn =nothing
+//%>

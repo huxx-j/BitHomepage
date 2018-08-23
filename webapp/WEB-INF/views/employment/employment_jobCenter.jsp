@@ -1,8 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+
 <!DOCTYPE html>
 <html lang="ko">
-<link rel= "shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico">
+<link rel= "shortcut icon" href="/images/favicon.ico">
 <head>
     <!-- #include virtual="/Include/Meta.asp"-->
     <c:import url="/WEB-INF/views/Include/Meta.jsp"/>
@@ -19,13 +21,13 @@
 
     <!-- #include virtual="/Include/HeaderScript1709.asp"-->
     <c:import url="/WEB-INF/views/Include/HeaderScript1709.jsp"/>
+
     <script type="text/javascript">
         $(document).ready(function(){
             <!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"-->
             <c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
             <!--#include virtual="/Include/HeaderScriptReady1709.inc"-->
             <c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
-
             //$(".snb_1702 .newdepth1").eq(0).addClass("on");
             $(".snb_1709 a.newdepth1").eq(0).addClass("on");
         });
@@ -76,7 +78,7 @@
                             <li>4. 취업지원센터는 일반채용에 있어 별도의 비용을 요구하지 않습니다. (단, 선발된 인재에 대해 신입사원채용교육 진행시에는 그에 따른 교육비가 청구됩니다.)</li>
                         </ul>
                         <!--<p class="mar_t20"><img src="/Images/Content/img_employment_01_02.jpg" alt="1. 취업지원센터접속 - www.job.bitacademy.com 회원가입 또는 로그인, 2.인재검색 - 기업맞춤형 인재검색 인재스크랩 및 관리, 3.면접제의 - 인재에게 채용정보제공 참석여부에 따른 채용정보, 4.채용진행 - 면접진행 및 결과발표 결과는 온라인으로 직접연결, 5.채용 - 입사 또는 신입채용프로그램 진행"></p>-->
-                        <a href="/job/WriteRecruit" class="btnBlueBorder big mar_t20" style="margin-left:255px; font-size:14pt !important;">구인의뢰 신청하기</a>
+                        <a href="/job/WriteRecruit.asp" class="btnBlueBorder big mar_t20" style="margin-left:255px; font-size:14pt !important;">구인의뢰 신청하기</a>
                     </div>
                     <!-- //con_wrap1709 -->
 
@@ -88,7 +90,7 @@
                             <li>2. 취업지원센터는 비트교육센터가 직접 선발하고 관리하는 기업정보만을 공개합니다.</li>
                         </ul>
                         <!--<p class="mar_t20"><img src="/Images/Content/img_employment_01_03.jpg" alt="1.취업지원센터접속 - www.job.bitacademy.com 회원가입 또는 로그인, 3.이력서등록 - 이력서검수 및 공개 취업의 기회부여, 3.면접제의 및 참석 - 참석여부 온라인등록 면접일정 및 상세내용통보, 4.면접진행 및 결과발표 결과는 온라인 및 개별통보, 5.채용 - 입사 또는 신입채용프로그램 진행"></p>-->
-                        <a href="/job/List" class="btnBlueBorder big mar_t20" style="margin-left:255px; font-size:14pt !important;">채용정보 확인하기</a>
+                        <a href="/job/List.asp" class="btnBlueBorder big mar_t20" style="margin-left:255px; font-size:14pt !important;">채용정보 확인하기</a>
                     </div>
                     <!-- //con_wrap1709 -->
 
@@ -98,7 +100,7 @@
                         <ul>
                             <li>생생한 면접후기를 읽어보실 수 있습니다.</li>
                         </ul>
-                        <a href="/job/Interview" class="btnBlueBorder big mar_t20" style="margin-left:255px; font-size:14pt !important;">면접후기 살펴보기</a>
+                        <a href="/job/Interview.asp" class="btnBlueBorder big mar_t20" style="margin-left:255px; font-size:14pt !important;">면접후기 살펴보기</a>
                     </div>
                     <!-- //con_wrap1709 -->
 

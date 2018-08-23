@@ -1,8 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+
 <!DOCTYPE html>
 <html lang="ko">
-<link rel= "shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico">
+<link rel= "shortcut icon" href="/images/favicon.ico">
 <head>
     <!-- #include virtual="/Include/Meta.asp"-->
     <c:import url="/WEB-INF/views/Include/Meta.jsp"/>
@@ -16,7 +18,6 @@
     <!-- .btn_refundView 및 .btn_refundView2는 /JS/Common.js 에 이벤트핸들러 정의 -->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/common_css/Common_CSS_Detail_720_1709.css" >
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/common_css/Common_CSS_Detail_720plus_1709.css" >
-
     <!-- #include virtual="/Include/HeaderScript1709.asp"-->
     <c:import url="/WEB-INF/views/Include/HeaderScript1709.jsp"/>
     <script type="text/javascript">
@@ -25,7 +26,7 @@
             <c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
             <!--#include virtual="/Include/HeaderScriptReady1709.inc"-->
             <c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
-//$(".snb_1702 .newdepth1").eq(4).addClass("on");
+            //$(".snb_1702 .newdepth1").eq(4).addClass("on");
             $(".snb_1709 a.newdepth1").eq(4).addClass("on");
         });
     </script>

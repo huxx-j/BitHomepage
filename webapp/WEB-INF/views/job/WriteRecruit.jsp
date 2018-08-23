@@ -1,40 +1,56 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+
 <!DOCTYPE html>
 <!--METADATA TYPE= "typelib"  NAME= "ADODB Type Library"  FILE="C:\Program Files\Common Files\SYSTEM\ADO\msado15.dll"  -->
+<%--<%--%>
+    <%--Response.Expires = -1--%>
+    <%--Response.Expiresabsolute = Now() - 1--%>
+    <%--Response.AddHeader "pragma","no-cache"--%>
+    <%--Response.AddHeader "cache-control","private"--%>
+    <%--Response.CacheControl = "no-cache"--%>
 
+    <%--response.buffer = TRUE--%>
+    <%--//----------------------------------------------%>
+    <%--// 비트클럽 기업회원 기업정보 수정 처리--%>
+    <%--// 2005-08-01--%>
+    <%--// 프로그램 : 구한모 // 죽었던 코드 전체 수정하여 살림 = YG.--%>
+    <%--//----------------------------------------------%>
+<%--%>--%>
+
+<!--#include virtual="/include/config.asp"-->
+<%--<c:import url="/WEB-INF/views/Include/config.jsp"/>--%>
+<!--#include Virtual="/include/javaScriptFun.asp"-->
+<%--<c:import url="/WEB-INF/views/Include/javaScriptFun.jsp"/>--%>
+<%--<%--%>
     <%--Dim CompSeqNum,CompResNum,CompName--%>
 
-    <%--CompSeqNum = ""  '세션--%>
+    <%--CompSeqNum = ""  //세션--%>
     <%--CompSeqNum = session("CompSeqNum")--%>
     <%--CompResNum = session("CompResNum")--%>
     <%--CompName = session("CompName")--%>
 
-    <%--'if trim(CompSeqNum)="" or CompResNum = "" or CompName = "" then--%>
-    <%--'	call alertMsgGoURL ("로그인 정보가 없습니다. \n다시 로그인해 주세요.", "/job/advance_register_info.asp")--%>
-    <%--'end if	--%>
-
-
+    <%--//if trim(CompSeqNum)="" or CompResNum = "" or CompName = "" then--%>
+    <%--//	call alertMsgGoURL ("로그인 정보가 없습니다. \n다시 로그인해 주세요.", "/job/advance_register_info.asp")--%>
+    <%--//end if--%>
     <%--Set Dbcon = Server.CreateObject("ADODB.Connection")--%>
     <%--Dbcon.Open Con_bit_db--%>
 <%--%>--%>
-
 <html>
-<link rel= "shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico">
+<link rel= "shortcut icon" href="/images/favicon.ico">
 <head>
-    <%--<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">--%>
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
 
     <title>비트교육센터 홈페이지에 오신 것을 환영합니다.</title>
     <!-- #include virtual="/Include/Meta.asp"-->
-        <c:import url="/WEB-INF/views/Include/Meta.jsp"/>
-
+    <c:import url="/WEB-INF/views/Include/Meta.jsp"/>
     <!-- #include virtual="/Include/ContentStyle.asp"-->
-        <c:import url="/WEB-INF/views/Include/contentStyle.jsp"/>
-        <c:import url="/WEB-INF/views/Include/Script.jsp"/>
-        <!-- #include virtual="/Include/Script.asp"-->
+    <c:import url="/WEB-INF/views/Include/contentStyle.jsp"/>
+    <!-- #include virtual="/Include/Script.asp"-->
+    <c:import url="/WEB-INF/views/Include/Script.jsp"/>
     <!--#include virtual="/job/WriteRecruit_script.asp"-->
-        <c:import url="./WriteRecruit_script.jsp"/>
-
+    <c:import url="/WEB-INF/views/job/WriteRecruit_script.jsp"/>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/common_css/Common_CSS_Detail_720_1709.css" >
@@ -42,14 +58,12 @@
 
     <!-- #include virtual="/Include/HeaderScript1709.asp"-->
     <c:import url="/WEB-INF/views/Include/HeaderScript1709.jsp"/>
-
-        <script type="text/javascript">
+    <script type="text/javascript">
         $(document).ready(function(){
             <!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"-->
             <c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
             <!--#include virtual="/Include/HeaderScriptReady1709.inc"-->
             <c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
-
             //$(".snb_1702 .newdepth1").eq(1).addClass("on");
             $(".snb_1709 a.newdepth1").eq(1).addClass("on");
 
@@ -326,10 +340,9 @@
         }
 
     </script>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/CSS/Base2017Webfont.css"/>
+    <link rel="stylesheet" type="text/css" href="/CSS/Base2017Webfont.css"/>
     <!-- #include virtual="/Include/Script_MoBon_1803.asp"-->
     <c:import url="/WEB-INF/views/Include/Script_MoBon_1803.jsp"/>
-
 </head>
 
 
@@ -729,7 +742,7 @@
                                     </tr>
 
                                     <tr>
-                                        <th>팩스</font></th>
+                                        <th>팩스</th>
                                         <td>
                                             <input type=text name="ChargeFax" style="width:30%;" maxlength="20"> (예 : 02-1234-7890)
                                         </td>
@@ -774,3 +787,9 @@
 </body>
 
 </html>
+
+<%--<%--%>
+    <%--Dbcon.close--%>
+    <%--Set Dbcon = nothing--%>
+<%--%>--%>
+

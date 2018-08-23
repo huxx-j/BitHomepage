@@ -1,6 +1,9 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 
 <script>
-
+    <!--
 
     //영숫자 체크
     function check_char(input_str) {
@@ -57,10 +60,11 @@
             fm.caddr2.value=""
         }
     }
-
+    //-->
 </script>
-<%--<script language="vbscript">--%>
-	<%--sub zipsearch_onClick()	//'우편번호체크--%>
-		<%--window.open "/Member/zipserch1.asp?tozip=C",null,"height=800,width=700,status=no,scrollbars=yes,toolbar=no,titlebar=no,menubar=no,location=0,left=300,top=300"--%>
-	<%--end sub                                                 --%>
-<%--</script>--%>
+
+<script language="vbscript">
+	sub zipsearch_onClick()	//'우편번호체크
+		window.open "/Member/zipserch1.asp?tozip=C",null,"height=800,width=700,status=no,scrollbars=yes,toolbar=no,titlebar=no,menubar=no,location=0,left=300,top=300"
+	end sub                                                 
+</script>
