@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="job">
+    <!--면접 후기 리스트 출력-->
+    <select id="list" resultType="InterviewVo">
+        <![CDATA[
+            select
+            Num,
+            InterviewManner,
+            InterviewDescription,
+            InterViewOpinion,
+            studName,
+            Department,
+            CompName,
+            EstablishYear,
+            Business,
+            Address,
+            HomePage,
+            YearSell,
+            StaffNum,
+            UpdateDate,
+            CompSeqNum
+            from AfterInterview
+        ]]>
+    </select>
+    <!--CompName기준으로 검색(면접후기 검색시 사용) -->
+    <select id="search" parameterType="String" resultType="InterviewVo">
+        <![CDATA[
+            select
+            Num,
+            InterviewManner,
+            InterviewDescription,
+            InterViewOpinion,
+            studName,
+            Department,
+            CompName,
+            EstablishYear,
+            Business,
+            Address,
+            HomePage,
+            YearSell,
+            StaffNum,
+            UpdateDate,
+            CompSeqNum
+            from AfterInterview
+            where CompName=#{search}
+        ]]>
+    </select>
+
+    <!--CompName기준으로 이미지로고경로 정보와 홈페이지 URL을 가져온다(리스트 출력시 사용)-->
+    <select id="SelectLogo" parameterType="String" resultType="InterviewImageLogoPathVo">
+        <![CDATA[
+          select
+          idx,
+          ImageLogoPath,
+          HomepageURL
+          from InterviewImageLogoPath
+          where CompName=#{CompName}
+           ]]>
+    </select>
+</mapper>

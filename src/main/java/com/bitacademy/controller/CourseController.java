@@ -61,6 +61,42 @@ public class CourseController {
         return "course/expert/PopupIncludeMain";
     }
 
+    @RequestMapping(value="/employ/Course_Employ")
+    public String Course_Employ(){return "course/employ/Course_Employ";}
+
+    @RequestMapping(value="employ/Course_Employ_AurosTech")
+    public String Course_Employ_AurosTech(){return "course/employ/Course_Employ_AurosTech";}
+
+    @RequestMapping(value="employ/Course_Employ_BAinfra")
+    public String Course_Employ_BAinfra(){return "course/employ/Course_Employ_BAinfra";}
+
+    @RequestMapping(value="employ/Course_Employ_BitComputer")
+    public String Course_Employ_BitComputer(){return "course/employ/Course_Employ_BitComputer";}
+
+    @RequestMapping(value="employ/Course_Employ_BizTechPartners")
+    public String Course_Employ_BizTechPartners(){return "course/employ/Course_Employ_BizTechPartners";}
+
+    @RequestMapping(value="employ/Course_Employ_ITtelecom")
+    public String Course_Employ_ITtelecom(){return "course/employ/Course_Employ_ITtelecom";}
+
+    @RequestMapping(value="employ/Course_Employ_ivis")
+    public String Course_Employ_ivis(){return "course/employ/Course_Employ_ivis";}
+
+    @RequestMapping(value="employ/Course_Employ_PSK")
+    public String Course_Employ_PSK(){return "course/employ/Course_Employ_PSK";}
+
+    @RequestMapping(value="employ/Course_Employ_TaehaMechatronics")
+    public String Course_Employ_TaehaMechatronics(){return "course/employ/Course_Employ_TaehaMechatronics";}
+
+    @RequestMapping(value="kukka/Course_Kukka_Introduction")
+    public String Course_Kukka_Introduction(){return "course/kukka/Course_Kukka_Introduction";}
+
+    @RequestMapping(value="kukka/Course_Kukka_JavaBigData_2018")
+    public String Course_Kukka_JavaBigData_2018(){return "course/kukka/Course_Kukka_JavaBigData_2018";}
+
+    @RequestMapping(value="kukka/Course_Kukka_RaspberryPiIoTService_2018")
+    public String Course_Kukka_RaspberryPiIoTService_2018(){return "course/kukka/Course_Kukka_RaspberryPiIoTService_2018";}
+
     @ResponseBody
     @RequestMapping(value = "/ajax/getLocationInfo", method = RequestMethod.POST)
     public List<BP2Vo> getLocationInfo(@RequestParam("BPNum") int BPNum) {

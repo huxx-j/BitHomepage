@@ -65,7 +65,7 @@
                 <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu5off.png"/>
                 <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu6off.png"/>
                 <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu7off.png" h_ref="/employment/employment_jobCenter"/>
-                <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu8off.png" h_ref="/Course/Employ/Course_Employ.asp"/>
+                <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu8off.png" h_ref="/course/employ/Course_Employ"/>
                 <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu9off.png" h_ref="/course/license/Course_Licenses"/>
                 <div style="clear:both;"></div>
 
