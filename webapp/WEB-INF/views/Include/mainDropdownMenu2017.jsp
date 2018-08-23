@@ -774,6 +774,11 @@
         <div class="divMiddle long twolines" href="/Course/Kukka/Course_Kukka_RaspberryPiIoTService_2018.asp">
             <div class="divMiddleInner twolines" style="width:200px;">IoT를 활용한 자바 웹&amp;모바일 고급인력 양성과정</div>
         </div>
+
+        <div class="divMiddle long twolines" href="/Course/Kukka/Course_Kukka_EmbeddedService_2018.asp">
+            <div class="divMiddleInner twolines" style="width:200px;">IoT Software개발 고급인력 양성과정</div>
+        </div>
+
         <div class="dnone divMiddle long twolines" href="/Course/Kukka/Course_Kukka_FinTech_2018.asp">
             <div class="divMiddleInner twolines" style="width:200px;">금융 IT기반 핀테크 전문가<br/> 양성과정</div>
         </div>

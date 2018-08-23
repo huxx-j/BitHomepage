@@ -8,9 +8,11 @@
         <typeAlias alias="PamphletVo" type="com.bitacademy.vo.PamphletVo"/>
         <typeAlias alias="BP2Vo" type="com.bitacademy.vo.BP2Vo"/>
         <typeAlias alias="UserVo" type="com.bitacademy.vo.UserVo"/>
+        <typeAlias alias="QAVo" type="com.bitacademy.vo.QAVo"/>
     </typeAliases>
     <mappers>
         <mapper resource="mybatis/mappers/course.xml"/>
         <mapper resource="mybatis/mappers/member.xml"/>
+        <mapper resource="mybatis/mappers/qa.xml"/>
     </mappers>
 </configuration>

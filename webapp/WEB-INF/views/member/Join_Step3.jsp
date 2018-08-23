@@ -365,7 +365,7 @@
                     </div>
 
                     <div class="con_wrap1709">
-                        <form name="memform" method="post"  action="https://www.bitschool.com/Member/member_ipin_result_ok_old.asp" >
+                        <form name="memform" method="post"  action="${pageContext.request.contextPath}/member/member_ipin_result_ok_old" >
                             <input type="hidden" name="idcheck" value="N">
                             <input type="hidden" name="sDupInfo" value='<%--<%=sDupInfo%>--%>'>
                             <input type="hidden" name="sName" value='<%--<%=sName%>--%>'>
@@ -392,7 +392,7 @@
                                     </tr>
                                     <tr>
                                         <td scope="row" class="darker c" scope="row" class="tit"><label for="username">아이디 <span class="star"> *</span></label></td>
-                                        <td colspan="2"><input type="text" name="username" id="joinInfo_02" class="w167">
+                                        <td colspan="2"><input type="text" name="loginID" id="joinInfo_02" class="w167">
                                             <span><a href="javascript:openid();" class="btnGreenBorder mar_r5">중복확인</a>4~8자 사이로 입력해 주시기 바랍니다</span></td>
                                     </tr>
                                     <tr>

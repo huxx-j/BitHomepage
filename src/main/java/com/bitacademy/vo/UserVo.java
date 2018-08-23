@@ -4,8 +4,8 @@ public class UserVo {
     private String loginID;
     private String password;
     private String return_url;
-    private int User_no;
-    private String NameHan;
+    private int user_no;
+    private String nameHan;
 
     public String getLoginID() {
         return loginID;
@@ -16,19 +16,19 @@ public class UserVo {
     }
 
     public int getUser_no() {
-        return User_no;
+        return user_no;
     }
 
     public void setUser_no(int user_no) {
-        User_no = user_no;
+        this.user_no = user_no;
     }
 
     public String getNameHan() {
-        return NameHan;
+        return nameHan;
     }
 
     public void setNameHan(String nameHan) {
-        NameHan = nameHan;
+        this.nameHan = nameHan;
     }
 
     public String getPassword() {
@@ -53,8 +53,8 @@ public class UserVo {
                 "loginID='" + loginID + '\'' +
                 ", password='" + password + '\'' +
                 ", return_url='" + return_url + '\'' +
-                ", User_no=" + User_no +
-                ", NameHan='" + NameHan + '\'' +
+                ", user_no=" + user_no +
+                ", nameHan='" + nameHan + '\'' +
                 '}';
     }
 }

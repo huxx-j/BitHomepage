@@ -16,4 +16,9 @@
         ]]>
     </select>
 
+    <insert id="member_ipin_result_ok_old" parameterType="MemberVo" >
+        <![CDATA[
+                insert into
+        ]]>
+    </insert>
 </mapper>
