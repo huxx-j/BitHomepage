@@ -18,11 +18,13 @@ public class InterviewVo {
     private String StaffNum;
     private Timestamp UpdateDate;
     private int CompSeqNum;
+    private String ImageLogoPath;
+    private String HomepageURL;
 
     public InterviewVo() {
     }
 
-    public InterviewVo(int num, String interviewManner, String interviewDescription, String compReputiation, String studName, String department, String compName, int establishYear, String business, String address, String homePage, String yearSell, String staffNum, Timestamp updateDate, int compSeqNum) {
+    public InterviewVo(int num, String interviewManner, String interviewDescription, String compReputiation, String studName, String department, String compName, int establishYear, String business, String address, String homePage, String yearSell, String staffNum, Timestamp updateDate, int compSeqNum, String imageLogoPath, String homepageURL) {
         Num = num;
         InterviewManner = interviewManner;
         InterviewDescription = interviewDescription;
@@ -38,6 +40,8 @@ public class InterviewVo {
         StaffNum = staffNum;
         UpdateDate = updateDate;
         CompSeqNum = compSeqNum;
+        ImageLogoPath = imageLogoPath;
+        HomepageURL = homepageURL;
     }
 
     public int getNum() {
@@ -160,6 +164,22 @@ public class InterviewVo {
         CompSeqNum = compSeqNum;
     }
 
+    public String getImageLogoPath() {
+        return ImageLogoPath;
+    }
+
+    public void setImageLogoPath(String imageLogoPath) {
+        ImageLogoPath = imageLogoPath;
+    }
+
+    public String getHomepageURL() {
+        return HomepageURL;
+    }
+
+    public void setHomepageURL(String homepageURL) {
+        HomepageURL = homepageURL;
+    }
+
     @Override
     public String toString() {
         return "InterviewVo{" +
@@ -178,6 +198,8 @@ public class InterviewVo {
                 ", StaffNum='" + StaffNum + '\'' +
                 ", UpdateDate=" + UpdateDate +
                 ", CompSeqNum=" + CompSeqNum +
+                ", ImageLogoPath='" + ImageLogoPath + '\'' +
+                ", HomepageURL='" + HomepageURL + '\'' +
                 '}';
     }
 }

@@ -34,9 +34,9 @@ $(".mainmenu").on("click", function() {
 var index = $(".mainmenu").index(this);
 //console.log("index : "+index);   // 0 : 단기핵심, 3 : 국비지원무료과정
 if(index==0) {
-location.href="/Course/ShortCourse/Course_ShortCourse.asp";
+location.href="/course/shortcourse/Course_ShortCourse";
 } else if(index==3) {
-location.href="/Course/Kukka/Course_Support.asp";
+location.href="/course/kukka/Course_Support.asp";
 }
 });
 

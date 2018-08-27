@@ -51,38 +51,38 @@
             page=1;
         }
     </script>
-    <%
-        page = Request.QueryString("page")
-        IF page="" THEN
-            page=1
-        'response.write page & "<br/>"
-        END IF
+    <%--<%--%>
+        <%--page = Request.QueryString("page")--%>
+        <%--IF page="" THEN--%>
+            <%--page=1--%>
+        <%--'response.write page & "<br/>"--%>
+        <%--END IF--%>
 
-        Dim strQuerySearch
-        '//search = Request.QueryString("search")
-        search = SQLClean(Request.QueryString("search"))
-        IF search<>"" THEN
-        strQuerySearch = " WHERE CompName like '%" & search & "%' "
-        END IF
+        <%--Dim strQuerySearch--%>
+        <%--'//search = Request.QueryString("search")--%>
+        <%--search = SQLClean(Request.QueryString("search"))--%>
+        <%--IF search<>"" THEN--%>
+        <%--strQuerySearch = " WHERE CompName like '%" & search & "%' "--%>
+        <%--END IF--%>
 
-        'StudID = session("StudID")
+        <%--'StudID = session("StudID")--%>
 
-        set rs = server.CreateObject("adodb.recordset")
-        '//sql = "SELECT * FROM db_bit.dbo.Interview " & strQuerySearch & " ORDER BY num DESC"
-        sql = "SELECT * FROM db_bit.dbo.Interview " & strQuerySearch & " ORDER BY num DESC"
+        <%--set rs = server.CreateObject("adodb.recordset")--%>
+        <%--'//sql = "SELECT * FROM db_bit.dbo.Interview " & strQuerySearch & " ORDER BY num DESC"--%>
+        <%--sql = "SELECT * FROM db_bit.dbo.Interview " & strQuerySearch & " ORDER BY num DESC"--%>
 
-        rs.PageSize = 10 '페이지의 사이즈를 정함 ...반드시 레크드셋오픈전에 지정해주어야 한다.
-        rs.Open sql, oConn, 1 '레코드 커서 타입(1)을 지정해 주어야 한다. 만일 지정이 안되면 페이징이 안된대.
+        <%--rs.PageSize = 10 '페이지의 사이즈를 정함 ...반드시 레크드셋오픈전에 지정해주어야 한다.--%>
+        <%--rs.Open sql, oConn, 1 '레코드 커서 타입(1)을 지정해 주어야 한다. 만일 지정이 안되면 페이징이 안된대.--%>
 
-        IF NOT rs.EOF THEN
-        totalpage =rs.PageCount
-        rs.AbsolutePage = page
-        totalNum = rs.RecordCount
-        END IF
-        'response.write "totalpage : " & totalpage & "<br/>"
-        'response.write "rs.AbsolutePage : " & rs.AbsolutePage & "<br/>"
-        'response.write "totalNum : " & totalNum & "<br/>"
-    %>
+        <%--IF NOT rs.EOF THEN--%>
+        <%--totalpage =rs.PageCount--%>
+        <%--rs.AbsolutePage = page--%>
+        <%--totalNum = rs.RecordCount--%>
+        <%--END IF--%>
+        <%--'response.write "totalpage : " & totalpage & "<br/>"--%>
+        <%--'response.write "rs.AbsolutePage : " & rs.AbsolutePage & "<br/>"--%>
+        <%--'response.write "totalNum : " & totalNum & "<br/>"--%>
+    <%--%>--%>
 
     <link rel="stylesheet" type="text/css" href="/job/bodyStyle.css">
     <link rel= "shortcut icon" href="/images/favicon.ico">
@@ -419,14 +419,14 @@
                 <div style="margin-top:25px;">
                     <div id="myBox1" class="myPopup" style="display:none;"></div>
                     <div class="myBlurAll" style="display:none;"></div>
-                    <%
-                        String search=request.getParameter("search");
-                        if (search!="") {
-                            out.print("<p class=\"blueTxt\">\n" +
-                                    "                        회사명 '${search}' 으로 검색된 결과입니다 : <a href=\"javascript:btnCancel();\" class=\"btnWhiteBorder\" style=\"height:24px; margin-left:30px; padding:2px 5px; \"><span style=\"line-height:24px;\">검색취소</span></a>\n" +
-                                    "                    </p>");
-                        }
-                    %>
+//                    <%
+//                        String search=request.getParameter("search");
+//                        if (search!="") {
+//                            out.print("<p class=\"blueTxt\">\n" +
+//                                    "                        회사명 '${search}' 으로 검색된 결과입니다 : <a href=\"javascript:btnCancel();\" class=\"btnWhiteBorder\" style=\"height:24px; margin-left:30px; padding:2px 5px; \"><span style=\"line-height:24px;\">검색취소</span></a>\n" +
+//                                    "                    </p>");
+//                        }
+//                    %>
                     <!-- Search -->
                     <div style="height:60px; margin:20px 0 10px 0px; ">
                         <input type="text" id="inputSearch" class="form-control" placeholder="(검색어를 입력하세요)" value="" style="height:32px; width:40%; font-size:1.5em; border-radius:5px; float:left;"/>
@@ -484,19 +484,12 @@
                                 <td>
                                     <a href="#" id="a${vo.Num}" class="aOpenPopup">
                                         <span style="font-size:1.75em; font-weight:900; text-shadow:1px 1px 1px #828282; margin-right:5px;">${vo.CompName}</span>
-                                        <img src="<%=ImagePath%>" style="max-width:175px; max-height:39px; margin-top:0px;"/>
+                                        <img src="${vo.ImagePath}" style="max-width:175px; max-height:39px; margin-top:0px;"/>
 
                                     </a>
                                 </td>
-                                <td style="font-size:1.25em; font-weight:700;"><%= Left(rs("UpdateDate"), 10) %></td>
+                                <td style="font-size:1.25em; font-weight:700;">${vo.UpdateDate}</td>
                             </tr>
-                            <%
-
-                                rs.moveNext
-                                END IF
-                                NEXT
-                                'loop
-                            %>
                             </c:forEach>
                             </tbody>
                         </table>
@@ -538,33 +531,33 @@
                             float:left;
                         }
                     </style>
-                    <div style="text-align:center; margin-left:50px; margin-top:30px; font-weight:800; font-size:1.1em;">
-                        <a href="/job/interview.asp?page=1"><div class="btnPaging" style="color:#393939;">처음</div></a>
-                        <a href="/job/interview.asp?page=<%=pagingPrevNum %>"><div class="btnPaging" style="color:#393939;">이전</div></a>
-                        <%
-                            FOR i=pagingStartNum TO pagingEndNum STEP 1
-                        %>
-                        <!--<span style="margin-left:12px;">-->
-                        <%
-                            IF Cint(page) = Cint(i) THEN
-                        %>
-                        <!-- font-weight:800; text-decoration:underline; -->
-                        <div style="background-color:#ffffb6;" class="redTxt btnPaging"><%=i %></div>
-                        <%
-                            ELSE
-                        %>
-                        <a href="/job/interview.asp?page=<%=i %>"><div class="btnPaging" style="color:#393939;"><%=i %></div></a>
-                        <%
-                            END IF
-                        %>
-                        <!--</span>-->
-                        <%
-                            NEXT
-                        %>
-                        <a href="/job/interview.asp?page=<%=pagingNextNum %>" style="color:#393939;"><div class="btnPaging" >다음</div></a>
-                        <a href="/job/interview.asp?page=<%=totalpage %>"><div class="btnPaging" style="color:#393939;">끝</div></a>
-                    </div>
-                    <div style="clear:both;"></div>
+<%--//                    <div style="text-align:center; margin-left:50px; margin-top:30px; font-weight:800; font-size:1.1em;">--%>
+<%--//                        <a href="/job/interview.asp?page=1"><div class="btnPaging" style="color:#393939;">처음</div></a>--%>
+<%--//                        <a href="/job/interview.asp?page=<%=pagingPrevNum %>"><div class="btnPaging" style="color:#393939;">이전</div></a>--%>
+<%--//                        <%--%>
+<%--//                            FOR i=pagingStartNum TO pagingEndNum STEP 1--%>
+<%--//                        %>--%>
+<%--//                        <!--<span style="margin-left:12px;">-->--%>
+<%--//                        <%--%>
+<%--//                            IF Cint(page) = Cint(i) THEN--%>
+<%--//                        %>--%>
+<%--//                        <!-- font-weight:800; text-decoration:underline; -->--%>
+<%--//                        <div style="background-color:#ffffb6;" class="redTxt btnPaging"><%=i %></div>--%>
+<%--//                        <%--%>
+<%--//                            ELSE--%>
+<%--//                        %>--%>
+<%--//                        <a href="/job/interview.asp?page=<%=i %>"><div class="btnPaging" style="color:#393939;"><%=i %></div></a>--%>
+<%--//                        <%--%>
+<%--//                            END IF--%>
+<%--//                        %>--%>
+<%--//                        <!--</span>-->--%>
+<%--//                        <%--%>
+<%--//                            NEXT--%>
+<%--//                        %>--%>
+<%--//                        <a href="/job/interview.asp?page=<%=pagingNextNum %>" style="color:#393939;"><div class="btnPaging" >다음</div></a>--%>
+<%--//                        <a href="/job/interview.asp?page=<%=totalpage %>"><div class="btnPaging" style="color:#393939;">끝</div></a>--%>
+<%--//                    </div>--%>
+<%--//                    <div style="clear:both;"></div>--%>
                     <!-- //Paging -->
 
                     <!-- btnWrite -->
@@ -592,10 +585,10 @@
 </div>
 </body>
 </html>
-<%
-    rs.Close
-    Dbcon.Close
-    set rs=nothing
-    set Rs2=nothing
-    set Dbcon =nothing
-%>
+//<%
+//    rs.Close
+//    Dbcon.Close
+//    set rs=nothing
+//    set Rs2=nothing
+//    set Dbcon =nothing
+//%>

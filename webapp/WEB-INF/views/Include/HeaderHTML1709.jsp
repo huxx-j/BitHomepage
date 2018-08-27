@@ -59,10 +59,10 @@
             <!--TopMenuBar-->
             <div id="mainTopMenuBar">
                 <!--<img class="mainmenu" src="/Images/Menus/2/MainPage_Menu__menu1off.png"/>-->
-                <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu2off.png"/>
+                <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu2off.png" h_ref="/course/shortcourse/Course_ShortCourse"/>
                 <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu3off.png"/>
                 <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu4off.png"/>
-                <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu5off.png"/>
+                <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu5off.png" h_ref="/course/shortcourse/Course_ShortCourse"/>
                 <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu6off.png"/>
                 <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu7off.png" h_ref="/employment/employment_jobCenter"/>
                 <img class="mainmenu" src="${pageContext.request.contextPath}/assets/Images/Menus/2/MainPage_Menu__menu8off.png" h_ref="/course/employ/Course_Employ"/>

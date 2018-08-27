@@ -637,10 +637,10 @@
         <div class="divTop1"></div>
         <div class="divTop2" ></div>
         <div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/localCampus/localCampus_Daejeon_introduction.asp">
+        <div class="divMiddle" href="/course/localCampus/localCampus_Daejeon_introduction">
             <div class="divMiddleInner" style="width:140px;">대전캠퍼스 소개</div>
         </div>
-        <div class="divMiddle" href="/Course/localCampus/DetailPage/Daejeon_windowNet.asp">
+        <div class="divMiddle" href="/course/localCampus/DetailPage/Daejeon_windowNet">
             <div class="divMiddleInner" style="width:140px;">윈도우 닷넷 고급과정</div>
         </div>
         <div class="divBlank"></div><div class="divBlank"></div>
@@ -652,10 +652,10 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/localCampus/localCampus_Busan_introduction.asp">
+        <div class="divMiddle" href="/course/localCampus/localCampus_Busan_introduction">
             <div class="divMiddleInner" style="width:130px;">부산캠퍼스 소개</div>
         </div>
-        <div class="divMiddle" href="/Course/localCampus/DetailPage/Busan_javaHigh.asp">
+        <div class="divMiddle" href="/course/localCampus/Busan_javaHigh">
             <div class="divMiddleInner" style="width:130px;">웹&amp;모바일 고급과정</div><!--자바고급과정???-->
         </div>
         <div class="divBlank"></div>
@@ -667,10 +667,10 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/localCampus/localCampus_Gunpo_introduction.asp">
+        <div class="divMiddle" href="/course/localCampus/localCampus_Gunpo_introduction">
             <div class="divMiddleInner" style="width:140px;">군포캠퍼스 소개</div>
         </div>
-        <div class="divMiddle" href="/Course/localCampus/DetailPage/Gunpo_windowNet.asp">
+        <div class="divMiddle" href="/course/localCampus/Gunpo_windowNet">
             <div class="divMiddleInner" style="width:140px;">윈도우 닷넷 고급과정</div>
         </div>
         <div class="divBottom"></div>
@@ -681,10 +681,10 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/localCampus/localCampus_Gimhae_introduction.asp">
+        <div class="divMiddle" href="/course/localCampus/localCampus_Gimhae_introduction">
             <div class="divMiddleInner" style="width:140px;">김해캠퍼스 소개</div>
         </div>
-        <div class="divMiddle twolines" href="javascript:alert('준비중입니다.(문의 02-3486-3456)'); // /Course/localCampus/DetailPage/Gimhae_BigData.asp">
+        <div class="divMiddle twolines" href="javascript:alert('준비중입니다.(문의 02-3486-3456)'); // /course/localCampus/Gimhae_BigData.asp">
             <div class="divMiddleInner twolines" style="width:140px;">빅데이터 엔지니어링 실무적용 고급과정</div>
         </div>
         <div class="divBottom"></div>
@@ -699,13 +699,13 @@
     <div class="mainDropdownMenu depth1 no3 fl" >
         <div class="divTop1"></div>
         <div class="divTop2"></div>
-        <div class="divMiddle" href="/Course/Expert/Course_Expert_JavaExpert.asp">
+        <div class="divMiddle" href="/course/expert/Course_Expert_JavaExpert">
             <div class="divMiddleInner" style="width:180px;">자바 전문가과정</div>
         </div>
         <div class="divMiddle" href="javascript:alert('준비중입니다. (문의 02-3486-3456)');">
             <div class="divMiddleInner" style="width:180px;">윈도우 닷넷 전문가과정</div>
         </div>
-        <div class="divMiddle" href="/Course/Expert/Course_Expert_Embedded.asp">
+        <div class="divMiddle" href="/course/expert/Course_Expert_Embedded">
             <div class="divMiddleInner" style="width:180px;">임베디드 시스템 전문가과정</div>
         </div>
         <div class="divMiddle" href="javascript:alert('준비중입니다. (문의 02-3486-3456)');">
@@ -774,6 +774,11 @@
         <div class="divMiddle long twolines" href="/Course/Kukka/Course_Kukka_RaspberryPiIoTService_2018.asp">
             <div class="divMiddleInner twolines" style="width:200px;">IoT를 활용한 자바 웹&amp;모바일 고급인력 양성과정</div>
         </div>
+
+        <div class="divMiddle long twolines" href="/Course/Kukka/Course_Kukka_EmbeddedService_2018.asp">
+            <div class="divMiddleInner twolines" style="width:200px;">IoT Software개발 고급인력 양성과정</div>
+        </div>
+
         <div class="dnone divMiddle long twolines" href="/Course/Kukka/Course_Kukka_FinTech_2018.asp">
             <div class="divMiddleInner twolines" style="width:200px;">금융 IT기반 핀테크 전문가<br/> 양성과정</div>
         </div>
