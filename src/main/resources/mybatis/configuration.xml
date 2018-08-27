@@ -9,10 +9,14 @@
         <typeAlias alias="BP2Vo" type="com.bitacademy.vo.BP2Vo"/>
         <typeAlias alias="UserVo" type="com.bitacademy.vo.UserVo"/>
         <typeAlias alias="QAVo" type="com.bitacademy.vo.QAVo"/>
+        <typeAlias alias="MemberVo" type="com.bitacademy.vo.MemberVo"/>
+        <typeAlias alias="InterviewVo" type="com.bitacademy.vo.InterviewVo"/>
+        <typeAlias alias="InterviewImageLogoPathVo" type="com.bitacademy.vo.InterviewImageLogoPathVo"/>
     </typeAliases>
     <mappers>
         <mapper resource="mybatis/mappers/course.xml"/>
         <mapper resource="mybatis/mappers/member.xml"/>
         <mapper resource="mybatis/mappers/qa.xml"/>
+        <mapper resource="mybatis/mappers/job.xml"/>
     </mappers>
 </configuration>
