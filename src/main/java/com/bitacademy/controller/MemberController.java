@@ -1,6 +1,7 @@
 package com.bitacademy.controller;
 
 import com.bitacademy.service.MemberService;
+import com.bitacademy.vo.MemberVo;
 import com.bitacademy.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -69,9 +70,10 @@ public class MemberController {
         return return_url;
     }
 
- /*   @ResponseBody
-    @RequestMapping(value = "/chkID", method = RequestMethod.POST)
-    public int chkID(@RequestParam("memid") String memid) {
-        return memberService.chkID(memid);
-    }*/
+    @RequestMapping(value = "/member_ipin_result_ok_old")
+    public String member_ipin_result_ok_old(@ModelAttribute MemberVo memberVo){
+        memberService.member_ipin_result_ok_old(memberVo);
+        return "/index";
+    }
 }
+

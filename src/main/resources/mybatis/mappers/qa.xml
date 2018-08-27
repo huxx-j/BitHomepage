@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qa">
+
+    <select id="getQAList" parameterType="HashMap" resultType="QAVo">
+     <![CDATA[
+              SELECT idx, Category, Notice_yn, LoginID, NameHan,
+                      Email, Tel_Num, Hp_Num, Title, Content, Visit,
+                      Ref, Re_Step, Re_Level, FileName, FileSize, Del_yn, substring(Reg_Date,1,10) as Reg_Date
+              FROM Online_QA
+              WHERE idx!=2946
+                    AND Notice_yn='N'
+                    AND Category='A'
+                    AND Del_yn='N'
+                    ORDER BY Ref DESC, Re_Level
+                    LIMIT #{start}, #{pageSize}
+        ]]>
+ </select>
+
+    <select id="getTotalCnt" resultType="Int">
+        <![CDATA[
+                select count(idx) from Online_QA
+                where idx!=2946
+                      AND Notice_yn='N'
+                      AND Category='A'
+                      AND Del_yn='N';
+        ]]>
+    </select>
+
+    <select id="Support_online_content" parameterType="Int" resultType="QAVo">
+        <![CDATA[
+                SELECT idx, Category, Notice_yn, LoginID, NameHan,
+                      Email, Tel_Num, Hp_Num, Title, replace(Content, char(10), '<br />') as Content, Visit,
+                      Ref, Re_Step, Re_Level, FileName, FileSize, Del_yn, substring(Reg_Date,1,10) as Reg_Date
+              FROM Online_QA
+              where idx=#{idx}
+        ]]>
+    </select>
+
+    <select id="Support_online_write" parameterType="Int" resultType="QAVo">
+        <![CDATA[
+                SELECT idx, Category, Notice_yn, LoginID, NameHan,
+                      Email, Tel_Num, Hp_Num, Title, Content, Visit,
+                      Ref, Re_Step, Re_Level, FileName, FileSize, Del_yn, substring(Reg_Date,1,10) as Reg_Date
+              FROM Online_QA
+              where idx=#{idx}
+        ]]>
+    </select>
+
+    <insert id="Support_online_write_re" parameterType="QAVo">
+        <![CDATA[
+                insert into Online_QA(Category, Notice_yn, LoginID, NameHan,
+                                        Email, Tel_Num, Hp_Num, Title, Content, Visit,
+                                        Ref, Re_Step, Re_Level, FileName, FileSize, Del_yn, Reg_Date)
+                values ('A', 'N', #{loginID}, #{nameHan}, #{email}, #{tel_Num},
+                         #{hp_Num}, #{title}, #{content}, 0, ]]>
+                         <if test="re_Level==0">
+                             <![CDATA[#{idx},]]>
+                         </if>
+                         <if test="re_Level!=0">
+                             <![CDATA[#{ref},]]>
+                         </if>
+                        <![CDATA[
+                         #{re_Step}+1, #{re_Level}+1, #{fileName},
+                         #{fileSize}, 'N', current_timestamp)
+        ]]>
+    </insert>
+
+    <update id="Support_online_write_up" parameterType="QAVo">
+        <![CDATA[
+                update Online_QA
+                set Title=#{title}, Content=#{content}
+                where idx=#{idx}
+        ]]>
+    </update>
+
+    <insert id="Support_online_write_new" parameterType="QAVo">
+        <selectKey keyProperty="idx" resultType="Int" order="AFTER">
+            select LAST_INSERT_ID() from dual
+        </selectKey>
+        <![CDATA[
+                insert into Online_QA(idx, Category, Notice_yn, LoginID, NameHan,
+                                        Email, Tel_Num, Hp_Num, Title, Content, Visit,
+                                        Ref, Re_Step, Re_Level, FileName, FileSize, Del_yn, Reg_Date)
+                values (#{idx},'A', 'N', #{loginID}, #{nameHan}, #{email}, #{tel_Num},
+                         #{hp_Num}, #{title}, #{content}, 0, #{idx}, 0, 0, #{fileName},
+                         #{fileSize}, 'N', current_timestamp)
+        ]]>
+    </insert>
+
+    <update id="refUp" parameterType="Int">
+        <![CDATA[
+                update Online_QA set Ref=#{idx} where idx=#{idx}
+        ]]>
+    </update>
+
+    <select id="refChk" parameterType="Int" resultType="Int">
+        <![CDATA[
+                select count(idx) from Online_QA where Ref=#{idx};
+        ]]>
+    </select>
+
+    <delete id="Support_online_del" parameterType="Int">
+        <![CDATA[
+                delete from Online_QA where idx=#{idx}
+        ]]>
+    </delete>
+</mapper>

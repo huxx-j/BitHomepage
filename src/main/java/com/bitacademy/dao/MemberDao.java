@@ -1,5 +1,6 @@
 package com.bitacademy.dao;
 
+import com.bitacademy.vo.MemberVo;
 import com.bitacademy.vo.UserVo;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,5 +19,9 @@ public class MemberDao {
 
     public UserVo login_ok(UserVo userVo) {
         return sqlSession.selectOne("member.login_ok", userVo);
+    }
+
+    public int member_ipin_result_ok_old(MemberVo memberVo) {
+        return sqlSession.insert("member.member_ipin_result_ok_old", memberVo);
     }
 }

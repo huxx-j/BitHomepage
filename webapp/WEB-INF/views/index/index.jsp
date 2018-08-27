@@ -310,14 +310,14 @@
         <!-- mainSubMenu -->
         <div id="mainSubMenu" style="width:960px; margin:0 auto;">
             <img class="submenu" src="${pageContext.request.contextPath}/assets/Images/Menus/submenu1off.png" h_ref="/center/Center_info"/>
-            <img class="submenu" src="${pageContext.request.contextPath}/assets/Images/Menus/submenu2off.png" h_ref="/Support/Support_fund.asp"/>
+            <img class="submenu" src="${pageContext.request.contextPath}/assets/Images/Menus/submenu2off.png" h_ref="/support/Support_fund"/>
             <img class="submenu" src="${pageContext.request.contextPath}/assets/Images/Menus/submenu3off.png" h_ref="/course/shortcourse/refundInfo_01"/>
             <img class="submenu" src="${pageContext.request.contextPath}/assets/Images/Menus/submenu4off.png" h_ref="/support/Support_certification"/>
             <img class="submenu" src="${pageContext.request.contextPath}/assets/Images/Menus/submenu5off.png" h_ref="/support/Support_etcRent"/>
             <img class="submenu" src="${pageContext.request.contextPath}/assets/Images/Menus/submenu6off.png" h_ref="/support/Support_instructor"/>
             <!--<img class="submenu" src="Images/Menus/submenu7off.png" h_ref="/Support/Support_labor_favor.asp"/>-->
             <img class="submenu" src="${pageContext.request.contextPath}/assets/Images/Menus/submenu7off.png" h_ref="javascript:alert('준비중입니다. Q&A 게시판에 문의 주세요. 문의(02-3486-3456)');"/>
-            <img class="submenu" src="${pageContext.request.contextPath}/assets/Images/Menus/submenu8off.png" h_ref="/Support/Support_online_list.asp"/>
+            <img class="submenu" src="${pageContext.request.contextPath}/assets/Images/Menus/submenu8off.png" h_ref="/support/Support_online_list"/>
             <img class="submenu" src="${pageContext.request.contextPath}/assets/Images/Menus/submenu9off.png" h_ref="/center/location"/>
             <div style="clear:both;"></div>
         </div>
@@ -531,7 +531,7 @@
                             .dnone { DISPLAY:NONE; }
                         </style>
                         <div class="slot first" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기프_Python프로그래밍.png')" href="/Course/ShortCourse/DetailPage/Course_Python.asp">
-                            <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>
+                            <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>--%>
                             <p class="courseName dnone">Python 프로그래밍</p>
                             <p class="courseDescription dnone">프로그래밍 입문자도 쉽게 공부할 수 있는, 세상에서 가장 쉬운 언어</p>
                             <div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
@@ -565,13 +565,13 @@
                             <%--<!-- //SLIDER ( C <-> 자료구조 ) 삭제(2018-04-17-YG) -->--%>
                         <%--%>--%>
                         <div class="slot" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기프_C프로그래밍.png')" href="/Course/ShortCourse/DetailPage/Course_C.asp">
-                            <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__hot.png"/>
+                            <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__hot.png"/>--%>
                             <p class="courseName dnone"></p>
                             <p class="courseDescription dnone"></p>
                             <div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
                         </div>
                         <div class="slot" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기프_JAVA프로그래밍.png')" href="javascript:toggleCampusInfo(2);">
-                            <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__hot.png"/>
+                            <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__hot.png"/>--%>
                             <p class="courseName dnone">JAVA 프로그래밍</p>
                             <!--<p class="courseDescription dnone">자바 프로그램을 객체지향적으로 만드는 방법에 대해서 학습하는 과정으로 JAVA의 기본 문법을 탄탄히 다질 수 있는 기초 과정</p>-->
                             <p class="courseDescription dnone">웹개발의 시작이며 대규모 소프트웨어 개발에 많이 사용되는 언어로서 누구나 쉽게 시작할 수 있는 언어</p>
@@ -580,7 +580,7 @@
                             </div>
                         </div>
                         <div class="slot" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기프_Cpp프로그래밍.png')"  href="javascript:toggleCampusInfo(3);">
-                            <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>
+                            <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>--%>
                             <p class="courseName dnone">C++ 프로그래밍</p>
                             <!--<p class="courseDescription dnone">C++ 프로그래밍과 UML을 활용한 실습 위주의 교육을 통해 실무 프로젝트에 대한 적응력을 향상시킬 수 있도록 구성</p>-->
                             <p class="courseDescription dnone">C언어에서 발전한 언어로서 컴퓨터 하드웨어를 가장 강력하게 제어할 수 있는 언어</p>
@@ -604,25 +604,25 @@
                         -->
                         <!-- .extended / _extended.png / _280px.png -->
                         <div class="slot first extended" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기프_GoProgramming_Extended.png')" href="/Course/ShortCourse/DetailPage/Course_Go.asp">
-                            <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>
+                            <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>--%>
                             <p class="courseName dnone"></p>
                             <p class="courseDescription dnone"></p>
                             <div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
                         </div>
                         <div class="slot extended" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기핵심_R을_사용한_데이터분석_extended.png')" href="/Course/ShortCourse/DetailPage/Course_DSCIENCE_AnalysisMachineLearning.asp">
-                            <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>
+                            <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>--%>
                             <p class="courseName dnone"></p>
                             <p class="courseDescription dnone"></p>
                             <div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
                         </div>
                         <div class="slot extended" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기핵심_최적화_알고리즘_extended.png')" href="/Course/ShortCourse/DetailPage/Course_OptimizationAlgorithms.asp">
-                            <img class="slotIcon" src="${pageContext.request.contextPath}/assetsImages/Icons/MainPage_SlotIcon__recommend.png"/>
+                            <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assetsImages/Icons/MainPage_SlotIcon__recommend.png"/>--%>
                             <p class="courseName dnone"></p>
                             <p class="courseDescription dnone"></p>
                             <div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
                         </div>
                         <div class="slot extended" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기핵심_AWSCloudWeb_Extended.png')" href="/Course/ShortCourse/DetailPage/Course_AWSCloudWeb2.asp">
-                            <img class="slotIcon" src="${pageContext.request.contextPath}/assetsImages/Icons/MainPage_SlotIcon__recommend.png"/>
+                            <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assetsImages/Icons/MainPage_SlotIcon__recommend.png"/>--%>
                             <p class="courseName dnone"></p>
                             <p class="courseDescription dnone"></p>
                             <div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
@@ -640,13 +640,13 @@
                         -->
                         <!-- .extended / _extended.png / _280px.png -->
                         <div class="slot first extended" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기핵심_실용머신러닝Python_extended.png')" href="/Course/ShortCourse/DetailPage/Course_DSCIENCE_PracticalMachineLearningPython.asp">
-                            <img class="slotIcon" src="${pageContext.request.contextPath}/assetsImages/Icons/MainPage_SlotIcon__recommend.png"/>
+                            <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assetsImages/Icons/MainPage_SlotIcon__recommend.png"/>--%>
                             <p class="courseName dnone">웹퍼블리싱 실무</p>
                             <p class="courseDescription dnone">HTML의 기초부터 실무예제를 체계적인 학습을 통해 모바일, 데스크탑 웹 서비스를 제작할 수 있도록 하는 과정</p>
                             <div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
                         </div>
                         <div class="slot extended" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기핵심_블록체인_초연결_extended.png')" href="/Course/ShortCourse/DetailPage/Course_Blockchain_HyperConnected.asp">
-                            <img class="slotIcon" src="${pageContext.request.contextPath}/assetsImages/Icons/MainPage_SlotIcon__recommend.png"/>
+                            <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assetsImages/Icons/MainPage_SlotIcon__recommend.png"/>--%>
                             <p class="courseName dnone"></p>
                             <p class="courseDescription dnone"></p>
                             <div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
@@ -706,7 +706,7 @@
                             -->
                             <!-- .extended / _extended.png / _280px.png -->
                             <div class="slot first extended" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__국비지원_라즈베리파이IoT서비스_extended.png')" href="/Course/Kukka/Course_Kukka_RaspberryPiIoTService_2018.asp">
-                                <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__new.png"/>
+                                <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__new.png"/>--%>
                                 <p class="courseName dnone">&nbsp;</p>
                                 <p class="courseDescription dnone">&nbsp;</p>
                                 <div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
@@ -744,19 +744,19 @@
                             -->
                             <!-- .extended / _extended.png / _280px.png -->
                             <div class="slot extended" style="background:url('/assets/Images/Slots/2/MainPage_Slot__국비지원_빅데이터_extended.png')" href="/Course/Kukka/Course_Kukka_JavaBigData_2018.asp">
-                                <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__new.png"/>
+                                <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__new.png"/>--%>
                                 <p class="courseName dnone">&nbsp;</p>
                                 <p class="courseDescription dnone">&nbsp;</p>
                                 <div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
                             </div>
                             <div class="slot" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__전문가_자바.png')" href="/Course/Expert/Course_Expert_JavaExpert.asp">
-                                <img class="slotIcon" src="/${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>
+                                <%--<img class="slotIcon" src="/${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>--%>
                                 <p class="courseName dnone">자바 전문가과정</p>
                                 <p class="courseDescription dnone">Java 언어를 기반으로 프론트엔드와 백엔드를 아우르는 전문가가 되기 위한 과정</p>
                                 <div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
                             </div>
                             <div class="slot" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__전문가_임베디드시스템.png')" href="/Course/Expert/Course_Expert_Embedded.asp">
-                                <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__hot.png"/>
+                                <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__hot.png"/>--%>
                                 <p class="courseName dnone long">임베디드 시스템 전문가과정</p>
                                 <p class="courseDescription dnone">ARM어셈블리, 리눅스커널, 디바이스드라이버 등을 심도 있게 배워 임베디드SW의 전문가가 되기 위한 과정</p>
                                 <div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
@@ -800,7 +800,7 @@
                                 .courseName dnone.up { margin-top:8px; }
                             </style>
                             <div class="slot" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__초중고SW교육_라즈베리파이.png')" href="/Course/ShortCourse/DetailPage/Course_RaspberryPi_Audio.asp">
-                                <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__new.png"/>
+                                <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__new.png"/>--%>
                                 <p class="courseName dnone up long">세상과 소통하는<br/>라즈베리파이 오디오 만들기</p>
                                 <!--<p class="courseDescription dnone under2line">프로그래밍을 전혀 모르는 청소년들이 인터넷에 연결되는 오디오를 임베디드를 보드를 이용하여 만들어 보는 과정</p>-->
                                 <p class="courseDescription dnone">프로그래밍을 전혀 모르는 청소년들이 인터넷에 연결되는 오디오를 임베디드를 보드를 이용하여 만들어 보는 과정</p>
@@ -840,29 +840,29 @@
 
                     <!-- 고급과정 -->
                     <div id="Content" style="display:none;">
-                        <img src="Images/Titles/MainPage_Title__고급과정.png" style="float:left; margin-bottom:-2px;" alt="고급과정"/>
+                        <img src="${pageContext.request.contextPath}/assets/Images/Titles/MainPage_Title__고급과정.png" style="float:left; margin-bottom:-2px;" alt="고급과정"/>
                         <div style="clear:both;"></div>
 
                         <div class="slot first" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__고급_Iot.png')" href="javascript:alert('준비중입니다. 문의(02-3486-3456)');">
-                            <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__hot.png"/>
+                            <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__hot.png"/>--%>
                             <p class="courseName dnone">IoT 고급과정</p>
                             <p class="courseDescription dnone">폭발적으로 성장하고 있는 사물인터넷(Internet of Things)을 구현하여 나만의 장치를 만들어 보는 과정</p>
                             <div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
                         </div>
                         <div class="slot" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__고급_임베디드.png')" href="javascript:alert('준비중입니다. 문의(02-3486-3456)');">
-                            <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__hot.png"/>
+                            <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__hot.png"/>--%>
                             <p class="courseName dnone long">임베디드 시스템 고급과정</p>
                             <p class="courseDescription dnone">ARM어셈블리, 리눅스커널, 디바이스드라이버 등을 배워 본격적인 임베디드 시스템을 만들어 보는 과정</p>
                             <div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
                         </div>
                         <div class="slot" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__고급_윈도우닷넷.png')" href="javascript:alert('준비중입니다. 문의(02-3486-3456)');">
-                            <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>
+                            <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>--%>
                             <p class="courseName dnone long">윈도우 닷넷 고급과정</p>
                             <p class="courseDescription dnone">닷넷(.NET) 플랫폼의 강력한 기술을 이용하여 윈도우에 최적화된 다양한 응용 프로그램을 만들어 보는 과정</p>
                             <div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
                         </div>
                         <div class="slot" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__고급_빅데이터사이언티스트.png')" href="javascript:alert('준비중입니다. 문의(02-3486-3456)');">
-                            <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__new.png"/>
+                            <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__new.png"/>--%>
                             <p class="courseName dnone long">빅데이터 사이언티스트 과정</p>
                             <p class="courseDescription dnone">스프링 프레임워크 기반으로 서버를 구축하고 빅데이터를 수집/처리/분석/시각화를 위한 프로그래밍을 배우는 과정 </p>
                             <div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
@@ -874,7 +874,7 @@
                     <!-- 신입사원채용교육Line#1 -->
                     <div id="Content" class="dnone">
                         <div style="float:left;">
-                            <img src="Images/Titles/MainPage_Title__신입사원채용교육.png" style="float:left; margin-bottom:2px;" alt="신입사원채용교육"/>
+                            <img src="${pageContext.request.contextPath}/assets/Images/Titles/MainPage_Title__신입사원채용교육.png" style="float:left; margin-bottom:2px;" alt="신입사원채용교육"/>
                             <div style="clear:both;"></div>
 
                             <style>
@@ -922,7 +922,7 @@
                                         <span style="font-weight:900; color:#ff0000;">모집중</span>
                                     </p>
                                 </div>
-                                <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>
+                                <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>--%>
                                 <p class="courseName dnone">-</p>
                                 <p class="courseDescription dnone">-</p>
                                 <div class="insideSlot" style="margin-top:-190px; height:190px; background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected190px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
@@ -937,7 +937,7 @@
                                         <span style="font-weight:900; color:#ff0000;">모집중</span>
                                     </p>
                                 </div>
-                                <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>
+                                <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>--%>
                                 <p class="courseName dnone">-</p>
                                 <p class="courseDescription dnone">-</p>
                                 <div class="insideSlot" style="margin-top:-190px; height:190px; background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected190px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
@@ -952,7 +952,7 @@
                                         <span style="font-weight:900; color:#ff0000;">모집중</span>
                                     </p>
                                 </div>
-                                <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>
+                                <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>--%>
                                 <p class="courseName dnone">-</p>
                                 <p class="courseDescription dnone">-</p>
                                 <div class="insideSlot" style="margin-top:-190px; height:190px; background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected190px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
@@ -967,7 +967,7 @@
                                         <span style="font-weight:900; color:#ff0000;">모집중</span>
                                     </p>
                                 </div>
-                                <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>
+                                <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>--%>
                                 <p class="courseName dnone">-</p>
                                 <p class="courseDescription dnone">-</p>
                                 <div class="insideSlot" style="margin-top:-190px; height:190px; background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected190px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
@@ -991,7 +991,7 @@
                                         <span style="font-weight:900; color:#ff0000;">모집중</span>
                                     </p>
                                 </div>
-                                <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>
+                                <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>--%>
                                 <p class="courseName dnone">-</p>
                                 <p class="courseDescription dnone">-</p>
                                 <div class="insideSlot" style="margin-top:-190px; height:190px; background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected190px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
@@ -1006,7 +1006,7 @@
                                         <span style="font-weight:900; color:#ff0000;">모집중</span>
                                     </p>
                                 </div>
-                                <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>
+                                <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>--%>
                                 <p class="courseName dnone">-</p>
                                 <p class="courseDescription dnone">-</p>
                                 <div class="insideSlot" style="margin-top:-190px; height:190px; background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected190px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
@@ -1021,7 +1021,7 @@
                                         <span style="font-weight:900; color:#ff0000;">모집중</span>
                                     </p>
                                 </div>
-                                <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>
+                                <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>--%>
                                 <p class="courseName dnone">-</p>
                                 <p class="courseDescription dnone">-</p>
                                 <div class="insideSlot" style="margin-top:-190px; height:190px; background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected190px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
@@ -1036,7 +1036,7 @@
                                         <span style="font-weight:900; color:#ff0000;">모집중</span>
                                     </p>
                                 </div>
-                                <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>
+                                <%--<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>--%>
                                 <p class="courseName dnone">-</p>
                                 <p class="courseDescription dnone">-</p>
                                 <div class="insideSlot" style="margin-top:-190px; height:190px; background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected190px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
