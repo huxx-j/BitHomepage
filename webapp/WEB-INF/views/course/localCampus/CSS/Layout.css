@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* Content CSS */
+/* Web Publish Team Woo Seok, Shin 20121214 */
+/* CSS 적용순서 : 아이디 > 태그와 클래스 > 클래스 > 태그
+/* CSS 선택자 선언순서 : Type Selector, Layout Selector, Class Selector, Etc */
+/* CSS 속성 선언순서 : display, position, float/clear, overflow, width/height, margin/padding, border, background, color/font, align, etc */
+
+#SkipMenu {
+	overflow:hidden; 
+	position:absolute;
+	left:0; 
+	top:0; 
+	z-index:500; 
+	width:100%; 
+	height:0px; 
+	background-color:#ffba00;
+	box-shadow:inset 0px -2px 5px rgba(0,0,0,0.1);
+}
+#Wrapper {position:relative;}
+#Header_Wrap {width:100%; height:115px; background:url('/localCampus/Images/Common/bg_header.png') repeat-x}
+#Header {overflow:hidden; width:100%; max-width:1200px; margin:0 auto}
+#Header h1 {float:left; margin-left:10px;height:34px}
+#Header h2 {float:left; margin:10px 0 0 10px; clear:both}
+#Header .telNum {display:block; float:right; margin:21px 10px 0 0}
+#Header .telNum.on {display:none}
+#Header .btnLnb {display:none; float:right; margin:22px 10px 0 0; cursor:pointer}
+
+#GNB_Wrap {float:right}
+#GNB_Wrap .gnb {overflow:hidden; margin:10px 5px 0 5px;}
+#GNB_Wrap .gnb li {float:left; background:url('/localCampus/Images/Common/ico_line2.png') right 0 no-repeat}
+#GNB_Wrap .gnb li a {display:block; padding:0 8px; font-size:11px; color:#fff}
+#GNB_Wrap .gnb li a:hover {color:#f0dead}
+#GNB_Wrap .gnb li a.on {color:#f0dead}
+#GNB_Wrap .gnb li.last {background:none}
+
+#LNB_Wrap:after {content:""; display:block; clear:both}
+#LNB_Wrap {float:left; margin:42px 0 0 100px}
+
+.lnb {overflow:hidden;}
+.lnb li {float:left; background:url('/localCampus/Images/Common/ico_line1.png') right 0 no-repeat}
+.lnb li.last {background:none}
+.lnb li a {display:block; padding:0 12px; font-family: 'Nanum Gothic Bold'; font-size:14px; color:#fff;}
+.lnb li a:hover {color:#f0dead}
+.lnb li a.on {color:#f0dead}
+
+.lnb_mob {display:none; position:absolute; right:-160px; top:0px; z-index:99; background:#3577ba}
+.lnb_mob.on {display:block}
+.lnb_mob li {padding:0 5px; text-align:right}
+.lnb_mob li a {display:block; width:130px; padding:12px 10px;  border-bottom:1px solid #14487d; border-top:1px solid #5d96d1; font-family: 'Nanum Gothic'; font-size:13px; color:#fff}
+.lnb_mob li.last a {border-bottom:0px}
+.lnb_mob li.tit {padding:15px 10px; background:#fafafa; font-family: 'Nanum Gothic Bold'; font-size:14px; color:#14487d}
+.lnb_mob .telNum_mob {padding:12px 10px; background:#1c5a99; font-family: 'Nanum Gothic Bold'; font-size:14px; color:#fff}
+.lnb_mob .delete {position:absolute; left:10px; top:15px; cursor:pointer}
+
+#Container {position:relative; width:100%; padding:12px 0 35px 0}
+#Content {width:100%; max-width:1200px; margin:0 auto;}
+#Content.sub {width:100%; min-height:500px; max-width:1110px; min-width:1000px; padding:42px 45px; border:1px solid #d1d1d1; background:#fff}
+
+#Footer_Wrap {width:100%;}
+#Footer_Wrap .familySite_wrap {width:100%; height:47px; background:#458acf}
+#Footer_Wrap .familySite_wrap .familySite {overflow:hidden; max-width:1200px;  margin:0 auto; padding-right:10px}
+#Footer_Wrap .familySite_wrap .familySite select {float:right; width:200px; margin:10px 0 0 0; font-size:12px; color:#555}
+#Footer {height:100px;  margin:0 auto}
+#Footer .address {margin:30px 0; text-align:center; line-height:20px;}
+
+/* Layer Pop */
+.lp_blue {border:1px solid #3679bd}
+.lp_header {color:#333}
+.lp_header h1 {padding-bottom:5px; border-bottom:1px solid #d1d1d1; font-family: 'Nanum Gothic Bold'; font-size:14px;}
+.lp_container {width:100%; height:100%; padding:15px}
+
+@media (max-width:1000px){
+	#LNB_Wrap {margin:0}
+	#Header .btnLnb {display:block}
+	#Header .lnb {display:none}
+}
+/*
+@media (max-width:800px){
+	.col3 {width:47.91489%;}
+	#LNB_Wrap {margin:0}
+	#Header .btnLnb {display:block}
+	#Header .lnb {display:none}
+}
+
+@media (max-width:480px){
+	.lp_container {padding:15px}
+	.cntImg {display:none}
+	.col3 {width:100%;}
+	#Header .telNum {display:none}
+}
+*/
+
