@@ -190,7 +190,7 @@ String CourseID = "StorageSystem_FM";
 						<div class="con_wrap1709">
 							<h5>선수 과목</h5>
 							<ul class="ul_dot_gray">
-								<li>C Programming <a href="/course/shortcourse/detailPage/Course_c" class="btnBlueBorder">자세히보기</a></li>
+								<li>C Programming <a href="/course/shortcourse/detailPage/Course_C" class="btnBlueBorder">자세히보기</a></li>
 								<li>System Programming <span class="colorBitBlue">(리눅스 시스템에 대한 전반적인 이해)</span></li>
 							</ul>
 						</div>

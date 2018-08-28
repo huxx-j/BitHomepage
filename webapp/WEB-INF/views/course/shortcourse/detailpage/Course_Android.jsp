@@ -1,12 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
-<%-- <%
-'//"Android1_core" -> "android_programming"으로 변경함 -> 다시 "Android1_core"으로 변경함. (2016-12-01-YG)
-CourseID = "Android1_core"
-'//CourseID = "androidVacation"
-SubjectName = "안드로이드 앱 개발"
-%> --%>
+<%!
+//"Android1_core" -> "android_programming"으로 변경함 -> 다시 "Android1_core"으로 변경함. (2016-12-01-YG)
+String CourseID = "Android1_core";
+//CourseID = "androidVacation"
+String SubjectName = "안드로이드 앱 개발";
+%>
 
 <!DOCTYPE html>
 <!-- not REDIRECTABLE TO MOBILE -->
@@ -92,7 +92,7 @@ SubjectName = "안드로이드 앱 개발"
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>단기핵심과정
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>Mobile
 						</p>
-						<%-- <h4><%=SubjectName%></h4> --%>
+						<h4><%=SubjectName%></h4>
 					</div>
 
 					<section class="section">

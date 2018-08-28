@@ -1,5 +1,20 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+<%!
+String strCourseID = "DSci_PracticalMLearn1";
+%>
+
+<%!
+//dim strDate
+String strDate="2017.12.12 ~ 2017.12.21 (화,목)";
+
+// 과정명 변경 (2018-03-08) 실용 머신러닝 
+String strSubject = "Python을 활용한 실용머신러닝 - 초급";
+//strSubject="실용 머신러닝 초급 - Python"
+
+int indexDepth3=2;
+%>
 <!DOCTYPE html>
 <!-- NOT REDIRECTABLE to Mobile -->
 <html lang="ko">
@@ -69,7 +84,7 @@
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>단기핵심과정
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>Data Science
 						</p>
-					
+						<h4><%=strSubject%></h4>
 					</div>
 
 					<section class="section">

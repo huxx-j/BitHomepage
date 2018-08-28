@@ -1,14 +1,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%-- <%
-strCourseID = "Bchain_HyperConnected"
+<%!
+String strCourseID = "Bchain_HyperConnected";
 %>
 
-<%
-strSubject = "블록체인 - 초연결 기술과 규제"
+<%!
+String strSubject = "블록체인 - 초연결 기술과 규제";
 
-indexDepth3=2
-%> --%>
+int indexDepth3=2;
+%>
 
 <!DOCTYPE html>
 <!-- NOT REDIRECTABLE to Mobile -->
@@ -79,7 +79,7 @@ indexDepth3=2
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>단기핵심과정
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>Blockchain
 						</p>
-						<%-- <h4><%=strSubject%></h4> --%>
+						 <h4><%=strSubject%></h4>
 					</div>
 
 					<section class="section">

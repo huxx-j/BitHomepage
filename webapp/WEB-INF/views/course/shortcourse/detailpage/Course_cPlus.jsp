@@ -35,11 +35,11 @@
 	<c:import url="/WEB-INF/views/Include/HeaderScript1709.jsp"/>
 	<script type="text/javascript">
         $(document).ready(function(){
-            <!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"-->
+            /* <!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"--> */
             <c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
-            <!--#include virtual="/Include/HeaderScriptReady1709.inc"-->
+            /* <!--#include virtual="/Include/HeaderScriptReady1709.inc"--> */
             <c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
-            /********************* 고용보험환급 div, btn 관련. *******************************************************/
+            //********************* 고용보험환급 div, btn 관련. *******************************************************/
             $("#btnOpenSaGn1").on("click", function(event) {
                 var height = document.body.scrollHeight * 1.0;
                 $( 'html, body' ).stop().animate( { scrollTop : height }, 100, function() { } );
