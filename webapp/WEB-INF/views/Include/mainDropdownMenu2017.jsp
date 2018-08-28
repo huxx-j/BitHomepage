@@ -768,21 +768,21 @@
             <div class="divMiddleInner" style="width:200px;">프로젝트 발표회</div>
         </div>
         -->
-        <div class="divMiddle  " href="/Course/Kukka/Course_Kukka_Introduction.asp">
+        <div class="divMiddle  " href="/course/kukka/Course_Kukka_Introduction">
             <div class="divMiddleInner" style="width:200px;">국가기간전략산업직종훈련 소개</div>
         </div>
-        <div class="divMiddle long twolines" href="/Course/Kukka/Course_Kukka_RaspberryPiIoTService_2018.asp">
+        <div class="divMiddle long twolines" href="/course/kukka/Course_Kukka_RaspberryPiIoTService_2018">
             <div class="divMiddleInner twolines" style="width:200px;">IoT를 활용한 자바 웹&amp;모바일 고급인력 양성과정</div>
         </div>
 
-        <div class="divMiddle long twolines" href="/Course/Kukka/Course_Kukka_EmbeddedService_2018.asp">
+        <div class="dnone divMiddle long twolines" href="/course/kukka/Course_Kukka_EmbeddedService_2018">
             <div class="divMiddleInner twolines" style="width:200px;">IoT Software개발 고급인력 양성과정</div>
         </div>
 
-        <div class="dnone divMiddle long twolines" href="/Course/Kukka/Course_Kukka_FinTech_2018.asp">
+        <div class="dnone divMiddle long twolines" href="/course/kukka/Course_Kukka_FinTech_2018">
             <div class="divMiddleInner twolines" style="width:200px;">금융 IT기반 핀테크 전문가<br/> 양성과정</div>
         </div>
-        <div class="divMiddle long twolines" href="/Course/Kukka/Course_Kukka_JavaBigData_2018.asp">
+        <div class="divMiddle long twolines" href="/course/kukka/Course_Kukka_JavaBigData_2018">
             <div class="divMiddleInner twolines" style="width:200px;">JAVA 기반 빅데이터 분석을 위한 <br/>고급인력 양성과정</div>
         </div>
 
@@ -808,40 +808,40 @@
         <div class="divTop2"></div>
         <div class="divBlank"></div>
 
-        <div class="divMiddle" href="/Course/Employ/Course_Employ.asp">
+        <div class="divMiddle" href="/course/employ/Course_Employ">
             <div class="divMiddleInner" style="width:190px;">신입사원 채용교육 소개</div>
         </div>
-        <div class="divMiddle" href="/Course/Employ/Course_Employ_ITtelecom.asp">
+        <div class="divMiddle" href="/course/employ/Course_Employ_ITtelecom">
             <div class="divMiddleInner" style="width:190px;">㈜아이티텔레콤 <span style="font-size:13px;">[모집중]</span></div>
         </div>
-        <div class="divMiddle" href="/Course/Employ/Course_Employ_BAinfra.asp">
+        <div class="divMiddle" href="/course/employ/Course_Employ_BAinfra">
             <div class="divMiddleInner" style="width:190px;">㈜비에이인프라 <span style="font-size:13px;">[모집중]</span></div>
         </div>
-        <div class="divMiddle" href="/Course/Employ/Course_Employ_ivis.asp">
+        <div class="divMiddle" href="/course/employ/Course_Employ_ivis">
             <div class="divMiddleInner" style="width:190px;">㈜아이비스 <span style="font-size:13px;">[모집중]</span></div>
         </div>
-        <div class="dnone divMiddle" href="/Course/Employ/Course_Employ_Cafe24.asp">
+        <div class="dnone divMiddle" href="/course/employ/Course_Employ_Cafe24">
             <div class="divMiddleInner" style="width:190px;">㈜카페24<span style="font-size:13px;">[모집중]</span></div>
         </div>
-        <div class="divMiddle" href="/Course/Employ/Course_Employ_BitComputer.asp">
+        <div class="divMiddle" href="/course/employ/Course_Employ_BitComputer">
             <div class="divMiddleInner" style="width:190px;">㈜비트컴퓨터 <span style="font-size:13px;">[모집중]</span></div>
         </div>
-        <div class="divMiddle" href="/Course/Employ/Course_Employ_AurosTech.asp">
+        <div class="divMiddle" href="/course/employ/Course_Employ_AurosTech">
             <div class="divMiddleInner" style="width:190px;">㈜오로스테크놀로지 <span style="font-size:13px;">[모집중]</span></div>
         </div>
-        <div class="divMiddle" href="/Course/Employ/Course_Employ_PSK.asp">
+        <div class="divMiddle" href="/course/employ/Course_Employ_PSK">
             <div class="divMiddleInner" style="width:190px;">㈜피에스케이 <span style="font-size:13px;">[모집중]</span></div>
         </div>
-        <div class="divMiddle" href="/Course/Employ/Course_Employ_BizTechPartners.asp">
+        <div class="divMiddle" href="/course/employ/Course_Employ_BizTechPartners">
             <div class="divMiddleInner" style="width:190px;">㈜비즈테크파트너스 <span style="font-size:13px;">[모집중]</span></div>
         </div>
-        <div class="divMiddle" href="/Course/Employ/Course_Employ_TaehaMechatronics.asp">
+        <div class="divMiddle" href="/course/employ/Course_Employ_TaehaMechatronics">
             <div class="divMiddleInner" style="width:190px;">㈜테하메카트로닉스 <span style="font-size:13px;">[모집중]</span></div>
         </div>
-        <div class="dnone divMiddle" href="/Course/Employ/Course_Employ_LEETECH.asp">
+        <div class="dnone divMiddle" href="/course/employ/Course_Employ_LEETECH">
             <div class="divMiddleInner" style="width:190px;">㈜리텍 <span style="font-size:13px;">[모집중]</span></div>
         </div>
-        <div class="dnone divMiddle" href="/Course/Employ/Course_Employ_voiceye.asp">
+        <div class="dnone divMiddle" href="/course/employ/Course_Employ_voiceye">
             <div class="divMiddleInner" style="width:190px;">㈜보이스아이 <span style="font-size:13px;">[모집중]</span></div>
         </div>
         <!--
@@ -857,7 +857,7 @@
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div>
 
-        <div class="divMiddle long" href="/Course/Kukka/Course_Consortium_RaspberryPi_IoT.asp">
+        <div class="divMiddle long" href="/course/kukka/Course_Consortium_RaspberryPi_IoT">
             <div class="divMiddleInner" style="width:220px; letter-spacing:-2px;">라즈베리파이를 활용한 IoT개발 실무과정</div>
         </div>
         <div class="divBottom"></div>

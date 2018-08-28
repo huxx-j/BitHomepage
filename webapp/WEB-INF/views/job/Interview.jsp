@@ -84,8 +84,8 @@
         <%--'response.write "totalNum : " & totalNum & "<br/>"--%>
     <%--%>--%>
 
-    <link rel="stylesheet" type="text/css" href="/job/bodyStyle.css">
-    <link rel= "shortcut icon" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/CSS/bodyStyle.css">
+    <link rel= "shortcut icon" href="${pageContext.request.contextPath}/assets/images/favicon.ico">
 
     <!-- #include virtual="/Include/Meta.asp"-->
     <c:import url="/WEB-INF/views/Include/Meta.jsp"/>
@@ -359,7 +359,7 @@
                     <p>
                         <img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_Home.png"/>
                         <img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>홈
-                        <img src="${pageContext.request.contextPath}/assets/Images/Icons/cn_ArrowTriangleRight.png"/>취업지원센터
+                        <img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>취업지원센터
                     </p>
                     <h4 style="float:left;">면접후기</h4>
                     <div style="clear:both; height:10px;"></div>
@@ -419,7 +419,7 @@
                 <div style="margin-top:25px;">
                     <div id="myBox1" class="myPopup" style="display:none;"></div>
                     <div class="myBlurAll" style="display:none;"></div>
-//                    <%
+                    <%
 //                        String search=request.getParameter("search");
 //                        if (search!="") {
 //                            out.print("<p class=\"blueTxt\">\n" +
@@ -430,7 +430,7 @@
                     <!-- Search -->
                     <div style="height:60px; margin:20px 0 10px 0px; ">
                         <input type="text" id="inputSearch" class="form-control" placeholder="(검색어를 입력하세요)" value="" style="height:32px; width:40%; font-size:1.5em; border-radius:5px; float:left;"/>
-                        <a href="javascript:btnSearch();" style="float:left;" class="aButton" ><img src="/Images/Content/Mobile/icn_Search.png" style="width:30px; margin-left:2px; border:1px solid #c9c9c9; padding:2px; border-radius:5px; box-shadow:0px 0px 3px #c9c9c9;"/></a>
+                        <a href="javascript:btnSearch();" style="float:left;" class="aButton" ><img src="${pageContext.request.contextPath}/assets/Images/Content/Mobile/icn_Search.png" style="width:30px; margin-left:2px; border:1px solid #c9c9c9; padding:2px; border-radius:5px; box-shadow:0px 0px 3px #c9c9c9;"/></a>
 
                         <!--<a href="javascript:btnSearch();" class="btn sml red" style="height:24px; margin-left:5px; padding:2px 5px;; float:left;"><span style="line-height:30px;">검색</span></a>-->
                         <div style="clear:both;"></div>
@@ -460,7 +460,7 @@
                             </tr>
                             </thead>
                             <tbody>
-//                            <%
+                           <%
     //                                'do while rs.eof = false
 //
 //                                FOR i=1 TO rs.PageSize STEP 1
@@ -495,7 +495,7 @@
                         </table>
                     </div>
                     <!-- Paging -->
-//                    <%
+                    <%
 //                        Dim pagingStartNum
 //                        Dim pagingEndNum
 //                        Dim pagingPrevNum
@@ -585,7 +585,7 @@
 </div>
 </body>
 </html>
-//<%
+<%
 //    rs.Close
 //    Dbcon.Close
 //    set rs=nothing
