@@ -29,6 +29,14 @@ public class ShortController {
     @RequestMapping(value = "/detailPage/Course_C_Weekend", method = RequestMethod.GET)
     public String Course_C_Weekend() { return "course/shortcourse/detailPage/Course_C_Weekend"; }
 
+    @RequestMapping(value = "/detailPage/Course_Python", method = RequestMethod.GET)
+    public String Course_Python() { return "course/shortcourse/detailPage/Course_Python"; }
+
+    @RequestMapping(value = "/detailPage/Course_cPlus", method = RequestMethod.GET)
+    public String Course_cPlus() { return "course/shortcourse/detailPage/Course_cPlus"; }
+    @RequestMapping(value = "/detailPage/Course_java", method = RequestMethod.GET)
+    public String Course_java() { return "course/shortcourse/detailPage/Course_Java"; }
+
     @RequestMapping(value = "/detailPage/Course_C", method = RequestMethod.GET)
     public String Course_C() { return "course/shortcourse/detailPage/Course_c"; }
 
@@ -199,13 +207,4 @@ public class ShortController {
     @RequestMapping(value = "/detailPage/Course_StorageSystem_FMBased", method = RequestMethod.GET)
     public String Course_StorageSystem_FMBased() { return "/course/shortcourse/detailPage/Course_StorageSystem_FMBased"; }
 
-    @RequestMapping(value = "/detailPage/Course_c", method = RequestMethod.GET)
-    public String Course_c() {
-        return "/course/shortcourse/detailPage/Course_c";
-    }
-
-    @RequestMapping(value = "/detailpage/Course_Python", method = RequestMethod.GET)
-    public String Course_Python() {
-        return "course/shortcourse/detailpage/Course_Python";
-    }
 }
