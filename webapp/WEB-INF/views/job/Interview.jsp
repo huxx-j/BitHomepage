@@ -18,7 +18,6 @@
 
     <!--#include virtual="/Include/config.asp"-->
     <!--#include Virtual="/Include/javaScriptFun.asp"-->
-
     <!--#include virtual="/Include/Common_Defend_1709.asp"-->
     <c:import url="/WEB-INF/views/Include/Common_Defend_1709.jsp"/>
     <!--#include file="include/jobLoginChk.asp"-->
@@ -44,13 +43,13 @@
         <%--Set Dbcon = Server.CreateObject("ADODB.Connection")--%>
         <%--Dbcon.Open Con_bit_db--%>
     <%--%>--%>
-    <script type="text/javascript">
-        // 맨 처음에 페이지 없이 열때
-        var page=${page};
-        if(page=""){
-            page=1;
-        }
-    </script>
+    <%--<script type="text/javascript">--%>
+        <%--// 맨 처음에 페이지 없이 열때--%>
+        <%--var page=${page};--%>
+        <%--if(page=""){--%>
+            <%--page=1;--%>
+        <%--}--%>
+    <%--</script>--%>
     <%--<%--%>
         <%--page = Request.QueryString("page")--%>
         <%--IF page="" THEN--%>
