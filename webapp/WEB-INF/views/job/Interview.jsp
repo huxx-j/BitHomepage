@@ -483,7 +483,7 @@
                                 <td>
                                     <a href="#" id="a${vo.Num}" class="aOpenPopup">
                                         <span style="font-size:1.75em; font-weight:900; text-shadow:1px 1px 1px #828282; margin-right:5px;">${vo.CompName}</span>
-                                        <img src="${vo.ImagePath}" style="max-width:175px; max-height:39px; margin-top:0px;"/>
+                                        <img src="${vo.ImageLogoPath}" style="max-width:175px; max-height:39px; margin-top:0px;"/>
 
                                     </a>
                                 </td>
@@ -493,6 +493,8 @@
                             </tbody>
                         </table>
                     </div>
+
+
                     <!-- Paging -->
                     <%
 //                        Dim pagingStartNum

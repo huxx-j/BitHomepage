@@ -33,7 +33,7 @@ public class JobController {
     @RequestMapping(value = "/search", method = {RequestMethod.POST,RequestMethod.GET})
     public List<InterviewVo> delCate(@RequestParam("inputSearch") String inputSearch ){
         return jobService.search(inputSearch);
-    }
+}
     @ResponseBody
     @RequestMapping(value = "/selectList", method = {RequestMethod.POST,RequestMethod.GET})
     public List<InterviewVo> selectList(){
@@ -44,6 +44,7 @@ public class JobController {
     public String Interview(Model model){
         List<InterviewVo> list=jobService.selectList();
         model.addAttribute("list",list);
+        System.out.println(list);
         return "/job/Interview";
     }
 

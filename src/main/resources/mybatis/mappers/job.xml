@@ -6,24 +6,28 @@
     <select id="selectList" resultType="InterviewVo">
         <![CDATA[
             select
-            Num,
-            InterviewManner,
-            InterviewDescription,
-            InterViewOpinion,
-            studName,
-            Department,
-            CompName,
-            EstablishYear,
-            Business,
-            Address,
-            HomePage,
-            YearSell,
-            StaffNum,
-            UpdateDate,
-            CompSeqNum
-            from AfterInterview
+            c.Num,
+            c.InterviewManner,
+            c.InterviewDescription,
+            c.InterViewOpinion,
+            c.studName,
+            c.Department,
+            c.CompName,
+            c.EstablishYear,
+            c.Business,
+            c.Address,
+            c.HomePage,
+            c.YearSell,
+            c.StaffNum,
+            c.UpdateDate,
+            c.CompSeqNum,
+            I.ImageLogoPath,
+            I.HomepageURL
+            from AfterInterview c, InterviewImageLogoPath I
+            where c.CompName=I.CompName;
         ]]>
     </select>
+
     <!--CompName기준으로 검색(면접후기 검색시 사용) -->
     <select id="search" parameterType="String" resultType="InterviewVo">
         <![CDATA[
