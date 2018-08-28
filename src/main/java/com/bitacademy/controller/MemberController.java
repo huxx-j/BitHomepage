@@ -57,9 +57,8 @@ public class MemberController {
         UserVo authUser = memberService.login_ok(userVo);
         if (authUser != null) {
             session.setAttribute("authUser", authUser);
-            return userVo.getReturn_url();
+            return authUser.getReturn_url();
         }
-        System.out.println(userVo.toString());
         return "redirect:/member/login?result=fail";
     }
 
@@ -76,4 +75,3 @@ public class MemberController {
         return "/index";
     }
 }
-

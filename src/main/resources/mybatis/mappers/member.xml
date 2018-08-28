@@ -12,7 +12,13 @@
 
     <select id="login_ok" parameterType="UserVo" resultType="UserVo">
         <![CDATA[
-                select User_no, NameHan, LoginID from Users where LoginID=#{loginID} and Password=#{password}
+                select User_no, NameHan, LoginID, AuthCode,
+                        substring(StudResNum,1,6) StudResNum, SleepStat,
+                        DATEDIFF(current_date,RegDate) RegDate,
+                        DATEDIFF(current_date,ReAgreeDate) ReAgreeDate
+                from Users
+                where LoginID=#{loginID}
+                       and Password=#{password}
         ]]>
     </select>
 

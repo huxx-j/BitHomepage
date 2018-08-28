@@ -6,6 +6,60 @@ public class UserVo {
     private String return_url;
     private int user_no;
     private String nameHan;
+    private int authCode;
+    private String studResNum;
+    private String sleepStat;
+    private int regDate;
+    private int reAgreeDate;
+    private int reAgreeStat;
+
+    public int getReAgreeStat() {
+        return reAgreeStat;
+    }
+
+    public void setReAgreeStat(int reAgreeStat) {
+        this.reAgreeStat = reAgreeStat;
+    }
+
+    public String getSleepStat() {
+        return sleepStat;
+    }
+
+    public void setSleepStat(String sleepStat) {
+        this.sleepStat = sleepStat;
+    }
+
+    public int getRegDate() {
+        return regDate;
+    }
+
+    public void setRegDate(int regDate) {
+        this.regDate = regDate;
+    }
+
+    public int getReAgreeDate() {
+        return reAgreeDate;
+    }
+
+    public void setReAgreeDate(int reAgreeDate) {
+        this.reAgreeDate = reAgreeDate;
+    }
+
+    public int getAuthCode() {
+        return authCode;
+    }
+
+    public void setAuthCode(int authCode) {
+        this.authCode = authCode;
+    }
+
+    public String getStudResNum() {
+        return studResNum;
+    }
+
+    public void setStudResNum(String studResNum) {
+        this.studResNum = studResNum;
+    }
 
     public String getLoginID() {
         return loginID;
@@ -55,6 +109,12 @@ public class UserVo {
                 ", return_url='" + return_url + '\'' +
                 ", user_no=" + user_no +
                 ", nameHan='" + nameHan + '\'' +
+                ", authCode=" + authCode +
+                ", studResNum='" + studResNum + '\'' +
+                ", sleepStat='" + sleepStat + '\'' +
+                ", regDate='" + regDate + '\'' +
+                ", reAgreeDate='" + reAgreeDate + '\'' +
+                ", reAgreeStat='" + reAgreeStat + '\'' +
                 '}';
     }
 }
