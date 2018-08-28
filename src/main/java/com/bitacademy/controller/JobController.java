@@ -25,9 +25,7 @@ public class JobController {
     }
 
     @RequestMapping(value = "/List", method=RequestMethod.GET )
-    public String List(Model model){
-        List<InterviewVo> list=jobService.selectList();
-        model.addAttribute("list",list);
+    public String List(){
         return "/job/List";
     }
 
@@ -43,7 +41,9 @@ public class JobController {
     }
 
     @RequestMapping(value = "/Interview")
-    public String Interview(){
+    public String Interview(Model model){
+        List<InterviewVo> list=jobService.selectList();
+        model.addAttribute("list",list);
         return "/job/Interview";
     }
 

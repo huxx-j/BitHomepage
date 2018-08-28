@@ -196,7 +196,7 @@
 
                     <div class="con_wrap1709 ">
                         <h5>과정로드맵</h5>
-                        <img src="Images/Python-P.PNG" style="text-align:center; width:100%;"/>
+                        <img src="${pageContext.request.contextPath}/assets/Images/Python-P.PNG" style="text-align:center; width:100%;"/>
                     </div>
 
                     <!-- con_wrap -->
