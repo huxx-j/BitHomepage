@@ -24,4 +24,13 @@ public class MemberDao {
     public int member_ipin_result_ok_old(MemberVo memberVo) {
         return sqlSession.insert("member.member_ipin_result_ok_old", memberVo);
     }
+
+    public int ActivateSleepingAccount(UserVo authUser) {
+        return sqlSession.update("member.ActivateSleepingAccount", authUser);
+    }
+
+    public int ReAgree(UserVo authUser) {
+        return sqlSession.update("member.ReAgree", authUser);
+
+    }
 }
