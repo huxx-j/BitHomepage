@@ -21,14 +21,15 @@ public class MemberService {
             userVo.setReturn_url("/index"); //로그인이 실패하면 메인페이지로 리다이렉트
             return userVo;
         } else {
-            if (authVo.getSleepStat().equals("휴면")){
-                authVo.setReturn_url("member/login_ActivateSleepingAccount"); //상태값이 휴면이면 휴면해제하는 페이지로 리다이렉트
+            if (authVo.getSleepStat().equals("휴면")) {
+//                authVo.setReturn_url("member/login_ActivateSleepingAccount"); //상태값이 휴면이면 휴면해제하는 페이지로 리다이렉트
+                authVo.setReturn_url("member/ActivateSleepingAccount"); //상태값이 휴면이면 휴면해제하는 페이지로 리다이렉트
                 return authVo;
             } else {
                 if (authVo.getRegDate() > 730) { //가입일이나 재동의일이 2년전이면 상태를 1로 설정
                     if (authVo.getReAgreeDate() > 730) {
-                        authVo.setReAgreeStat(1);
-                        authVo.setReturn_url("member/login_Reagree"); //상태값이 1이면 재동의 필요하니 재동의 페이지로 리다이렉트
+//                        authVo.setReAgreeStat(1);
+                        authVo.setReturn_url("member/ReAgree"); //상태값이 1이면 재동의 필요하니 재동의 페이지로 리다이렉트
                         return authVo;
                     }
                 }
@@ -41,5 +42,23 @@ public class MemberService {
 
     public int member_ipin_result_ok_old(MemberVo memberVo) {
         return memberDao.member_ipin_result_ok_old(memberVo);
+    }
+
+    public UserVo ActivateSleepingAccount(UserVo authUser) {
+        int sleepStat = memberDao.ActivateSleepingAccount(authUser);
+        if (sleepStat == 1) {
+            if (authUser.getRegDate() > 730) {
+                if (authUser.getReAgreeDate() > 730) {
+                    authUser.setReturn_url("member/ReAgree");
+                    return authUser;
+                }
+            }
+        }
+        authUser.setReturn_url("/index");
+        return authUser;
+    }
+
+    public int ReAgree(UserVo authUser) {
+        return memberDao.ReAgree(authUser);
     }
 }

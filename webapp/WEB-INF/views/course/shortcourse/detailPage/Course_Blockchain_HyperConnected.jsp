@@ -24,7 +24,7 @@ int indexDepth3=2;
 	
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<!-- .btn_refundView 및 .btn_refundView2는 /JS/Common.js 에 이벤트핸들러 정의 -->
-	<script src="Common_getIndex.js"></script>
+	<!-- <script src="./Common_getIndex.js"></script> -->
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/common_css/Common_CSS_Detail_720_1709.css" >
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/common_css/Common_CSS_Detail_720plus_1709.css" >
 	<!-- #include virtual="/Include/HeaderScript1709.asp"-->

@@ -27,4 +27,16 @@
                 insert into
         ]]>
     </insert>
+
+    <update id="ReAgree" parameterType="UserVo">
+        <![CDATA[
+                update Users set ReAgreeDate=current_date where LoginID=#{loginID} and User_no=#{user_no}
+        ]]>
+    </update>
+
+    <update id="ActivateSleepingAccount" parameterType="UserVo">
+        <![CDATA[
+                update Users set SleepStat='정상' where LoginID=#{loginID} and User_no=#{user_no}
+        ]]>
+    </update>
 </mapper>

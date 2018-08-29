@@ -92,4 +92,9 @@ public class SupportController {
         return supportService.refChk(idx);
 
     }
+
+    @RequestMapping(value = "/Support_fund")
+    public String Support_fund(){
+        return "support/Support_fund";
+    }
 }

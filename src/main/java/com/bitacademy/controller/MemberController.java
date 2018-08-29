@@ -74,4 +74,20 @@ public class MemberController {
         memberService.member_ipin_result_ok_old(memberVo);
         return "/index";
     }
+
+    @RequestMapping(value = "/ActivateSleepingAccount") //휴면계정 활성화
+    public String ActivateSleepingAccount(HttpSession session){
+        UserVo authUser = (UserVo)session.getAttribute("authUser");
+        authUser = memberService.ActivateSleepingAccount(authUser);
+        return authUser.getReturn_url();
+
+    }
+
+    @RequestMapping(value = "/ReAgree", method = RequestMethod.POST) //휴면계정 활성화
+    public String ReAgree(HttpSession session){
+        UserVo authUser = (UserVo)session.getAttribute("authUser");
+        memberService.ReAgree(authUser);
+        return "/index";
+    }
 }
+

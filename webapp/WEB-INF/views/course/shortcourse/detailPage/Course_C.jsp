@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
-<%
+<%!
 //(DEPRECATED) SubjectName = "[주중반] C 프로그래밍"
 String SubjectName = "[주중반] C Master";
 String CourseID = "C2_core";
