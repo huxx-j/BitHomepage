@@ -221,6 +221,7 @@
 							<!--<div id="flipbook" style="border:2px solid #d7d7d7; border-radius:3px;">-->
 							<div id="flipbook" style="box-shadow:0 4px 10px #666;">
 								<!--#include file="module_Busan_Booklet.asp"-->
+								<jsp:include page="/WEB-INF/views/course/localCampus/module_Busan_Booklet.jsp" flush="true"></jsp:include>
 							</div>
 							<div style="display:none; margin-left:270px; margin-top:30px;">
 								<a href="#" id="btnPrevious" class="btn mid blue disabled" style="float:left; margin-left:40px;">이전</a>
@@ -255,7 +256,7 @@
 						<!-- con_wrap1709 -->
 						<div class="con_wrap1709">
 							<h5>단기과정</h5>
-							<h5 class="small"><a href="/course/localCampus/DetailPage/Busan_C.asp">C Programming</a></h5>
+							<h5 class="small"><a href="/course/localCampus/DetailPage/Busan_c">C Programming</a></h5>
 							<div class="divTable">
 								<table>
 									<colgroup>
@@ -293,7 +294,7 @@
 									</tbody>
 								</table>
 							</div>
-							<h5 class="small"><a href="/course/localCampus/DetailPage/Busan_Java.asp">Java Programming</a></h5>
+							<h5 class="small"><a href="/course/localCampus/DetailPage/Busan_java">Java Programming</a></h5>
 							<div class="divTable">
 								<table>
 									<colgroup>
@@ -332,7 +333,7 @@
 									</tbody>
 								</table>
 							</div>
-							<h5 class="small"><a href="/course/localCampus/DetailPage/Busan_C2.asp">자료구조/알고리즘</a></h5>
+							<h5 class="small"><a href="/course/localCampus/DetailPage/Busan_c2">자료구조/알고리즘</a></h5>
 							<div class="divTable">
 								<table>
 									<colgroup>
@@ -382,7 +383,7 @@
 						<!-- con_wrap1709 -->
 						<div class="con_wrap1709">
 							<h5>고급과정<a href="javascript:showBooklet();" title="프로젝트 살펴보기" class="btnRedBorder" style="font-size:15px; padding:0 5px; margin-left:10px; border-radius:0px; letter-spacing:-1.5px;">프로젝트 살펴보기</a></h5>
-							<h5 class="small"><a href="/course/localCampus/DetailPage/Busan_JavaHigh.asp">JAVA 고급과정</a></h5>
+							<h5 class="small"><a href="/course/localCampus/DetailPage/Busan_JavaHigh">JAVA 고급과정</a></h5>
 							<div class="divTable">
 								<table>
 									<colgroup>

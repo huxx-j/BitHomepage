@@ -291,6 +291,7 @@
 						<div id="divSection1" class="con_wrap first last" style="margin-left:40px; display:none; z-index:10000; ">
 							<div id="flipbook" style="box-shadow:0 4px 10px #666;">
 								<!--#include file="module_Gunpo_Booklet.asp"-->
+								<jsp:include page="/WEB-INF/views/course/localCampus/module_Gunpo_Booklet.jsp" flush="true"></jsp:include>
 							</div>
 							<div style="display:none; margin-left:270px; margin-top:30px;">
 								<a href="#" id="btnPrevious" class="btn mid blue disabled" style="float:left; margin-left:40px;">이전</a>
@@ -311,6 +312,7 @@
 						<div id="divSection3" class="con_wrap first last" style="margin-left:40px; display:none; z-index:10000;">
 							<div id="flipbook_3" style="box-shadow:0 4px 10px #666; z-index:10000;">
 								<!--#include file="module_Gunpo_EntryWorks.asp"-->
+								<jsp:include page="/WEB-INF/views/course/localCampus/module_Gunpo_EntryWorks.jsp" flush="true"></jsp:include>
 							</div>
 							<div style="display:none; margin-left:270px; margin-top:30px;">
 								<a href="#" id="btnPrevious_3" class="btn mid blue disabled" style="float:left; margin-left:40px;">이전</a>

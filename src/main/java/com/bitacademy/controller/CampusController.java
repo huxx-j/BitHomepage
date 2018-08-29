@@ -60,6 +60,11 @@ public class CampusController {
     public String Busan_c2() {
         return "/course/localCampus/DetailPage/Busan_c2";
     }
+    /*@RequestMapping(value = "/module_Busan_Booklet", method = RequestMethod.GET)
+    public String module_Busan_Booklet() {
+        return "/course/localCampus/module_Busan_Booklet";
+    }*/
+    
 
     ///////////군포////////////////
     @RequestMapping(value = "/localCampus_Gunpo_introduction", method = RequestMethod.GET)

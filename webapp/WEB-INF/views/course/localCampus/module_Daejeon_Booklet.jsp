@@ -1,30 +1,30 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_LocalCampus_WS_Project_26_1.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_LocalCampus_WS_Project_26_2.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_LocalCampus_WS_Project_26_3.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_LocalCampus_WS_Project_26_4.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_LocalCampus_WS_Project_26_5.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_LocalCampus_WS_Project_26_6.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_LocalCampus_WS_Project_26_7.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_LocalCampus_WS_Project_26_8.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_localCampus_WS_Project_26_1.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_localCampus_WS_Project_26_2.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_localCampus_WS_Project_26_3.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_localCampus_WS_Project_26_4.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_localCampus_WS_Project_26_5.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_localCampus_WS_Project_26_6.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_localCampus_WS_Project_26_7.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_localCampus_WS_Project_26_8.png" width="800"/></div>
 
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_LocalCampus_WS_Project_25_1.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_LocalCampus_WS_Project_25_2.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_LocalCampus_WS_Project_25_3.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_LocalCampus_WS_Project_25_4.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_LocalCampus_WS_Project_25_5.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_LocalCampus_WS_Project_25_6.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_localCampus_WS_Project_25_1.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_localCampus_WS_Project_25_2.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_localCampus_WS_Project_25_3.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_localCampus_WS_Project_25_4.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_localCampus_WS_Project_25_5.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201803_localCampus_WS_Project_25_6.png" width="800"/></div>
 
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201704_LocalCampus_WS_Project_24_1.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201704_LocalCampus_WS_Project_24_2.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201704_LocalCampus_WS_Project_24_3.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201704_LocalCampus_WS_Project_24_4.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201704_LocalCampus_WS_Project_24_5.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201704_LocalCampus_WS_Project_24_6.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201704_LocalCampus_WS_Project_24_7.png" width="800"/></div>
-<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201704_LocalCampus_WS_Project_24_8.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201704_localCampus_WS_Project_24_1.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201704_localCampus_WS_Project_24_2.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201704_localCampus_WS_Project_24_3.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201704_localCampus_WS_Project_24_4.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201704_localCampus_WS_Project_24_5.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201704_localCampus_WS_Project_24_6.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201704_localCampus_WS_Project_24_7.png" width="800"/></div>
+<div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201704_localCampus_WS_Project_24_8.png" width="800"/></div>
 
 <div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201609_LocalCampus_WS_Project_23_1.png" width="800"/></div>
 <div><img src="${pageContext.request.contextPath}/assets/Images/Content/Booklet/201609_LocalCampus_WS_Project_23_2.png" width="800"/></div>

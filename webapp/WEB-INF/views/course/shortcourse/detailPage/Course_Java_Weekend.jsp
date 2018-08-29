@@ -1,15 +1,15 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
-<%-- <%
-' [주말반] JAVA Programming
-dim strDate
-'//strDate = "2017.12.9 ~ 2017.12.31"
-strDate = "(문의)"
+<%
+// [주말반] JAVA Programming
+//dim strDate
+//strDate = "2017.12.9 ~ 2017.12.31"
+String strDate = "(문의)";
 
-SubjectName = "[주말반] JAVA 프로그래밍"
-CourseID = "Java_Weekend"
-%> --%>
+String SubjectName = "[주말반] JAVA 프로그래밍";
+String CourseID = "Java_Weekend";
+%>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -352,7 +352,7 @@ CourseID = "Java_Weekend"
 								<p>- 직업안정기구에 구직 등록한 자</p>
 								
 								<div style="text-align:center;">
-									<a href="/Upload/company2.zip" class="btnBlueBorder" style="margin:10px auto;">사업주 위탁훈련 신청서류 다운로드</a>
+									<a href="${pageContext.request.contextPath}/assets/Upload/company2.zip" class="btnBlueBorder" style="margin:10px auto;">사업주 위탁훈련 신청서류 다운로드</a>
 									<p style="font-size:1em !important; margin-top:-10px; margin-bottom:10px; ">※ 신청서류 작성 후 kang.i.y@bit.kr로 보내주시기 바랍니다.</p>
 								</div>
 								
@@ -425,7 +425,7 @@ CourseID = "Java_Weekend"
 								<p>지원한도금액은 1인당 년간 200만원 한도 내에서 훈련과정에 따라 60~100% 지원</p>
 								
 								<div style="text-align:center;">
-									<a href="/Upload/employ2.zip" class="btnBlueBorder" style="margin:10px auto;">근로자 직무능력향상지원 신청서류 다운로드</a>
+									<a href="${pageContext.request.contextPath}/assets/Upload/employ2.zip" class="btnBlueBorder" style="margin:10px auto;">근로자 직무능력향상지원 신청서류 다운로드</a>
 									<p style="font-size:1em !important; margin-top:-10px; margin-bottom:10px; ">※ 신청서류 작성 후 kang.i.y@bit.kr로 보내주시기 바랍니다.</p>
 								</div>
 								<div class="divTable">
