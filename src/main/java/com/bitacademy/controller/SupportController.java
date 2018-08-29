@@ -79,7 +79,6 @@ public class SupportController {
                                           @RequestParam(value = "field_value", defaultValue = "", required = false) String field_value,
                                           @RequestParam(value = "re", defaultValue = "NO", required = false) String re,
                                           Model model){
-        System.out.println("dddddddd");
         model.addAttribute("content",supportService.Support_online_write_ok(qaVo, re));
         model.addAttribute("field", field);
         model.addAttribute("field_value",field_value);

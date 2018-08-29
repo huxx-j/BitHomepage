@@ -16,4 +16,17 @@
         ]]>
  </select>
 
+    <select id="register_depositCheck" parameterType="Int" resultType="PayVo">
+        <![CDATA[
+                select c.CurriNickname,a.ApplyType, cc.CateName, a.Deposit, c.CurriName,
+                        a.DepositDate, a.DepositAmount, a.CardPayState, a.CardPayDate, a.CardPayAmount
+                from Curriculum c, CurriculumCate cc, ApplyInfo a
+                where a.User_no=#{user_no}
+                       and a.Curriculum_no=c.Curriculum_no
+                       and c.CurriculumCate_no=cc.CurriculumCate_no
+                       and a.TestResult = '합격'
+                       and a.CardPayState <> '실패'
+        ]]>
+    </select>
+
 </mapper>

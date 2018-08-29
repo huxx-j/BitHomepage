@@ -36,4 +36,16 @@ public class RegisterController {
         model.addAttribute("list", list);
         return "register/register_requestResult";
     }
+
+    @RequestMapping(value = "/register_paymentStep", method = RequestMethod.GET)
+    public String register_paymentStep() {
+        return "/register/register_paymentStep";
+    }
+
+    @RequestMapping(value = "/register_depositCheck", method = RequestMethod.GET)
+    public String register_depositCheck(HttpSession session, Model model) {
+        UserVo userVo = (UserVo) session.getAttribute("authUser");
+        model.addAttribute("list",registerService.register_depositCheck(userVo));
+        return "/register/register_depositCheck";
+    }
 }

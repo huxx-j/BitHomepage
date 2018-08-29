@@ -13,7 +13,7 @@
         <typeAlias alias="InterviewVo" type="com.bitacademy.vo.InterviewVo"/>
         <typeAlias alias="InterviewImageLogoPathVo" type="com.bitacademy.vo.InterviewImageLogoPathVo"/>
         <typeAlias alias="ApplyVo" type="com.bitacademy.vo.ApplyVo"/>
-
+        <typeAlias alias="PayVo" type="com.bitacademy.vo.PayVo"/>
     </typeAliases>
     <mappers>
         <mapper resource="mybatis/mappers/course.xml"/>
