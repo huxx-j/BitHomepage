@@ -1,5 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+<%
+String strSubject="R을 사용한 데이터 분석과 머신러닝 (초급)";
+//strSubject="R을 사용한 데이터 분석과 머신러닝 초급(빅데이터)"
+
+int indexDepth3=0;
+%>
 <!DOCTYPE html>
 <!-- NOT REDIRECTABLE to Mobile -->
 <html lang="ko">
@@ -78,7 +85,7 @@
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>단기핵심과정
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>Data Science
 						</p>
-						<h4></h4>
+						<h4><%=strSubject%></h4>
 					</div>
 
 					<section class="section">

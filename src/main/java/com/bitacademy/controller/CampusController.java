@@ -20,17 +20,17 @@ public class CampusController {
         return "/course/localCampus/DetailPage/Daejeon_windowNet";
     }
 
-    @RequestMapping(value = "/Daejeon_c", method = RequestMethod.GET)
+    @RequestMapping(value = "/DetailPage/Daejeon_c", method = RequestMethod.GET)
     public String Daejeon_c() {
         return "/course/localCampus/DetailPage/Daejeon_c";
     }
 
-    @RequestMapping(value = "/Daejeon_cPlus", method = RequestMethod.GET)
+    @RequestMapping(value = "/DetailPage/Daejeon_cPlus", method = RequestMethod.GET)
     public String Daejeon_cPlus() {
         return "/course/localCampus/DetailPage/Daejeon_cPlus";
     }
 
-    @RequestMapping(value = "/Daejeon_java", method = RequestMethod.GET)
+    @RequestMapping(value = "/DetailPage/Daejeon_java", method = RequestMethod.GET)
     public String Daejeon_java() {
         return "/course/localCampus/DetailPage/Daejeon_java";
     }
@@ -46,17 +46,17 @@ public class CampusController {
         return "/course/localCampus/DetailPage/Busan_javaHigh";
     }
 
-    @RequestMapping(value ="/Busan_c", method = RequestMethod.GET)
+    @RequestMapping(value ="/DetailPage/Busan_c", method = RequestMethod.GET)
     public String Busan_c() {
         return "/course/localCampus/DetailPage/Busan_c";
     }
 
-    @RequestMapping(value = "/Busan_java", method = RequestMethod.GET)
+    @RequestMapping(value = "/DetailPage/Busan_java", method = RequestMethod.GET)
     public String Busan_java() {
         return "/course/localCampus/DetailPage/Busan_java";
     }
 
-    @RequestMapping(value = "/Busan_c2", method = RequestMethod.GET)
+    @RequestMapping(value = "/DetailPage/Busan_c2", method = RequestMethod.GET)
     public String Busan_c2() {
         return "/course/localCampus/DetailPage/Busan_c2";
     }
@@ -67,17 +67,17 @@ public class CampusController {
         return "/course/localCampus/localCampus_Gunpo_introduction";
     }
 
-    @RequestMapping(value = "/Gunpo_c", method = RequestMethod.GET)
+    @RequestMapping(value = "/DetailPage/Gunpo_c", method = RequestMethod.GET)
     public String Gunpo_c() {
         return "/course/localCampus/DetailPage/Gunpo_c";
     }
 
-    @RequestMapping(value = "/Gunpo_cPlus", method = RequestMethod.GET)
+    @RequestMapping(value = "/DetailPage/Gunpo_cPlus", method = RequestMethod.GET)
     public String Gunpo_cPlus() {
         return "/course/localCampus/DetailPage/Gunpo_cPlus";
     }
 
-    @RequestMapping(value = "/Gunpo_c2", method = RequestMethod.GET)
+    @RequestMapping(value = "/DetailPage/Gunpo_c2", method = RequestMethod.GET)
     public String Gunpo_c2() {
         return "/course/localCampus/DetailPage/Gunpo_c2";
     }
@@ -93,17 +93,17 @@ public class CampusController {
         return "/course/localCampus/localCampus_Gimhae_introduction";
     }
 
-    @RequestMapping(value = "/Gimhae_c", method = RequestMethod.GET)
+    @RequestMapping(value = "/DetailPage/Gimhae_c", method = RequestMethod.GET)
     public String Gimhae_c() {
         return "/course/localCampus/DetailPage/Gimhae_c";
     }
 
-    @RequestMapping(value = "/Gimhae_java", method = RequestMethod.GET)
+    @RequestMapping(value = "/DetailPage/Gimhae_java", method = RequestMethod.GET)
     public String Gimhae_java() {
         return "/course/localCampus/DetailPage/Gimhae_java";
     }
 
-    @RequestMapping(value = "/Gimhae_c2", method = RequestMethod.GET)
+    @RequestMapping(value = "/DetailPage/Gimhae_c2", method = RequestMethod.GET)
     public String Gimhae_c2() {
         return "/course/localCampus/DetailPage/Gimhae_c2";
     }

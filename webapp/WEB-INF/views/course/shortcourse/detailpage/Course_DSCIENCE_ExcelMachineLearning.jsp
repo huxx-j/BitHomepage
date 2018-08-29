@@ -1,17 +1,17 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%-- <%
-strCourseID = "DSci_ExcelMLearn"
+<%!
+String strCourseID = "DSci_ExcelMLearn";
 %>
 
-<%
-dim strDate
-strDate="(문의)"
+<%!
+//dim strDate
+String strDate="(문의)";
 
-strSubject="즉각 활용하는 Excel을 사용한 데이터 사이언스 입문"
+String strSubject="즉각 활용하는 Excel을 사용한 데이터 사이언스 입문";
 
-indexDepth3=2
-%> --%>
+int indexDepth3=2;
+%>
 
 <!DOCTYPE html>
 <!-- NOT REDIRECTABLE to Mobile -->
@@ -82,7 +82,7 @@ indexDepth3=2
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>단기핵심과정
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>Data Science
 						</p>
-						<%-- <h4><%=strSubject%></h4> --%>
+						<h4><%=strSubject%></h4>
 					</div>
 
 					<section class="section">

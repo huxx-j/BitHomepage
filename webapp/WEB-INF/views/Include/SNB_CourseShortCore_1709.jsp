@@ -141,7 +141,7 @@
 						<!-- newwrap no4 : 자료구조/알고리즘 -->
 						<li><a href="#" onclick="return onclickDS();" class="newdepth3 newwrap no4 plus">자료구조/알고리즘</a></li>
 						<ul class="newdepth4_wrap no4">
-							<li><a href="/course/shortcourse/detailPage/Course_c2.asp" class="newdepth4">· 주말반</a></li>
+							<li><a href="/course/shortcourse/detailPage/Course_c2" class="newdepth4">· 주말반</a></li>
 							<!--
 							<li><a href="/Course/ShortCourse/DetailPage/Course_AlgorithmIntermediate.asp" class="newdepth4">주말/중급 알고리즘</a></li>
 							<li><a href="/Course/ShortCourse/DetailPage/Course_AlgorithmAdvanced.asp" class="newdepth4">주말/고급 알고리즘</a></li>
@@ -172,18 +172,18 @@
 					<a href="#this" class="newdepth2">[대전]대전캠퍼스</a>
 					<ul class="newdepth3_wrap no2">
 						<li><a href="/course/localCampus/localCampus_Daejeon_introduction" class="newdepth3">대전캠퍼스 소개</a></li>
-						<li><a href="/course/localCampus/Daejeon_c" class="newdepth3">C Programming</a></li>
-						<li><a href="/course/localCampus/Daejeon_cPlus" class="newdepth3">C++ Programming</a></li>
-						<li><a href="/course/localCampus/Daejeon_java" class="newdepth3">JAVA Programming</a></li>
+						<li><a href="/course/localCampus/DetailPage/Daejeon_c" class="newdepth3">C Programming</a></li>
+						<li><a href="/course/localCampus/DetailPage/Daejeon_cPlus" class="newdepth3">C++ Programming</a></li>
+						<li><a href="/course/localCampus/DetailPage/Daejeon_java" class="newdepth3">JAVA Programming</a></li>
 					</ul>
 				</li>
 				<li>
 					<a href="#this" class="newdepth2 " style="letter-spacing:-1px;">[부산]부산캠퍼스</a>
 					<ul class="newdepth3_wrap no3">
 						<li><a href="/course/localCampus/localCampus_Busan_introduction" class="newdepth3">부산캠퍼스 소개</a></li>
-						<li><a href="/course/localCampus/Busan_c" class="newdepth3">C Programming</a></li>
-						<li><a href="/course/localCampus/Busan_java" class="newdepth3">JAVA Programming</a></li>
-						<li><a href="/course/localCampus/Busan_c2" class="newdepth3">자료구조/알고리즘</a></li>
+						<li><a href="/course/localCampus/DetailPage/Busan_c" class="newdepth3">C Programming</a></li>
+						<li><a href="/course/localCampus/DetailPage/Busan_java" class="newdepth3">JAVA Programming</a></li>
+						<li><a href="/course/localCampus/DetailPage/Busan_c2" class="newdepth3">자료구조/알고리즘</a></li>
 					</ul>
 				</li>
 				
@@ -191,9 +191,9 @@
 					<a href="#this" class="newdepth2 " style="letter-spacing:-1px;">[군포]군포캠퍼스</a>
 					<ul class="newdepth3_wrap no4">
 						<li><a href="/course/localCampus/localCampus_Gunpo_introduction" class="newdepth3">군포캠퍼스 소개</a></li>
-						<li><a href="/course/localCampus/Gunpo_c" class="newdepth3">C Programming</a></li>
-						<li><a href="/course/localCampus/Gunpo_cPlus" class="newdepth3">C++ Programming</a></li>
-						<li><a href="/course/localCampus/Gunpo_c2" class="newdepth3">자료구조/알고리즘</a></li>
+						<li><a href="/course/localCampus/DetailPage/Gunpo_c" class="newdepth3">C Programming</a></li>
+						<li><a href="/course/localCampus/DetailPage/Gunpo_cPlus" class="newdepth3">C++ Programming</a></li>
+						<li><a href="/course/localCampus/DetailPage/Gunpo_c2" class="newdepth3">자료구조/알고리즘</a></li>
 					</ul>
 				</li>
 
@@ -201,9 +201,9 @@
 					<a href="#this" class="newdepth2 " style="letter-spacing:-1px;">[김해]김해캠퍼스</a>
 					<ul class="newdepth3_wrap no5">
 						<li><a href="/course/localCampus/localCampus_Gimhae_introduction" class="newdepth3">김해캠퍼스 소개</a></li>
-						<li><a href="/course/localCampus/Gimhae_c" class="newdepth3">C Programming</a></li>
-						<li><a href="/course/localCampus/Gimhae_java" class="newdepth3">Java Programming</a></li>
-						<li><a href="/course/localCampus/Gimhae_c2" class="newdepth3">자료구조/알고리즘</a></li>
+						<li><a href="/course/localCampus/DetailPage/Gimhae_c" class="newdepth3">C Programming</a></li>
+						<li><a href="/course/localCampus/DetailPage/Gimhae_java" class="newdepth3">Java Programming</a></li>
+						<li><a href="/course/localCampus/DetailPage/Gimhae_c2" class="newdepth3">자료구조/알고리즘</a></li>
 					</ul>
 				</li>
 

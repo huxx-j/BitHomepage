@@ -493,8 +493,6 @@
                             </tbody>
                         </table>
                     </div>
-
-
                     <!-- Paging -->
                     <%
 //                        Dim pagingStartNum

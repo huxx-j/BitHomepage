@@ -1,10 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
-<%-- <%
-CourseID = "SER_JSP_core"
-SubjectName = "Servlet & JSP 프로그래밍"
-%> --%>
+<%
+String CourseID = "SER_JSP_core";
+String SubjectName = "Servlet & JSP 프로그래밍";
+%>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -67,7 +67,7 @@ SubjectName = "Servlet & JSP 프로그래밍"
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>단기핵심과정
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>Java
 						</p>
-						<%-- <h4><%=SubjectName%></h4> --%>
+						<h4><%=SubjectName%></h4>
 					</div>
 
 					<section class="section">

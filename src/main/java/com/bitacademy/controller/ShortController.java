@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping(value = "/course/shortcourse")
 public class ShortController {
+	
     @RequestMapping(value = "/refundInfo_01", method = RequestMethod.GET)
     public String refundInfo_01() {
         return "course/shortcourse/Course_shortCourse_refundInfo_01";
@@ -33,12 +34,20 @@ public class ShortController {
     public String Course_Python() { return "course/shortcourse/detailPage/Course_Python"; }
 
     @RequestMapping(value = "/detailPage/Course_cPlus", method = RequestMethod.GET)
-    public String Course_cPlus() { return "course/shortcourse/detailPage/Course_cPlus"; }
+    public String Course_cPlus() { 
+    	return "course/shortcourse/detailPage/Course_cPlus"; 
+    	}
+    
     @RequestMapping(value = "/detailPage/Course_java", method = RequestMethod.GET)
-    public String Course_java() { return "course/shortcourse/detailPage/Course_Java"; }
+    public String Course_java() { 
+    	return "course/shortcourse/detailPage/Course_Java"; 
+    	}
 
     @RequestMapping(value = "/detailPage/Course_C", method = RequestMethod.GET)
-    public String Course_C() { return "course/shortcourse/detailPage/Course_c"; }
+    public String Course_C() { 
+    	System.out.println("서울캠퍼스 c");
+    	return "course/shortcourse/detailPage/Course_C"; 
+    }
 
     @RequestMapping(value = "/detailPage/Course_Java_Weekend", method = RequestMethod.GET)
     public String Course_Java_Weekend() {
@@ -73,6 +82,10 @@ public class ShortController {
     public String Course_DSCIENCE_AnalysisMachineLearning2() {
         return "/course/shortcourse/detailPage/Course_DSCIENCE_AnalysisMachineLearning2";
     }
+    @RequestMapping(value = "/detailPage/Course_DSCIENCE_AnalysisMachineLearning", method = RequestMethod.GET)
+    public String Course_DSCIENCE_AnalysisMachineLearning() {
+        return "/course/shortcourse/detailPage/Course_DSCIENCE_AnalysisMachineLearning";
+    }
     @RequestMapping(value = "/detailPage/Course_DSCIENCE_ExcelMachineLearning", method = RequestMethod.GET)
     public String Course_DSCIENCE_ExcelMachineLearning() {
         return "/course/shortcourse/detailPage/Course_DSCIENCE_ExcelMachineLearning";
@@ -81,6 +94,11 @@ public class ShortController {
     public String Course_AWSCloudWeb2() {
         return "/course/shortcourse/detailPage/Course_AWSCloudWeb2";
     }
+    @RequestMapping(value = "/detailPage/Course_DSCIENCE_PracticalMachineLearningPython", method = RequestMethod.GET)
+    public String Course_DSCIENCE_PracticalMachineLearningPython() {
+        return "/course/shortcourse/detailPage/Course_DSCIENCE_PracticalMachineLearningPython";
+    }
+    
 
     @RequestMapping(value = "/detailPage/Course_Blockchain_HyperConnected", method = RequestMethod.GET)
     public String Course_Blockchain_HyperConnected2() {
@@ -205,6 +223,12 @@ public class ShortController {
     }
 
     @RequestMapping(value = "/detailPage/Course_StorageSystem_FMBased", method = RequestMethod.GET)
-    public String Course_StorageSystem_FMBased() { return "/course/shortcourse/detailPage/Course_StorageSystem_FMBased"; }
+    public String Course_StorageSystem_FMBased() { 
+    	return "/course/shortcourse/detailPage/Course_StorageSystem_FMBased"; 
+    }
 
+    @RequestMapping(value = "/detailPage/Course_c2", method = RequestMethod.GET)
+    public String Course_c2() {
+        return "course/shortcourse/detailPage/Course_c2";
+    }
 }

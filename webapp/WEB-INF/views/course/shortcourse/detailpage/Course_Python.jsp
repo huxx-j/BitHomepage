@@ -22,9 +22,9 @@
     <c:import url="/WEB-INF/views/Include/HeaderScript1709.jsp"/>
     <script type="text/javascript">
         $(document).ready(function(){
-            <!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"-->
+            /* <!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"--> */
             <c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
-            <!--#include virtual="/Include/HeaderScriptReady1709.inc"-->
+            /* <!--#include virtual="/Include/HeaderScriptReady1709.inc"--> */
             <c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
 
             /*

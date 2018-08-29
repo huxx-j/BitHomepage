@@ -229,7 +229,7 @@
         <div class="divMiddle"><div class="divMiddleInner" style="width:150px;">자료구조/알고리즘</div></div>
         <div class="divMiddle"><div class="divMiddleInner" style="width:150px;">Python 프로그래밍</div></div>
         <div class="divMiddle"><div class="divMiddleInner" style="width:150px;">C# 프로그래밍</div></div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_Go.asp"><div class="divMiddleInner" style="width:150px; background-image: url();">Go 프로그래밍</div></div>
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_Go"><div class="divMiddleInner" style="width:150px; background-image: url();">Go 프로그래밍</div></div>
         <div class="divMiddle"><div class="divMiddleInner" style="width:150px; letter-spacing:-2px;">SW 자율학습 지도 커뮤니티</div></div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
         <div class="divBottom"></div>
@@ -237,10 +237,10 @@
     <div class="mainDropdownMenu depth4 no1 fl">
         <div class="divTop1"></div>
         <div class="divTop2"></div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_c.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_C">
             <div class="divMiddleInner" style="width:140px;">[주중반] C Master</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_C_Weekend.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_C_Weekend">
             <div class="divMiddleInner" style="width:140px;">[주말반] C Master</div>
         </div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
@@ -250,10 +250,10 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_Java.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_Java">
             <div class="divMiddleInner" style="width:160px;">[주중반] Java 프로그래밍</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_Java_Weekend.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_Java_Weekend">
             <div class="divMiddleInner" style="width:160px;">[주말반] Java 프로그래밍</div>
         </div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
@@ -263,10 +263,10 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_cPlus.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_cPlus">
             <div class="divMiddleInner" style="width:160px;">[주중반] C++ 프로그래밍</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_cPlus_Weekend.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_cPlus_Weekend">
             <div class="divMiddleInner" style="width:160px;">[주말반] C++ 프로그래밍</div>
         </div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
@@ -276,7 +276,7 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_c2.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_c2">
             <div class="divMiddleInner" style="letter-spacing:0px;">[주말반] 자료구조</div>
         </div>
         <!--
@@ -294,10 +294,10 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_Python.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_Python">
             <div class="divMiddleInner" style="width:180px;">[주중반] Python 프로그래밍</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_Python_Weekend.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_Python_Weekend">
             <div class="divMiddleInner" style="width:180px;">[주말반] Python 프로그래밍</div>
         </div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
@@ -307,7 +307,7 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_cSharp.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_cSharp">
             <div class="divMiddleInner" style="width:160px;">[주중반] C# 프로그래밍</div>
         </div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
@@ -317,7 +317,7 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_SelfLearning.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_SelfLearning">
             <div class="divMiddleInner" style="width:170px; letter-spacing:-1px;">이론 / 프로젝트 멘토링 과정</div>
         </div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
@@ -328,16 +328,16 @@
         <div class="divTop1"></div>
         <div class="divTop2" ></div>
         <div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/localCampus/localCampus_Daejeon_introduction.asp">
+        <div class="divMiddle" href="/course/localCampus/localCampus_Daejeon_introduction">
             <div class="divMiddleInner" style="width:140px;">대전캠퍼스 소개</div>
         </div>
-        <div class="divMiddle" href="/Course/localCampus/DetailPage/Daejeon_c.asp">
+        <div class="divMiddle" href="/course/localCampus/DetailPage/Daejeon_c">
             <div class="divMiddleInner" style="width:140px;">C 프로그래밍</div>
         </div>
-        <div class="divMiddle" href="/Course/localCampus/DetailPage/Daejeon_cPlus.asp">
+        <div class="divMiddle" href="/course/localCampus/DetailPage/Daejeon_cPlus">
             <div class="divMiddleInner" style="width:140px;">C++ 프로그래밍</div>
         </div>
-        <div class="divMiddle" href="/Course/localCampus/DetailPage/Daejeon_java.asp">
+        <div class="divMiddle" href="/course/localCampus/DetailPage/Daejeon_java">
             <div class="divMiddleInner" style="width:140px;">Java 프로그래밍</div>
         </div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
@@ -349,16 +349,16 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/localCampus/localCampus_Busan_introduction.asp">
+        <div class="divMiddle" href="/course/localCampus/localCampus_Busan_introduction">
             <div class="divMiddleInner" style="width:140px;">부산캠퍼스 소개</div>
         </div>
-        <div class="divMiddle" href="/Course/localCampus/DetailPage/Busan_c.asp">
+        <div class="divMiddle" href="/course/localCampus/DetailPage/Busan_c">
             <div class="divMiddleInner" style="width:140px;">C 프로그래밍</div>
         </div>
-        <div class="divMiddle" href="/Course/localCampus/DetailPage/Busan_java.asp">
+        <div class="divMiddle" href="/course/localCampus/DetailPage/Busan_java">
             <div class="divMiddleInner" style="width:140px;">Java 프로그래밍</div>
         </div>
-        <div class="divMiddle" href="/Course/localCampus/DetailPage/Busan_c2.asp">
+        <div class="divMiddle" href="/course/localCampus/DetailPage/Busan_c2">
             <div class="divMiddleInner" style="width:140px;">자료구조</div>
         </div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
@@ -370,16 +370,16 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/localCampus/localCampus_Gunpo_introduction.asp">
+        <div class="divMiddle" href="/course/localCampus/localCampus_Gunpo_introduction">
             <div class="divMiddleInner" style="width:140px;">군포캠퍼스 소개</div>
         </div>
-        <div class="divMiddle" href="/Course/localCampus/DetailPage/Gunpo_c.asp">
+        <div class="divMiddle" href="/course/localCampus/DetailPage/Gunpo_c">
             <div class="divMiddleInner" style="width:140px;">C 프로그래밍</div>
         </div>
-        <div class="divMiddle" href="/Course/localCampus/DetailPage/Gunpo_cPlus.asp">
+        <div class="divMiddle" href="/course/localCampus/DetailPage/Gunpo_cPlus">
             <div class="divMiddleInner" style="width:140px;">C++ 프로그래밍</div>
         </div>
-        <div class="divMiddle" href="/Course/localCampus/DetailPage/Gunpo_c2.asp">
+        <div class="divMiddle" href="/course/localCampus/DetailPage/Gunpo_c2">
             <div class="divMiddleInner" style="width:140px;">자료구조</div>
         </div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
@@ -391,16 +391,16 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/localCampus/localCampus_Gimhae_introduction.asp">
+        <div class="divMiddle" href="/course/localCampus/localCampus_Gimhae_introduction">
             <div class="divMiddleInner" style="width:140px;">김해캠퍼스 소개</div>
         </div>
-        <div class="divMiddle" href="/Course/localCampus/DetailPage/Gimhae_c.asp">
+        <div class="divMiddle" href="/course/localCampus/DetailPage/Gimhae_c">
             <div class="divMiddleInner" style="width:140px;">C 프로그래밍</div>
         </div>
-        <div class="divMiddle" href="/Course/localCampus/DetailPage/Gimhae_java.asp">
+        <div class="divMiddle" href="/course/localCampus/DetailPage/Gimhae_java">
             <div class="divMiddleInner" style="width:140px;">JAVA 프로그래밍</div>
         </div>
-        <div class="divMiddle" href="/Course/localCampus/DetailPage/Gimhae_c2.asp">
+        <div class="divMiddle" href="/course/localCampus/DetailPage/Gimhae_c2">
             <div class="divMiddleInner" style="width:140px;">자료구조/알고리즘</div>
         </div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
@@ -412,19 +412,19 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_DSCIENCE_AnalysisMachineLearning.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_DSCIENCE_AnalysisMachineLearning">
             <div class="divMiddleInner long" style="width:295px;">R을 사용한 데이터 분석과 머신러닝 (초급)</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_DSCIENCE_AnalysisMachineLearning2.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_DSCIENCE_AnalysisMachineLearning2">
             <div class="divMiddleInner long" style="width:295px;">R을 사용한 데이터 분석과 머신러닝 (중급)</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_DSCIENCE_PracticalMachineLearningPython.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_DSCIENCE_PracticalMachineLearningPython">
             <div class="divMiddleInner" style="width:295px;">Python을 활용한 실용머신러닝 - 초급</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_DSCIENCE_ExcelMachineLearning.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_DSCIENCE_ExcelMachineLearning">
             <div class="divMiddleInner" style="width:295px; letter-spacing:-1px;">즉각 활용하는 Excel을 사용한 데이터 사이언스 입문</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_AWSCloudWeb2.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_AWSCloudWeb2">
             <div class="divMiddleInner" style="width:295px; letter-spacing:-1px;">AWS를 활용한 클라우드 기반 웹 개발</div>
         </div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
@@ -435,7 +435,7 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_Blockchain_HyperConnected.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_Blockchain_HyperConnected">
             <div class="divMiddleInner" style="width:220px;">블록체인 - 초연결 기술과 규제</div>
         </div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
@@ -446,13 +446,13 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_servletJsp.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_servletJsp">
             <div class="divMiddleInner" style="width:220px;">Servlet &amp; JSP 프로그래밍</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_spring.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_spring">
             <div class="divMiddleInner" style="width:220px;">Spring Framework 과정</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_aiojava.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_aiojava">
             <div class="divMiddleInner" style="width:220px;">All-in-One Java Application 개발</div>
         </div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
@@ -463,16 +463,16 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle long" href="/Course/ShortCourse/DetailPage/Course_HTML5.asp">
+        <div class="divMiddle long" href="/course/shortcourse/detailPage/Course_HTML5">
             <div class="divMiddleInner" style="width:260px;">웹개발자를 위한 HTML5(HTML5+CSS3)</div>
         </div>
         <div class="divMiddle" href="javascript:alert('준비중입니다. 문의(02-3486-3456)');">
             <div class="divMiddleInner" style="width:260px;">실전 jQuery</div>
         </div>
-        <div class="divMiddle long" href="/Course/ShortCourse/DetailPage/Course_JavaScript.asp">
+        <div class="divMiddle long" href="/course/shortcourse/detailPage/Course_JavaScript">
             <div class="divMiddleInner" style="width:260px;">웹개발자를 위한 JavaScript &amp; Ajax</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_WebPublishing.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_WebPublishing">
             <div class="divMiddleInner" style="width:260px;">Web Publishing 실무</div>
         </div>
         <div class="divMiddle" href="javascript:alert('준비중입니다. 문의(02-3486-3456)');">
@@ -484,7 +484,7 @@
         <div class="divMiddle long" href="javascript:alert('준비중입니다. 문의(02-3486-3456)');">
             <div class="divMiddleInner" style="width:260px;">Front-End JavaScript Framework</div>
         </div>
-        <div class="divMiddle long" href="/Course/ShortCourse/DetailPage/Course_Nodejs.asp">
+        <div class="divMiddle long" href="/course/shortcourse/detailPage/Course_Nodejs">
             <div class="divMiddleInner" style="width:260px;">객체지향 JavaScript와 Node.js 프로그래밍</div>
         </div>
         <div class="divBottom"></div>
@@ -494,22 +494,22 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_SearchEngine.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_SearchEngine">
             <div class="divMiddleInner" style="width:240px;">맞춤형 검색엔진<!-- 과정--></div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_dataBaseModeling.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_dataBaseModeling">
             <div class="divMiddleInner" style="width:240px;">데이터베이스 모델링</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_dataBase.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_dataBase">
             <div class="divMiddleInner" style="width:240px;">데이터베이스 성능튜닝</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_springData.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_springData">
             <div class="divMiddleInner" style="width:240px;">Spring Data + noSQL</div>
         </div>
         <div class="divMiddle" href="javascript:alert('준비중입니다. 문의(02-3486-3456)');">
             <div class="divMiddleInner" style="width:240px;">MySQL  최적화</div>
         </div>
-        <div class="divMiddle long" href="/Course/ShortCourse/DetailPage/Course_sqlJdbc.asp">
+        <div class="divMiddle long" href="/course/shortcourse/detailPage/Course_sqlJdbc">
             <div class="divMiddleInner" style="width:240px;">오라클과 데이터베이스 연동 프로그래밍</div>
         </div>
         <div class="divBottom"></div>
@@ -519,13 +519,13 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_Agile4Developer.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_Agile4Developer">
             <div class="divMiddleInner" style="width:240px;">Agile 소프트웨어 개발 실무</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_ArchitectureBasic.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_ArchitectureBasic">
             <div class="divMiddleInner" style="width:240px;">소프트웨어 아키텍처 입문</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_ITIL.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_ITIL">
             <div class="divMiddleInner" style="width:240px;">ITILv3 기반 IT Service Management</div>
         </div>
         <div class="divBlank"></div><div class="divBlank"></div>
@@ -536,7 +536,7 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_Android.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_Android">
             <div class="divMiddleInner" style="width:140px;">안드로이드 앱 개발</div>
         </div>
         <div class="divMiddle" href="javascript:alert('준비중입니다. 문의(02-3486-3456)');">
@@ -550,22 +550,22 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_javaPlan.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_javaPlan">
             <div class="divMiddleInner" style="width:250px;">Java 설계과정</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_realUml.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_realUml">
             <div class="divMiddleInner" style="width:250px;">UML 실전에서는 이것만 쓴다</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_uml.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_uml">
             <div class="divMiddleInner" style="width:250px;">실전! 분석과정</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_designPattern.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_designPattern">
             <div class="divMiddleInner" style="width:250px;">객체지향 개념과 디자인 패턴</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_codingTuning.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_codingTuning">
             <div class="divMiddleInner" style="width:250px;">Java JDBC 기반의 SQL 성능튜닝</div>
         </div>
-        <div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_OptimizationAlgorithms.asp">
+        <div class="divMiddle" href="/course/shortcourse/detailPage/Course_OptimizationAlgorithms">
             <div class="divMiddleInner" style="width:250px; letter-spacing:-1px;">최적화 알고리즘을 통한 SW개발 역량 강화</div>
         </div>
         <div class="divBottom"></div>
@@ -575,10 +575,10 @@
         <div class="divTop1"></div>
         <div class="divTop2"></div>
         <div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
-        <div class="divMiddle long" href="/Course/ShortCourse/DetailPage/Course_RaspberryPi.asp">
+        <div class="divMiddle long" href="/course/shortcourse/detailPage/Course_RaspberryPi">
             <div class="divMiddleInner" style="width:240px;">오픈소스 라즈베리파이를 활용한 IoT 과정</div>
         </div>
-        <div class="divMiddle long" href="/Course/ShortCourse/DetailPage/Course_StorageSystem_FMBased.asp">
+        <div class="divMiddle long" href="/course/shortcourse/detailPage/Course_StorageSystem_FMBased">
             <div class="divMiddleInner" style="width:240px;">Flash Memory기반 Storage System</div>
         </div>
         <div class="divBottom"></div>
@@ -871,7 +871,7 @@
     <div class="mainDropdownMenu depth1 no5 fl" >
         <div class="divTop1"></div>
         <div class="divTop2"></div>
-        <div class="divMiddle long" href="javascript:alert('준비중입니다. (문의 : 02-3486-3456)'); ///Course/ShortCourse/DetailPage/Course_RaspberryPi_Audio.asp">
+        <div class="divMiddle long" href="javascript:alert('준비중입니다. (문의 : 02-3486-3456)'); ///course/shortCourse/detailPage/Course_RaspberryPi_Audio">
             <div class="divMiddleInner" style="width:260px;">세상과 소통하는 라즈베리파이 오디오 만들기</div>
         </div>
         <div class="divBottom"></div>
