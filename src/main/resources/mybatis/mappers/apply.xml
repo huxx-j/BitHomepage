@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="apply">
+
+    <select id="register_requestResult" parameterType="UserVo" resultType="ApplyVo">
+     <![CDATA[
+            select a.Applicant_no, substring(a.ApplyDate,1,4) ApplyYear, substring(a.ApplyDate,6,2) ApplyMon, substring(a.ApplyDate,9,2) ApplyDay,
+                    substring(a.TestDate,1,4) TestYear, substring(a.TestDate,6,2) TestMon, substring(a.TestDate,9,2) TestDay,
+                    c.CurriName, cc.CateName, a.TestLang, a.TestResult, a.Coment, a.ApplyDate, a.TestDate, if(DATEDIFF(current_date,a.TestDate) >= 0,'참','거짓') as CDate
+            from Curriculum c, ApplyInfo a, CurriculumCate cc
+            where c.Curriculum_no=a.Curriculum_no
+            and a.User_no=#{user_no}
+            and c.CurriculumCate_no=cc.CurriculumCate_no
+            order by a.ApplyDate;
+        ]]>
+ </select>
+
+</mapper>

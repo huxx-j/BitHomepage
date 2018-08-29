@@ -170,10 +170,10 @@
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/job/WriteRecruit_page2.asp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/job/dbconn.inc" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/popup/Interview_InputForm.asp" charset="EUC-KR" />
+    <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/register/register_requestResult.jsp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/register/request/register_employment1.asp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/register/request/register_employment1.jsp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/register/request/register_license1.jsp" charset="EUC-KR" />
-    <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/register/request/register_requestResult.jsp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/assets" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/assets/CSS/bodyStyle.css" charset="EUC-KR" />
   </component>
