@@ -39,4 +39,19 @@
                 update Users set SleepStat='정상' where LoginID=#{loginID} and User_no=#{user_no}
         ]]>
     </update>
+
+    <select id="Member_modify" parameterType="Int" resultType="UserModVo">
+        <![CDATA[
+                select LoginID, NameHan, NameEng, Gender, Email, PostNum,
+                        Address, FamilyPostNum, FamilyAddress, Telephone, Cellphone, BitLetter
+                from Users where User_no=#{user_no};
+        ]]>
+    </select>
+
+    <select id="Member_modify_school" parameterType="Int" resultType="UserModVo">
+        <![CDATA[
+                select UserScholarship_no, User_no, substring(StartDate,1,4) StartYear, substring(StartDate,6,7) StartMon, substring(EndDate,1,4) EndYear, substring(EndDate,6,7) EndMon, StartDate, EndDate, School, State, Location, Degree, Major, SubMajor
+                from UserScholarship where User_no=#{user_no} order by StartDate, UserScholarship_no
+        ]]>
+    </select>
 </mapper>

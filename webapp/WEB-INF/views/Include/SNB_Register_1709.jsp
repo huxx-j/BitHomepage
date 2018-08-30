@@ -62,7 +62,7 @@
             <a href="${pageContext.request.contextPath}/register/register_depositCheck" class="newdepth1">입금확인</a>
         </li>
         <li>
-            <a href="${pageContext.request.contextPath}/member/member_modify" class="newdepth1">개인정보수정</a>
+            <a href="${pageContext.request.contextPath}/member/Member_modify" class="newdepth1">개인정보수정</a>
         </li>
     </ul>
 

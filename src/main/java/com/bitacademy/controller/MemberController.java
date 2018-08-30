@@ -2,6 +2,7 @@ package com.bitacademy.controller;
 
 import com.bitacademy.service.MemberService;
 import com.bitacademy.vo.MemberVo;
+import com.bitacademy.vo.UserModVo;
 import com.bitacademy.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 @RequestMapping(value = "/member")
@@ -88,6 +90,20 @@ public class MemberController {
         UserVo authUser = (UserVo)session.getAttribute("authUser");
         memberService.ReAgree(authUser);
         return "/index";
+    }
+
+    @RequestMapping(value = "/Member_modify")
+    public String Member_modify(HttpSession session, Model model){
+        if (session.getAttribute("authUser")==null) {
+            return "/index"; //로그인필요합니다. 리턴페이지는 나중에 수정...
+        }else {
+            UserVo authUser = (UserVo) session.getAttribute("authUser");
+            UserModVo userModVo = memberService.Member_modify(authUser.getUser_no());
+            List<UserModVo> list = memberService.Member_modify_school(authUser.getUser_no());
+            model.addAttribute("modVo", userModVo);
+            model.addAttribute("schoolList", list);
+            return "/member/Member_modify";
+        }
     }
 }
 
