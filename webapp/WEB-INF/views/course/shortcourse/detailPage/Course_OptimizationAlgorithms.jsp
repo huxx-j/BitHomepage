@@ -84,6 +84,7 @@ String SubjectName = "최적화 알고리즘을 통한 SW개발 역량 강화";
 											<th scope="row" class="tit">교육기간</th>
 											<td>
 												<!-- #include virtual="/Include/CourseDateTime/Date/Date__OptimizationAlgorithms.inc" -->
+												<c:import url="/WEB-INF/views/Include/CourseDateTime/Date/Date__OptimizationAlgorithms.jsp"/>
 												<!--<li><del>2015.05.13 ~ 2015.05.22 (8일 / 24시간)</del></li>-->
 												<!--<li>2015.08.10 ~ 2015.08.20 (8일 / 24시간)</li>-->
 												<!--<li>2015.11.16 ~ 2015.11.26 (8일 / 24시간)</li>-->
@@ -92,6 +93,7 @@ String SubjectName = "최적화 알고리즘을 통한 SW개발 역량 강화";
 											<!--<td>19:00 ~ 22:00 (1일 3시간 / 월 ~ 목)</td>-->
 											<td>
 												<!-- #include virtual="/Include/CourseDateTime/Time/Time__OptimizationAlgorithms.inc" -->
+												<c:import url="/WEB-INF/views/Include/CourseDateTime/Time/Time__OptimizationAlgorithms.jsp"/>
 											</td>
 										</tr>
 										<tr>

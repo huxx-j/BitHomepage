@@ -77,42 +77,42 @@ public class CourseController {
         return "course/employ/Course_Employ";
     }
 
-    @RequestMapping(value = "employ/Course_Employ_AurosTech", method = RequestMethod.GET)
+    @RequestMapping(value = "/employ/Course_Employ_AurosTech", method = RequestMethod.GET)
     public String Course_Employ_AurosTech() {
         return "course/employ/Course_Employ_AurosTech";
     }
 
-    @RequestMapping(value = "employ/Course_Employ_BAinfra", method = RequestMethod.GET)
+    @RequestMapping(value = "/employ/Course_Employ_BAinfra", method = RequestMethod.GET)
     public String Course_Employ_BAinfra() {
         return "course/employ/Course_Employ_BAinfra";
     }
 
-    @RequestMapping(value = "employ/Course_Employ_BitComputer", method = RequestMethod.GET)
+    @RequestMapping(value = "/employ/Course_Employ_BitComputer", method = RequestMethod.GET)
     public String Course_Employ_BitComputer() {
         return "course/employ/Course_Employ_BitComputer";
     }
 
-    @RequestMapping(value = "employ/Course_Employ_BizTechPartners", method = RequestMethod.GET)
+    @RequestMapping(value = "/employ/Course_Employ_BizTechPartners", method = RequestMethod.GET)
     public String Course_Employ_BizTechPartners() {
         return "course/employ/Course_Employ_BizTechPartners";
     }
 
-    @RequestMapping(value = "employ/Course_Employ_ITtelecom", method = RequestMethod.GET)
+    @RequestMapping(value = "/employ/Course_Employ_ITtelecom", method = RequestMethod.GET)
     public String Course_Employ_ITtelecom() {
         return "course/employ/Course_Employ_ITtelecom";
     }
 
-    @RequestMapping(value = "employ/Course_Employ_ivis", method = RequestMethod.GET)
+    @RequestMapping(value = "/employ/Course_Employ_ivis", method = RequestMethod.GET)
     public String Course_Employ_ivis() {
         return "course/employ/Course_Employ_ivis";
     }
 
-    @RequestMapping(value = "employ/Course_Employ_PSK", method = RequestMethod.GET)
+    @RequestMapping(value = "/employ/Course_Employ_PSK", method = RequestMethod.GET)
     public String Course_Employ_PSK() {
         return "course/employ/Course_Employ_PSK";
     }
 
-    @RequestMapping(value = "employ/Course_Employ_TaehaMechatronics", method = RequestMethod.GET)
+    @RequestMapping(value = "/employ/Course_Employ_TaehaMechatronics", method = RequestMethod.GET)
     public String Course_Employ_TaehaMechatronics() {
         return "course/employ/Course_Employ_TaehaMechatronics";
     }
@@ -155,5 +155,70 @@ public class CourseController {
     public String BITsupporters_2018() {
         return "course/BITsupporters_2018";
     }
-
+    //////////////////////전문가 과정관련/////////////////////
+    @RequestMapping(value = "/employ/Summary1_BizTechPartners", method = RequestMethod.GET)
+    public String Summary1_BizTechPartners() {
+        return "/course/employ/Summary1_BizTechPartners";
+    }
+    @RequestMapping(value = "/employ/Summary2_BizTechPartners", method = RequestMethod.GET)
+    public String Summary2_BizTechPartners() {
+        return "/course/employ/Summary2_BizTechPartners";
+    }
+    @RequestMapping(value = "/employ/Summary1_BitComputer", method = RequestMethod.GET)
+    public String Summary1_BitComputer() {
+        return "/course/employ/Summary1_BitComputer";
+    }
+    @RequestMapping(value = "/employ/Summary2_BitComputer", method = RequestMethod.GET)
+    public String Summary2_BitComputer() {
+        return "/course/employ/Summary2_BitComputer";
+    }
+    @RequestMapping(value = "/employ/Summary1_ITtelecom", method = RequestMethod.GET)
+    public String Summary1_ITtelecom() {
+        return "/course/employ/Summary1_ITtelecom";
+    }
+    @RequestMapping(value = "/employ/Summary2_ITtelecom", method = RequestMethod.GET)
+    public String Summary2_ITtelecom() {
+        return "/course/employ/Summary2_ITtelecom";
+    }
+    @RequestMapping(value = "/employ/Summary1_BAinfra", method = RequestMethod.GET)
+    public String Summary1_BAinfra() {
+        return "/course/employ/Summary1_BAinfra";
+    }
+    @RequestMapping(value = "/employ/Summary2_BAinfra", method = RequestMethod.GET)
+    public String Summary2_BAinfra() {
+        return "/course/employ/Summary2_BAinfra";
+    }
+    @RequestMapping(value = "/employ/Summary1_IVIS", method = RequestMethod.GET)
+    public String Summary1_IVIS() {
+        return "/course/employ/Summary1_IVIS";
+    }
+    @RequestMapping(value = "/employ/Summary2_IVIS", method = RequestMethod.GET)
+    public String Summary2_IVIS() {
+        return "/course/employ/Summary2_IVIS";
+    }
+    @RequestMapping(value = "/employ/Summary1_AurosTech", method = RequestMethod.GET)
+    public String Summary1_AurosTech() {
+        return "/course/employ/Summary1_AurosTech";
+    }
+    @RequestMapping(value = "/employ/Summary2_AurosTech", method = RequestMethod.GET)
+    public String Summary2_AurosTech() {
+        return "/course/employ/Summary2_AurosTech";
+    }
+    @RequestMapping(value = "/employ/Summary1_TaehaMechatronics", method = RequestMethod.GET)
+    public String Summary1_TaehaMechatronics() {
+        return "/course/employ/Summary1_TaehaMechatronics";
+    }
+    @RequestMapping(value = "/employ/Summary2_TaehaMechatronics", method = RequestMethod.GET)
+    public String Summary2_TaehaMechatronics() {
+        return "/course/employ/Summary2_TaehaMechatronics";
+    }
+    @RequestMapping(value = "/employ/Summary1_PSK", method = RequestMethod.GET)
+    public String Summary1_PSK() {
+        return "/course/employ/Summary1_PSK";
+    }
+    @RequestMapping(value = "/employ/Summary2_PSK", method = RequestMethod.GET)
+    public String Summary2_PSK() {
+        return "/course/employ/Summary2_PSK";
+    }
+    
 }

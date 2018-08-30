@@ -104,7 +104,7 @@ String CourseID = "EX";
 											<td>
 												<!-- #include virtual="/Include/CourseDateTime/Date/Date__EX.inc" -->
 												<c:import url="/WEB-INF/views/Include/CourseDateTime/Date/Date__EX.jsp"/>
-												<%= strDateTime %>
+												<%-- <%= strDateTime %> --%>
 												<!--2018.01.02 ~ 2018.05.31-->
 											</td>
 											<th>강의시간</th>
@@ -133,7 +133,7 @@ String CourseID = "EX";
 								<div style="clear;both; height:10px;"></div>
 								-->
 								<!-- 수강신청btn -->
-								<a href="/Register/Request/register_employment1.asp" title="지원하기" style="float:right; margin-top:24px; font-size:20px;" class="btnBlueBorder">
+								<a href="/register/request/register_employment1.asp" title="지원하기" style="float:right; margin-top:24px; font-size:20px;" class="btnBlueBorder">
 									<!--<img src="/Images/Btns/btn_ApplyCourse.png"/>-->
 									지원하기
 								</a>
@@ -193,7 +193,7 @@ String CourseID = "EX";
 								<!-- Line #1 -->
 								<div style="margin-top:24px;">
 									<div style="float:left; margin-top:0px;"> <!-- -15px; ">-->
-										<div class="slot first" style="height:190px; background-color:#fff;" href="/course/employ/Course_Employ_ITtelecom.asp">
+										<div class="slot first" style="height:190px; background-color:#fff;" href="/course/employ/Course_Employ_ITtelecom">
 											<div class="divCompanyEmploy">
 												<img class="companyLogo" src="${pageContext.request.contextPath}/assets/Images/Content/Company_Logo/img_LOGO_ITtelecom.jpg" style="height:60px; margin-top:6px; margin-left:41px; margin-bottom:-10px;">
 												<p class="companyName"><span>㈜아이티텔레콤</span></p>
@@ -208,7 +208,7 @@ String CourseID = "EX";
 											<div class="insideSlot" style="margin-top:-190px; height:190px; background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected190px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
 										</div>
 
-										<div class="slot " style="height:190px; background-color:#fff;" href="/course/employ/Course_Employ_BAinfra.asp">
+										<div class="slot " style="height:190px; background-color:#fff;" href="/course/employ/Course_Employ_BAinfra">
 											<div class="divCompanyEmploy">
 												<img class="companyLogo" src="${pageContext.request.contextPath}/assets/Images/Content/Company_Logo/img_LOGO_BAinfra.png" style="height:60px; margin-top:6px; margin-left:41px; margin-bottom:-10px;">
 												<p class="companyName"><span>㈜비에이인프라</span></p>
@@ -223,7 +223,7 @@ String CourseID = "EX";
 											<div class="insideSlot" style="margin-top:-190px; height:190px; background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected190px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
 										</div>
 
-										<div class="slot" style="height:190px; background-color:#fff;" href="/course/employ/Course_Employ_Ivis.asp">
+										<div class="slot" style="height:190px; background-color:#fff;" href="/course/employ/Course_Employ_Ivis">
 											<div class="divCompanyEmploy">
 												<img class="companyLogo" src="${pageContext.request.contextPath}/assets/Images/Main/img_logo_05.jpg" style="height:60px; margin-top:6px; margin-left:41px; margin-bottom:-10px;">
 												<p class="companyName"><span>㈜아이비스</span></p>
@@ -245,7 +245,7 @@ String CourseID = "EX";
 								<!-- Line #2 -->
 								<div style="margin-top:24px;">
 									<div style="float:left; margin-top:-15px; ">
-										<div class="slot first" style="height:190px; background-color:#fff;" href="/course/employ/Course_Employ_AurosTech.asp">
+										<div class="slot first" style="height:190px; background-color:#fff;" href="/course/employ/Course_Employ_AurosTech">
 											<div class="divCompanyEmploy">
 												<img class="companyLogo" src="${pageContext.request.contextPath}/assets/Images/Content/Employ/img_LOGO_AurosTech.png" style="height:40px; margin-bottom:0px; margin-top:15px; margin-left:35px;">
 												<p class="companyName"><span>㈜오로스테크놀로지</span></p>
@@ -259,7 +259,7 @@ String CourseID = "EX";
 											<p class="courseDescription dnone">-</p>
 											<div class="insideSlot" style="margin-top:-190px; height:190px; background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected190px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
 										</div>
-										<div class="slot" style="height:190px; background-color:#fff;" href="/course/employ/Course_Employ_TaehaMechatronics.asp">
+										<div class="slot" style="height:190px; background-color:#fff;" href="/course/employ/Course_Employ_TaehaMechatronics">
 											<div class="divCompanyEmploy">
 												<img class="companyLogo" src="${pageContext.request.contextPath}/assets/Images/Content/Employ/img_LOGO_TaehaMechatronics.png" style="margin-top:22px; margin-left:33px; margin-bottom:11px;">
 												<p class="companyName"><span>㈜태하메카트로닉스</span></p>
@@ -273,7 +273,7 @@ String CourseID = "EX";
 											<p class="courseDescription dnone">-</p>
 											<div class="insideSlot" style="margin-top:-190px; height:190px; background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected190px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
 										</div>
-										<div class="slot " style="height:190px; background-color:#fff;" href="/course/employ/Course_Employ_PSK.asp">
+										<div class="slot " style="height:190px; background-color:#fff;" href="/course/employ/Course_Employ_PSK">
 											<div class="divCompanyEmploy">
 												<img class="companyLogo" src="${pageContext.request.contextPath}/assets/Images/Content/Employ/img_LOGO_PSK.png" style="width:40%; margin-top:5px; margin-left:70px; margin-bottom:-8px;">
 												<p class="companyName"><span>㈜피에스케이</span></p>
@@ -297,27 +297,39 @@ String CourseID = "EX";
 							<div style="margin-top:10px;">
 								<div class="companySummary" style="DISPLAY:NONE;">
 									<!-- #include virtual="/Course/Employ/Summary1_ITtelecom.asp"-->
+									<c:import url="/course/employ/Summary1_ITtelecom"/>
 									<!-- #include virtual="/Course/Employ/Summary2_ITtelecom.asp"-->
+									<c:import url="/course/employ/Summary2_ITtelecom"/>
 								</div>
 								<div class="companySummary" style="DISPLAY:NONE;">
 									<!-- #include virtual="/Course/Employ/Summary1_BAinfra.asp"-->
+									<c:import url="/course/employ/Summary1_BAinfra"/>
 									<!-- #include virtual="/Course/Employ/Summary2_BAinfra.asp"-->
+									<c:import url="/course/employ/Summary2_BAinfra"/>
 								</div>
 								<div class="companySummary" style="DISPLAY:NONE;">
 									<!-- #include virtual="/Course/Employ/Summary1_IVIS.asp"-->
+									<c:import url="/course/employ/Summary1_IVIS"/>
 									<!-- #include virtual="/Course/Employ/Summary2_IVIS.asp"-->
+									<c:import url="/course/employ/Summary2_IVIS"/>
 								</div>
 								<div class="companySummary" style="DISPLAY:NONE;">
 									<!-- #include virtual="/Course/Employ/Summary1_AurosTech.asp"-->
+									<c:import url="/course/employ/Summary1_AurosTech"/>
 									<!-- #include virtual="/Course/Employ/Summary2_AurosTech.asp"-->
+									<c:import url="/course/employ/Summary2_AurosTech"/>
 								</div>
 								<div class="companySummary" style="DISPLAY:NONE;">
 									<!-- #include virtual="/Course/Employ/Summary1_TaehaMechatronics.asp"-->
+									<c:import url="/course/employ/Summary1_TaehaMechatronics"/>
 									<!-- #include virtual="/Course/Employ/Summary2_TaehaMechatronics.asp"-->
+									<c:import url="/course/employ/Summary2_TaehaMechatronics"/>
 								</div>
 								<div class="companySummary" style="DISPLAY:NONE;">
 									<!-- #include virtual="/Course/Employ/Summary1_PSK.asp"-->
+									<c:import url="/course/employ/Summary1_PSK"/>
 									<!-- #include virtual="/Course/Employ/Summary2_PSK.asp"-->
+									<c:import url="/course/employ/Summary2_PSK"/>
 								</div>
 							</div>
 							<!-- //참여기업 Summary -->

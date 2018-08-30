@@ -1,13 +1,11 @@
+<%!
+//strDateTime = "2017.09.06 ~ 2018.03.06"
+//strDateTime = "2018.01 ~ 2018.06"
+String strDateTime = "2018.01.02 ~ 2018.05.31";
 
-<%-- 
-<%
-'strDateTime = "2017.09.06 ~ 2018.03.06"
-'strDateTime = "2018.01 ~ 2018.06"
-strDateTime = "2018.01.02 ~ 2018.05.31"
-
-'// 상담신청모듈 추가시 필수 필드 : CourseID
-CourseID = "JX"	
-%> --%>
+// 상담신청모듈 추가시 필수 필드 : CourseID
+String CourseID = "JX";	
+%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
@@ -182,7 +180,7 @@ CourseID = "JX"
 							<h5>참여기업</h5>
 							<div class="companies">
 								<div style="float:left; margin-top:0px;"> <!-- -15px; ">-->
-									<div class="slot first" style="height:190px; background-color:rgb(255,255,255);" href="/course/employ/Course_Employ_BizTechPartners.asp">
+									<div class="slot first" style="height:190px; background-color:rgb(255,255,255);" href="/course/employ/Course_Employ_BizTechPartners">
 										<div class="divCompanyEmploy">
 											<img class="companyLogo" src="${pageContext.request.contextPath}/assets/Images/Content/Employ/img_LOGO_BizTechPartners.png" style="height:60px; margin-top:4px; margin-left:34px; margin-bottom:-9px;">
 											<p class="companyName"><span>㈜비즈테크파트너스</span></p>
@@ -191,12 +189,12 @@ CourseID = "JX"
 												<span style="font-weight:900; color:rgb(255,0,0);">모집중</span>
 											</p>
 										</div>
-										<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>
+										<%-- <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/> --%>
 										<p class="courseName dnone">-</p>
 										<p class="courseDescription dnone">-</p>
-										<div class="insideSlot" style="margin-top:-190px; height:190px; background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected_190px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
+										<div class="insideSlot" style="margin-top:-190px; height:190px; background:url('${pageContext.request.contextPath}/assets/CSS/MainPage_SlotSelected_190px.png'); opacity:0; -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
 									</div>
-									<div class="slot " style="height:190px; background-color:rgb(255,255,255);" href="/course/employ/Course_Employ_BitComputer.asp">
+									<div class="slot " style="height:190px; background-color:rgb(255,255,255);" href="/course/employ/Course_Employ_BitComputer">
 										<div class="divCompanyEmploy">
 											<img class="companyLogo" src="${pageContext.request.contextPath}/assets/Images/Main/img_logo_BITCOM.png" style="margin-top:18px; margin-left:38px; margin-bottom:8px;">
 											<p class="companyName"><span>㈜비트컴퓨터</span></p>
@@ -205,7 +203,7 @@ CourseID = "JX"
 												<span style="font-weight:900; color:rgb(255,0,0);">모집중</span>
 											</p>
 										</div>
-										<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/>
+										<%-- <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/> --%>
 										<p class="courseName dnone">-</p>
 										<p class="courseDescription dnone">-</p>
 										<div class="insideSlot" style="margin-top:-190px; height:190px; background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected_190px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
@@ -213,20 +211,19 @@ CourseID = "JX"
 								</div>
 								<div style="clear:both;"></div>
 							</div>	
-
 							<!-- 참여기업 Summary -->
 							<div style="margin-top:10px;">
 								<div class="companySummary" style="DISPLAY:NONE;">
 									<!-- #include virtual="/Course/Employ/Summary1_BizTechPartners.asp"-->
-									<c:import url="../employ/Summary1_BizTechPartners.jsp"/>
+									<c:import url="/course/employ/Summary1_BizTechPartners"/>
 									<!-- #include virtual="/Course/Employ/Summary2_BizTechPartners.asp"-->
-									<c:import url="../employ/Summary2_BizTechPartners.jsp"/>
+									<c:import url="/course/employ/Summary2_BizTechPartners"/>
 								</div>
 								<div class="companySummary" style="DISPLAY:NONE;">
 									<!-- #include virtual="/Course/Employ/Summary1_BitComputer.asp"-->
-									<c:import url="../employ/Summary1_BitComputer.jsp"/>
+									<c:import url="/course/employ/Summary1_BitComputer"/>
 									<!-- #include virtual="/Course/Employ/Summary2_BitComputer.asp"-->
-									<c:import url="../employ/Summary2_BitComputer.jsp"/>
+									<c:import url="/course/employ/Summary2_BitComputer"/>
 								</div>
 							</div>
 							<!-- //참여기업 Summary -->
