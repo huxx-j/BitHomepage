@@ -8,6 +8,6 @@
     검증된 제품과 기술력, 고객서비스를 바탕으로 안정적인 시장을 확보한 것에 그치지 않고 임베디드 전문가로서의 자부심과 최고의 기술력을 토대로 무한한 가능성을 가진 기업으로 성장할 것입니다.<br/>
     이러한, 임베디드 시스템 및 피트니스 전문기업인 태하메카트로닉스㈜에서 열정을 가진 연구개발부문 사원을 모집합니다.
 </p>
-<a href="http://taeha.co.kr/html/" class="blueTxt fb" target="_blank">홈페이지 주소 : http://taeha.co.kr/html/</a>
+<a href="http://taeha.co.kr/" class="blueTxt fb" target="_blank">홈페이지 주소 : http://taeha.co.kr/</a>
 <br/><br/>
 

@@ -206,7 +206,7 @@ String CourseID = "C2_core";
 											<th>교육정원</th>
 											<td>30명</td>
 											<th>문의</th>
-											<td>02-3486-1780 &nbsp;(<a href="mailto:kang.i.y@bit.kr" class="email">kang.i.y@bit.kr</a>)</td>
+											<td>최광원 070-4166-2491</td>
 										</tr>
 									</tbody>
 								</table> 

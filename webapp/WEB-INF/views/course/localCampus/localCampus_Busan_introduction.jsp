@@ -100,12 +100,12 @@
 			
 			///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			// 3. 초기값에 따라서 [프로젝트 살펴보기] 및 [공모전 출품작] 보여주기.
-			<%-- if( 'booklet' == '<%=Request.QueryString("beginwith")%>') {
+			if("booklet"=="${beginwith}") {
 				showBooklet();
 			}
-			//else if( 'entryWorks' == '<%=Request.QueryString("beginwith")%>') {
-			//	showEntryWorks(); --%>
-			//}
+			else if("entryWorks"=="${beginwith}") {
+				showEntryWorks();
+			}
 		});
 	
 		//////////////////////////////////////////////////////

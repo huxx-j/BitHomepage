@@ -65,7 +65,7 @@
 						</p>
 						<h4>
 							JAVA 고급과정
-							<a href="/course/localCampus/LocalCampus_Busan_Introduction.asp?beginwith=booklet" title="프로젝트 살펴보기" class="btnRedBorder" style="font-size:15px; padding:0 5px; margin-left:10px; border-radius:0px; letter-spacing:-1.5px;">프로젝트 살펴보기</a>
+							<a href="/course/localCampus/localCampus_Busan_introduction?beginwith=booklet" title="프로젝트 살펴보기" class="btnRedBorder" style="font-size:15px; padding:0 5px; margin-left:10px; border-radius:0px; letter-spacing:-1.5px;">프로젝트 살펴보기</a>
 						</h4>
 					</div>
 

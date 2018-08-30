@@ -142,9 +142,9 @@ String SubjectName = "JAVA 설계과정";
 						<div class="con_wrap1709">
 							<h5>선수지식</h5>
 							<ul class="ul_dot_gray">
-								<li>JAVA Programming<a href="/course/shortcourse/detailPage/Course_java.asp" class="mar_l10 btnBlueBorder small">자세히보기</a></li>
-								<li>SQL & JDBC<a href="/course/shortcourse/detailPage/Course_sqlJdbc.asp" class="mar_l10 btnBlueBorder small">자세히보기</a></li>
-								<li>Servlet & JSP<a href="/course/shortcourse/detailPage/Course_servletJsp.asp" class="mar_l10 btnBlueBorder small">자세히보기</a></li>
+								<li>JAVA Programming<a href="/course/shortcourse/detailPage/Course_java" class="mar_l10 btnBlueBorder small">자세히보기</a></li>
+								<li>SQL & JDBC<a href="/course/shortcourse/detailPage/Course_sqlJdbc" class="mar_l10 btnBlueBorder small">자세히보기</a></li>
+								<li>Servlet & JSP<a href="/course/shortcourse/detailPage/Course_servletJsp" class="mar_l10 btnBlueBorder small">자세히보기</a></li>
 								<!--
 								<li>객체지향 자바프로그래밍</li>
 								<li>실전! SQL & JDBC 프로그래밍</li>
