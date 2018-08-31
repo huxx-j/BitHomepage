@@ -87,41 +87,58 @@ public class MemberService {
 
     public List<UserModVo> Member_modify_school(int user_no) {
         List<UserModVo> list = memberDao.Member_modify_school(user_no);
-        String date = "0000-0";
-
         for (UserModVo userModVo: list) {
+            // 1. 날짜 처리
+            String endYear = (String) userModVo.getEndYear();
+            String endMon = (String) userModVo.getEndMon();
+            String startYear = (String) userModVo.getStartYear();
+            String startMon = (String) userModVo.getStartMon();
+            if (endYear.contains("-") || endYear.equals("")) {
+                endYear = "0";
+            }
+            if (endMon.contains("-") || endMon.equals("")) {
+                endMon = "0";
+            }
+            if (startYear.contains("-") || startYear.equals("")){
+                startYear = "0";
+            }
+            if (startMon.contains("-") || startMon.equals("")){
+                startMon = "0";
+            }
+            userModVo.setEndYear(endYear);
+            userModVo.setEndMon(endMon);
+            userModVo.setStartYear(startYear);
+            userModVo.setStartMon(startMon);
+            // 1. end
+
             // 2. 학교이름 나눠주는 코드
             if (userModVo.getSchool()!=null){
-                userModVo.setSchoolPosition(1); // 학력등록정보에서 포지션 잡기위해 사용
                 String s = userModVo.getSchool();
-                if (s.substring(s.length()-4, s.length()).equals("고등학교") || s.substring(s.length()-4, s.length()).equals("검정고시")) {
-                    userModVo.setSchoolPosition(0); //고등학교/검정고시 행에 들어가야 하므로 position 지정
-                    String[] sArray = new String[2];
-                    if (s.substring(s.length()-4, s.length()).equals("고등학교")){ //고등학교
-                        sArray[0]=s.split("고등학교")[0]; //result = 학교이름
-                        sArray[1]=s.substring(s.length()-4, s.length()); // result = 고등학교
+                String[] sArray = new String[2];
+                if (s.contains("고등학교") || s.contains("검정고시")) {
+                    if (s.substring(s.length() - 4, s.length()).equals("고등학교")) { //고등학교
+                        sArray[0] = s.split("고등학교")[0]; //result = 학교이름
+                        sArray[1] = s.substring(s.length() - 4, s.length()); // result = 고등학교
                     } else { // 검정고시
-                        sArray[0]= "";
-                        sArray[1]="검정고시";
+                        sArray[0] = "";
+                        sArray[1] = "검정고시";
                     }
                     userModVo.setSchoolArray(sArray);
-                } else if (s.substring(s.length()-3, s.length()).equals("대학교") || s.substring(s.length()-3, s.length()).equals("대학원") || s.substring(s.length()-2, s.length()).equals("대학")){
-                    String[] sArray = new String[2];
-                    if (s.substring(s.length()-3, s.length()).equals("대학교")){
-                        sArray[0]=s.split("대학교")[0]; //result = 학교이름
-                        sArray[1]=s.substring(s.length()-3, s.length()); // result = 대학교
-                    } else if (s.substring(s.length()-3, s.length()).equals("대학원")){
-                        sArray[0]=s.split("대학원")[0]; //result = 학교이름
-                        sArray[1]=s.substring(s.length()-3, s.length()); // result = 대학원
+                } else if (s.contains("대학교") || s.contains("대학원") || s.contains("대학")) {
+                    if (s.substring(s.length() - 3, s.length()).equals("대학교")) {
+                        sArray[0] = s.split("대학교")[0]; //result = 학교이름
+                        sArray[1] = s.substring(s.length() - 3, s.length()); // result = 대학교
+                    } else if (s.substring(s.length() - 3, s.length()).equals("대학원")) {
+                        sArray[0] = s.split("대학원")[0]; //result = 학교이름
+                        sArray[1] = s.substring(s.length() - 3, s.length()); // result = 대학원
                     } else {
-                        sArray[0]=s.split("대학")[0]; //result = 학교이름
-                        sArray[1]=s.substring(s.length()-2, s.length()); // result = 대학
+                        sArray[0] = s.split("대학")[0]; //result = 학교이름
+                        sArray[1] = s.substring(s.length() - 2, s.length()); // result = 대학
                     }
                     userModVo.setSchoolArray(sArray);
                 } else {
-                    String[] sArray = new String[2];
-                    sArray[0]=s; //result = 데이터 그대로 출력
-                    sArray[1]="기타"; // result = 기타
+                    sArray[0] = s; //result = 데이터 그대로 출력
+                    sArray[1] = "기타"; // result = 기타
                     userModVo.setSchoolArray(sArray);
                 }
             } else { // 학교가 null일때
@@ -138,6 +155,9 @@ public class MemberService {
                 list.add(dummyVo);
             }
         }
+//        for (UserModVo userModVo : list) {
+//            System.out.println(userModVo.toString());
+//        }
         return list;
     }
 }

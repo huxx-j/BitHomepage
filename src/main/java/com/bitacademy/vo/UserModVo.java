@@ -3,48 +3,48 @@ package com.bitacademy.vo;
 import java.util.Arrays;
 
 public class UserModVo {
-   private String loginID;
-   private String nameHan;
-   private String nameEng;
-   private String[] nameEngArray;
-   private int gender;
-   private String email;
-   private String postNum;
-   private String address;
-   private String familyPostNum;
-   private String familyAddress;
-   private String telephone;
-   private String cellphone;
-   private String bitLetter;
-   private String[] telephoneArray;
-   private String[] cellphoneArray;
+    private String loginID;
+    private String nameHan;
+    private String nameEng;
+    private String[] nameEngArray;
+    private int gender;
+    private String email;
+    private String postNum;
+    private String address;
+    private String familyPostNum;
+    private String familyAddress;
+    private String telephone;
+    private String cellphone;
+    private String bitLetter;
+    private String[] telephoneArray;
+    private String[] cellphoneArray;
 
 
-   private int userScholarship_no;
-   private int user_no;
-   private String startDate;
-   private int[] startDateArray;
-   private String endDate;
-   private int[] endDateArray;
-   private String school;
-   private String[] schoolArray;
-   private String state;
-   private String location;
-   private String degree;
-   private String major;
-   private String subMajor;
-   private int schoolPosition;
+    private int userScholarship_no;
+    private int user_no;
+    private String startDate;
+    private Object[] startDateArray;
+    private String endDate;
+    private Object[] endDateArray;
+    private String school;
+    private String[] schoolArray;
+    private String state;
+    private String location;
+    private String degree;
+    private String major;
+    private String subMajor;
+    private int schoolPosition;
 
-   private int startYear;
-   private int startMon;
-   private int endYear;
-   private int endMon;
+    private Object startYear;
+    private Object startMon;
+    private Object endYear;
+    private Object endMon;
 
 
     public UserModVo() {
     }
 
-    public UserModVo(String loginID, String nameHan, String nameEng, String[] nameEngArray, int gender, String email, String postNum, String address, String familyPostNum, String familyAddress, String telephone, String cellphone, String bitLetter, String[] telephoneArray, String[] cellphoneArray, int userScholarship_no, int user_no, String startDate, int[] startDateArray, String endDate, int[] endDateArray, String school, String state, String location, String degree, String major, String subMajor) {
+    public UserModVo(String loginID, String nameHan, String nameEng, String[] nameEngArray, int gender, String email, String postNum, String address, String familyPostNum, String familyAddress, String telephone, String cellphone, String bitLetter, String[] telephoneArray, String[] cellphoneArray, int userScholarship_no, int user_no, String startDate, Object[] startDateArray, String endDate, Object[] endDateArray, String school, String[] schoolArray, String state, String location, String degree, String major, String subMajor, int schoolPosition, int startYear, int startMon, int endYear, int endMon) {
         this.loginID = loginID;
         this.nameHan = nameHan;
         this.nameEng = nameEng;
@@ -67,11 +67,17 @@ public class UserModVo {
         this.endDate = endDate;
         this.endDateArray = endDateArray;
         this.school = school;
+        this.schoolArray = schoolArray;
         this.state = state;
         this.location = location;
         this.degree = degree;
         this.major = major;
         this.subMajor = subMajor;
+        this.schoolPosition = schoolPosition;
+        this.startYear = startYear;
+        this.startMon = startMon;
+        this.endYear = endYear;
+        this.endMon = endMon;
     }
 
     @Override
@@ -113,35 +119,35 @@ public class UserModVo {
                 '}';
     }
 
-    public int getStartYear() {
+    public Object getStartYear() {
         return startYear;
     }
 
-    public void setStartYear(int startYear) {
+    public void setStartYear(Object startYear) {
         this.startYear = startYear;
     }
 
-    public int getStartMon() {
+    public Object getStartMon() {
         return startMon;
     }
 
-    public void setStartMon(int startMon) {
+    public void setStartMon(Object startMon) {
         this.startMon = startMon;
     }
 
-    public int getEndYear() {
+    public Object getEndYear() {
         return endYear;
     }
 
-    public void setEndYear(int endYear) {
+    public void setEndYear(Object endYear) {
         this.endYear = endYear;
     }
 
-    public int getEndMon() {
+    public Object getEndMon() {
         return endMon;
     }
 
-    public void setEndMon(int endMon) {
+    public void setEndMon(Object endMon) {
         this.endMon = endMon;
     }
 
@@ -185,12 +191,20 @@ public class UserModVo {
         this.startDate = startDate;
     }
 
-    public int[] getStartDateArray() {
+    public Object[] getStartDateArray() {
         return startDateArray;
     }
 
-    public void setStartDateArray(int[] startDateArray) {
+    public void setStartDateArray(Object[] startDateArray) {
         this.startDateArray = startDateArray;
+    }
+
+    public Object[] getEndDateArray() {
+        return endDateArray;
+    }
+
+    public void setEndDateArray(Object[] endDateArray) {
+        this.endDateArray = endDateArray;
     }
 
     public String getEndDate() {
@@ -199,14 +213,6 @@ public class UserModVo {
 
     public void setEndDate(String endDate) {
         this.endDate = endDate;
-    }
-
-    public int[] getEndDateArray() {
-        return endDateArray;
-    }
-
-    public void setEndDateArray(int[] endDateArray) {
-        this.endDateArray = endDateArray;
     }
 
     public String getSchool() {

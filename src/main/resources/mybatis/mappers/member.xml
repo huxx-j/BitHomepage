@@ -50,8 +50,13 @@
 
     <select id="Member_modify_school" parameterType="Int" resultType="UserModVo">
         <![CDATA[
-                select UserScholarship_no, User_no, substring(StartDate,1,4) StartYear, substring(StartDate,6,7) StartMon, substring(EndDate,1,4) EndYear, substring(EndDate,6,7) EndMon, StartDate, EndDate, School, State, Location, Degree, Major, SubMajor
-                from UserScholarship where User_no=#{user_no} order by StartDate, UserScholarship_no
+                select UserScholarship_no, User_no, substring(StartDate,1,4) StartYear,
+                        substring(StartDate,6,7) StartMon,
+                        substring(EndDate,1,4) EndYear, substring(EndDate,6,7) EndMon, StartDate, EndDate, School, State,
+                        Location, Degree, Major, SubMajor
+                from UserScholarship
+                where User_no=#{user_no}
+                order by UserScholarship_no
         ]]>
     </select>
 </mapper>
