@@ -133,21 +133,21 @@ public class CourseController {
     public String Course_Kukka_RaspberryPiIoTService_2018() {
         return "course/kukka/Course_Kukka_RaspberryPiIoTService_2018";
     }
+    @RequestMapping(value = "kukka/Course_Support", method = RequestMethod.GET)
+    public String Course_Support() {
+    	System.out.println("국비지원 컨트롤러 옴");
+        return "course/kukka/Course_Support";
+    }
+    
 
     @ResponseBody
-    @RequestMapping(
-            value = {"/ajax/getLocationInfo"},
-            method = {RequestMethod.POST}
-    )
+    @RequestMapping(value = {"/ajax/getLocationInfo"},method = {RequestMethod.POST})
     public List<BP2Vo> getLocationInfo(@RequestParam("BPNum") int BPNum) {
         return this.courseService.getLocationInfo(BPNum);
     }
 
     @ResponseBody
-    @RequestMapping(
-            value = {"/ajax/getProjectInfo"},
-            method = {RequestMethod.POST}
-    )
+    @RequestMapping(value = {"/ajax/getProjectInfo"},method = {RequestMethod.POST})
     public PamphletVo getProjectInfo(@RequestParam("termNum") int termNum, @RequestParam("groupNum") int groupNum) {
         return this.courseService.getProjectInfo(termNum, groupNum);
     }

@@ -10,6 +10,6 @@
       개발하고 이와 함께 ADAS, 차세대 HMI, CAN, 차량 이더넷 등의 솔루션 기술 개발에 집중하여 고품질, 
       고신뢰성을 기반으로 국내 자동차 소프트웨어의 수준을 높이고 경쟁력을 확보하는데 기여하고자 사업을 추진중입니다. 
 </p>
-<a class="blueTxt fb" href="http://www.ivisolution.com" target="_blank">홈페이지 주소 : http://www.ivisolution.com/</a>
+<a class="blueTxt fb" href="http://ivisolution.com" target="_blank">홈페이지 주소 : http://www.ivisolution.com/</a>
 <br/><br/>
 

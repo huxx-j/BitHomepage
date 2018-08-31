@@ -46,7 +46,7 @@
         <li class="dnone">
             <a href="#" onclick="return onclickIndustry40();" class="newdepth1" style="letter-spacing:0px;">4차산업선도인력양성</a>
             <ul class="newdepth2_wrap no1" style="height:50px;">
-                <li><a href="/Course/Industry4.0/Course_Industry40_FinTech_Expert.asp" class="newdepth2">AI기반 핀테크 융합 전문가과정</a></li>
+                <li><a href="/course/industry4.0/Course_Industry40_FinTech_Expert" class="newdepth2">AI기반 핀테크 융합 전문가과정</a></li>
 
                 <!--<li><a href="/Course/Industry4.0/Course_Industry40_IoTSelfDriving_Expert.asp" class="newdepth2">IoT를 활용한 AI 기반 자율주행 전문가과정</a></li>-->
                 <!--<li><a href="/Course/Industry4.0/Course_Industry40_BigData_Expert.asp" class="newdepth2" style="height:39px;">AI기반 빅데이터 엔지니어/사이언티스트 전문가과정</a></li>-->
@@ -56,7 +56,7 @@
             <a href="#" onclick="return onclickKukka();" class="newdepth1">국가기간전략산업직종</a>
             <ul class="newdepth2_wrap no2" style="min-height:132px;"><!--"170px;">-->
                 <li><a href="/course/kukka/Course_Kukka_Introduction" style="height:26px;" class="newdepth2 long">국가기간전략산업직종훈련 소개</a></li>
-                <li style="display:none;"><a href="/Course/Kukka/Course_Kukka_Projects20180102" style="height:14px;" class="newdepth2">프로젝트 발표회</a></li><!--  style="DISPLAY:NONE;" -->
+                <li style="display:none;"><a href="/course/kukka/Course_Kukka_Projects20180102" style="height:14px;" class="newdepth2">프로젝트 발표회</a></li><!--  style="DISPLAY:NONE;" -->
                 <li><a href="/course/kukka/Course_Kukka_RaspberryPiIoTService_2018" style="height:24px; padding-right:10px;" class="newdepth2 long">IoT를 활용한 자바 웹&amp;모바일 고급인력 양성과정</a></li>
                 <li class="dnone"><a href="/Course/Kukka/Course_Kukka_FinTech_2018" style="height:24px; padding-right:10px;" class="newdepth2 long">금융 IT기반 핀테크 전문가 양성과정</a></li>
                 <li><a href="/course/kukka/Course_Kukka_JavaBigData_2018" style="height:24px; letter-spacing:-1px;" class="newdepth2 long">JAVA 기반 빅데이터 분석을 위한 고급인력 양성과정</a></li>
@@ -84,13 +84,13 @@
             </ul>
         </li>
         <li class="dnone">
-            <a href="/Course/Chung/Course_Chung_2018.asp" class="newdepth1">청년취업아카데미</a>
+            <a href="/course/chung/Course_Chung_2018" class="newdepth1">청년취업아카데미</a>
         </li>
         <li class="dnone">
             <a href="#" onclick="return onclickConsortium();" class="newdepth1" style="letter-spacing:-0.5px;">국가인적자원개발컨소시엄</a>
             <ul class="newdepth2_wrap no4" style="height:48px;">
-                <li><a href="/Course/Kukka/Course_Consortium_AWS_Cloud_Web.asp" class="newdepth2 dnone">AWS를 활용한 클라우드 기반 웹 개발</a></li>
-                <li><a href="/Course/Kukka/Course_Consortium_RaspberryPi_IoT.asp" class="newdepth2">라즈베리파이를 활용한 IoT개발 실무과정</a></li>
+                <li><a href="/course/kukka/Course_Consortium_AWS_Cloud_Web" class="newdepth2 dnone">AWS를 활용한 클라우드 기반 웹 개발</a></li>
+                <li><a href="/course/kukka/Course_Consortium_RaspberryPi_IoT" class="newdepth2">라즈베리파이를 활용한 IoT개발 실무과정</a></li>
             </ul>
         </li>
     </ul>

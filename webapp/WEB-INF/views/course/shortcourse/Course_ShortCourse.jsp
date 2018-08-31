@@ -66,22 +66,22 @@
 		function toggleCampusInfo(numCampus) {
 			var str="";
 			if(numCampus==1) {		// C프로그래밍
-				str 	= "<a href='./Courses_C'><div><span class='campusName'>[서울]</span> 비트교육센터</div></a>" +
-					"<a href='/course/localcampus/detailpage/Daejeon_c'><div><span class='campusName'>[대전]</span> 대전캠퍼스</div></a>" +
-					"<a href='/course/localcampus/detailpage/Busan_c'><div><span class='campusName'>[부산]</span> 부산캠퍼스</div></a>";
+				str 	= "<a href='/course/shortcourse/detailPage/Course_C'><div><span class='campusName'>[서울]</span> 비트교육센터</div></a>" +
+					"<a href='/course/localCampus/DetailPage/Daejeon_c'><div><span class='campusName'>[대전]</span> 대전캠퍼스</div></a>" +
+					"<a href='/course/localCampus/DetailPage/Busan_c'><div><span class='campusName'>[부산]</span> 부산캠퍼스</div></a>";
 			}
 			else if(numCampus==2) {		// Java프로그래밍
-				str 	= "<a href='/course/shortcourse/detailpage/Course_Java'><div><span class='campusName'>[서울]</span> 비트교육센터</div></a>" +
-					"<a href='/course/localcampus/detailpage/Daejeon_java'><div><span class='campusName'>[대전]</span> 대전캠퍼스</div></a>" +
-					"<a href='/course/localcampus/detailpage/Busan_java'><div><span class='campusName'>[부산]</span> 부산캠퍼스</div></a>";
+				str 	= "<a href='/course/shortcourse/detailPage/Course_Java'><div><span class='campusName'>[서울]</span> 비트교육센터</div></a>" +
+					"<a href='/course/localCampus/DetailPage/Daejeon_java'><div><span class='campusName'>[대전]</span> 대전캠퍼스</div></a>" +
+					"<a href='/course/localCampus/DetailPage/Busan_java'><div><span class='campusName'>[부산]</span> 부산캠퍼스</div></a>";
 			}
 			else if(numCampus==3) {		// C++프로그래밍
-				str 	= "<a href='/course/shortcourse/detailpage/Course_cPlus'><div><span class='campusName'>[서울]</span> 비트교육센터</div></a>" +
-					"<a href='/course/localcampus/detailpage/Daejeon_cPlus'><div><span class='campusName'>[대전]</span> 대전캠퍼스</div></a>";
+				str 	= "<a href='/course/shortcourse/detailPage/Course_cPlus'><div><span class='campusName'>[서울]</span> 비트교육센터</div></a>" +
+					"<a href='/course/localCampus/DetailPage/Daejeon_cPlus'><div><span class='campusName'>[대전]</span> 대전캠퍼스</div></a>";
 			}
 			else if(numCampus==4) {		// 자료구조/알고리즘
-				str 	= "<a href='/course/shortcourse/detailpage/Course_c2'><div><span class='campusName'>[서울]</span> 비트교육센터</div></a>" +
-					"<a href='/course/localcampus/detailpage/Busan_c2'><div><span class='campusName'>[부산]</span> 부산캠퍼스</div></a>";
+				str 	= "<a href='/course/shortcourse/detailPage/Course_c2'><div><span class='campusName'>[서울]</span> 비트교육센터</div></a>" +
+					"<a href='/course/localCampus/DetailPage/Busan_c2'><div><span class='campusName'>[부산]</span> 부산캠퍼스</div></a>";
 			}			
 			if( $("div#selectCampus"+numCampus).html().length>0 )
 				$("div#selectCampus"+numCampus).html("");
@@ -197,7 +197,7 @@
 						<div style="clear:both;"></div>
 					</div>
 					
-					<div class="slot " style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기프_Python프로그래밍.png')" href="/course/shortcourse/detailpage/Course_Python">
+					<div class="slot " style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기프_Python프로그래밍.png')" href="/course/shortcourse/detailPage/Course_Python">
 						<p class="courseName dnone">Python 프로그래밍</p>
 						<p class="courseDescription dnone">프로그래밍 입문자도 쉽게 공부할 수 있는, 세상에서 가장 쉬운 언어</p>
 						<div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
@@ -236,25 +236,25 @@
 							<div class="selectCampus" id="selectCampus3"></div>
 						</div>
 					</div>
-					<div class="slot" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기핵심_모바일_안드로이드앱개발.png')" href="/course/shortcourse/detailpage/Course_Android">
+					<div class="slot" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기핵심_모바일_안드로이드앱개발.png')" href="/course/shortcourse/detailPage/Course_Android">
 						<%-- <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/> --%>
 						<p class="courseName dnone">안드로이드 앱 개발</p>
 						<p class="courseDescription dnone">Java 언어를 기반으로 안드로이드에서 구동되는 앱을 개발하는 과정</p>
 						<div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
 					</div>
-					<div class="slot" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기핵심_실용머신러닝Python.png')" href="/course/shortcourse/detailpage/Course_DSCIENCE_PracticalMachineLearningPython">
+					<div class="slot" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기핵심_실용머신러닝Python.png')" href="/course/shortcourse/detailPage/Course_DSCIENCE_PracticalMachineLearningPython">
 						<%-- <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/> --%>
 						<p class="courseName dnone">&nbsp;</p>
 						<p class="courseDescription dnone">&nbsp;</p>
 						<div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
 					</div>
-					<div class="slot" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기핵심_R을사용한데이터분석과머신러닝초급.png')" href="/course/shortcourse/detailpage/Course_DSCIENCE_AnalysisMachineLearning">
+					<div class="slot" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기핵심_R을사용한데이터분석과머신러닝초급.png')" href="/course/shortcourse/detailPage/Course_DSCIENCE_AnalysisMachineLearning">
 						<%-- <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__new.png"/> --%>
 						<p class="courseName up long dnone">R을 사용한 데이터 분석과 머신러닝 (초급)</p>
 						<p class="courseDescription dnone">데이터 분석과 머신러닝을 위한 통계 프로그래밍 언어 R을 사용하여 데이터 처리, 시각화, 머신러닝을 배우는 과정</p>
 						<div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
 					</div>
-					<div class="slot" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기핵심_퍼블리싱실무.png')" href="/course/shortcourse/detailpage/Course_WebPublishing">
+					<div class="slot" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__단기핵심_퍼블리싱실무.png')" href="/course/shortcourse/detailPage/Course_WebPublishing">
 						<%-- <img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__recommend.png"/> --%>
 						<p class="courseName dnone">웹퍼블리싱 실무</p>
 						<p class="courseDescription dnone">HTML의 기초부터 실무예제를 체계적인 학습을 통해 모바일, 데스크탑 웹 서비스를 제작할 수 있도록 하는 과정</p>
