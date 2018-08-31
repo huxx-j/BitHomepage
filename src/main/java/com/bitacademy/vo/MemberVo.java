@@ -17,13 +17,13 @@ public class MemberVo {
     private String handphone3;
     private String mail1;
     private String mail2;
-    private String bitletter;
+    private String bitLetter;
     private String job;
 
     public MemberVo() {
     }
 
-    public MemberVo(String sDupInfo, String sName, String name, String loginID, String password, String confirm_pwd, String czipcode2, String caddr2, String telephone1, String telephone2, String telephone3, String handphone1, String handphone2, String handphone3, String mail1, String mail2, String bitletter, String job) {
+    public MemberVo(String sDupInfo, String sName, String name, String loginID, String password, String confirm_pwd, String czipcode2, String caddr2, String telephone1, String telephone2, String telephone3, String handphone1, String handphone2, String handphone3, String mail1, String mail2, String bitLetter, String job) {
         this.sDupInfo = sDupInfo;
         this.sName = sName;
         this.name = name;
@@ -40,7 +40,7 @@ public class MemberVo {
         this.handphone3 = handphone3;
         this.mail1 = mail1;
         this.mail2 = mail2;
-        this.bitletter = bitletter;
+        this.bitLetter = bitLetter;
         this.job = job;
     }
 
@@ -172,12 +172,12 @@ public class MemberVo {
         this.mail2 = mail2;
     }
 
-    public String getBitletter() {
-        return bitletter;
+    public String getBitLetter() {
+        return bitLetter;
     }
 
-    public void setBitletter(String bitletter) {
-        this.bitletter = bitletter;
+    public void setBitLetter(String bitletter) {
+        this.bitLetter = bitLetter;
     }
 
     public String getJob() {
@@ -207,7 +207,7 @@ public class MemberVo {
                 ", handphone3='" + handphone3 + '\'' +
                 ", mail1='" + mail1 + '\'' +
                 ", mail2='" + mail2 + '\'' +
-                ", bitletter='" + bitletter + '\'' +
+                ", bitletter='" + bitLetter + '\'' +
                 ", job='" + job + '\'' +
                 '}';
     }

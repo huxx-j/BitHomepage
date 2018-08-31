@@ -2,6 +2,7 @@ package com.bitacademy.controller;
 
 import com.bitacademy.service.MemberService;
 import com.bitacademy.vo.MemberVo;
+import com.bitacademy.vo.UserModReqVo;
 import com.bitacademy.vo.UserModVo;
 import com.bitacademy.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -104,6 +105,12 @@ public class MemberController {
             model.addAttribute("schoolList", list);
             return "/member/Member_modify";
         }
+    }
+
+    @RequestMapping(value = "/member_modify_ok", method = RequestMethod.POST)
+    public String member_modify_ok (@ModelAttribute UserModReqVo userModReqVo){
+        memberService.member_modify_ok(userModReqVo);
+        return "redirect:/member/Member_modify";
     }
 }
 

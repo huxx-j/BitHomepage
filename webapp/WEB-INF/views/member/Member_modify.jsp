@@ -146,7 +146,7 @@
     <c:import url="/WEB-INF/views/Include/Script_MoBon_1803.jsp"/>
 </head>
 <body>
-<form name="memform" method="POST" action="http://www.bitacademy.com/Member/member_modify_ok.asp">
+<form name="memform" method="POST" action="${pageContext.request.contextPath}/member/member_modify_ok">
     <div id="Wrapper">
 
         <!-- Header -->
@@ -183,6 +183,7 @@
                         <div class="con_wrap1709">
                             <div class="divTable">
                                 <input type="hidden" name="idcheck" value="N">
+                                <input type="hidden" name="user_no" value="${sessionScope.authUser.user_no}">
                                 <table>
                                     <caption>개인정보수정</caption>
                                     <colgroup>
@@ -225,13 +226,13 @@
                                         <td scope="row" class="darker c">성별</td>
                                         <td>
                                             <c:if test="${modVo.gender eq 1}">
-                                                <input name="sex" type="radio" CHECKED value="1" disabled>&nbsp;남자
-                                                <input name="sex" type="radio" value="2" disabled>&nbsp;여자</td>
-                                            </c:if>
-                                            <c:if test="${modVo.gender eq 2}">
-                                                <input name="sex" type="radio" value="1" disabled>&nbsp;남자
-                                                <input name="sex" type="radio" CHECKED value="2" disabled>&nbsp;여자</td>
-                                            </c:if>
+                                            <input name="sex" type="radio" CHECKED value="1" disabled>&nbsp;남자
+                                            <input name="sex" type="radio" value="2" disabled>&nbsp;여자</td>
+                                        </c:if>
+                                        <c:if test="${modVo.gender eq 2}">
+                                            <input name="sex" type="radio" value="1" disabled>&nbsp;남자
+                                            <input name="sex" type="radio" CHECKED value="2" disabled>&nbsp;여자</td>
+                                        </c:if>
                                         </td>
                                     </tr>
                                     <tr>
@@ -298,29 +299,29 @@
                                         <td scope="row" class="darker c"><label for="joinInfo_10">직업<span class="star">*</span></td>
                                         <td colspan="2">
                                             <select name="job" id="" class="jobSelect">
-                                                <option selected>직업선택</option>
-                                                <option value="학생" >학생 </option>
-                                                <option value="컴퓨터/인터넷" >컴퓨터/인터넷</option>
-                                                <option value="언론" >언론</option>
-                                                <option value="공무원" >공무원</option>
-                                                <option value="회사원" >회사원</option>
-                                                <option value="군인" >군인</option>
-                                                <option value="서비스업" >서비스업</option>
-                                                <option value="교육" >교육</option>
-                                                <option value="금융/증권/보험업" >금융/증권/보험업</option>
-                                                <option value="유통업" >유통업</option>
-                                                <option value="예술" >예술</option>
-                                                <option value="의료" >의료</option>
-                                                <option value="법률" >법률</option>
-                                                <option value="건설업" >건설업</option>
-                                                <option value="제조업" >제조업</option>
-                                                <option value="부동산업" >부동산업</option>
-                                                <option value="운송업" >운송업</option>
-                                                <option value="농/수산/임업" >농/수산/임업</option>
-                                                <option value="광산업" >광산업</option>
-                                                <option value="주부" >주부</option>
-                                                <option value="기타" >기타</option>
-                                                <option value="무직" >무직</option>
+                                                <option ${modVo.job eq null or modVo.job eq '' ? "selected" : ""}>직업선택</option>
+                                                <option ${modVo.job eq "학생" ? "selected" : ""} value="학생" >학생 </option>
+                                                <option ${modVo.job eq "컴퓨터/인터넷" ? "selected" : ""} value="컴퓨터/인터넷" >컴퓨터/인터넷</option>
+                                                <option ${modVo.job eq "언론" ? "selected" : ""} value="언론" >언론</option>
+                                                <option ${modVo.job eq "공무원" ? "selected" : ""} value="공무원" >공무원</option>
+                                                <option ${modVo.job eq "회사원" ? "selected" : ""} value="회사원" >회사원</option>
+                                                <option ${modVo.job eq "군인" ? "selected" : ""} value="군인" >군인</option>
+                                                <option ${modVo.job eq "서비스업" ? "selected" : ""} value="서비스업" >서비스업</option>
+                                                <option ${modVo.job eq "교육" ? "selected" : ""} value="교육" >교육</option>
+                                                <option ${modVo.job eq "금융/증권/보험업" ? "selected" : ""} value="금융/증권/보험업" >금융/증권/보험업</option>
+                                                <option ${modVo.job eq "유통업" ? "selected" : ""} value="유통업" >유통업</option>
+                                                <option ${modVo.job eq "예술" ? "selected" : ""} value="예술" >예술</option>
+                                                <option ${modVo.job eq "의료" ? "selected" : ""} value="의료" >의료</option>
+                                                <option ${modVo.job eq "법률" ? "selected" : ""} value="법률" >법률</option>
+                                                <option ${modVo.job eq "건설업" ? "selected" : ""} value="건설업" >건설업</option>
+                                                <option ${modVo.job eq "제조업" ? "selected" : ""} value="제조업" >제조업</option>
+                                                <option ${modVo.job eq "부동산업" ? "selected" : ""} value="부동산업" >부동산업</option>
+                                                <option ${modVo.job eq "운송업" ? "selected" : ""} value="운송업" >운송업</option>
+                                                <option ${modVo.job eq "농/수산/임업" ? "selected" : ""} value="농/수산/임업" >농/수산/임업</option>
+                                                <option ${modVo.job eq "광산업" ? "selected" : ""} value="광산업" >광산업</option>
+                                                <option ${modVo.job eq "주부" ? "selected" : ""} value="주부" >주부</option>
+                                                <option ${modVo.job eq "기타" ? "selected" : ""} value="기타" >기타</option>
+                                                <option ${modVo.job eq "무직" ? "selected" : ""} value="무직" >무직</option>
                                             </select>
                                         </td>
                                     </tr>
@@ -377,10 +378,11 @@
                                     <c:forEach items="${schoolList}" var="vo" varStatus="cnt">
                                         <tr>
                                             <td>	<!-- 기간 -->
+                                                <input type="hidden" name="">
                                                 <input name="DteFr_${cnt.index}"  value="${vo.startYear eq 0 ? "" : vo.startYear}" size=3  maxLength="4" onkeypress="onlyNumber();" onchange="JavaScript:chknext(this)" style="width:33px">
                                                 년
                                                 <select name="DayFr_${cnt.index}" size="1">
-                                                    <option value=""></option>
+                                                    <option value="0"></option>
                                                     <c:forEach var="i" begin="1" end="12" step="1">
                                                         <option ${vo.startMon eq i ? "selected" : ""} value="${i}">${i}</option>
                                                     </c:forEach>
@@ -395,7 +397,7 @@
                                                 <input name="DteEnd_${cnt.index}"  size=3 value="${vo.endYear eq 0 ? "" : vo.endYear}" maxLength="4" onchange="JavaScript:chknext(this)" onkeypress="onlyNumber();" style="width:33px">
                                                 년
                                                 <select name="DayEnd_${cnt.index}" size="1">
-                                                    <option value=""></option>
+                                                    <option value="0"></option>
                                                     <c:forEach var="i" begin="1" end="12" step="1">
                                                         <option ${vo.endMon eq i ? "selected" : ""} value="${i}">${i}</option>
                                                     </c:forEach>
@@ -404,8 +406,8 @@
                                             </td>
                                             <td>		<!-- 학교 -->
                                                 <input id="inputSchoolName${cnt.index}" name="School_${cnt.index}" value="${vo.schoolArray[0]}" maxLength="14" size="9" style="width:70px; height:22px;">
-                                                <select id="selectSchool${cnt.index}" name=schoolclassify_${cnt.index}" style="HEIGHT:22px; WIDTH:85px; background-color:#f7f7ff;" onChange="OnSelectChangeSchool(${cnt.index});">
-                                                    <option value="">선택</option>
+                                                <select id="selectSchool${cnt.index}" name="schoolclassify_${cnt.index}" style="HEIGHT:22px; WIDTH:85px; background-color:#f7f7ff;" onChange="OnSelectChangeSchool(${cnt.index});">
+                                                    <option value="0">선택</option>
                                                     <option ${vo.schoolArray[1] eq "고등학교" ? "selected" : ""} value="고등학교">고등학교</option>
                                                     <option ${vo.schoolArray[1] eq "검정고시" ? "selected" : ""} value="검정고시">검정고시</option>
                                                     <option ${vo.schoolArray[1] eq "대학" ? "selected" : ""} value="대학">대학</option>
@@ -416,7 +418,7 @@
                                             </td>
                                             <td>		<!-- 소재지 -->
                                                 <!--<input name="SchLocation_ < % = i % > " value=" < % = Location % > " maxLength="20" size="7" style="width:60px">-->
-                                                <select name="SchLocation_${cnt.index}" value="" style="width:110px; HEIGHT:22px; background-color:#f7f7ff;">
+                                                <select name="SchLocation_${cnt.index}" style="width:110px; HEIGHT:22px; background-color:#f7f7ff;">
                                                     <option ${vo.location eq '' or vo.location eq null ? "selected" : ""} value="0">선택</option>
                                                     <option ${vo.location eq '서울특별시' ? "selected" : ""} value="서울특별시">서울특별시</option>
                                                     <option ${vo.location eq '부산광역시' ? "selected" : ""} value="부산광역시">부산광역시</option>
@@ -439,11 +441,11 @@
                                                 </select>
                                             </td>
                                             <td>		<!-- 학위 -->
-                                                <%--<% if i=0 then%>--%>
-                                                <%--<input type=hidden name='SchDegree_0' value="">--%>
-                                                <%--<% else%>--%>
+                                                    <%--<% if i=0 then%>--%>
+                                                    <%--<input type=hidden name='SchDegree_0' value="">--%>
+                                                    <%--<% else%>--%>
                                                 <select name="SchDegree_${cnt.index}" style="HEIGHT: 22px;WIDTH: 55px">
-                                                    <option ${vo.degree eq "" or vo.degree eq null ? "selected" : ""} value="">선택</option>
+                                                    <option ${vo.degree eq "" or vo.degree eq null ? "selected" : ""} value="0">선택</option>
                                                     <option ${vo.degree eq "전문학사" ? "selected" : ""} value="전문학사">전문학사</option>
                                                     <option ${vo.degree eq "학사" ? "selected" : ""} value="학사">학사</option>
                                                     <option ${vo.degree eq "석사" ? "selected" : ""} value="석사">석사</option>
@@ -451,14 +453,14 @@
 
                                                 </select>
                                             </td>
-                                            <td><input name="SchDepartment_${cnt.index}" value="${vo.major}" maxLength="25" size="8" style="width:60px"></td>
+                                            <td><input name="SchDepartment_${cnt.index}" value="${vo.major eq null or vo.major eq '' ? '' : vo.major}" maxLength="25" size="8" style="width:60px"></td>
                                             <td>
-                                                <input name="SchSubDepartment_${cnt.index}" value="${vo.subMajor}" maxLength="25" size="7" style="width:60px">
+                                                <input name="SchSubDepartment_${cnt.index}" value="${vo.subMajor eq null or vo.subMajor eq '' ? '' : vo.subMajor}" maxLength="25" size="7" style="width:60px">
                                                 <input type="hidden" name="Num_${cnt.index}" value="${vo.userScholarship_no}">
                                             </td>
                                             <td>
                                                 <select name="Bigo_${cnt.index}" style='HEIGHT: 22px;WIDTH: 55px'>
-                                                    <option ${vo.state eq "" or vo.state eq null ? "selected" : ""} value="">선택</option>
+                                                    <option ${vo.state eq "" or vo.state eq null ? "selected" : ""} value="0">선택</option>
                                                     <option ${vo.state eq "졸업" ? "selected" : ""} value="졸업">졸업</option>
                                                     <option ${vo.state eq "수료" ? "selected" : ""} value="수료">수료</option>
                                                     <option ${vo.state eq "졸업예정" ? "selected" : ""} value="졸업예정">졸업예정</option>
@@ -490,14 +492,14 @@
                                             </td>
                                         </tr>
                                     </c:forEach>
-                                     </tbody>
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
 
                         <div class="btn_wrap c mar_t40">
                             <a href="javascript:submit_it();" title="" class="btnBlueBorder big">완료</a>
-                            <a href="javascript:history.bak();" title="" class="btnWhiteBorder big">취소</a>
+                            <a href="javascript:history.back();" title="" class="btnWhiteBorder big">취소</a>
                         </div>
                     </section>
                     <!--<a href="#this" class="moveTop">Top</a>-->

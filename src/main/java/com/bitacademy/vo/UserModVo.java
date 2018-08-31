@@ -18,7 +18,8 @@ public class UserModVo {
     private String bitLetter;
     private String[] telephoneArray;
     private String[] cellphoneArray;
-
+    private String password;
+    private String job;
 
     private int userScholarship_no;
     private int user_no;
@@ -117,6 +118,22 @@ public class UserModVo {
                 ", endYear=" + endYear +
                 ", endMon=" + endMon +
                 '}';
+    }
+
+    public String getJob() {
+        return job;
+    }
+
+    public void setJob(String job) {
+        this.job = job;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Object getStartYear() {

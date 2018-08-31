@@ -59,4 +59,26 @@
                 order by UserScholarship_no
         ]]>
     </select>
+
+    <update id="member_modify_ok">
+        <![CDATA[
+                update Users set NameEng=#{nameEng}, Password=#{password},
+                        PostNum=#{postNum}, Address=#{address}, FamilyPostNum=#{familyPostNum},
+                        FamilyAddress=#{familyAddress}, Telephone=#{telephone}, Email=#{email},
+                        BitLetter=#{bitLetter}, Cellphone=#{cellphone}, Job=#{job}
+                where User_no=#{user_no}
+        ]]>
+    </update>
+
+    <insert id="member_school_modify_ok">
+        <![CDATA[
+                insert into UserScholarship(UserScholarship_no, User_no,StartDate,EndDate,
+                              School,State,Location,Degree,Major,SubMajor)
+                        values(#{userScholarship_no}, #{user_no},#{startDate},#{endDate},#{school},
+                        #{state},#{location},#{degree},#{major},#{subMajor})
+                ON DUPLICATE KEY UPDATE StartDate=#{startDate},EndDate=#{endDate},
+                              School=#{school},State=#{state},Location=#{location},
+                              Degree=#{degree},Major=#{major},SubMajor=#{subMajor}
+        ]]>
+    </insert>
 </mapper>

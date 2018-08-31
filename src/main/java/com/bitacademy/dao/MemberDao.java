@@ -43,4 +43,12 @@ public class MemberDao {
     public List<UserModVo> Member_modify_school(int user_no) {
         return sqlSession.selectList("member.Member_modify_school",user_no);
     }
+
+    public int member_modify_ok(UserModVo userModVo) {
+        return sqlSession.update("member.member_modify_ok", userModVo);
+    }
+
+    public int member_school_modify_ok(UserModVo userModVo) {
+        return sqlSession.insert("member.member_school_modify_ok", userModVo);
+    }
 }
