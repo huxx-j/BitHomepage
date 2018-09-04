@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public class MemberDao {
@@ -34,6 +35,7 @@ public class MemberDao {
 
     public int ReAgree(UserVo authUser) {
         return sqlSession.update("member.ReAgree", authUser);
+
     }
 
     public UserModVo Member_modify(int user_no) {
@@ -48,7 +50,12 @@ public class MemberDao {
         return sqlSession.update("member.member_modify_ok", userModVo);
     }
 
+
     public int member_school_modify_ok(UserModVo userModVo) {
         return sqlSession.insert("member.member_school_modify_ok", userModVo);
+    }
+
+    public int member_del(Map<String,Object> map) {
+        return sqlSession.update("member.member_del", map);
     }
 }

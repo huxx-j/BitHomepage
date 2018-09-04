@@ -9,7 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class MemberService {
@@ -117,35 +119,35 @@ public class MemberService {
             String[] sArray = new String[2];
             if (userModVo.getSchool()!=null){
                 String s = userModVo.getSchool();
-                if (s.contains("고등학교") || s.contains("검정고시")) {
-                    if (s.substring(s.length() - 4, s.length()).equals("고등학교")) { //고등학교
-                        sArray[0] = s.split("고등학교")[0]; //result = 학교이름
-                        sArray[1] = s.substring(s.length() - 4, s.length()); // result = 고등학교
-                    } else { // 검정고시
-                        sArray[0] = "";
-                        sArray[1] = "검정고시";
+                    if (s.contains("고등학교") || s.contains("검정고시")) {
+                        if (s.substring(s.length() - 4, s.length()).equals("고등학교")) { //고등학교
+                            sArray[0] = s.split("고등학교")[0]; //result = 학교이름
+                            sArray[1] = s.substring(s.length() - 4, s.length()); // result = 고등학교
+                        } else { // 검정고시
+                            sArray[0] = "";
+                            sArray[1] = "검정고시";
+                        }
+//                        userModVo.setSchoolArray(sArray);
+                    } else if (s.contains("대학교") || s.contains("대학원") || s.contains("대학")) {
+                        if (s.substring(s.length() - 3, s.length()).equals("대학교")) {
+                            sArray[0] = s.split("대학교")[0]; //result = 학교이름
+                            sArray[1] = s.substring(s.length() - 3, s.length()); // result = 대학교
+                        } else if (s.substring(s.length() - 3, s.length()).equals("대학원")) {
+                            sArray[0] = s.split("대학원")[0]; //result = 학교이름
+                            sArray[1] = s.substring(s.length() - 3, s.length()); // result = 대학원
+                        } else {
+                            sArray[0] = s.split("대학")[0]; //result = 학교이름
+                            sArray[1] = s.substring(s.length() - 2, s.length()); // result = 대학
+                        }
+//                        userModVo.setSchoolArray(sArray);
+                    } else if (s.contains("기타")){
+                        sArray[0] = s.split("기타")[0]; //result = 학교이름
+                        sArray[1] = s.substring(s.length() - 2, s.length()); // result = 기타
+                    } else  {
+                        sArray[0] = s; //result = 데이터 그대로 출력
+                        sArray[1] = "기타"; // result = 기타
+//                        userModVo.setSchoolArray(sArray);
                     }
-//                        userModVo.setSchoolArray(sArray);
-                } else if (s.contains("대학교") || s.contains("대학원") || s.contains("대학")) {
-                    if (s.substring(s.length() - 3, s.length()).equals("대학교")) {
-                        sArray[0] = s.split("대학교")[0]; //result = 학교이름
-                        sArray[1] = s.substring(s.length() - 3, s.length()); // result = 대학교
-                    } else if (s.substring(s.length() - 3, s.length()).equals("대학원")) {
-                        sArray[0] = s.split("대학원")[0]; //result = 학교이름
-                        sArray[1] = s.substring(s.length() - 3, s.length()); // result = 대학원
-                    } else {
-                        sArray[0] = s.split("대학")[0]; //result = 학교이름
-                        sArray[1] = s.substring(s.length() - 2, s.length()); // result = 대학
-                    }
-//                        userModVo.setSchoolArray(sArray);
-                } else if (s.contains("기타")){
-                    sArray[0] = s.split("기타")[0]; //result = 학교이름
-                    sArray[1] = s.substring(s.length() - 2, s.length()); // result = 기타
-                } else  {
-                    sArray[0] = s; //result = 데이터 그대로 출력
-                    sArray[1] = "기타"; // result = 기타
-//                        userModVo.setSchoolArray(sArray);
-                }
             } else { // 학교가 null일때
 //                String[] sArray = new String[2];
                 sArray[0] = ""; //result = 빈칸
@@ -290,7 +292,15 @@ public class MemberService {
 
             memberDao.member_school_modify_ok(userModVo);
         }
+
         // 2. end
         return 0;
+    }
+
+    public int member_del(int user_no, String loginID) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("user_no", user_no);
+        map.put("loginID", loginID);
+        return memberDao.member_del(map);
     }
 }

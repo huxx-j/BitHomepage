@@ -226,13 +226,13 @@
                                         <td scope="row" class="darker c">성별</td>
                                         <td>
                                             <c:if test="${modVo.gender eq 1}">
-                                            <input name="sex" type="radio" CHECKED value="1" disabled>&nbsp;남자
-                                            <input name="sex" type="radio" value="2" disabled>&nbsp;여자</td>
-                                        </c:if>
-                                        <c:if test="${modVo.gender eq 2}">
-                                            <input name="sex" type="radio" value="1" disabled>&nbsp;남자
-                                            <input name="sex" type="radio" CHECKED value="2" disabled>&nbsp;여자</td>
-                                        </c:if>
+                                                <input name="sex" type="radio" CHECKED value="1" disabled>&nbsp;남자
+                                                <input name="sex" type="radio" value="2" disabled>&nbsp;여자</td>
+                                            </c:if>
+                                            <c:if test="${modVo.gender eq 2}">
+                                                <input name="sex" type="radio" value="1" disabled>&nbsp;남자
+                                                <input name="sex" type="radio" CHECKED value="2" disabled>&nbsp;여자</td>
+                                            </c:if>
                                         </td>
                                     </tr>
                                     <tr>
@@ -441,11 +441,12 @@
                                                 </select>
                                             </td>
                                             <td>		<!-- 학위 -->
-                                                    <%--<% if i=0 then%>--%>
-                                                    <%--<input type=hidden name='SchDegree_0' value="">--%>
-                                                    <%--<% else%>--%>
+                                                <%--<% if i=0 then%>--%>
+                                                <%--<input type=hidden name='SchDegree_0' value="">--%>
+                                                <%--<% else%>--%>
                                                 <select name="SchDegree_${cnt.index}" style="HEIGHT: 22px;WIDTH: 55px">
                                                     <option ${vo.degree eq "" or vo.degree eq null ? "selected" : ""} value="0">선택</option>
+                                                    <option ${vo.degree eq "none" ? "selected" : ""} value="none">해당없음</option>
                                                     <option ${vo.degree eq "전문학사" ? "selected" : ""} value="전문학사">전문학사</option>
                                                     <option ${vo.degree eq "학사" ? "selected" : ""} value="학사">학사</option>
                                                     <option ${vo.degree eq "석사" ? "selected" : ""} value="석사">석사</option>
@@ -492,7 +493,7 @@
                                             </td>
                                         </tr>
                                     </c:forEach>
-                                    </tbody>
+                                     </tbody>
                                 </table>
                             </div>
                         </div>

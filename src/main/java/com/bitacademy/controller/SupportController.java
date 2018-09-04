@@ -96,4 +96,5 @@ public class SupportController {
     public String Support_fund(){
         return "support/Support_fund";
     }
+
 }

@@ -132,8 +132,8 @@
                                         <c:forEach items="${list}" var="vo">
                                             <tr>
                                                 <td class="c">
-                                                        ${vo.applyYear} /<br/>
-                                                        ${vo.applyMon} / ${vo.applyDay}
+                                                    ${vo.applyYear} /<br/>
+                                                    ${vo.applyMon} / ${vo.applyDay}
                                                 </td>
                                                 <td class="c">
                                                     <c:if test="${vo.testYear eq null}">
@@ -146,7 +146,7 @@
                                                 </td>
                                                 <td class="c">${vo.curriName}</td>
                                                 <td class="c">
-                                                        ${vo.cateName}
+                                                   ${vo.cateName}
                                                 </td>
 
                                                 <td class="c">

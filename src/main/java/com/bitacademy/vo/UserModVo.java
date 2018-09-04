@@ -3,43 +3,43 @@ package com.bitacademy.vo;
 import java.util.Arrays;
 
 public class UserModVo {
-    private String loginID;
-    private String nameHan;
-    private String nameEng;
-    private String[] nameEngArray;
-    private int gender;
-    private String email;
-    private String postNum;
-    private String address;
-    private String familyPostNum;
-    private String familyAddress;
-    private String telephone;
-    private String cellphone;
-    private String bitLetter;
-    private String[] telephoneArray;
-    private String[] cellphoneArray;
-    private String password;
-    private String job;
+   private String loginID;
+   private String nameHan;
+   private String nameEng;
+   private String[] nameEngArray;
+   private int gender;
+   private String email;
+   private String postNum;
+   private String address;
+   private String familyPostNum;
+   private String familyAddress;
+   private String telephone;
+   private String cellphone;
+   private String bitLetter;
+   private String[] telephoneArray;
+   private String[] cellphoneArray;
+   private String password;
+   private String job;
 
-    private int userScholarship_no;
-    private int user_no;
-    private String startDate;
-    private Object[] startDateArray;
-    private String endDate;
-    private Object[] endDateArray;
-    private String school;
-    private String[] schoolArray;
-    private String state;
-    private String location;
-    private String degree;
-    private String major;
-    private String subMajor;
-    private int schoolPosition;
+   private int userScholarship_no;
+   private int user_no;
+   private String startDate;
+   private Object[] startDateArray;
+   private String endDate;
+   private Object[] endDateArray;
+   private String school;
+   private String[] schoolArray;
+   private String state;
+   private String location;
+   private String degree;
+   private String major;
+   private String subMajor;
+   private int schoolPosition;
 
-    private Object startYear;
-    private Object startMon;
-    private Object endYear;
-    private Object endMon;
+   private Object startYear;
+   private Object startMon;
+   private Object endYear;
+   private Object endMon;
 
 
     public UserModVo() {

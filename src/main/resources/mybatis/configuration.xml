@@ -15,6 +15,8 @@
         <typeAlias alias="ApplyVo" type="com.bitacademy.vo.ApplyVo"/>
         <typeAlias alias="PayVo" type="com.bitacademy.vo.PayVo"/>
         <typeAlias alias="UserModVo" type="com.bitacademy.vo.UserModVo"/>
+        <typeAlias alias="CareerVo" type="com.bitacademy.vo.CareerVo"/>
+        <typeAlias alias="TrainingVo" type="com.bitacademy.vo.TrainingVo"/>
     </typeAliases>
     <mappers>
         <mapper resource="mybatis/mappers/course.xml"/>
@@ -22,6 +24,5 @@
         <mapper resource="mybatis/mappers/qa.xml"/>
         <mapper resource="mybatis/mappers/job.xml"/>
         <mapper resource="mybatis/mappers/apply.xml"/>
-
     </mappers>
 </configuration>

@@ -17,6 +17,26 @@ public class ApplyVo {
     private String Coment;
     private String CDate;
 
+    private int User_no;
+    private int Curriculum_no;
+    private String ApplyType;
+    private String TestScore;
+    private String Deposit;
+    private String DepositAmount;
+    private String CardPayDate;
+    private String CardPayAmount;
+    private String TotalPay;
+    private String DepositDate;
+    private String CardPayState;
+    private String Note;
+    private String State;
+    private String GisuFlag;
+    private String AfterPlan;
+    private String Motive;
+    private String hope;
+
+    private String isAppYN;
+
     public ApplyVo() {
     }
 
@@ -34,6 +54,151 @@ public class ApplyVo {
         TestResult = testResult;
         Coment = coment;
 
+    }
+
+    public String[] getHope() {
+        String[] hopeArray = hope.split("");
+        return hopeArray;
+    }
+
+    public void setHope(String hope) {
+        this.hope = hope;
+    }
+
+    public String getIsAppYN() {
+        return isAppYN;
+    }
+
+    public void setIsAppYN(String isAppYN) {
+        this.isAppYN = isAppYN;
+    }
+
+    public int getUser_no() {
+        return User_no;
+    }
+
+    public void setUser_no(int user_no) {
+        User_no = user_no;
+    }
+
+    public int getCurriculum_no() {
+        return Curriculum_no;
+    }
+
+    public void setCurriculum_no(int curriculum_no) {
+        Curriculum_no = curriculum_no;
+    }
+
+    public String getApplyType() {
+        return ApplyType;
+    }
+
+    public void setApplyType(String applyType) {
+        ApplyType = applyType;
+    }
+
+    public String getTestScore() {
+        return TestScore;
+    }
+
+    public void setTestScore(String testScore) {
+        TestScore = testScore;
+    }
+
+    public String getDeposit() {
+        return Deposit;
+    }
+
+    public void setDeposit(String deposit) {
+        Deposit = deposit;
+    }
+
+    public String getDepositAmount() {
+        return DepositAmount;
+    }
+
+    public void setDepositAmount(String depositAmount) {
+        DepositAmount = depositAmount;
+    }
+
+    public String getCardPayDate() {
+        return CardPayDate;
+    }
+
+    public void setCardPayDate(String cardPayDate) {
+        CardPayDate = cardPayDate;
+    }
+
+    public String getCardPayAmount() {
+        return CardPayAmount;
+    }
+
+    public void setCardPayAmount(String cardPayAmount) {
+        CardPayAmount = cardPayAmount;
+    }
+
+    public String getTotalPay() {
+        return TotalPay;
+    }
+
+    public void setTotalPay(String totalPay) {
+        TotalPay = totalPay;
+    }
+
+    public String getDepositDate() {
+        return DepositDate;
+    }
+
+    public void setDepositDate(String depositDate) {
+        DepositDate = depositDate;
+    }
+
+    public String getCardPayState() {
+        return CardPayState;
+    }
+
+    public void setCardPayState(String cardPayState) {
+        CardPayState = cardPayState;
+    }
+
+    public String getNote() {
+        return Note;
+    }
+
+    public void setNote(String note) {
+        Note = note;
+    }
+
+    public String getState() {
+        return State;
+    }
+
+    public void setState(String state) {
+        State = state;
+    }
+
+    public String getGisuFlag() {
+        return GisuFlag;
+    }
+
+    public void setGisuFlag(String gisuFlag) {
+        GisuFlag = gisuFlag;
+    }
+
+    public String getAfterPlan() {
+        return AfterPlan;
+    }
+
+    public void setAfterPlan(String afterPlan) {
+        AfterPlan = afterPlan;
+    }
+
+    public String getMotive() {
+        return Motive;
+    }
+
+    public void setMotive(String motive) {
+        Motive = motive;
     }
 
     public String  getCDate() {
@@ -174,6 +339,22 @@ public class ApplyVo {
                 ", TestResult='" + TestResult + '\'' +
                 ", Coment='" + Coment + '\'' +
                 ", CDate='" + CDate + '\'' +
+                ", User_no=" + User_no +
+                ", Curriculum_no=" + Curriculum_no +
+                ", ApplyType='" + ApplyType + '\'' +
+                ", TestScore='" + TestScore + '\'' +
+                ", Deposit='" + Deposit + '\'' +
+                ", DepositAmount='" + DepositAmount + '\'' +
+                ", CardPayDate='" + CardPayDate + '\'' +
+                ", CardPayAmount='" + CardPayAmount + '\'' +
+                ", TotalPay='" + TotalPay + '\'' +
+                ", DepositDate='" + DepositDate + '\'' +
+                ", CardPayState='" + CardPayState + '\'' +
+                ", Note='" + Note + '\'' +
+                ", State='" + State + '\'' +
+                ", GisuFlag='" + GisuFlag + '\'' +
+                ", AfterPlan='" + AfterPlan + '\'' +
+                ", Motive='" + Motive + '\'' +
                 '}';
     }
 }

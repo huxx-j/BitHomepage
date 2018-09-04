@@ -59,8 +59,12 @@ public class MemberController {
     public String login_ok(@ModelAttribute UserVo userVo, HttpSession session){
         UserVo authUser = memberService.login_ok(userVo);
         if (authUser != null) {
-            session.setAttribute("authUser", authUser);
-            return authUser.getReturn_url();
+            if (authUser.getLeaveStat().equals("stay")) {
+                session.setAttribute("authUser", authUser);
+                return authUser.getReturn_url();
+            } else if (authUser.getLeaveStat().equals("leave")){
+                return "redirect:/member/login?result=fail";
+            }
         }
         return "redirect:/member/login?result=fail";
     }
@@ -80,17 +84,24 @@ public class MemberController {
 
     @RequestMapping(value = "/ActivateSleepingAccount") //휴면계정 활성화
     public String ActivateSleepingAccount(HttpSession session){
-        UserVo authUser = (UserVo)session.getAttribute("authUser");
-        authUser = memberService.ActivateSleepingAccount(authUser);
-        return authUser.getReturn_url();
-
+        if (session.getAttribute("authUser")==null) {
+            return "/index"; //로그인필요합니다. 리턴페이지는 나중에 수정...
+        }else {
+            UserVo authUser = (UserVo) session.getAttribute("authUser");
+            authUser = memberService.ActivateSleepingAccount(authUser);
+            return authUser.getReturn_url();
+        }
     }
 
     @RequestMapping(value = "/ReAgree", method = RequestMethod.POST) //휴면계정 활성화
     public String ReAgree(HttpSession session){
-        UserVo authUser = (UserVo)session.getAttribute("authUser");
-        memberService.ReAgree(authUser);
-        return "/index";
+        if (session.getAttribute("authUser")==null) {
+            return "/index"; //로그인필요합니다. 리턴페이지는 나중에 수정...
+        }else {
+            UserVo authUser = (UserVo) session.getAttribute("authUser");
+            memberService.ReAgree(authUser);
+            return "/index";
+        }
     }
 
     @RequestMapping(value = "/Member_modify")
@@ -112,5 +123,15 @@ public class MemberController {
         memberService.member_modify_ok(userModReqVo);
         return "redirect:/member/Member_modify";
     }
-}
 
+    @ResponseBody
+    @RequestMapping(value = "/member_del", method = RequestMethod.POST)
+    public int member_del (@RequestParam("user_no") int user_no, @RequestParam("loginID") String loginID, HttpSession session){
+        int cnt = memberService.member_del(user_no, loginID);
+        if (cnt>0) {
+            session.removeAttribute("authUser");
+            session.invalidate();
+        }
+        return cnt;
+    }
+}

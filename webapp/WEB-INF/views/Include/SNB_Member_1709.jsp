@@ -25,12 +25,33 @@
 
 <script>
     <!--
-    function mem_del()
-    {
+    function mem_del() {
         //if(confirm( "비트교육센터 회원 탈퇴 하시겠습니까? \n 비트교육센터 회원으로 등록된 정보를 삭제합니다." ))
-        if(confirm( '비트교육센터에 등록된 회원님의 정보를 삭제합니다. \n정말로 회원탈퇴 하시겠습니까? (<%--<%=session("userid")%>--%>)' ))
-        {
-            location.href="/member/member_del";
+        if(confirm('비트교육센터에 등록된 회원님의 정보를 삭제합니다. \n정말로 회원탈퇴 하시겠습니까? \n회원 ID : ${sessionScope.authUser.loginID}')){
+            <%--var user_no = ${sessionScope.authUser.user_no};--%>
+            <%--var loginID = "${sessionScope.authUser.loginID}";--%>
+            $.ajax({
+                url: "${pageContext.request.contextPath}/member/member_del",
+                type: "post",
+                // contentType: "application/json",
+                data: {"user_no": ${sessionScope.authUser.user_no},
+                        "loginID" : "${sessionScope.authUser.loginID}"},
+                dataType: "json",
+                success: function (result) {
+                    if (result>0){
+                        alert("정상적으로 탈퇴처리되었습니다. \n이용해 주셔서 감사합니다.");
+                        location.href="/index";
+                    } else {
+                        alert("탈퇴처리중 오류가 발생하였습니다.")
+                    }
+
+                },
+                error: function (XHR, status, error) {
+                    console.error(status + " : " + error);
+                }
+            });
+
+
         }
     }
     //-->

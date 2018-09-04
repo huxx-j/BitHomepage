@@ -1,6 +1,7 @@
 package com.bitacademy.vo;
 
 public class MemberVo {
+    //회원가입용 Vo
     private String sDupInfo;
     private String sName;
     private String name;
