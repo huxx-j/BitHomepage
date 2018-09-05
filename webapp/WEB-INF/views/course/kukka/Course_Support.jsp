@@ -1,11 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
 <%-- <%
 Session.CodePage  = 949 '한글
 Response.CharSet  = "euc-kr" '한글
-%> --%>
-
+%>
+ --%>
 <!DOCTYPE html>
 <!-- NOT REDIRECTABLE to Mobile -->
 <html lang="ko">
@@ -18,19 +17,17 @@ Response.CharSet  = "euc-kr" '한글
 	<c:import url="/WEB-INF/views/Include/contentStyle.jsp"/>
 	<!-- #include virtual="/Include/Script.asp"-->
 	<c:import url="/WEB-INF/views/Include/Script.jsp"/>
-	
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src="Common_getIndex.js"></script>
+	<!-- .btn_refundView 및 .btn_refundView2는 /JS/Common.js 에 이벤트핸들러 정의 -->
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/common_css/Common_CSS_Detail_720_1709.css" >
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/common_css/Common_CSS_Detail_720plus_1709.css" >
 	<!-- #include virtual="/Include/HeaderScript1709.asp"-->
 	<c:import url="/WEB-INF/views/Include/HeaderScript1709.jsp"/>
+	
 	<script type="text/javascript">
 		$(document).ready(function(){
-			/* <!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"--> */
-			 <c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
-			 /* <!--#include virtual="/Include/HeaderScriptReady1709.inc"--> */
-			 <c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
+			<c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
+			<c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
 			/*
 			$(".myConList").on("mouseenter", function() {
 				//$(this).stop(true,true).animate({'backgroundColor':'#ffffea',"borderColor":"#2f2fff"},400,'easeOutElastic');
@@ -146,12 +143,7 @@ Response.CharSet  = "euc-kr" '한글
 						<div style="clear:both;"></div>
 						
 						
-						<div class="slot first extended" style="background:url('${pageContext.request.contextPath}/assets/CSS/Slots/2/MainPage_Slot__국비지원_라즈베리파이IoT서비스_extended.png')" href="/course/kukka/Course_Kukka_RaspberryPiIoTService_2018">
-							<img class="slotIcon" src="Images/Icons/MainPage_SlotIcon__new.png"/>
-							<p class="courseName dnone">&nbsp;</p>
-							<p class="courseDescription dnone">&nbsp;</p>
-							<div class="insideSlot" style="background:url('/WEB-INF/views/course/kukka/kukkaImages/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
-						</div>
+						
 						<!--
 						<div class="slot" style="background:url('/Images/Slots/2/MainPage_Slot__국비지원_핀테크.png')" href="/Course/Kukka/Course_Kukka_FinTech_2018.asp">
 							<img class="slotIcon" src="Images/Icons/MainPage_SlotIcon__new.png"/>
@@ -160,26 +152,37 @@ Response.CharSet  = "euc-kr" '한글
 							<div class="insideSlot" style="background:url('/Images/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
 						</div>
 						-->
-						<div class="slot extended" style="background:url('${pageContext.request.contextPath}/assets/CSS/Slots/2/MainPage_Slot__국비지원_빅데이터_extended.png')" href="/course/kukka/Course_Kukka_JavaBigData_2018">
+						<div class="slot  first extended" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__국비지원_빅데이터_extended.png')" href="/course/kukka/Course_Kukka_JavaBigData_2018">
+							<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__new.png"/>
+							<p class="courseName dnone">&nbsp;</p>
+							<p class="courseDescription dnone">&nbsp;</p>
+							<div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
+						</div>
+
+						<div class="slot extended" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__KUKA18_ED.GIF')" href="/course/kukka/Course_Kukka_EmbeddedService_2018">
+							<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__new.png"/>
+							<p class="courseName dnone">&nbsp;</p>
+							<p class="courseDescription dnone">&nbsp;</p>
+							<div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
+						</div>
+
+						<!--
+						<div class="slot extended" style="background:url('/Images/Slots/2/MainPage_Slot__KUKA18_FD_10.gif')" href="/Course/Kukka/Course_Kukka_Fintech_2018.asp"">
 							<img class="slotIcon" src="Images/Icons/MainPage_SlotIcon__new.png"/>
 							<p class="courseName dnone">&nbsp;</p>
 							<p class="courseDescription dnone">&nbsp;</p>
-							<div class="insideSlot" style="background:url('/WEB-INF/views/course/kukka/kukkaImages/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
+							<div class="insideSlot" style="background:url('/Images/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
 						</div>
-<!--
-						<div class="slot" style="background:url('/Images/Slots/2/MainPage_Slot__4차산업_핀테크.png')" href="/Course/Industry4.0/Course_Industry40_FinTech_Expert.asp">
-							<img class="slotIcon" src="Images/Icons/MainPage_SlotIcon__recommend.png"/>
+						-->
+						
+						<div class="slot extended" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__java.png.gif')" href="/course/expert/Course_Expert_JavaExpert"">
+							<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__new.png"/>
 							<p class="courseName dnone">&nbsp;</p>
 							<p class="courseDescription dnone">&nbsp;</p>
-							<div class="insideSlot" style="background:url('Images/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
+							<div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
 						</div>
--->
-						<div class="slot " style="background:url('${pageContext.request.contextPath}/assets/CSS/Slots/2/MainPage_Slot__전문가_자바.png')" href="/course/expert/Course_Expert_JavaExpert">
-							<img class="slotIcon" src="/Images/Icons/MainPage_SlotIcon__recommend.png"/>
-							<p class="courseName dnone">자바 전문가과정</p>
-							<p class="courseDescription dnone">Java 언어를 기반으로 프론트엔드와 백엔드를 아우르는 전문가가 되기 위한 과정</p>
-							<div class="insideSlot" style="background:url('/WEB-INF/views/course/kukka/kukkaImages/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
-						</div>
+
+
 	
 <!-- // 잠시 숨김
 <div class="slot" style="background:url('/Images/Slots/2/MainPage_Slot__국비지원_AWS클라우드웹개발.png')" href="/Course/Kukka/Course_Kukka_AWSCloudWeb_2018.asp">
@@ -230,13 +233,16 @@ Response.CharSet  = "euc-kr" '한글
 					<div style="float:left; margin-top:10px;">
 						<img src="${pageContext.request.contextPath}/assets/Images/Titles/MainPage_Title__4차산업혁명.png" style="float:left; margin-bottom:2px; display:none;" alt="4차산업혁명"/>
 						<div style="clear:both;"></div>
-
-						<div class="slot first" style="background:url('${pageContext.request.contextPath}/assets/CSS/Slots/2/MainPage_Slot__전문가_임베디드시스템.png')" href="/course/expert/Course_Expert_Embedded">
-							<img class="slotIcon" src="/Images/Icons/MainPage_SlotIcon__hot.png"/>
-							<p class="courseName dnone long">임베디드 시스템 전문가과정</p>
-							<p class="courseDescription dnone">ARM어셈블리, 리눅스커널, 디바이스드라이버 등을 심도 있게 배워 임베디드SW의 전문가가 되기 위한 과정</p>
-							<div class="insideSlot" style="background:url('/WEB-INF/views/course/kukka/kukkaImages/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
+					
+					
+					<div class="slot first extended" style="background:url('${pageContext.request.contextPath}/assets/Images/Slots/2/MainPage_Slot__embedded.gif')" href="/course/expert/Course_Expert_Embedded">
+							<img class="slotIcon" src="${pageContext.request.contextPath}/assets/Images/Icons/MainPage_SlotIcon__new.png"/>
+							<p class="courseName dnone">&nbsp;</p>
+							<p class="courseDescription dnone">&nbsp;</p>
+							<div class="insideSlot" style="background:url('${pageContext.request.contextPath}/assets/Images/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
 						</div>
+
+
 						
 						<!--
 						<div class="slot " style="background:url('/Images/Slots/2/MainPage_Slot__4차산업_IoT자율주행.png')" href="/Course/Industry4.0/Course_Industry40_IoTSelfDriving_Expert.asp">
