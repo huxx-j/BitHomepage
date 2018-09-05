@@ -25,7 +25,6 @@ public class RegisterController {
 
 	@RequestMapping(value = "/request/register_shortCourse_insertMMS", method = RequestMethod.GET)
     public String register_shortCourse_insertMMS() {
-        
 		return "register/request/register_shortCourse_insertMMS";
     }
 	@RequestMapping(value = "/request/register_shortCourse", method = RequestMethod.GET)
@@ -52,7 +51,6 @@ public class RegisterController {
 	    model.addAttribute("list",registerService.register_depositCheck(userVo));
         return "/register/register_depositCheck";
     }
-
 
     @RequestMapping(value = "/request/register_form")
     public String register_form(Model model, HttpSession session, @RequestParam(value = "idx", defaultValue = "0", required = false) int idx, @RequestParam(value = "cID") String cID){
@@ -85,7 +83,6 @@ public class RegisterController {
 	            model.addAttribute("applyInfo", applyVo);
                 return "/register/request/register_form";
             }
-
         }
     }
 
@@ -104,7 +101,6 @@ public class RegisterController {
             }
             model.addAttribute("hope", hope);
             //1. end
-
             return "register/request/register_form2?cID="+cID;
         }
     }
