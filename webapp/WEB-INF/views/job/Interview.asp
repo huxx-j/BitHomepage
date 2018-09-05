@@ -457,7 +457,7 @@ Response.Expires = -1
 										<td style="font-size:1.25em; font-weight:700;"><%= Left(rs("UpdateDate"), 10) %></td>
 									</tr>
 									<%
-											
+
 											rs.moveNext
 										END IF
 									NEXT
@@ -491,7 +491,6 @@ Response.Expires = -1
 							IF pagingNextNum > totalpage THEN
 								pagingNextNum = totalpage - (totalpage mod 10) + 1
 							END IF
-							
 						%>
 						<style>
 							.btnPaging {

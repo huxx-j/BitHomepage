@@ -1,113 +1,44 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+
 <!DOCTYPE html>
 
 <!--#include virtual="/Include/config.asp"-->
 <!--#include Virtual="/Include/javaScriptFun.asp"-->
-
-<%--<%--%>
-    <%--Session.CodePage  = 949 '한글--%>
-    <%--Response.CharSet  = "euc-kr" '한글--%>
-    <%--Response.AddHeader "Pragma","no-cache"--%>
-    <%--Response.AddHeader "cache-control", "no-staff"--%>
-    <%--Response.Expires  = -1--%>
-
-    <%--Set Dbcon = Server.CreateObject("ADODB.Connection")--%>
-    <%--Dbcon.Open Con_bit_db--%>
-<%--%>--%>
-<%
-    Dim StrInterviewManner			' 면접관태도
-    Dim StrInterviewDescription		' 면접내용
-    Dim StrInterviewOpinion			' 느낀점
-    Dim StrCompReputation			' 회사평가
-
-    Dim StrCompName					' 회사명
-    Dim StrEstablishYear			' 설립년도
-    Dim StrBusiness					' 주력사업
-    Dim StrAddress					' 주소
-    Dim StrHomePage					' 홈페이지
-    Dim StrYearSell					' 연매출액 + "억"
-    Dim StrStaffNum					' 직원수 + "명"
-    Dim StrUpdateDate					' 갱신일자
-%>
 
 <html lang="ko">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
     <!--<meta charset="euc-kr">-->
 
-
-    <%
-        ' << retrieving values from the dbo.Interview >>
-        'response.write "111<br/>"
-        'response.end
-
-        Num = request.querystring("Num") 				'// Num : 면접후기 글 번호.
-        'response.write(Num & "<br/>")
-    %>
-    <%
-        sql = "select * from db_bit.dbo.InterviewHitCount where Num=" & Num
-        'response.write sql & "<br/>"
-        'response.end
-        set Rs = Dbcon.execute(sql)
-
-        IF Rs.EOF THEN
-        '// 처음 조회당하는(조회수=0) 글번호인 경우.
-        sql = "INSERT INTO db_bit.dbo.InterviewHitCount (Num, HitCount) VALUES (" & Num & ",1)"
-        Dbcon.execute(sql)
-        ELSE
-        '// 이미 조회당해본(조회수>0) 글번호인 경우.
-        hitCount = Cint(Rs("HitCount"))
-        sql = "UPDATE db_bit.dbo.InterviewHitCount SET HitCount=" & (hitCount+1) & " WHERE Num=" & Num
-        'response.write sql
-        'response.end
-        Set Rs2 = Dbcon.execute(sql)
-        Set Rs2 = nothing
-        END IF
-
-        Rs.close
-        Set Rs = Nothing
-
-    %>
-    <%
-        sql = "select * from db_bit.dbo.Interview where Num=" & Num
-        'response.write(sql)
-        'response.end
-
-        set rs = Dbcon.execute(sql)
-
-        IF NOT rs.EOF THEN
-        StrInterviewManner = rs("InterviewManner")
-        StrInterviewDescription = rs("InterviewDescription")
-        StrInterviewOpinion = rs("InterviewOpinion")
-        StrCompReputation = rs("CompReputation")
-
-        StrInterviewManner = Replace(StrInterviewManner, """", "&quot;")
-        StrInterviewDescription = Replace(StrInterviewDescription, """", "&quot;")
-        StrInterviewOpinion = Replace(StrInterviewOpinion, """", "&quot;")
-        StrCompReputation = Replace(StrCompReputation, """", "&quot;")
-
-        StrCompName = rs("CompName")
-        StrEstablishYear = rs("EstablishYear")
-        StrBusiness = rs("Business")
-        StrAddress = rs("Address")
-        StrHomePage = rs("HomePage")
-        StrYearSell = rs("YearSell")
-        StrStaffNum = rs("StaffNum")
-        StrUpdateDate = rs("UpdateDate")
-
-        END IF
-
-    %>
-
     <script>
         $(document).ready(function() {
-            showUpInterviewContents();
+            var Num=${param.Num};
+            console.log("들어감");
+            $.ajax({
+                url : "${pageContext.request.contextPath }/job/selectNum",
+                type : "POST",
+                //contentType : "application/json",
+                data : {"Num": Num},
+                dataType : "json",
 
+                success : function(InterviewVo) {
+                console.log("다녀옴");
+                    $("input[name='InterviewDescription']").val(InterviewVo.InterviewDescription);
+                    $("input[name='InterviewManner']").val(InterviewVo.InterviewManner);
+                    $("input[name='InterviewOpinion']").val(InterviewVo.InterviewOpinion);
+                    $("input[name='CompReputation']").val(InterviewVo.CompReputation);
+                },
+                error : function(XHR, status, error) {
+                    console.error(status + " : " + error);
+                }
+            });
             /* NOT Working PROPERLY. 2016-11-21-YG
             $("#divContent1, #divContent2").bind("mousewheel", function(e) {
                 // tell the browser we're handling this event
                 e.preventDefault();
                 e.stopPropagation();
-
             });
             */
         });
@@ -125,51 +56,27 @@
 
             //$('#myBox1').html(str1 + str2 + str3 + str4);
             $('#divContent2').html(str1 + str2 + str3 + str4);
-
-
         }
     </script>
 </head>
 <body>
 <form name="form2" style="height:10px;">  <!-- to share between ASP and JS -->
-    <input type="hidden" class="Str1" value="<%=replace(strInterviewDescription, chr(13), "<br/>")%>"/>
-    <input type="hidden" class="Str2" value="<%=replace(strInterviewManner, chr(13), "<br/>")%>" />
-    <input type="hidden" class="Str3" value="<%=replace(strInterviewOpinion, chr(13), "<br/>")%>" />
-    <input type="hidden" class="Str4" value="<%=replace(strCompReputation, chr(13), "<br/>")%>" />
-
+    <input type="hidden" name="InterviewDescription" class="Str1" value="${job.InterviewDescription}"/>
+    <input type="hidden" name="InterviewManner" class="Str2" value="${job.InterviewManner}" />
+    <input type="hidden" name="InterviewOpinion" class="Str3" value="${job.InterviewOpinion}"  />
+    <input type="hidden" name="CompReputation" class="Str4" value="${job.CompReputation}" />
 </form>
 
-<%
-    sql2 = "SELECT * FROM db_bit.dbo.InterviewImageLogoPath WHERE CompName like '%"&rs("CompName")&"%'"
-    Set Rs2 = Dbcon.Execute(sql2)
-
-    if Rs2.eof = false then
-    ImagePath = Rs2("ImageLogoPath")
-    HomepageURL = Rs2("HomepageURL")
-    else
-    ImagePath = ""
-    HomepageURL = ""
-    end if
-    Rs2.Close
-%>
 <div id="divContent1" style="margin-bottom:10px;">
-    <div style="float:left;"><h2> <img src="<%=ImagePath%>" style="max-width:175px; max-height:39px;"/><span class="blueTxt" style="font-size:1.6em;"><%=strCompName %> </span> 면접후기</h2></div>
+    <div style="float:left;"><h2> <img src="${job.ImagePath}" style="max-width:175px; max-height:39px;"/><span class="blueTxt" style="font-size:1.6em;">${job.strCompName}" </span> 면접후기</h2></div>
     <div style="float:right; font-weight:900; font-size:1.25em;"><a id="aClose1" href="#"><span class="redTxt">[닫기]</span></a></div>
     <div style="clear:both;"></div>
-    <div style="float:right; margin-right:10px; font-size:0.8em; "><a href="<%=HomepageURL%>" target="_blank"><u><span style="color:#8f8f8f;"><%=HomepageURL%></span></u></a></div>
+    <div style="float:right; margin-right:10px; font-size:0.8em; "><a href="${job.HomepageURL}" target="_blank"><u><span style="color:#8f8f8f;">${job.HomepageURL}</span></u></a></div>
     <div style="clear:both;"></div>
 </div>
 
 <div id="divContent2" style="margin-bottom:10px;">
+
 </div>
 
-
 </body>
-
-    <%
-	rs.close
-	Set rs = Nothing
-
-	Dbcon.close
-	Set Dbcon = Nothing
-%>

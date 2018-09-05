@@ -2,13 +2,11 @@ package com.bitacademy.controller;
 
 import com.bitacademy.service.JobService;
 import com.bitacademy.vo.InterviewVo;
+import org.apache.ibatis.jdbc.Null;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,6 +20,11 @@ public class JobController {
     @RequestMapping(value = "/WriteRecruit")
     public String WriteRecruit(){
         return "/job/WriteRecruit";
+    }
+
+    @RequestMapping(value = "/Interview_InputForm")
+    public String Interview_InputForm(){
+        return "/job/Interview_InputForm";
     }
 
     @RequestMapping(value = "/List", method=RequestMethod.GET )
@@ -41,11 +44,28 @@ public class JobController {
     }
 
     @RequestMapping(value = "/Interview")
-    public String Interview(Model model){
+    public String Interview(@RequestParam("page") int page, Model model){
         List<InterviewVo> list=jobService.selectList();
+        if(page ==0){
+            page=1;
+    }
+        model.addAttribute("interMap", jobService.setpage(page));
         model.addAttribute("list",list);
-        System.out.println(list);
         return "/job/Interview";
+    }
+
+    @ResponseBody
+    @RequestMapping(value="/InterviewComplete",method = {RequestMethod.POST,RequestMethod.GET})
+    public void InterviewComplete(@RequestBody InterviewVo interviewVo){
+        jobService.insertinterview(interviewVo);
+    }
+
+
+    @ResponseBody
+    @RequestMapping(value="/InterviewPopupInclude",method = {RequestMethod.POST,RequestMethod.GET})
+    public InterviewVo selectNum(@RequestParam ("Num") int Num,Model model){
+        model.addAttribute("vo,",jobService.selectNum(Num));
+        return jobService.selectNum(Num);
     }
 
 }

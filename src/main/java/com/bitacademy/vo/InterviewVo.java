@@ -6,6 +6,7 @@ public class InterviewVo {
     private int Num;
     private String InterviewManner;
     private String InterviewDescription;
+    private String InterviewOpinion;
     private String CompReputiation;
     private String studName;
     private String Department;
@@ -16,7 +17,7 @@ public class InterviewVo {
     private String HomePage;
     private String YearSell;
     private String StaffNum;
-    private Timestamp UpdateDate;
+    private String UpdateDate;
     private int CompSeqNum;
     private String ImageLogoPath;
     private String HomepageURL;
@@ -24,10 +25,11 @@ public class InterviewVo {
     public InterviewVo() {
     }
 
-    public InterviewVo(int num, String interviewManner, String interviewDescription, String compReputiation, String studName, String department, String compName, int establishYear, String business, String address, String homePage, String yearSell, String staffNum, Timestamp updateDate, int compSeqNum, String imageLogoPath, String homepageURL) {
+    public InterviewVo(int num, String interviewManner, String interviewDescription, String interviewOpinion, String compReputiation, String studName, String department, String compName, int establishYear, String business, String address, String homePage, String yearSell, String staffNum, String updateDate, int compSeqNum, String imageLogoPath, String homepageURL) {
         Num = num;
         InterviewManner = interviewManner;
         InterviewDescription = interviewDescription;
+        InterviewOpinion = interviewOpinion;
         CompReputiation = compReputiation;
         this.studName = studName;
         Department = department;
@@ -66,6 +68,14 @@ public class InterviewVo {
 
     public void setInterviewDescription(String interviewDescription) {
         InterviewDescription = interviewDescription;
+    }
+
+    public String getInterviewOpinion() {
+        return InterviewOpinion;
+    }
+
+    public void setInterviewOpinion(String interviewOpinion) {
+        InterviewOpinion = interviewOpinion;
     }
 
     public String getCompReputiation() {
@@ -148,11 +158,11 @@ public class InterviewVo {
         StaffNum = staffNum;
     }
 
-    public Timestamp getUpdateDate() {
+    public String getUpdateDate() {
         return UpdateDate;
     }
 
-    public void setUpdateDate(Timestamp updateDate) {
+    public void setUpdateDate(String updateDate) {
         UpdateDate = updateDate;
     }
 
@@ -186,6 +196,7 @@ public class InterviewVo {
                 "Num=" + Num +
                 ", InterviewManner='" + InterviewManner + '\'' +
                 ", InterviewDescription='" + InterviewDescription + '\'' +
+                ", InterviewOpinion='" + InterviewOpinion + '\'' +
                 ", CompReputiation='" + CompReputiation + '\'' +
                 ", studName='" + studName + '\'' +
                 ", Department='" + Department + '\'' +
@@ -196,7 +207,7 @@ public class InterviewVo {
                 ", HomePage='" + HomePage + '\'' +
                 ", YearSell='" + YearSell + '\'' +
                 ", StaffNum='" + StaffNum + '\'' +
-                ", UpdateDate=" + UpdateDate +
+                ", UpdateDate='" + UpdateDate + '\'' +
                 ", CompSeqNum=" + CompSeqNum +
                 ", ImageLogoPath='" + ImageLogoPath + '\'' +
                 ", HomepageURL='" + HomepageURL + '\'' +

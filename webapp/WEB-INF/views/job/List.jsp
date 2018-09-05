@@ -57,176 +57,176 @@
 
     <!--#include file="include/dbconn.inc"-->
 
-    <%
-        Set Dbcon = Server.CreateObject("ADODB.Connection")
-        Dbcon.Open Con_bit_db
-    %>
+    <%--<%--%>
+        <%--Set Dbcon = Server.CreateObject("ADODB.Connection")--%>
+        <%--Dbcon.Open Con_bit_db--%>
+    <%--%>--%>
 
-    <%
-        ' // StudName, StudTermNum 을 DB에서 불러와 세션에 저장한다.
-        StudID = session("StudID")
-        Dim StudName
-        Dim StudTermNum
+    <%--<%--%>
+        <%--' // StudName, StudTermNum 을 DB에서 불러와 세션에 저장한다.--%>
+        <%--StudID = session("StudID")--%>
+        <%--Dim StudName--%>
+        <%--Dim StudTermNum--%>
 
-        ' (1) StudName from dbo.Member (NameHan), USING StudID
-        IF StudID = "" OR isEmpty(StudID) OR isNULL(StudID) THEN
-            StudName = ""
-        ELSE
-        'select top 1 NameHan from db_bit.dbo.Member where StudID = session("StudID")
-        sql = "SELECT TOP 1 NameHan FROM db_bit.dbo.Member WHERE StudID='" & StudID & "'"
-        Set Rs = Dbcon.Execute(sql)
+        <%--' (1) StudName from dbo.Member (NameHan), USING StudID--%>
+        <%--IF StudID = "" OR isEmpty(StudID) OR isNULL(StudID) THEN--%>
+            <%--StudName = ""--%>
+        <%--ELSE--%>
+        <%--'select top 1 NameHan from db_bit.dbo.Member where StudID = session("StudID")--%>
+        <%--sql = "SELECT TOP 1 NameHan FROM db_bit.dbo.Member WHERE StudID='" & StudID & "'"--%>
+        <%--Set Rs = Dbcon.Execute(sql)--%>
 
-        IF Rs.eof = false THEN
-        session("StudName") = Rs("NameHan")
-        END IF
+        <%--IF Rs.eof = false THEN--%>
+        <%--session("StudName") = Rs("NameHan")--%>
+        <%--END IF--%>
 
-        Rs.close
-        Set Rs = Nothing
-        END IF
+        <%--Rs.close--%>
+        <%--Set Rs = Nothing--%>
+        <%--END IF--%>
 
-        ' (2) StudTermNum from dbo.CourseTermStudent, USING StudID, ORDER BY UpdateDate DESC
-        IF StudID =  "" OR isEmpty(StudID) OR isNULL(StudID) THEN
-        StudTermNum = ""
-        ELSE
-        'select top 1 TermNum from db_bit.dbo.CourseTermStudent where StudID='' order by UpdateDate desc
-        sql = "SELECT TOP 1 TermNum FROM db_bit.dbo.CourseTermStudent WHERE StudID=" & StudID & " ORDER BY UpdateDate DESC"
-        Set Rs = Dbcon.Execute(sql)
+        <%--' (2) StudTermNum from dbo.CourseTermStudent, USING StudID, ORDER BY UpdateDate DESC--%>
+        <%--IF StudID =  "" OR isEmpty(StudID) OR isNULL(StudID) THEN--%>
+        <%--StudTermNum = ""--%>
+        <%--ELSE--%>
+        <%--'select top 1 TermNum from db_bit.dbo.CourseTermStudent where StudID='' order by UpdateDate desc--%>
+        <%--sql = "SELECT TOP 1 TermNum FROM db_bit.dbo.CourseTermStudent WHERE StudID=" & StudID & " ORDER BY UpdateDate DESC"--%>
+        <%--Set Rs = Dbcon.Execute(sql)--%>
 
-        IF Rs.eof = false THEN
-        session("StudTermNum") = Rs("TermNum")
-        ELSE
-        session("StudTermNum") = ""
-        END IF
+        <%--IF Rs.eof = false THEN--%>
+        <%--session("StudTermNum") = Rs("TermNum")--%>
+        <%--ELSE--%>
+        <%--session("StudTermNum") = ""--%>
+        <%--END IF--%>
 
-        Rs.close
-        Set Rs = Nothing
-        END IF
-
-
-    %>
-
-    <%
-        '''4Testing
-        'session("StudID") = 51955
-        'session("StudName") = "이영걸"
-
-        StudID = ""  '세션
-        StudID = session("StudID")
-        StudName = session("StudName")
-        StudTermNum = session("StudTermNum")
-
-        '''if trim(StudID)="" or StudID = "0" or request("id") = "" then
-        '''	Response.Redirect "/job/JobSearchLogin.asp"
-        '''end if
-        if StudID = "" OR isEmpty(StudID) OR isNULL(StudID) then
-        call alertMsgGoURL ("로그인 정보가 없습니다. \n다시 로그인해 주세요.", "http://www.bitacademy.com/Member/login.asp?return_url=http://www.bitacademy.com/job/List.asp")
-        response.end
-        end if
-    %>
+        <%--Rs.close--%>
+        <%--Set Rs = Nothing--%>
+        <%--END IF--%>
 
 
-    <%
-        ' Studid 로부터 LoginID를 가져온다.
-        sql = ""
-        sql = "Select top 1 LoginID from db_bit.dbo.Member where StudID = " & Studid
+    <%--%>--%>
 
-        Set Rs = Dbcon.Execute(sql)
-        LoginID = Rs("LoginID")
-        Rs.Close
-        Set Rs = nothing
-    %>
+    <%--<%--%>
+        <%--'''4Testing--%>
+        <%--'session("StudID") = 51955--%>
+        <%--'session("StudName") = "이영걸"--%>
 
-    <%
-        '-- 기업위탁, 대학비트, 전문가, 청년취업, 국가기간 "수료"
+        <%--StudID = ""  '세션--%>
+        <%--StudID = session("StudID")--%>
+        <%--StudName = session("StudName")--%>
+        <%--StudTermNum = session("StudTermNum")--%>
 
-        '///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        '// 1. 권한검사 - (1) 전문가, 기업위탁, 대학비트, 청년취업, 국가기간일것 (2) 지원일자가 1년이내일것 (3) application.SelectResult가 '합격'일것 (4) application.Isuse=0 일것
-
-        ' // YG 2016-03-30 : 권한부여 개선 (기수부여 뿐만 아니라, '수료' 상태라야 권한 有)
-        ' sql = "SELECT TOP 10 CourseID FROM db_bit.dbo.CourseTermStudent WHERE StudID=" & StudID
-        sql = "SELECT TOP 10 CourseID FROM db_bit.dbo.CourseTermStudent WHERE StudID=" & StudID & " AND CompletStat='수료'"
-
-        Set rs = Dbcon.Execute(sql)
-
-        bRight=false '권한여부
-        do while rs.eof = false
-        CourseID = rs("CourseID")
-
-        'response.write("CourseID : " & CourseID & "<br/>")
-
-        IF CourseID = "" THEN
-        ELSE
-        sql = "SELECT TOP 10 ExpertID from db_bit.dbo.Course where CourseID = '" & CourseID & "'"
-        Set rs2 = Dbcon.Execute(sql)
-        if rs2.eof or rs2.bof then
-        else
-        ExpertID = rs2("ExpertID")
-        end if
-        rs2.Close
-
-        'response.write("ExpertID : " & ExpertID & "<br/>")
-
-        ' 권한부여 과정 : 전문가 / 기업위탁 / 국가기간 / 대학비트 / 청년취업.
-        IF ExpertID = "전문가" OR ExpertID = "기업위탁" OR ExpertID = "국가기간" OR ExpertID = "대학비트" OR ExpertID = "청년취업" THEN
-        bRight = true
-        ELSE
-        END IF
-        END IF
-
-        'response.write("bRight : " & bRight & "<br/>")
-
-        rs.moveNext
-        loop
-
-        '// FROM HERE : 관리자에게 권한 강제부여.
-        ' job : 팀장님
-        ' acidstar : 임 대리님
-        ' silverq : 정 대리님 X
-        ' bowery24 : 강기윤 X
-        ' kitac : 김영산 x
-        ' jjh0422 : 장재호 x
-        ' k0sm0s1 : 김윤정 x
-        ' hoone : 이지훈 x
-        ' karnmou : 정경진
-        ' vntltl92 : 조희준
-        ' dagi1227 : 김건태
-        ' dnwjd748 : 강인영 (201802012)
-        IF LoginID = "job" OR LoginID = "acidstar" OR LoginID = "yglee" OR LoginID = "karnmou" OR LoginID = "vntltl92" OR LoginID = "dagi1227" OR LoginID = "dnwjd748" THEN
-        bRight = true
-        END IF
-
-        IF bRight = false THEN
-        call alertMsgGoURL ("권한이 없습니다. \n채용정보는 전문가과정 등을 수료하신 분들이 보실 수 있습니다.", "http://www.bitacademy.com/")
-        END IF
-
-        rs.Close
-        Set rs = Nothing
-    %>
-
-    <%
-        if request("page") =""then
-        page=1
-        else
-        page=request("page")
-        end if
-
-        'set oConn=server.CreateObject("adodb.connection")
-        '	oConn.Open "Provider=SQLOLEDB.1;Persist Security Info=False" & _
-        '	            ";User ID=bitdb;Password=bit!bt?qlxm.rhksflwk#" & _
-        '	           ";Initial Catalog=DB_BIT;Data Source=localhost;Network Address=localhost, 1433;Network Library=dbmssocn"
-
-        set rs = server.CreateObject("adodb.recordset")
-
-        sql = "SELECT C.CompName, J.RequestDate, J.Department, J.SeqNum" & _
-        " FROM Company C INNER JOIN JobOffer J ON C.CompSeqNum=J.CompSeqNum" & _
-        " WHERE  (J.CentClub=0 or J.CentClub is null) AND J.isShow > 0 ORDER BY J.RequestDate DESC, C.CompName  "
+        <%--'''if trim(StudID)="" or StudID = "0" or request("id") = "" then--%>
+        <%--'''	Response.Redirect "/job/JobSearchLogin.asp"--%>
+        <%--'''end if--%>
+        <%--if StudID = "" OR isEmpty(StudID) OR isNULL(StudID) then--%>
+        <%--call alertMsgGoURL ("로그인 정보가 없습니다. \n다시 로그인해 주세요.", "http://www.bitacademy.com/Member/login.asp?return_url=http://www.bitacademy.com/job/List.asp")--%>
+        <%--response.end--%>
+        <%--end if--%>
+    <%--%>--%>
 
 
-        rs.PageSize =10 '페이지의 사이즈를 정함 ...반드시 레크드셋오픈전에 지정해주어야 한다.
+    <%--<%--%>
+        <%--' Studid 로부터 LoginID를 가져온다.--%>
+        <%--sql = ""--%>
+        <%--sql = "Select top 1 LoginID from db_bit.dbo.Member where StudID = " & Studid--%>
 
-        rs.Open sql, oConn, 1 '레코드 커서 타입(1)을 지정해 주어야 한다. 만일 지정이 안되면 페이징이 안된다. ,3
+        <%--Set Rs = Dbcon.Execute(sql)--%>
+        <%--LoginID = Rs("LoginID")--%>
+        <%--Rs.Close--%>
+        <%--Set Rs = nothing--%>
+    <%--%>--%>
 
-    %>
+    <%--<%--%>
+        <%--'-- 기업위탁, 대학비트, 전문가, 청년취업, 국가기간 "수료"--%>
+
+        <%--'///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--%>
+        <%--'// 1. 권한검사 - (1) 전문가, 기업위탁, 대학비트, 청년취업, 국가기간일것 (2) 지원일자가 1년이내일것 (3) application.SelectResult가 '합격'일것 (4) application.Isuse=0 일것--%>
+
+        <%--' // YG 2016-03-30 : 권한부여 개선 (기수부여 뿐만 아니라, '수료' 상태라야 권한 有)--%>
+        <%--' sql = "SELECT TOP 10 CourseID FROM db_bit.dbo.CourseTermStudent WHERE StudID=" & StudID--%>
+        <%--sql = "SELECT TOP 10 CourseID FROM db_bit.dbo.CourseTermStudent WHERE StudID=" & StudID & " AND CompletStat='수료'"--%>
+
+        <%--Set rs = Dbcon.Execute(sql)--%>
+
+        <%--bRight=false '권한여부--%>
+        <%--do while rs.eof = false--%>
+        <%--CourseID = rs("CourseID")--%>
+
+        <%--'response.write("CourseID : " & CourseID & "<br/>")--%>
+
+        <%--IF CourseID = "" THEN--%>
+        <%--ELSE--%>
+        <%--sql = "SELECT TOP 10 ExpertID from db_bit.dbo.Course where CourseID = '" & CourseID & "'"--%>
+        <%--Set rs2 = Dbcon.Execute(sql)--%>
+        <%--if rs2.eof or rs2.bof then--%>
+        <%--else--%>
+        <%--ExpertID = rs2("ExpertID")--%>
+        <%--end if--%>
+        <%--rs2.Close--%>
+
+        <%--'response.write("ExpertID : " & ExpertID & "<br/>")--%>
+
+        <%--' 권한부여 과정 : 전문가 / 기업위탁 / 국가기간 / 대학비트 / 청년취업.--%>
+        <%--IF ExpertID = "전문가" OR ExpertID = "기업위탁" OR ExpertID = "국가기간" OR ExpertID = "대학비트" OR ExpertID = "청년취업" THEN--%>
+        <%--bRight = true--%>
+        <%--ELSE--%>
+        <%--END IF--%>
+        <%--END IF--%>
+
+        <%--'response.write("bRight : " & bRight & "<br/>")--%>
+
+        <%--rs.moveNext--%>
+        <%--loop--%>
+
+        <%--'// FROM HERE : 관리자에게 권한 강제부여.--%>
+        <%--' job : 팀장님--%>
+        <%--' acidstar : 임 대리님--%>
+        <%--' silverq : 정 대리님 X--%>
+        <%--' bowery24 : 강기윤 X--%>
+        <%--' kitac : 김영산 x--%>
+        <%--' jjh0422 : 장재호 x--%>
+        <%--' k0sm0s1 : 김윤정 x--%>
+        <%--' hoone : 이지훈 x--%>
+        <%--' karnmou : 정경진--%>
+        <%--' vntltl92 : 조희준--%>
+        <%--' dagi1227 : 김건태--%>
+        <%--' dnwjd748 : 강인영 (201802012)--%>
+        <%--IF LoginID = "job" OR LoginID = "acidstar" OR LoginID = "yglee" OR LoginID = "karnmou" OR LoginID = "vntltl92" OR LoginID = "dagi1227" OR LoginID = "dnwjd748" THEN--%>
+        <%--bRight = true--%>
+        <%--END IF--%>
+
+        <%--IF bRight = false THEN--%>
+        <%--call alertMsgGoURL ("권한이 없습니다. \n채용정보는 전문가과정 등을 수료하신 분들이 보실 수 있습니다.", "http://www.bitacademy.com/")--%>
+        <%--END IF--%>
+
+        <%--rs.Close--%>
+        <%--Set rs = Nothing--%>
+    <%--%>--%>
+
+    <%--<%--%>
+        <%--if request("page") =""then--%>
+        <%--page=1--%>
+        <%--else--%>
+        <%--page=request("page")--%>
+        <%--end if--%>
+
+        <%--'set oConn=server.CreateObject("adodb.connection")--%>
+        <%--'	oConn.Open "Provider=SQLOLEDB.1;Persist Security Info=False" & _--%>
+        <%--'	            ";User ID=bitdb;Password=bit!bt?qlxm.rhksflwk#" & _--%>
+        <%--'	           ";Initial Catalog=DB_BIT;Data Source=localhost;Network Address=localhost, 1433;Network Library=dbmssocn"--%>
+
+        <%--set rs = server.CreateObject("adodb.recordset")--%>
+
+        <%--sql = "SELECT C.CompName, J.RequestDate, J.Department, J.SeqNum" & _--%>
+        <%--" FROM Company C INNER JOIN JobOffer J ON C.CompSeqNum=J.CompSeqNum" & _--%>
+        <%--" WHERE  (J.CentClub=0 or J.CentClub is null) AND J.isShow > 0 ORDER BY J.RequestDate DESC, C.CompName  "--%>
+
+
+        <%--rs.PageSize =10 '페이지의 사이즈를 정함 ...반드시 레크드셋오픈전에 지정해주어야 한다.--%>
+
+        <%--rs.Open sql, oConn, 1 '레코드 커서 타입(1)을 지정해 주어야 한다. 만일 지정이 안되면 페이징이 안된다. ,3--%>
+
+    <%--%>--%>
 
     <link rel="stylesheet" type="text/css" href="/job/bodyStyle.css">
     <title>비트교육센터에 오신것을 환영합니다.</title>
@@ -261,19 +261,19 @@
     <!-- #include virtual="/Include/Script_MoBon_1803.asp"-->
     c:import url="/WEB-INF/views/Include/Script_MoBon_1803.jsp"/>
 </head>
-<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="font-size:10pt; margin:0;" ><!--<%=StudID%><%=StudName%><%=StudTermNum%>-->
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="font-size:10pt; margin:0;" >
 
-<%
-    if not rs.EOF then
-    totalpage =rs.PageCount
-    rs.AbsolutePage =page
-    totalNum = rs.RecordCount
-    elseif rs.EOF then
-    totalpage = 1
-    ' rs.AbsolutePage =page
-    totalNum = 0
-    end if
-%>
+<%--<%--%>
+    <%--if not rs.EOF then--%>
+    <%--totalpage =rs.PageCount--%>
+    <%--rs.AbsolutePage =page--%>
+    <%--totalNum = rs.RecordCount--%>
+    <%--elseif rs.EOF then--%>
+    <%--totalpage = 1--%>
+    <%--' rs.AbsolutePage =page--%>
+    <%--totalNum = 0--%>
+    <%--end if--%>
+<%--%>--%>
 <style>
     .courseName {
         font-size:15pt !important;
@@ -386,15 +386,15 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <%
-                                        i=1
-                                        do until rs.EOF or i>rs.PageSize
+                                    <%--<%--%>
+                                        <%--i=1--%>
+                                        <%--do until rs.EOF or i>rs.PageSize--%>
 
-                                        RequestDate = FormatDateTime(rs("RequestDate"), 2)
-                                        Department = rs("Department")
-                                        CompName = rs("CompName")
-                                        SeqNum= rs("SeqNum")
-                                    %>
+                                        <%--RequestDate = FormatDateTime(rs("RequestDate"), 2)--%>
+                                        <%--Department = rs("Department")--%>
+                                        <%--CompName = rs("CompName")--%>
+                                        <%--SeqNum= rs("SeqNum")--%>
+                                    <%--%>--%>
 
                                     <tr>
                                         <td width="113" style="text-align:center;"><%=RequestDate%></td>
@@ -402,12 +402,11 @@
                                         <td width="298"><a href="/job/JobDetail.asp?id=<%=SeqNum%>&page=<%=page%>" type="text/css"> <%=Department%></a></td>
                                     </tr>
 
-
-                                    <%
-                                        rs.MoveNext
-                                        i=i+1
-                                        loop
-                                    %>
+                                    <%--<%--%>
+                                        <%--rs.MoveNext--%>
+                                        <%--i=i+1--%>
+                                        <%--loop--%>
+                                    <%--%>--%>
 
                                     <!--
                                     <tr bgColor="#e0ebec" style="height:1px;">
@@ -437,32 +436,32 @@
                             <td align="middle">
                                 <div style="width:100%; margin-top:10px; font-size:15px; font-weight:900; font-family:'Nanum Gothic Bold';">
 
-                                    <%
-                                        '첫페이지가 아니라면, "이전" 을 표시함.
-                                    %>
-                                    <% IF page <> 1 THEN %>
-                                    <span style="color:darkblue;"><a href="/job/List.asp?page=<%=page-1%>">이전</a></span>
-                                    <% END IF %>
+                                    <%--<%--%>
+                                        <%--'첫페이지가 아니라면, "이전" 을 표시함.--%>
+                                    <%--%>--%>
+                                    <%--<% IF page <> 1 THEN %>--%>
+                                    <%--<span style="color:darkblue;"><a href="/job/List.asp?page=<%=page-1%>">이전</a></span>--%>
+                                    <%--<% END IF %>--%>
 
-                                    <%
-                                        '(OLD) <span style="color:darkblue; margin:0 20px 0 20px;"> < % = page % > /  < % = totalpage % > </span>
-                                    %>
-                                    <%
-                                        FOR l = 1 to totalpage
-                                        strStyleAdded = ""
-                                        IF l = Cint(page) THEN
-                                        strStyleAdded = "color:red; text-decoration:underline; font-weight:800;"
-                                        ELSE
-                                        strStyleAdded = ""
-                                        END IF
-                                        response.write (" <a href='/job/List.asp?page=" & l & "' style='margin-left:10px;'><span style='" & strStyleAdded & "'>" & l & "</span></a> ")
-                                    %>
+                                    <%--<%--%>
+                                        <%--'(OLD) <span style="color:darkblue; margin:0 20px 0 20px;"> < % = page % > /  < % = totalpage % > </span>--%>
+                                    <%--%>--%>
+                                    <%--<%--%>
+                                        <%--FOR l = 1 to totalpage--%>
+                                        <%--strStyleAdded = ""--%>
+                                        <%--IF l = Cint(page) THEN--%>
+                                        <%--strStyleAdded = "color:red; text-decoration:underline; font-weight:800;"--%>
+                                        <%--ELSE--%>
+                                        <%--strStyleAdded = ""--%>
+                                        <%--END IF--%>
+                                        <%--response.write (" <a href='/job/List.asp?page=" & l & "' style='margin-left:10px;'><span style='" & strStyleAdded & "'>" & l & "</span></a> ")--%>
+                                    <%--%>--%>
 
-                                    <%
-                                        NEXT
-                                    %>
+                                    <%--<%--%>
+                                        <%--NEXT--%>
+                                    <%--%>--%>
 
-                                    <% IF rs.RecordCount <= 0 THEN %>
+                                    <%--<% IF rs.RecordCount <= 0 THEN %>--%>
                                     <table align="center" border="0" cellPadding="1" cellSpacing="1" style=" WIDTH: 430px; margin-left:50px; margin-top:10px;">
                                         <tr>
                                             <td>
@@ -479,25 +478,25 @@
                                             </td>
                                         </tr>
                                     </table>
-                                    <% END IF %>
+                                    <%--<% END IF %>--%>
 
 
-                                    <%
-                                        '맨 마지막 페이지가 아니라면, "다음" 을 표시함.
-                                    %>
-                                    <% IF Cint(page)<>Cint(totalpage) THEN %>
-                                    <a href="/job/List.asp?page=<%=page+1%>" style="margin-left:10px;"> 다음	</a>
-                                    <% END IF %>
+                                    <%--<%--%>
+                                        <%--'맨 마지막 페이지가 아니라면, "다음" 을 표시함.--%>
+                                    <%--%>--%>
+                                    <%--<% IF Cint(page)<>Cint(totalpage) THEN %>--%>
+                                    <%--<a href="/job/List.asp?page=<%=page+1%>" style="margin-left:10px;"> 다음	</a>--%>
+                                    <%--<% END IF %>--%>
                                 </div>
 
-                                <%
-                                    rs.close
-                                %>
+                                <%--<%--%>
+                                    <%--rs.close--%>
+                                <%--%>--%>
 
-                                <%
-                                    sql = "select top 10 num, title, updatedate  from JobNotice where isshow=1 order by updatedate DESC"
-                                    rs.Open sql, oConn
-                                %>
+                                <%--<%--%>
+                                    <%--sql = "select top 10 num, title, updatedate  from JobNotice where isshow=1 order by updatedate DESC"--%>
+                                    <%--rs.Open sql, oConn--%>
+                                <%--%>--%>
 
                             </td>
                         </tr>

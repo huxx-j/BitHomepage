@@ -1,16 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
-<%--<%--%>
-    <%--Session.CodePage  = 949 '한글--%>
-    <%--Response.CharSet  = "euc-kr" '한글--%>
-<%--%>--%>
-
-<%--<%--%>
-    <%--Response.AddHeader "Pragma", "no-cache"--%>
-    <%--Response.AddHeader "cache-control", "no-store"--%>
-    <%--Response.Expires = -1--%>
-<%--%>--%>
 <!DOCTYPE html>
 <!-- REDIRECTABLE TO MOBILE -->
 
@@ -36,52 +26,6 @@
 	}
 
 	</script>
-
-    <!--#include file="include/dbconn.inc"-->
-
-    <%--<%--%>
-        <%--Set Dbcon = Server.CreateObject("ADODB.Connection")--%>
-        <%--Dbcon.Open Con_bit_db--%>
-    <%--%>--%>
-    <%--<script type="text/javascript">--%>
-        <%--// 맨 처음에 페이지 없이 열때--%>
-        <%--var page=${page};--%>
-        <%--if(page=""){--%>
-            <%--page=1;--%>
-        <%--}--%>
-    <%--</script>--%>
-    <%--<%--%>
-        <%--page = Request.QueryString("page")--%>
-        <%--IF page="" THEN--%>
-            <%--page=1--%>
-        <%--'response.write page & "<br/>"--%>
-        <%--END IF--%>
-
-        <%--Dim strQuerySearch--%>
-        <%--'//search = Request.QueryString("search")--%>
-        <%--search = SQLClean(Request.QueryString("search"))--%>
-        <%--IF search<>"" THEN--%>
-        <%--strQuerySearch = " WHERE CompName like '%" & search & "%' "--%>
-        <%--END IF--%>
-
-        <%--'StudID = session("StudID")--%>
-
-        <%--set rs = server.CreateObject("adodb.recordset")--%>
-        <%--'//sql = "SELECT * FROM db_bit.dbo.Interview " & strQuerySearch & " ORDER BY num DESC"--%>
-        <%--sql = "SELECT * FROM db_bit.dbo.Interview " & strQuerySearch & " ORDER BY num DESC"--%>
-
-        <%--rs.PageSize = 10 '페이지의 사이즈를 정함 ...반드시 레크드셋오픈전에 지정해주어야 한다.--%>
-        <%--rs.Open sql, oConn, 1 '레코드 커서 타입(1)을 지정해 주어야 한다. 만일 지정이 안되면 페이징이 안된대.--%>
-
-        <%--IF NOT rs.EOF THEN--%>
-        <%--totalpage =rs.PageCount--%>
-        <%--rs.AbsolutePage = page--%>
-        <%--totalNum = rs.RecordCount--%>
-        <%--END IF--%>
-        <%--'response.write "totalpage : " & totalpage & "<br/>"--%>
-        <%--'response.write "rs.AbsolutePage : " & rs.AbsolutePage & "<br/>"--%>
-        <%--'response.write "totalNum : " & totalNum & "<br/>"--%>
-    <%--%>--%>
 
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/CSS/bodyStyle.css">
     <link rel= "shortcut icon" href="${pageContext.request.contextPath}/assets/images/favicon.ico">
@@ -115,6 +59,10 @@
                     btnSearch();
                 }
             });
+            function resize(obj) {
+                obj.style.height = "1px";
+                obj.style.height = (12+obj.scrollHeight)+"px";
+            }
 
             // 회사명 클릭시 팝업 열기 & 내용 보이기.
             $('.aOpenPopup').on('click', function(e) {
@@ -122,17 +70,54 @@
                 var Num = $(this).attr('id').substring(1); // ex. '125'
                 //alert("NUM : " + Num);
 
-                ajaxLoad('#myBox1', '', 'InterviewPopupInclude.asp?Num='+Num);
-                //showUpInterviewContents();
-
+                console.log("아작스전"+Num);
+                viewDetail(Num);
+                // showUpInterviewContents();
                 e.preventDefault();
-
                 //$('.myBlurAll').css('display','block');
                 $('#myBox1').css('display','block');
                 //$('body').css('overflow','hidden');
-
                 openNav();
             });
+            function viewDetail(Num){
+                console.log("아작스후"+Num);
+            $.ajax({
+                url : "${pageContext.request.contextPath }/job/InterviewPopupInclude",
+                type : "POST",
+                //contentType : "application/json",
+                data : {"Num": Num},
+                dataType : "json",
+                success : function(InterviewVo) {
+                    console.log(InterviewVo);
+                    $("#delpoint").remove();
+                    var str=" ";
+                    str+='<div id="delpoint">';
+                    str+='<div style="margin-top:30px; margin-bottom:5px; padding:5px; font-size:13pt; color:#8b6338; background-color:#fbfbec;">면접내용</div>';
+                    str+='    <p class="autosize" onkeydown="resize(this)" onkeyup="resize(this)" style="font-size:11pt; color:#4f4f4f; line-height:15pt; border:none; width: 598px; resize:none;" readonly="disable"  value="" name="InterviewDescription" >';
+                    str+= InterviewVo.interviewDescription;
+                    str+='    </p>';
+                    str+='   <div style="margin-top:30px; margin-bottom:5px; padding:5px; font-size:13pt; color:#8b6338; background-color:#fbfbec;">면접관태도</div>';
+                    str+='   <p style="font-size:11pt; color:#4f4f4f; line-height:15pt; border:none; width: 598px;">';
+                    str+= InterviewVo.interviewManner;
+                    str+='   </p>';
+                    str+='    <div style="margin-top:30px; margin-bottom:5px; padding:5px; font-size:13pt; color:#8b6338; background-color:#fbfbec;">느낀점</div>';
+                    str+='  <p style="font-size:11pt; color:#4f4f4f; line-height:15pt; border:none; width: 598px;">';
+                    str+= InterviewVo.interviewOpinion;
+                    str+='   </p>';
+                    str+='  <div style="margin-top:30px; margin-bottom:5px; padding:5px; font-size:13pt; color:#8b6338; background-color:#fbfbec;">회사평가</div>';
+                    str+='   <p style="font-size:11pt; color:#4f4f4f; line-height:15pt; border:none; width: 598px;">';
+                    str+= InterviewVo.compReputiation;
+                    str+='   </p>';
+                    str+='</div>'
+                    $("#divContent2").append(str);
+                    console.log(str);
+                    $("#ImagePath").attr('src',"${pageContext.request.contextPath}/assets"+InterviewVo.imageLogoPath);
+                },
+                error : function(XHR, status, error) {
+                    console.error(status + " : " + error);
+                }
+            });
+            }
 
             $('.myBlurAll').on('click', function() {
 
@@ -200,11 +185,11 @@
         }
 
         function btnWrite() {
-            window.open("/Popup/Interview_InputForm.asp","","left=-1500, top=-300, width=710, height=950, titlebar=no, location=no, toolbar=no, resizable=no, scrollbars=yes");
+            window.open("${pageContext.request.contextPath }/job/Interview_InputForm","","left=-1500, top=-300, width=710, height=950, titlebar=no, location=no, toolbar=no, resizable=no, scrollbars=yes");
         }
 
         function showUpInterviewContents() {
-            alert("begin.");
+            //alert("begin.");
 
             var strPre = '<div style="margin-top:30px; margin-bottom:5px; padding:5px; font-size:13pt; color:#8b6338; background-color:#fbfbec;">';
             var strMid = '</div><p style="font-size:11pt; color:#4f4f4f; line-height:15pt;">';
@@ -216,10 +201,8 @@
             var str3 = strPre + '느낀점' + strMid + $('.Str3').eq(0).val() + strPost;
             var str4 = strPre + '회사평가' + strMid + $('.Str4').eq(0).val() + strPost;
 
-            //$('#myBox1').html(str1 + str2 + str3 + str4);
-            $('#divContent').html(str1 + str2 + str3 + str4);
-
-
+           // $('#myBox1').html(str1 + str2 + str3 + str4);
+            $('#divContent2').html(str1 + str2 + str3 + str4);
         }
     </script>
 
@@ -238,6 +221,7 @@
 </head>
 <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="font-size:10pt; margin:0;" >
 <style>
+    textarea.autosize { min-height: 50px; }
     /* The Overlay (background) */
     .overlay {
         /* Height & width depends on how you want to reveal the overlay (see JS below) */
@@ -416,17 +400,26 @@
                     }
                 </style>
                 <div style="margin-top:25px;">
-                    <div id="myBox1" class="myPopup" style="display:none;"></div>
+                    <div id="myBox1" class="myPopup" style="display:none;">
+                        <%--<form name="form2" style="height:10px;">  <!-- to share between ASP and JS -->--%>
+                            <%--<input type="hidden" name="InterviewDescription" class="Str1" value=""/>--%>
+                            <%--<input type="hidden" name="InterviewManner" class="Str2" value="" />--%>
+                            <%--<input type="hidden" name="InterviewOpinion" class="Str3" value=""  />--%>
+                            <%--<input type="hidden" name="CompReputiation" class="Str4" value="" />--%>
+                        <%--</form>--%>
+                        <div id="divContent1" style="margin-bottom:10px;">
+                            <div style="float:left;"><h2> <img id="ImagePath" src="" style="max-width:175px; max-height:39px;"/><span class="blueTxt" style="font-size:1.6em;">${vo.CompName} </span> 면접후기</h2></div>
+                            <div style="float:right; font-weight:900; font-size:1.25em;"><a id="aClose1" href="#"><span class="redTxt">[닫기]</span></a></div>
+                            <div style="clear:both;"></div>
+                            <div style="float:right; margin-right:10px; font-size:0.8em; "><a href="${vo.HomePage}" target="_blank"><u><span style="color:#8f8f8f;"></span></u></a></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div id="divContent2" style="margin-bottom:10px;">
+
+                        </div>
+                    </div>
                     <div class="myBlurAll" style="display:none;"></div>
-                    <%
-//                        String search=request.getParameter("search");
-//                        if (search!="") {
-//                            out.print("<p class=\"blueTxt\">\n" +
-//                                    "                        회사명 '${search}' 으로 검색된 결과입니다 : <a href=\"javascript:btnCancel();\" class=\"btnWhiteBorder\" style=\"height:24px; margin-left:30px; padding:2px 5px; \"><span style=\"line-height:24px;\">검색취소</span></a>\n" +
-//                                    "                    </p>");
-//                        }
-//                    %>
-                    <!-- Search -->
+
                     <div style="height:60px; margin:20px 0 10px 0px; ">
                         <input type="text" id="inputSearch" class="form-control" placeholder="(검색어를 입력하세요)" value="" style="height:32px; width:40%; font-size:1.5em; border-radius:5px; float:left;"/>
                         <a href="javascript:btnSearch();" style="float:left;" class="aButton" ><img src="${pageContext.request.contextPath}/assets/Images/Content/Mobile/icn_Search.png" style="width:30px; margin-left:2px; border:1px solid #c9c9c9; padding:2px; border-radius:5px; box-shadow:0px 0px 3px #c9c9c9;"/></a>
@@ -459,66 +452,25 @@
                             </tr>
                             </thead>
                             <tbody>
-                           <%
-    //                                'do while rs.eof = false
-//
-//                                FOR i=1 TO rs.PageSize STEP 1
-//                                IF NOT rs.EOF THEN
-//
-//                                sql2 = "SELECT * FROM db_bit.dbo.InterviewImageLogoPath WHERE CompName like '%"&rs("CompName")&"%'"
-//                                Set Rs2 = Dbcon.Execute(sql2)
-//
-//                                if Rs2.eof = false then
-//                                ImagePath = Rs2("ImageLogoPath")
-//                                HomepageURL = Rs2("HomepageURL")
-//                                else
-//                                ImagePath = ""
-//                                HomepageURL = ""
-//                                end if
-//                                Rs2.Close
-//                            %>
-                            <c:forEach items="${list}" var="vo">
-                            <tr>
-                                <td style="font-size:1.1em; font-weight:800;">${vo.Num}</td>
-                                <td>
-                                    <a href="#" id="a${vo.Num}" class="aOpenPopup">
-                                        <span style="font-size:1.75em; font-weight:900; text-shadow:1px 1px 1px #828282; margin-right:5px;">${vo.CompName}</span>
-                                        <img src="${vo.ImageLogoPath}" style="max-width:175px; max-height:39px; margin-top:0px;"/>
 
-                                    </a>
+                            <c:forEach items="${list}" var="vo" begin="${interMap.fristitem}" end="${interMap.enditem}" step="1">
+                            <tr>
+                                <td style="font-size:1.1em; font-weight:800;">${vo.num}</td>
+                                <td>
+                                    <a href="#" id="a${vo.num}" class="aOpenPopup">
+                                        <span style="font-size:1.75em; font-weight:900; text-shadow:1px 1px 1px #828282; margin-right:5px;">${vo.compName}</span>
+                                        <c:if test="${vo.imageLogoPath ne null}">
+                                            <img src="${pageContext.request.contextPath}/assets${vo.imageLogoPath}" style="max-width:175px; max-height:39px; margin-top:0px;"/>
+                                        </c:if>
+                                       </a>
                                 </td>
-                                <td style="font-size:1.25em; font-weight:700;">${vo.UpdateDate}</td>
+                                <td style="font-size:1.25em; font-weight:700;">${vo.updateDate}</td>
                             </tr>
                             </c:forEach>
                             </tbody>
                         </table>
                     </div>
-                    <!-- Paging -->
-                    <%
-//                        Dim pagingStartNum
-//                        Dim pagingEndNum
-//                        Dim pagingPrevNum
-//                        Dim pagingNextNum
-//
-//                        pagingStartNum = page - (page mod 10) + 1
-//                        pagingEndNum = page - (page mod 10) + 10
-//                        IF (page mod 10) = 0 THEN
-//                        pagingStartNum = PagingStartNum - 10
-//                        pagingEndNum = PagingEndNum - 10
-//                        END IF
-//                        IF pagingEndNum > totalpage THEN
-//                        pagingEndNum = totalpage
-//                        END IF
-//
-//                        pagingPrevNum = pagingStartNum - 10
-//                        pagingNextNum = pagingStartNum + 10
-//                        IF pagingPrevNum < 1 THEN
-//                        pagingPrevNum = 1
-//                        END IF
-//                        IF pagingNextNum > totalpage THEN
-//                        pagingNextNum = totalpage - (totalpage mod 10) + 1
-//                        END IF
-//                    %>
+
                     <style>
                         .btnPaging {
                             border:1px solid #c9c9c9;
@@ -530,39 +482,28 @@
                             float:left;
                         }
                     </style>
-<%--//                    <div style="text-align:center; margin-left:50px; margin-top:30px; font-weight:800; font-size:1.1em;">--%>
-<%--//                        <a href="/job/interview.asp?page=1"><div class="btnPaging" style="color:#393939;">처음</div></a>--%>
-<%--//                        <a href="/job/interview.asp?page=<%=pagingPrevNum %>"><div class="btnPaging" style="color:#393939;">이전</div></a>--%>
-<%--//                        <%--%>
-<%--//                            FOR i=pagingStartNum TO pagingEndNum STEP 1--%>
-<%--//                        %>--%>
-<%--//                        <!--<span style="margin-left:12px;">-->--%>
-<%--//                        <%--%>
-<%--//                            IF Cint(page) = Cint(i) THEN--%>
-<%--//                        %>--%>
-<%--//                        <!-- font-weight:800; text-decoration:underline; -->--%>
-<%--//                        <div style="background-color:#ffffb6;" class="redTxt btnPaging"><%=i %></div>--%>
-<%--//                        <%--%>
-<%--//                            ELSE--%>
-<%--//                        %>--%>
-<%--//                        <a href="/job/interview.asp?page=<%=i %>"><div class="btnPaging" style="color:#393939;"><%=i %></div></a>--%>
-<%--//                        <%--%>
-<%--//                            END IF--%>
-<%--//                        %>--%>
-<%--//                        <!--</span>-->--%>
-<%--//                        <%--%>
-<%--//                            NEXT--%>
-<%--//                        %>--%>
-<%--//                        <a href="/job/interview.asp?page=<%=pagingNextNum %>" style="color:#393939;"><div class="btnPaging" >다음</div></a>--%>
-<%--//                        <a href="/job/interview.asp?page=<%=totalpage %>"><div class="btnPaging" style="color:#393939;">끝</div></a>--%>
-<%--//                    </div>--%>
-<%--//                    <div style="clear:both;"></div>--%>
+                    <div style="text-align:center; margin-left:50px; margin-top:30px; font-weight:800; font-size:1.1em;">
+                        <a href="/job/Interview?page=1"><div class="btnPaging" style="color:#393939;">처음</div></a>
+                        <a href="/job/Interview?page=${interMap.pagingPrevNum}"><div class="btnPaging" style="color:#393939;">이전</div></a>
+                        <!--<span style="margin-left:12px;">-->
+                        <c:forEach begin="${interMap.pagingStartNum}" end="${interMap.pagingEndNum}" step="1" var="i">
+                        <!-- font-weight:800; text-decoration:underline; -->
+                            <c:if  test="${page eq i}">
+                            <div style="background-color:#ffffb6;" class="redTxt btnPaging">${i}</div>
+                            </c:if>
+                            <c:if  test="${page ne i}">
+                            <a href="/job/Interview?page=${i}"> <div class="btnPaging" style="color:#393939;">${i}</div></a>
+                            </c:if>
+                        </c:forEach>
+                        <!--</span>-->
+                        <a href="/job/Interview?page=${interMap.pagingNextNum}" style="color:#393939;"><div class="btnPaging" >다음</div></a>
+                        <a href="/job/Interview?page=${interMap.totalPage}"><div class="btnPaging" style="color:#393939;">끝</div></a>
+                    </div>
+                    <div style="clear:both;"></div>
                     <!-- //Paging -->
-
                     <!-- btnWrite -->
                     <div style="width:60%; height:60px; margin:20px auto; text-align:center;" class="con_wrap1709">
                         <a href="javascript:btnWrite();" class="btnGreenBorder big" style="color:#75902f !important;">면접후기 작성</a>
-
                     </div>
                     <!-- //btnWrite -->
 
@@ -583,11 +524,7 @@
     <!-- //Footer_Wrap -->
 </div>
 </body>
+<script type="text/javascript">
+
+</script>
 </html>
-<%
-//    rs.Close
-//    Dbcon.Close
-//    set rs=nothing
-//    set Rs2=nothing
-//    set Dbcon =nothing
-//%>
