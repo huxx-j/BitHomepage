@@ -8,7 +8,7 @@
             <span style="margin:0 5px 0 7px; color:#a0a0a0; ">|</span>
             <a href="#" style="text-decoration:none; color:#a0a0a0; ">이메일 무단수집거부</a>
             <span style="margin:0 5px 0 7px; color:#a0a0a0; ">|</span>
-            <a href="/Member/policy.asp" style="text-decoration:none; color:#a0a0a0; ">개인정보취급방침</a>
+            <a href="/member/policy" style="text-decoration:none; color:#a0a0a0; ">개인정보취급방침</a>
             <span style="margin:0 5px 0 7px; color:#a0a0a0; ">|</span>
             <a href="javascript:alert('준비중입니다. 문의(02-3486-3456)');" style="text-decoration:none; color:#a0a0a0; ">이용약관</a>
         </b></div>

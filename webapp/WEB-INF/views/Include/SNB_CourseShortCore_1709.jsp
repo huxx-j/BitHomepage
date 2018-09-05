@@ -1,6 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
 <!--#include file="Common_CSS_SNB_1709.inc"-->
 <c:import url="/WEB-INF/views/Include/Common_CSS_SNB_1709.jsp"/>
 <style>
@@ -116,56 +115,49 @@
 				<!-- newwrap no1 : Programming -->
 				<li>
 					<a href="#this" class="newdepth2">[서울]비트교육센터</a>
-					<ul class="newdepth3_wrap no1" style="min-height:315px;">
+					<ul class="newdepth3_wrap no1" style="min-height:290px;">
+					
+						
 						<!-- newwrap no1 : CP -->
-						<li><a href="#" onclick="return onclickCP();" class="newdepth3 newwrap no1 plus">C Master</a></li>
-						<ul class="newdepth4_wrap no1">
-							<li><a href="/course/shortcourse/detailPage/Course_C" class="newdepth4">· 주중반</a></li>
-							<li><a href="/course/shortcourse/detailPage/Course_C_Weekend" class="newdepth4">· 주말반</a></li>
-						</ul>
+						<li><a href="/course/shortcourse/detailPage/Course_C" class="newdepth3">C Master</a></li>
 						
 						<!-- newwrap no2 : JP -->
-						<li><a href="#" onclick="return onclickJP();" class="newdepth3 newwrap no2 plus">JAVA 프로그래밍</a></li>
-						<ul class="newdepth4_wrap no2">
-							<li><a style="padding-right:1px;" href="/course/shortcourse/detailPage/Course_java" class="newdepth4">· 주중반</a></li>
-							<li><a style="padding-right:1px;" href="/course/shortcourse/detailPage/Course_Java_Weekend" class="newdepth4">· 주말반</a></li>
-						</ul>
-
+						<li><a href="/course/shortcourse/detailPage/Course_java" class="newdepth3">JAVA 프로그래밍</a></li>
+					
 						<!-- newwrap no3 : C++P -->
-						<li><a href="#" onclick="return onclickCppP();" class="newdepth3 newwrap no3 plus">C++ 프로그래밍</a></li>
-						<ul class="newdepth4_wrap no3">
-							<li><a href="/course/shortcourse/detailPage/Course_cPlus" class="newdepth4">· 주중반</a></li>
-							<li><a href="/course/shortcourse/detailPage/Course_cPlus_Weekend" class="newdepth4">· 주말반</a></li>
-						</ul>
+						<li><a href="/course/shortcourse/detailPage/Course_cPlus" class="newdepth3">C++ 프로그래밍</a></li>
 						
-						<!-- newwrap no4 : 자료구조/알고리즘 -->
-						<li><a href="#" onclick="return onclickDS();" class="newdepth3 newwrap no4 plus">자료구조/알고리즘</a></li>
-						<ul class="newdepth4_wrap no4">
-							<li><a href="/course/shortcourse/detailPage/Course_c2" class="newdepth4">· 주말반</a></li>
-							<!--
-							<li><a href="/Course/ShortCourse/DetailPage/Course_AlgorithmIntermediate.asp" class="newdepth4">주말/중급 알고리즘</a></li>
-							<li><a href="/Course/ShortCourse/DetailPage/Course_AlgorithmAdvanced.asp" class="newdepth4">주말/고급 알고리즘</a></li>
-							-->
-						</ul>
+						<!-- newwrap no4 : Python 프로그래밍 -->
+						<li><a href="/course/shortcourse/detailPage/Course_Python" class="newdepth3">Python 프로그래밍</a></li>
 						
-						<!-- newwrap no5 : Python 프로그래밍 -->
-						<li><a href="#" onclick="return onclickPythonP();" class="newdepth3 newwrap no5 plus">Python 프로그래밍</a></li>
-						<ul class="newdepth4_wrap no5">
-							<li><a href="/course/shortcourse/detailPage/Course_Python" class="newdepth4">· 주중반</a></li>
-							<li><a href="/course/shortcourse/detailPage/Course_Python_Weekend" class="newdepth4">· 주말반</a></li>
-						</ul>
-						
-						<!-- newwrap no6 : C# 프로그래밍 -->
-						<li><a href="#" onclick="return onclickCsharpP();" class="newdepth3 newwrap no6 plus">C# 프로그래밍</a></li>
-						<ul class="newdepth4_wrap no6">
-							<li><a href="/course/shortcourse/detailPage/Course_cSharp" class="newdepth4">· 주중반</a></li>
-						</ul>
+						<!-- newwrap no5 : C# 프로그래밍 -->
+						<li><a href="/course/shortcourse/detailPage/Course_cSharp" class="newdepth3">C# 프로그래밍</a></li>
 						
 						<!-- no7 : Go 프로그래밍 -->
-						<li><a href="/course/shortcourse/detailPage/Course_Go" class="newdepth3 no7">Go 프로그래밍</a></li>
+						<li><a href="/course/shortcourse/detailPage/Course_Go" class="newdepth3">Go 프로그래밍</a></li>
 						
 						<!-- no8 : SW 자율학습 지도 커뮤니티 -->
-						<li><a href="/course/shortcourse/detailPage/Course_SelfLearning" class="newdepth3 no8">SW 자율학습 지도 커뮤니티</a></li>
+						<li><a href="/course/shortcourse/detailPage/Course_SelfLearning" class="newdepth3">SW 자율학습 지도 커뮤니티</a></li>
+						
+						
+		</li>			
+						
+						<!-- newwrap no4 : 자료구조/알고리즘 -->
+						<!-- 
+						<li><a href="#" onclick="return onclickDS();" class="newdepth3 newwrap no4 plus">자료구조/알고리즘</a></li>
+						 -->
+						
+						
+						<!-- newwrap no5 : Python 프로그래밍 -->
+						<!--
+						<li><a href="#" onclick="return onclickPythonP();" class="newdepth3 newwrap no5 plus">Python 프로그래밍</a></li>
+						<ul class="newdepth4_wrap no5">
+							<li><a href="/Course/ShortCourse/DetailPage/Course_Python.asp" class="newdepth4">· 주중반</a></li>
+							<li><a href="/Course/ShortCourse/DetailPage/Course_Python_Weekend.asp" class="newdepth4">· 주말반</a></li>
+						</ul>
+						 -->
+						 
+						 
 					</ul>
 				</li>
 				<li>
@@ -180,7 +172,7 @@
 				<li>
 					<a href="#this" class="newdepth2 " style="letter-spacing:-1px;">[부산]부산캠퍼스</a>
 					<ul class="newdepth3_wrap no3">
-						<li><a href="/course/localCampus/localCampus_Busan_introduction" class="newdepth3">부산캠퍼스 소개</a></li>
+						<li><a href="/course/localCampus/localCampus_Busan_introduction?beginwith='no'" class="newdepth3">부산캠퍼스 소개</a></li>
 						<li><a href="/course/localCampus/DetailPage/Busan_c" class="newdepth3">C Programming</a></li>
 						<li><a href="/course/localCampus/DetailPage/Busan_java" class="newdepth3">JAVA Programming</a></li>
 						<li><a href="/course/localCampus/DetailPage/Busan_c2" class="newdepth3">자료구조/알고리즘</a></li>
@@ -190,7 +182,7 @@
 				<li>
 					<a href="#this" class="newdepth2 " style="letter-spacing:-1px;">[군포]군포캠퍼스</a>
 					<ul class="newdepth3_wrap no4">
-						<li><a href="/course/localCampus/localCampus_Gunpo_introduction" class="newdepth3">군포캠퍼스 소개</a></li>
+						<li><a href="/course/localCampus/localCampus_Gunpo_introduction?beginwith='no'" class="newdepth3">군포캠퍼스 소개</a></li>
 						<li><a href="/course/localCampus/DetailPage/Gunpo_c" class="newdepth3">C Programming</a></li>
 						<li><a href="/course/localCampus/DetailPage/Gunpo_cPlus" class="newdepth3">C++ Programming</a></li>
 						<li><a href="/course/localCampus/DetailPage/Gunpo_c2" class="newdepth3">자료구조/알고리즘</a></li>
@@ -200,7 +192,7 @@
 				<li>
 					<a href="#this" class="newdepth2 " style="letter-spacing:-1px;">[김해]김해캠퍼스</a>
 					<ul class="newdepth3_wrap no5">
-						<li><a href="/course/localCampus/localCampus_Gimhae_introduction" class="newdepth3">김해캠퍼스 소개</a></li>
+						<li><a href="/course/localCampus/localCampus_Gimhae_introduction?beginwith='no'" class="newdepth3">김해캠퍼스 소개</a></li>
 						<li><a href="/course/localCampus/DetailPage/Gimhae_c" class="newdepth3">C Programming</a></li>
 						<li><a href="/course/localCampus/DetailPage/Gimhae_java" class="newdepth3">Java Programming</a></li>
 						<li><a href="/course/localCampus/DetailPage/Gimhae_c2" class="newdepth3">자료구조/알고리즘</a></li>
@@ -235,7 +227,7 @@
 				<!-- newwrap no4 : Java -->
 				<li><a href="/course/shortcourse/detailPage/Course_servletJsp" class="newdepth2 no1">Servlet &amp; JSP 프로그래밍</a></li>
 				<li><a href="/course/shortcourse/detailPage/Course_spring" class="newdepth2 no2 ">Spring Framework 과정</a></li>
-				<li style="height:50px;"><a href="/course/shortcourse/detailPage/Course_aiojava" class="newdepth2 no3">All-in-One Java Application 개발</a></li>
+				<li style="height:50px;"><a href="/Course/ShortCourse/DetailPage/Course_aiojava" class="newdepth2 no3">All-in-One Java Application 개발</a></li>
 			</ul>
 		</li>			
 			

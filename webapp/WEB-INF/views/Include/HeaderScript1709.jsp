@@ -225,17 +225,17 @@
         }
         else if(numCampus==2) {		// Java프로그래밍
             str 	= "<a href='/course/shortcourse/detailPage/Course_java'><div><span class='campusName'>[서울]</span> 비트교육센터</div></a>" +
-                "<a href='/Course/localCampus/DetailPage/Daejeon_java.asp'><div><span class='campusName'>[대전]</span> 대전캠퍼스</div></a>" +
-                "<a href='/Course/localCampus/DetailPage/Busan_java.asp'><div><span class='campusName'>[부산]</span> 부산캠퍼스</div></a>";
+                "<a href='/course/localCampus/DetailPage/Daejeon_java'><div><span class='campusName'>[대전]</span> 대전캠퍼스</div></a>" +
+                "<a href='/course/localCampus/DetailPage/Busan_java'><div><span class='campusName'>[부산]</span> 부산캠퍼스</div></a>";
         }
         else if(numCampus==3) {		// C++프로그래밍
-            str 	= "<a href='/Course/ShortCourse/DetailPage/Course_cPlus.asp'><div><span class='campusName'>[서울]</span> 비트교육센터</div></a>" +
-                "<a href='/Course/localCampus/DetailPage/Daejeon_cPlus.asp'><div><span class='campusName'>[대전]</span> 대전캠퍼스</div></a>";
+            str 	= "<a href='/course/shortcourse/detailPage/Course_cPlus'><div><span class='campusName'>[서울]</span> 비트교육센터</div></a>" +
+                "<a href='/course/localCampus/DetailPage/Daejeon_cPlus'><div><span class='campusName'>[대전]</span> 대전캠퍼스</div></a>";
         }
         else if(numCampus==4) {		// 자료구조/알고리즘
             bxslider1.stopAuto();
-            str 	= "<a href='/Course/ShortCourse/DetailPage/Course_C2.asp'><div><span class='campusName'>[서울]</span> 비트교육센터</div></a>" +
-                "<a href='/Course/localCampus/DetailPage/Busan_c2.asp'><div><span class='campusName'>[부산]</span> 부산캠퍼스</div></a>";
+            str 	= "<a href='/course/shortcourse/detailPage/Course_C2'><div><span class='campusName'>[서울]</span> 비트교육센터</div></a>" +
+                "<a href='/course/localCampus/DetailPage/Busan_c2'><div><span class='campusName'>[부산]</span> 부산캠퍼스</div></a>";
         }
         if( $("div#selectCampus"+numCampus).html().length>0 )
             $("div#selectCampus"+numCampus).html("");
