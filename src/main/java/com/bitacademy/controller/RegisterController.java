@@ -6,6 +6,7 @@ import com.bitacademy.vo.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,24 +21,24 @@ import java.util.Map;
 public class RegisterController {
     @Autowired
     private RegisterService registerService;
-	@Autowired
+    @Autowired
     private MemberService memberService;
 
-	@RequestMapping(value = "/request/register_shortCourse_insertMMS", method = RequestMethod.GET)
+    @RequestMapping(value = "/request/register_shortCourse_insertMMS", method = RequestMethod.GET)
     public String register_shortCourse_insertMMS() {
-        
-		return "register/request/register_shortCourse_insertMMS";
+
+        return "register/request/register_shortCourse_insertMMS";
     }
-	@RequestMapping(value = "/request/register_shortCourse", method = RequestMethod.GET)
+    @RequestMapping(value = "/request/register_shortCourse", method = RequestMethod.GET)
     public String register_shortCourse() {
-		return "register/request/register_shortCourse";
+        return "register/request/register_shortCourse";
     }
 
     @RequestMapping(value = "/register_requestResult", method = RequestMethod.GET)
     public String register_requestResult(HttpSession session, Model model) {
-	    UserVo authUser = (UserVo)session.getAttribute("authUser");
-	    List<ApplyVo> list = registerService.register_requestResult(authUser);
-	    model.addAttribute("list", list);
+        UserVo authUser = (UserVo)session.getAttribute("authUser");
+        List<ApplyVo> list = registerService.register_requestResult(authUser);
+        model.addAttribute("list", list);
         return "register/register_requestResult";
     }
 
@@ -48,18 +49,18 @@ public class RegisterController {
 
     @RequestMapping(value = "/register_depositCheck", method = RequestMethod.GET)
     public String register_depositCheck(HttpSession session, Model model) {
-	    UserVo userVo = (UserVo) session.getAttribute("authUser");
-	    model.addAttribute("list",registerService.register_depositCheck(userVo));
+        UserVo userVo = (UserVo) session.getAttribute("authUser");
+        model.addAttribute("list",registerService.register_depositCheck(userVo));
         return "/register/register_depositCheck";
     }
 
 
     @RequestMapping(value = "/request/register_form")
     public String register_form(Model model, HttpSession session, @RequestParam(value = "idx", defaultValue = "0", required = false) int idx, @RequestParam(value = "cID") String cID){
-	    if (session.getAttribute("authUser")==null){
-	        return "/index";
+        if (session.getAttribute("authUser")==null){
+            return "/index";
         } else {
-	        model.addAttribute("cID",cID);
+            model.addAttribute("cID",cID);
             UserVo authUser = (UserVo) session.getAttribute("authUser");
             Map<String, Object> map = new HashMap<>();
             UserVo userVo = registerService.register_form_info(authUser); //유저 기본정보 가져오는 코드
@@ -75,14 +76,14 @@ public class RegisterController {
             List<UserVo> list4 = registerService.register_form_Licence(authUser.getUser_no()); //자격/면허 가져오는 코드
             model.addAttribute("licence", list4);
             ApplyVo applyVo = new ApplyVo();
-	        if (idx != 0) {
+            if (idx != 0) {
                 applyVo = registerService.register_form(authUser, idx);
                 applyVo.setIsAppYN("Y");
                 model.addAttribute("applyInfo", applyVo);
                 return "/register/request/register_form";
             } else {
-	            applyVo.setIsAppYN("N");
-	            model.addAttribute("applyInfo", applyVo);
+                applyVo.setIsAppYN("N");
+                model.addAttribute("applyInfo", applyVo);
                 return "/register/request/register_form";
             }
 
@@ -105,7 +106,18 @@ public class RegisterController {
             model.addAttribute("hope", hope);
             //1. end
 
-            return "register/request/register_form2?cID="+cID;
+            return "/register/request/register_form2?cID="+cID;
+        }
+    }
+
+    @RequestMapping(value = "/request/register_form_submit")
+    public String register_form_submit(@ModelAttribute LongApplyVo longApplyVo, @RequestParam("cID") String cID, HttpSession session){
+        if (session.getAttribute("authUser")==null){
+            return "/index";
+        } else {
+            System.out.println(longApplyVo.toString());
+            registerService.register_form_submit(longApplyVo, cID);
+            return "/register/request/register_form2";
         }
     }
 }

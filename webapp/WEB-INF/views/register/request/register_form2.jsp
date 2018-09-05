@@ -96,12 +96,12 @@
                                     <tbody>
                                     <tr>
                                         <td class="l" colspan="2">
-                                            <input name="hope" type="checkbox" value="1" ${hope.hope[0] eq "1" ? "checked" : ""}> 취업
-                                            <input name="hope" type="checkbox" value="2" ${hope.hope[1] eq "2" ? "checked" : ""}>해외취업
-                                            <input name="hope" type="checkbox" value="3" ${hope.hope[2] eq "3" ? "checked" : ""}>복직혹은 복학
-                                            <input name="hope" type="checkbox" value="4" ${hope.hope[3] eq "4" ? "checked" : ""}>대학원진학
-                                            <input name="hope" type="checkbox" value="5" ${hope.hope[4] eq "5" ? "checked" : ""}>병역특례
-                                            <input name="hope" type="checkbox" value="6" ${hope.hope[5] eq "6" ? "checked" : ""}>기타
+                                            <input name="hopeChkBox" type="checkbox" value="1" ${hope.hope[0] eq "1" ? "checked" : ""}> 취업
+                                            <input name="hopeChkBox" type="checkbox" value="2" ${hope.hope[1] eq "2" ? "checked" : ""}>해외취업
+                                            <input name="hopeChkBox" type="checkbox" value="3" ${hope.hope[2] eq "3" ? "checked" : ""}>복직혹은 복학
+                                            <input name="hopeChkBox" type="checkbox" value="4" ${hope.hope[3] eq "4" ? "checked" : ""}>대학원진학
+                                            <input name="hopeChkBox" type="checkbox" value="5" ${hope.hope[4] eq "5" ? "checked" : ""}>병역특례
+                                            <input name="hopeChkBox" type="checkbox" value="6" ${hope.hope[5] eq "6" ? "checked" : ""}>기타
                                         </td>
                                     </tr>
                                     <tr>
@@ -148,9 +148,9 @@
                                         <col width="100%">
                                     </colgroup>
                                     <thead>
-                                        <tr>
-                                            <th style="width:40px;" scope="row" class="tit">사용언어/툴</th>
-                                        </tr>
+                                    <tr>
+                                        <th style="width:40px;" scope="row" class="tit">사용언어/툴</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
@@ -171,33 +171,33 @@
                                     <tr>
                                         <th style="width:40px;" scope="row" rowspan="2" class="tit">소개</th>
                                         <td>비트교육센터 수료자</td>
-                                        <td>성명 <input type="text" name="Name" value="<%--<%=AppWayCompName%>--%>" maxlength=10 size="8"></td>
-                                        <td>관계 <input type="text" name="Relation" size="13" value="<%--<%=AppWayCompRelation%>--%>"></td>
-                                        <td>직업 <input type="text" name="Office" size="13" value="<%--<%=AppWayOfficeName%>--%>"></td>
+                                        <td>성명 <input type="text" name="name" value="<%--<%=AppWayCompName%>--%>" maxlength=10 size="8"></td>
+                                        <td>관계 <input type="text" name="relation" size="13" value="<%--<%=AppWayCompRelation%>--%>"></td>
+                                        <td>직업 <input type="text" name="office" size="13" value="<%--<%=AppWayOfficeName%>--%>"></td>
                                     </tr>
                                     <tr>
                                         <td>기타</td>
-                                        <td>성명 <input type="text" name="EtcName" value="<%--<%=AppWayEtcName%>--%>" size="8"  maxlength="10"></td>
-                                        <td>관계 <input type="text" name="EtcRelation" value="<%--<%=AppWayEtcRelation%>--%>" size="13"  maxlength="10"></td>
-                                        <td>직업 <input type="text" name="EtcPos" value="<%--<%=AppWayEtcPosition%>--%>" size="13"  maxlength="10"></td>
+                                        <td>성명 <input type="text" name="etcName" value="<%--<%=AppWayEtcName%>--%>" size="8"  maxlength="10"></td>
+                                        <td>관계 <input type="text" name="etcRelation" value="<%--<%=AppWayEtcRelation%>--%>" size="13"  maxlength="10"></td>
+                                        <td>직업 <input type="text" name="etcPos" value="<%--<%=AppWayEtcPosition%>--%>" size="13"  maxlength="10"></td>
                                     </tr>
                                     <tr>
                                         <th scope="row" rowspan="2" class="tit">광고</th>
                                         <td colspan="4">
-                                            <input type="checkbox" value='010102' name="Newchkbox0" >비트교육센터 홈페이지 &emsp;
-                                            <input type="checkbox" value='010102' name="Newchkbox0">후견인 제도 &emsp;
-                                            <input type="checkbox" value='010102' name="Newchkbox0">학교 포스터 &emsp;
-                                            <input type="checkbox" value='010102' name="Newchkbox0">노동부 고용센터 &emsp;
-                                            <input type="checkbox" value='010102' name="Newchkbox0">사람인
+                                            <input type="checkbox" value='010101' name="appWaychkbox" >비트교육센터 홈페이지 &emsp;
+                                            <input type="checkbox" value='010102' name="appWaychkbox">후견인 제도 &emsp;
+                                            <input type="checkbox" value='010103' name="appWaychkbox">학교 포스터 &emsp;
+                                            <input type="checkbox" value='010104' name="appWaychkbox">노동부 고용센터 &emsp;
+                                            <input type="checkbox" value='010105' name="appWaychkbox">사람인
                                         </td>
                                     </tr>
                                     <tr>
                                         <td colspan="4">
-                                            <input type="checkbox" value='010102' name="Newchkbox0" >Facebook &emsp;
-                                            <input type="checkbox" value='010102' name="Newchkbox0">네이버 지식인 &emsp;
-                                            <input type="checkbox" value='010102' name="Newchkbox0">네이버 키워드 &emsp;
-                                            <input type="checkbox" value='010102' name="Newchkbox0">네이버 블로그 &emsp;
-                                            <input type="checkbox" value='010102' name="Newchkbox0">잡코리아
+                                            <input type="checkbox" value='010201' name="appWaychkbox" >Facebook &emsp;
+                                            <input type="checkbox" value='010202' name="appWaychkbox">네이버 지식인 &emsp;
+                                            <input type="checkbox" value='010203' name="appWaychkbox">네이버 키워드 &emsp;
+                                            <input type="checkbox" value='010204' name="appWaychkbox">네이버 블로그 &emsp;
+                                            <input type="checkbox" value='010205' name="appWaychkbox">잡코리아
                                         </td>
                                     </tr>
 

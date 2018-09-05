@@ -38,6 +38,17 @@ public class UserVo {
     private String acquireYear;
     private String acquireMon;
     private String liceName;
+    private String licence_no;
+    private String userCareer_no;
+    private String userTraining_no;
+
+    public String getLicence_no() {
+        return licence_no;
+    }
+
+    public void setLicence_no(String licence_no) {
+        this.licence_no = licence_no;
+    }
 
     public String getLiceName() {
         return liceName;

@@ -17,6 +17,7 @@
         <typeAlias alias="UserModVo" type="com.bitacademy.vo.UserModVo"/>
         <typeAlias alias="CareerVo" type="com.bitacademy.vo.CareerVo"/>
         <typeAlias alias="TrainingVo" type="com.bitacademy.vo.TrainingVo"/>
+        <typeAlias alias="LongApplyVo" type="com.bitacademy.vo.LongApplyVo"/>
     </typeAliases>
     <mappers>
         <mapper resource="mybatis/mappers/course.xml"/>
