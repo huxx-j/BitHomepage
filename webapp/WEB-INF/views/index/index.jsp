@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!--#include virtual="/Include/config.asp"-->
-console.log("메인");
+
 <%-- <%
 Response.AddHeader "Pragma", "no-cache"
 Response.AddHeader "cache-control", "no-store"
