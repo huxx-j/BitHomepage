@@ -39,6 +39,7 @@
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/Include/CourseDateTime/Date/Date__JavaScript.jsp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/Include/CourseDateTime/Date/Date__Java_Weekend.jsp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/Include/CourseDateTime/Date/Date__KUKA18_BD.jsp" charset="EUC-KR" />
+    <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/Include/CourseDateTime/Date/Date__KUKA18_FD.inc" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/Include/CourseDateTime/Date/Date__Python.jsp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/Include/CourseDateTime/Date/Date__SER_JSP_core.jsp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/Include/CourseDateTime/Date/Date__SQL_JDBC_core.jsp" charset="EUC-KR" />
@@ -79,6 +80,7 @@
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/Include/CourseDateTime/Time/Time__JavaScript.jsp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/Include/CourseDateTime/Time/Time__Java_Weekend.jsp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/Include/CourseDateTime/Time/Time__KUKA18_BD.jsp" charset="EUC-KR" />
+    <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/Include/CourseDateTime/Time/Time__KUKA18_FD.inc" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/Include/CourseDateTime/Time/Time__Python.jsp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/Include/CourseDateTime/Time/Time__SER_JSP_core.jsp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/Include/CourseDateTime/Time/Time__SQL_JDBC_core.jsp" charset="EUC-KR" />

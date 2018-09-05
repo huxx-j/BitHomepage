@@ -1,7 +1,6 @@
-<%
-    Session.CodePage  = 949 '한글
-    Response.CharSet  = "euc-kr" '한글
-%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 
 <!DOCTYPE html>
 <!-- not REDIRECTABLE TO MOBILE -->
@@ -10,9 +9,12 @@
 <link rel= "shortcut icon" href="/images/favicon.ico">
 <head>
     <!-- #include virtual="/Include/Meta.asp"-->
+    <c:import url="/WEB-INF/views/Include/Meta.jsp"/>
     <title>비트교육센터</title>
     <!-- #include virtual="/Include/ContentStyle.asp"-->
+    <c:import url="/WEB-INF/views/Include/contentStyle.jsp"/>
     <!-- #include virtual="/Include/Script.asp"-->
+    <c:import url="/WEB-INF/views/Include/Script.jsp"/>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- .btn_refundView 및 .btn_refundView2는 /JS/Common.js 에 이벤트핸들러 정의 -->
     <link rel="stylesheet" type="text/css" href="/include/Common_CSS_Detail_720_1709.css" >
@@ -41,10 +43,11 @@
         */
     </script>
     <!-- #include virtual="/Include/Script_MoBon_1803.asp"-->
+    <c:import url="/WEB-INF/views/Include/Script_MoBon_1803.jsp"/>
 </head>
 <style>
     /* white and narrowSNB */
-    .moveTop { width:175px !important; background:#17538e url('/Images/Common/btn_moveTop.png') 50px center no-repeat; }
+    .moveTop { width:175px !important; background:#17538e url('${pageContext.request.contextPath}/assets/Images/Common/btn_moveTop.png') 50px center no-repeat; }
     #Container_Wrap { min-height:initial; }
     ul.newdepth3_wrap li.long { letter-spacing:-1px; }
     ul.newdepth2_wrap li.long { letter-spacing:-1px; }
@@ -97,6 +100,7 @@
 <div id="Wrapper">
     <!-- Header_Wrap -->
     <!-- #include virtual="/Include/HeaderHTML1709.asp"-->
+    <c:import url="/WEB-INF/views/Include/HeaderHTML1709.jsp"/>
     <!-- //Header_Wrap -->
     <hr>
     <div id="Container_Wrap">
@@ -104,15 +108,16 @@
         <div id="Content_Wrap">
             <!-- SNB_Wrap-->
             <!-- #include virtual = "/Include/SNB_CourseSupport_1709.asp"-->
+            <c:import url="/WEB-INF/views/Include/SNB_CourseSupport_1709.jsp"/>
             <!-- //SNB_Wrap-->
             <!-- Content -->
             <div id="Content">
                 <div class="hGroup1709">
                     <p>
-                        <img src="/Images/Icons/icn_Home.png"/>
-                        <img src="/Images/Icons/icn_ArrowTriangleRight.png"/>무료취업과정
-                        <img src="/Images/Icons/icn_ArrowTriangleRight.png"/>국가기간전략산업직종
-                        <img src="/Images/Icons/icn_ArrowTriangleRight.png"/>금융IT기반 핀테크융합 전문가 양성과정
+                        <img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_Home.png"/>
+                        <img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>무료취업과정
+                        <img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>국가기간전략산업직종
+                        <img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>금융IT기반 핀테크융합 전문가 양성과정
                     </p>
                     <h4 style="float:left; letter-spacing:0px;" >금융IT기반 핀테크융합 전문가 양성과정</h4>
                     <!-- 수강신청btn -->
@@ -143,10 +148,12 @@
                                     <th>교육기간</th>
                                     <td>
                                         <!-- #include virtual="/Include/CourseDateTime/Date/Date__KUKA18_FD_10.inc" -->
+                                        <c:import url="/WEB-INF/views/Include/CourseDateTime/Date/Date__KUKA18_FD_10.jsp"/>
                                     </td>
                                     <th>강의시간</th>
                                     <td>
                                         <!-- #include virtual="/Include/CourseDateTime/Time/Time__KUKA18_FD_10.inc" -->
+                                        <c:import url="/WEB-INF/views/Include/CourseDateTime/Time/Time__KUKA18_FD_10.jsp"/>
                                     </td>
                                 </tr>
                                 <tr>
