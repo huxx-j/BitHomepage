@@ -36,7 +36,7 @@ var index = $(".mainmenu").index(this);
 if(index==0) {
 location.href="/course/shortcourse/Course_ShortCourse";
 } else if(index==3) {
-location.href="/course/kukka/Course_Support.asp";
+location.href="/course/kukka/Course_Support";
 }
 });
 

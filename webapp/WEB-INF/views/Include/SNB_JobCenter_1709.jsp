@@ -34,7 +34,7 @@
         <li><a href="${pageContext.request.contextPath}/employment/employment_jobCenter" class="newdepth1" style="letter-spacing:-1px;">비트교육센터 취업지원센터</a></li>
         <li><a href="${pageContext.request.contextPath}/job/WriteRecruit" class="newdepth1">구인의뢰 신청</a></li>
         <li><a href="${pageContext.request.contextPath}/job/List" class="newdepth1">채용정보 확인</a></li>
-        <li><a href="${pageContext.request.contextPath}/job/Interview?page=1" class="newdepth1">면접후기</a></li>
+        <li><a href="${pageContext.request.contextPath}/job/Interview" class="newdepth1">면접후기</a></li>
         <li><a href="${pageContext.request.contextPath}/employment/employment_bitAdvantage" class="newdepth1">비트출신 장점</a></li>
         <li><a href="${pageContext.request.contextPath}/employment/employment_company" class="newdepth1">비트출신 진출기업</a></li>
         <li class="last"><a href="${pageContext.request.contextPath}/employment/employment_companyEmployment" class="newdepth1">신입채용교육 진행 기업</a></li>

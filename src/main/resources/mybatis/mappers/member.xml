@@ -12,10 +12,11 @@
 
     <select id="login_ok" parameterType="UserVo" resultType="UserVo">
         <![CDATA[
-                select User_no, NameHan, LoginID, AuthCode,
+                select User_no, NameHan, LoginID, AuthCode, NameEng,
                         substring(StudResNum,1,6) StudResNum, SleepStat,
                         DATEDIFF(current_date,RegDate) RegDate,
-                        DATEDIFF(current_date,ReAgreeDate) ReAgreeDate
+                        DATEDIFF(current_date,ReAgreeDate) ReAgreeDate,
+                        LeaveStat
                 from Users
                 where LoginID=#{loginID}
                        and Password=#{password}
@@ -37,6 +38,54 @@
     <update id="ActivateSleepingAccount" parameterType="UserVo">
         <![CDATA[
                 update Users set SleepStat='정상' where LoginID=#{loginID} and User_no=#{user_no}
+        ]]>
+    </update>
+
+    <select id="Member_modify" parameterType="Int" resultType="UserModVo">
+        <![CDATA[
+                select LoginID, NameHan, NameEng, Gender, Email, PostNum, Job,
+                        Address, FamilyPostNum, FamilyAddress, Telephone, Cellphone, BitLetter
+                from Users where User_no=#{user_no};
+        ]]>
+    </select>
+
+    <select id="Member_modify_school" parameterType="Int" resultType="UserModVo">
+        <![CDATA[
+                select UserScholarship_no, User_no, substring(StartDate,1,4) StartYear,
+                        substring(StartDate,6,7) StartMon,
+                        substring(EndDate,1,4) EndYear, substring(EndDate,6,7) EndMon, StartDate, EndDate, School, State,
+                        Location, Degree, Major, SubMajor
+                from UserScholarship
+                where User_no=#{user_no}
+                order by UserScholarship_no
+        ]]>
+    </select>
+
+    <update id="member_modify_ok">
+        <![CDATA[
+                update Users set NameEng=#{nameEng}, Password=#{password},
+                        PostNum=#{postNum}, Address=#{address}, FamilyPostNum=#{familyPostNum},
+                        FamilyAddress=#{familyAddress}, Telephone=#{telephone}, Email=#{email},
+                        BitLetter=#{bitLetter}, Cellphone=#{cellphone}, Job=#{job}
+                where User_no=#{user_no}
+        ]]>
+    </update>
+
+    <insert id="member_school_modify_ok">
+        <![CDATA[
+                insert into UserScholarship(UserScholarship_no, User_no,StartDate,EndDate,
+                              School,State,Location,Degree,Major,SubMajor)
+                        values(#{userScholarship_no}, #{user_no},#{startDate},#{endDate},#{school},
+                        #{state},#{location},#{degree},#{major},#{subMajor})
+                ON DUPLICATE KEY UPDATE StartDate=#{startDate},EndDate=#{endDate},
+                              School=#{school},State=#{state},Location=#{location},
+                              Degree=#{degree},Major=#{major},SubMajor=#{subMajor}
+        ]]>
+    </insert>
+
+    <update id="member_del" parameterType="HashMap">
+        <![CDATA[
+                update Users set LeaveStat='leave' where User_no=#{user_no} and LoginID=#{loginID}
         ]]>
     </update>
 </mapper>

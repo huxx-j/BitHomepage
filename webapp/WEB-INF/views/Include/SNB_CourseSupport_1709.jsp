@@ -84,13 +84,13 @@
             </ul>
         </li>
         <li class="dnone">
-            <a href="/Course/Chung/Course_Chung_2018.asp" class="newdepth1">청년취업아카데미</a>
+            <a href="/course/chung/Course_Chung_2018" class="newdepth1">청년취업아카데미</a>
         </li>
         <li class="dnone">
             <a href="#" onclick="return onclickConsortium();" class="newdepth1" style="letter-spacing:-0.5px;">국가인적자원개발컨소시엄</a>
             <ul class="newdepth2_wrap no4" style="height:48px;">
-                <li><a href="/Course/Kukka/Course_Consortium_AWS_Cloud_Web.asp" class="newdepth2 dnone">AWS를 활용한 클라우드 기반 웹 개발</a></li>
-                <li><a href="/Course/Kukka/Course_Consortium_RaspberryPi_IoT.asp" class="newdepth2">라즈베리파이를 활용한 IoT개발 실무과정</a></li>
+                <li><a href="/course/kukka/Course_Consortium_AWS_Cloud_Web" class="newdepth2 dnone">AWS를 활용한 클라우드 기반 웹 개발</a></li>
+                <li><a href="/course/kukka/Course_Consortium_RaspberryPi_IoT" class="newdepth2">라즈베리파이를 활용한 IoT개발 실무과정</a></li>
             </ul>
         </li>
     </ul>

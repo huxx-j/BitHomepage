@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="ko">
-<link rel= "shortcut icon" href="/images/favicon.ico">
+<link rel= "shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico">
 <head>
 	<!-- #include virtual="/Include/Meta.asp"-->
 	<c:import url="/WEB-INF/views/Include/Meta.jsp"/>
@@ -115,7 +115,7 @@
 									</tbody>
 								</table>
 								<!-- 수강신청btn -->
-								<a href="/Register/Request/register_shortCourse.asp?cID=" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
+								<a href="/register/request/register_shortCourse.asp?cID=" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
 								</a>
 								<div style="clear;both; height:10px;"></div>
@@ -148,14 +148,14 @@
 						</div>
 						<!-- //로드맵 -->
 
-<!--						
-<div class="myBlackBox" style="font-size:13pt;">
-	<p>데이터의 구조는 컴퓨터 분야의 필수 조건이 되었습니다.</p>
-	<p>사고방식은 곧 프로그램의 능력입니다.</p>
-	<p>능력을 업그레이드하며 프로그램을 완성해 갑니다.</p>
-	<p>기본적 과정에서 학습한 것을 연계하여 학습함으로서 문제 해결능력을 향상 시킵니다.</p>
-</div>
--->					
+						<!--						
+						<div class="myBlackBox" style="font-size:13pt;">
+							<p>데이터의 구조는 컴퓨터 분야의 필수 조건이 되었습니다.</p>
+							<p>사고방식은 곧 프로그램의 능력입니다.</p>
+							<p>능력을 업그레이드하며 프로그램을 완성해 갑니다.</p>
+							<p>기본적 과정에서 학습한 것을 연계하여 학습함으로서 문제 해결능력을 향상 시킵니다.</p>
+						</div>
+						-->					
 						<!-- con_wrap -->
 						<div class="con_wrap1709"> <!-- style="z-index:1;">--> <!-- otherwise, 환급내용 자세히보기 div와 z-index problem happens -->
 							<!--<h5>누가 수강하면 좋을까요?</h5>-->

@@ -144,12 +144,14 @@
 			
 			///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			// 3. 초기값에 따라서 [프로젝트 살펴보기] 및 [공모전 출품작] 보여주기.
-			<%-- if( 'booklet' == '<%=Request.QueryString("beginwith")%>') {
+			
+			console.log("${beginwith}");
+			if("booklet"=="${beginwith}") {
 				showBooklet();
 			}
-			else if( 'entryWorks' == '<%=Request.QueryString("beginwith")%>') {
+			else if("entryWorks"=="${beginwith}") {
 				showEntryWorks();
-			} --%>
+			} 
 		});
 		//////////////////////////////////////////////////////
 		// 프로젝트 살펴보기 booklet.
@@ -292,8 +294,8 @@
 						<div id="divSection1" class="con_wrap first last" style="margin-left:40px; display:none; z-index:10000; ">
 							<!--<div id="flipbook" style="border:2px solid #d7d7d7; border-radius:3px;">-->
 							<div id="flipbook" style="box-shadow:0 4px 10px #666;">
-								<!--#include file="module_Daejeon_Booklet.asp"-->
-								<%-- <c:import url="/WEB-INF/views/localCampus/module_Daejeon_Booklet.jsp"/> --%>
+								<!--#include file="module_Daejeon_.asp"-->
+								<jsp:include page="/WEB-INF/views/course/localCampus/module_Daejeon_Booklet.jsp"></jsp:include>
 							</div>
 							<div style="display:none; margin-left:270px; margin-top:30px;">
 								<a href="#" id="btnPrevious" class="btn mid blue disabled" style="float:left; margin-left:40px;">이전</a>
@@ -314,7 +316,7 @@
 						<div id="divSection3" class="con_wrap first last" style="margin-left:40px; display:none; z-index:10000;">
 							<div id="flipbook_3" style="box-shadow:0 4px 10px #666; z-index:10000;">
 								<!--#include file="module_Daejeon_EntryWorks.asp"-->
-								<%-- <c:import url="/WEB-INF/views/localCampus/module_Daejeon_EntryWorks.jsp"/> --%>
+								<jsp:include page="/WEB-INF/views/course/localCampus/module_Daejeon_EntryWorks.jsp"></jsp:include>
 							</div>
 							<div style="display:none; margin-left:270px; margin-top:30px;">
 								<a href="#" id="btnPrevious_3" class="btn mid blue disabled" style="float:left; margin-left:40px;">이전</a>
@@ -388,7 +390,7 @@
 									</tbody>
 								</table>
 							</div>
-							<h5 class="small"><a href="/course/localCampus/detailPage/Daejeon_Cplus.asp">C++ Programming</h5>
+							<h5 class="small"><a href="/course/localCampus/DetailPage/Daejeon_cPlus">C++ Programming</h5>
 							<div class="divTable">
 								<table>
 									<colgroup>
@@ -427,7 +429,7 @@
 									</tbody>
 								</table>
 							</div>
-							<h5 class="small"><a href="/course/localCampus/detailPage/Daejeon_Java.asp">Java Programming</a></h5>
+							<h5 class="small"><a href="/course/localCampus/DetailPage/Daejeon_java">Java Programming</a></h5>
 							<div class="divTable">
 								<table>
 									<colgroup>
@@ -483,7 +485,7 @@
 								<a href="javascript:showBooklet();" title="프로젝트 살펴보기" class="btnRedBorder" style="font-size:15px; padding:0 5px; margin-left:10px; border-radius:0px; letter-spacing:-1.5px;">프로젝트 살펴보기</a>
 								<a href="javascript:showEntryWorks();" title="공모전 출품작" class="btnRedBorder" style="font-size:15px; padding:0 5px; margin-left:10px; border-radius:0px; letter-spacing:-1.5px;">공모전 출품작</a>
 							</h5>
-							<h5 class="small"><a href="/course/localCampus/detailPage/Daejeon_windowNet.asp">Windows.NET 고급과정</h5>
+							<h5 class="small"><a href="/course/localCampus/DetailPage/Daejeon_windowNet">Windows.NET 고급과정</h5>
 							<div class="divTable">
 								<table>
 									<colgroup>

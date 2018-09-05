@@ -66,8 +66,8 @@
 						</p>
 						<h4>
 							Windows .NET 고급과정
-							<a href="/course/localCampus/LocalCampus_Gunpo_Introduction.asp?beginwith=booklet" title="프로젝트 살펴보기" class="btnRedBorder" style="font-size:15px; padding:0 5px; margin-left:10px; border-radius:0px; letter-spacing:-1.5px;">프로젝트 살펴보기</a>
-							<a href="/course/localCampus/LocalCampus_Gunpo_Introduction.asp?beginwith=entryWorks" title="공모전 출품작" class="btnRedBorder" style="font-size:15px; padding:0 5px; margin-left:10px; border-radius:0px; letter-spacing:-1.5px;">공모전 출품작</a>
+							<a href="/course/localCampus/localCampus_Gunpo_introduction?beginwith=booklet" title="프로젝트 살펴보기" class="btnRedBorder" style="font-size:15px; padding:0 5px; margin-left:10px; border-radius:0px; letter-spacing:-1.5px;">프로젝트 살펴보기</a>
+							<a href="/course/localCampus/localCampus_Gunpo_introduction?beginwith=entryWorks" title="공모전 출품작" class="btnRedBorder" style="font-size:15px; padding:0 5px; margin-left:10px; border-radius:0px; letter-spacing:-1.5px;">공모전 출품작</a>
 						</h4>
 					</div>
 

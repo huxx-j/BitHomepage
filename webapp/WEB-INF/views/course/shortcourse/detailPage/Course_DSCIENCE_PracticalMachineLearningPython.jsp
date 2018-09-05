@@ -129,7 +129,7 @@ int indexDepth3=2;
 								<div style="clear;both; height:10px;"></div>
 								-->
 								<!-- 수강신청btn -->
-								<a href="/Register/Request/register_shortCourse.asp?cID=" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
+								<a href="/register/request/register_shortCourse.asp?cID=" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
 								</a>
 								<div style="clear;both; height:10px;"></div>

@@ -1,16 +1,15 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
-<%-- <%
-strCourseID = "Go"
+<%!
+String strCourseID = "Go";
 %>
 
-<%
-strSubject = "Go 프로그래밍"
+<%!
+String strSubject = "Go 프로그래밍";
 
-indexDepth3=2
-%> --%>
-
+int indexDepth3=2;
+%>
 <!DOCTYPE html>
 <!-- NOT REDIRECTABLE to Mobile -->
 <html lang="ko">
@@ -84,7 +83,7 @@ indexDepth3=2
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>Programming
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>[서울]비트교육센터
 						</p>
-						<%-- <h4><%=strSubject%></h4> --%>
+						<h4><%=strSubject%></h4>
 					</div>
 
 					<section class="section">

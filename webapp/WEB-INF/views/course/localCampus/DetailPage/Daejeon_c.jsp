@@ -181,7 +181,7 @@
 						<div class="con_wrap1709">
 							<h5>교육장소</h5>
 							<ul class="ul_dot_gray">
-								<li>대전광역시 동구 자양동 52-2 우송IT교육센터 3층<img style="margin-top:-68px; height:100px;" src="img_qrcode_Daejeon.jpg"/></li>
+								<li>대전광역시 동구 자양동 52-2 우송IT교육센터 3층<img style="margin-top:-68px; height:100px;" src="${pageContext.request.contextPath}/assets/Images/img_qrcode_daejeon.jpg"/></li>
 							</ul>
 						</div>
 						<!-- //con_wrap1709 -->

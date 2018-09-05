@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!--#include file="Common_CSS_SNB_1709.inc"-->
 <c:import url="/WEB-INF/views/Include/Common_CSS_SNB_1709.jsp"/>
 
@@ -35,15 +37,15 @@
             <a href="#this" onclick="javascript:openApply();" class="newdepth1">신규지원</a>
             <ul class="newdepth2_wrap no1" style="height:351px;">
                 <!--<li><a href="/Register/Request/register_shortCourse" class="newdepth2">단기핵심과정</a></li>-->
-                <li class="long"><a href="${pageContext.request.contextPath}/register/Request/register_shortCourse" class="newdepth2">단기핵심과정/겨울방학특강</a></li>
-                <li><a href="${pageContext.request.contextPath}/register/Request/register_localCampus" class="newdepth2">비트캠퍼스</a></li>
-                <li><a href="${pageContext.request.contextPath}/register/Request/register_expert1" class="newdepth2">전문가과정</a></li>
-                <li><a href="${pageContext.request.contextPath}/register/Request/register_industry40_1" class="newdepth2">4차산업선도인력양성</a></li>
-                <li><a href="${pageContext.request.contextPath}/register/Request/register_coursePresentation" class="newdepth2">4차산업교육설명회</a></li>
-                <li><a href="${pageContext.request.contextPath}/register/Request/register_kukka1" class="newdepth2">국가기간전략산업직종</a></li>
-                <li><a href="${pageContext.request.contextPath}/register/Request/register_employment1" class="newdepth2">신입사원채용교육</a></li>
-                <li><a href="${pageContext.request.contextPath}/register/Request/register_chung1" class="newdepth2">청년취업아카데미</a></li>
-                <li><a href="${pageContext.request.contextPath}/register/Request/register_license1" class="newdepth2">BSPM(비트SW프로그래밍 자격증)</a></li>
+                <li class="long"><a href="${pageContext.request.contextPath}/register/request/register_form?cID=short" class="newdepth2">단기핵심과정/겨울방학특강</a></li>
+                <li><a href="${pageContext.request.contextPath}/register/request/register_form?cID=bitcam" class="newdepth2">비트캠퍼스</a></li>
+                <li><a href="${pageContext.request.contextPath}/register/request/register_form?cID=expert" class="newdepth2">전문가과정</a></li>
+                <li><a href="${pageContext.request.contextPath}/register/request/register_form?cID=industry40" class="newdepth2">4차산업선도인력양성</a></li>
+                <li><a href="${pageContext.request.contextPath}/register/request/register_form?cID=presentation" class="newdepth2">4차산업교육설명회</a></li>
+                <li><a href="${pageContext.request.contextPath}/register/request/register_form?cID=kuka" class="newdepth2">국가기간전략산업직종</a></li>
+                <li><a href="${pageContext.request.contextPath}/register/request/register_form?cID=employment" class="newdepth2">신입사원채용교육</a></li>
+                <li><a href="${pageContext.request.contextPath}/register/request/register_form?cID=chung" class="newdepth2">청년취업아카데미</a></li>
+                <li><a href="${pageContext.request.contextPath}/register/request/register_form?cID=bspm" class="newdepth2">BSPM(비트SW프로그래밍 자격증)</a></li>
             </ul>
         </li>
         <li>
@@ -60,7 +62,7 @@
             <a href="${pageContext.request.contextPath}/register/register_depositCheck" class="newdepth1">입금확인</a>
         </li>
         <li>
-            <a href="${pageContext.request.contextPath}/member/member_modify" class="newdepth1">개인정보수정</a>
+            <a href="${pageContext.request.contextPath}/member/Member_modify" class="newdepth1">개인정보수정</a>
         </li>
     </ul>
 

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="apply">
+
+    <select id="register_requestResult" parameterType="UserVo" resultType="ApplyVo">
+     <![CDATA[
+            select a.Applicant_no, substring(a.ApplyDate,1,4) ApplyYear, substring(a.ApplyDate,6,2) ApplyMon, substring(a.ApplyDate,9,2) ApplyDay,
+                    substring(a.TestDate,1,4) TestYear, substring(a.TestDate,6,2) TestMon, substring(a.TestDate,9,2) TestDay,
+                    c.CurriName, cc.CateName, a.TestLang, a.TestResult, a.Coment, a.ApplyDate, a.TestDate, if(DATEDIFF(current_date,a.TestDate) >= 0,'참','거짓') as CDate
+            from Curriculum c, ApplyInfo a, CurriculumCate cc
+            where c.Curriculum_no=a.Curriculum_no
+            and a.User_no=#{user_no}
+            and c.CurriculumCate_no=cc.CurriculumCate_no
+            order by a.ApplyDate;
+        ]]>
+ </select>
+
+    <select id="register_depositCheck" parameterType="Int" resultType="PayVo">
+        <![CDATA[
+                select c.CurriNickname,a.ApplyType, cc.CateName, a.Deposit, c.CurriName,
+                        a.DepositDate, a.DepositAmount, a.CardPayState, a.CardPayDate, a.CardPayAmount
+                from Curriculum c, CurriculumCate cc, ApplyInfo a
+                where a.User_no=#{user_no}
+                       and a.Curriculum_no=c.Curriculum_no
+                       and c.CurriculumCate_no=cc.CurriculumCate_no
+                       and a.TestResult = '합격'
+                       and a.CardPayState <> '실패'
+        ]]>
+    </select>
+
+    <select id="register_form" parameterType="HashMap" resultType="ApplyVo">
+        <![CDATA[
+                SELECT User_no, Curriculum_no, ApplyDate, ApplyType, TestDate, TestLang, TestScore,
+                        TestResult, Coment, Deposit, DepositAmount, CardPayDate, CardPayAmount,
+                        TotalPay, DepositDate, CardPayState, Note, State, GisuFlag, AfterPlan, Motive
+                from ApplyInfo
+                where User_no = #{user_no} and Applicant_no = #{idx}
+        ]]>
+    </select>
+
+    <select id="register_form_info" parameterType="Int" resultType="UserVo">
+        <![CDATA[
+                select NameHan, NameEng, StudResNum, gender, Thesis,
+                        Email, PostNum, Address, Telephone, cellphone
+                from Users
+                where User_no = #{user_no}
+        ]]>
+    </select>
+
+    <select id="register_form_training" parameterType="Int" resultType="TrainingVo">
+        <![CDATA[
+                select UserTraining_no, User_no, StartDate,
+                        EndDate, EduCenterName, EduCourseName, Content,
+                        substring(StartDate,1,4) StartYear,
+                        substring(StartDate,6,7) StartMon,
+                        substring(EndDate,1,4) EndYear, substring(EndDate,6,7) EndMon
+                from UserTraining
+                where User_no=#{user_no}
+        ]]>
+    </select>
+
+    <select id="register_form_career" parameterType="Int" resultType="CareerVo">
+        <![CDATA[
+                select UserCareer_no, User_no, StartDate, EndDate,
+                        CompName, DevPart, Role, Department, substring(StartDate,1,4) StartYear,
+                        substring(StartDate,6,7) StartMon, substring(EndDate,1,4) EndYear,
+                        substring(EndDate,6,7) EndMon, YearSal, RetireReason
+                from UserCareer
+                where User_no=#{user_no}
+        ]]>
+    </select>
+
+    <select id="register_form_Lang_Mil" parameterType="Int" resultType="UserVo">
+        <![CDATA[
+                select User_no, MillArm, MillRank, MillEnrollDate, MillDischargeDate,
+                        MillIncompletReason, Lang1, Lang2, LangScore1, LangScore2 ,
+                        substring(MillEnrollDate,1,4) StartYear, substring(MillEnrollDate,6,7) StartMon,
+                        substring(MillDischargeDate,1,4) EndYear, substring(MillDischargeDate,6,7) EndMon
+                from Users
+                where User_no=#{user_no}
+        ]]>
+    </select>
+    <select id="register_form_Licence" parameterType="Int" resultType="UserVo">
+        <![CDATA[
+                select User_no, LiceName, AcquireDate,
+                        substring(AcquireDate,1,4) AcquireYear,
+                        substring(AcquireDate,6,7) AcquireMon
+                from Licence
+                where User_no=#{user_no}
+        ]]>
+    </select>
+
+    <select id="register_form_hope" parameterType="HashMap" resultType="ApplyVo">
+        <![CDATA[
+                select User_no, Applicant_no, Hope, AfterPlan from ApplyInfo where Applicant_no=#{idx} and User_no=#{user_no}
+        ]]>
+    </select>
+</mapper>

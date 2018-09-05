@@ -70,8 +70,8 @@
     var WIDEBANNER_CHANGE_DELAY = 5300; //= 5300;		// 2초마다 와이드배너 전환(transition)
     var NUM_OF_WIDEBANNERS = 2;	// 와이드배너이미지 개수.							// NOT USED HERE :: SHOULD BE OVERRIDED.
     // arrWidebannerAddr : 와이드배너 주소 배열
-    var arrWidebannerAddr = new Array("/Center/Center_info.asp",
-        "/Course/Employ/Course_Employ_BizTechPartners.asp"
+    var arrWidebannerAddr = new Array("/Center/Center_info",
+        "/course/employ/Course_Employ_BizTechPartners"
     );																					// NOT USED HERE :: SHOULD BE OVERRIDED.
     var arrWidebannerBgColor = new Array("#4c4c4c", "#2a2a2a");							// NOT USED HERE :: SHOULD BE OVERRIDED.
 
@@ -219,12 +219,12 @@
         var str="";
         if(numCampus==1) {		// C프로그래밍
             bxslider1.stopAuto();
-            str 	= "<a href='/Course/ShortCourse/Courses_c.asp'><div><span class='campusName'>[서울]</span> 비트교육센터</div></a>" +
-                "<a href='/Course/localCampus/DetailPage/Daejeon_c.asp'><div><span class='campusName'>[대전]</span> 대전캠퍼스</div></a>" +
-                "<a href='/Course/localCampus/DetailPage/Busan_c.asp'><div><span class='campusName'>[부산]</span> 부산캠퍼스</div></a>";
+            str 	= "<a href='/course/shortcourse/detailPage/Courses_C'><div><span class='campusName'>[서울]</span> 비트교육센터</div></a>" +
+                "<a href='/course/localCampus/DetailPage/Daejeon_c'><div><span class='campusName'>[대전]</span> 대전캠퍼스</div></a>" +
+                "<a href='/course/localCampus/DetailPage/Busan_c'><div><span class='campusName'>[부산]</span> 부산캠퍼스</div></a>";
         }
         else if(numCampus==2) {		// Java프로그래밍
-            str 	= "<a href='/Course/ShortCourse/DetailPage/Course_Java.asp'><div><span class='campusName'>[서울]</span> 비트교육센터</div></a>" +
+            str 	= "<a href='/course/shortcourse/detailPage/Course_java'><div><span class='campusName'>[서울]</span> 비트교육센터</div></a>" +
                 "<a href='/Course/localCampus/DetailPage/Daejeon_java.asp'><div><span class='campusName'>[대전]</span> 대전캠퍼스</div></a>" +
                 "<a href='/Course/localCampus/DetailPage/Busan_java.asp'><div><span class='campusName'>[부산]</span> 부산캠퍼스</div></a>";
         }
