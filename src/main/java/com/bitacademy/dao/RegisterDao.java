@@ -48,4 +48,25 @@ public class RegisterDao {
     public ApplyVo register_form_hope(Map<String,Object> map) {
         return sqlSession.selectOne("apply.register_form_hope", map);
     }
+
+    public int register_form_submit(LongApplyVo longApplyVo) {
+        sqlSession.insert("apply.register_form_submit", longApplyVo);
+        return Integer.parseInt(longApplyVo.getApplicant_no());
+    }
+
+    public void register_form_submit_user(LongApplyVo longApplyVo) {
+        sqlSession.update("apply.register_form_submit_user", longApplyVo);
+    }
+
+    public void register_form_submit_licence(LongApplyVo longApplyVo) {
+        sqlSession.insert("apply.register_form_submit_licence", longApplyVo);
+    }
+
+    public void register_form_submit_career(LongApplyVo longApplyVo) {
+        sqlSession.insert("apply.register_form_submit_career", longApplyVo);
+    }
+
+    public void register_form_submit_edu(LongApplyVo longApplyVo) {
+        sqlSession.insert("apply.register_form_submit_edu", longApplyVo);
+    }
 }

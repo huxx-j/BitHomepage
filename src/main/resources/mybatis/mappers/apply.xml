@@ -83,7 +83,7 @@
     </select>
     <select id="register_form_Licence" parameterType="Int" resultType="UserVo">
         <![CDATA[
-                select User_no, LiceName, AcquireDate,
+                select License_no, User_no, LiceName, AcquireDate,
                         substring(AcquireDate,1,4) AcquireYear,
                         substring(AcquireDate,6,7) AcquireMon
                 from Licence
@@ -96,4 +96,62 @@
                 select User_no, Applicant_no, Hope, AfterPlan from ApplyInfo where Applicant_no=#{idx} and User_no=#{user_no}
         ]]>
     </select>
+
+    <insert id="register_form_submit" parameterType="LongApplyVo">
+        <selectKey keyProperty="Applicant_no" resultType="Int" order="AFTER">
+            <![CDATA[
+                    select LAST_INSERT_ID() from dual
+            ]]>
+        </selectKey>
+        <![CDATA[
+                insert into ApplyInfo (Applicant_no, User_no, Curriculum_no, ApplyDate,
+                                         ApplyType, TestDate, TestLang, HopeExpert)
+                        values (#{applicant_no}, #{user_no}, #{curriculum_no}, #{applyDate},
+                                 #{applyType}, #{testDate}, #{testLang}, #{hopeExpert})
+                ON DUPLICATE KEY UPDATE User_no = #{user_no}, Curriculum_no = #{curriculum_no},
+                                          ApplyDate = #{applyDate}, ApplyType = #{applyType},
+                                          TestDate = #{testDate}, TestLang = #{testLang}, HopeExpert=#{hopeExpert}
+        ]]>
+    </insert>
+
+    <update id="register_form_submit_user" parameterType="LongApplyVo">
+        <![CDATA[
+                update Users set Thesis=#{Thesis},Lang1=#{Lang1},LangScore1=#{Lang1Score},
+                                  Lang2=#{Lang2},LangScore2=#{Lang2Score},MillArm=#{MilArm},MillRank=#{MilRank},
+                                  MillEnrollDate=#{MilEnrollDate},MillDischargeDate=#{MilDischargeDate},
+                                  MillIncompletReason=#{MilIncompletReason}
+                where User_no=#{user_no}
+        ]]>
+    </update>
+
+    <insert id="register_form_submit_licence" parameterType="LongApplyVo">
+        <![CDATA[
+                insert into Licence (License_no, User_no, LiceName, AcquireDate)
+                        values (#{license_no},#{user_no},#{liceName},#{acquireDate})
+                ON DUPLICATE KEY UPDATE LiceName=#{liceName}, AcquireDate=#{acquireDate}
+        ]]>
+    </insert>
+
+    <insert id="register_form_submit_career" parameterType="LongApplyVo">
+        <![CDATA[
+                insert into UserCareer(UserCareer_no, User_no, StartDate, EndDate,
+                                        CompName, Department, DevPart, Role, YearSal, RetireReason)
+                        values (${userCareer_no}, ${user_no}, ${startDate}, ${endDate},
+                                 ${compName}, ${department}, ${devPart}, ${role}, ${yearSal}, ${retireReason})
+                ON DUPLICATE KEY UPDATE StartDate=#{startDate}, EndDate=#{endDate},
+                                        CompName=#{compName}, Department=#{department}, DevPart=#{devPart}, Role=#{role},
+                                        YearSal=#{yearSal}, RetireReason=#{retireReason}
+        ]]>
+    </insert>
+
+    <insert id="register_form_submit_edu" parameterType="LongApplyVo">
+        <![CDATA[
+                insert into UserTraining (UserTraining_no, User_no, StartDate,
+                                            EndDate, EduCenterName, EduCourseName, Content)
+                        values (#{userTraining_no}, #{user_no}, #{startDate},
+                                #{endDate}, #{eduCenterName}, #{eduCourseName}, #{content})
+                ON DUPLICATE KEY UPDATE StartDate=#{startDate}, EndDate=#{endDate},
+                                EduCenterName=#{eduCenterName}, EduCourseName=#{eduCourseName}, Content=#{content}
+        ]]>
+    </insert>
 </mapper>

@@ -52,6 +52,7 @@ public class MemberDao {
 
 
     public int member_school_modify_ok(UserModVo userModVo) {
+        System.out.println(userModVo.toString());
         return sqlSession.insert("member.member_school_modify_ok", userModVo);
     }
 
