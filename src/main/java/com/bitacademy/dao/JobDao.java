@@ -18,4 +18,16 @@ public class JobDao {
     public List<InterviewVo> selectList(){
         return sqlSession.selectList("job.selectList");
     }
+
+    public void insertinterview(InterviewVo interviewVo) {
+        sqlSession.insert("job.insertinterview" ,interviewVo);
+    }
+
+    public int getTotalpage() {
+        return sqlSession.selectOne("job.getTotalpage");
+    }
+
+    public InterviewVo selectNum(int num) {
+        return sqlSession.selectOne("job.selectNum",num);
+    }
 }

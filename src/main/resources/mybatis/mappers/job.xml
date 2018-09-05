@@ -5,25 +5,78 @@
     <!--면접 후기 리스트 출력-->
     <select id="selectList" resultType="InterviewVo">
         <![CDATA[
-            select
-            Num,
-            InterviewManner,
-            InterviewDescription,
-            InterViewOpinion,
-            studName,
-            Department,
-            CompName,
-            EstablishYear,
-            Business,
-            Address,
-            HomePage,
-            YearSell,
-            StaffNum,
-            UpdateDate,
-            CompSeqNum
-            from AfterInterview
+           select
+            c.Num,
+            c.InterviewManner,
+            c.InterviewDescription,
+            c.InterViewOpinion,
+            c.studName,
+            c.Department,
+            c.CompName,
+            c.EstablishYear,
+            c.Business,
+            c.Address,
+            c.HomePage,
+            c.YearSell,
+            c.StaffNum,
+            left(c.UpdateDate,10) UpdateDate,
+            c.CompSeqNum,
+            c.CompReputiation,
+            I.ImageLogoPath,
+            I.HomepageURL
+            from AfterInterview c
+            left join InterviewImageLogoPath I on I.CompName=c.CompName
+            order by c.Num desc
         ]]>
     </select>
+    <select id="selectNum" resultType="InterviewVo" parameterType="Int">
+        <![CDATA[
+          select
+            c.Num,
+            replace(c.InterviewManner, char(10), '<br />') as InterviewManner,
+            replace(c.InterviewDescription, char(10), '<br />') as InterviewDescription,
+            replace(c.InterViewOpinion, char(10), '<br />') as InterViewOpinion,
+            c.studName,
+            c.Department,
+            c.CompName,
+            c.EstablishYear,
+            c.Business,
+            c.Address,
+            c.HomePage,
+            c.YearSell,
+            c.StaffNum,
+            left(c.UpdateDate,10) UpdateDate,
+            c.CompSeqNum,
+            replace(c.CompReputiation, char(10), '<br />') as CompReputiation,
+            I.ImageLogoPath,
+            I.HomepageURL
+             from AfterInterview c
+             left join InterviewImageLogoPath I on I.CompName=c.CompName
+             where c.Num=#{num}
+        ]]>
+    </select>
+    <!--면접 후기 삽입-->
+    <insert id="insertinterview" parameterType="InterviewVo">
+        <![CDATA[
+          insert into
+          AfterInterview(CompName,EstablishYear,Business,Address,HomePage,YearSell,
+                         StaffNum,InterviewDescription,InterviewManner,InterviewOpinion,CompReputation)
+          values(
+          #{CompName},
+          #{EstablishYear},
+          #{Business},
+          #{Address},
+          #{HomePage},
+          #{YearSell},
+          #{StaffNum},
+          #{InterviewDescription},
+          #{InterviewManner},
+          #{InterviewOpinion},
+          #{CompReputation}
+          )
+        ]]>
+    </insert>
+
     <!--CompName기준으로 검색(면접후기 검색시 사용) -->
     <select id="search" parameterType="String" resultType="InterviewVo">
         <![CDATA[
@@ -58,5 +111,13 @@
           from InterviewImageLogoPath
           where CompName=#{CompName}
            ]]>
+    </select>
+
+    <select id="getTotalpage" resultType="Int">
+        <![CDATA[
+          select
+          count(num)
+          from AfterInterview
+          ]]>
     </select>
 </mapper>
