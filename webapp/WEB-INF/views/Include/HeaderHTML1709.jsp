@@ -17,26 +17,18 @@
 					<c:choose>
 						<c:when test="${sessionScope.authUser == null}">
 							<div class="fl">
-								<a href="/member/Join_Step1"><img
-									src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Join.png"
-									title="JOIN" /></a>
+								<a href="${pageContext.request.contextPath}/member/Join_Step1"><img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Join.png" title="JOIN" /></a>
 							</div>
 							<div class="fl">
-								<a href="/member/login?return_url=/index"><img
-									src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Login.png"
-									title="LOGIN" /></a>
+								<a href="${pageContext.request.contextPath}/member/login?return_url=/index"><img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Login.png" title="LOGIN" /></a>
 							</div>
 						</c:when>
 						<c:otherwise>
 							<div class="fl">
-								<a href="/register/register_requestResult"><img
-									src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Mypage.png"
-									title="MyPage" /></a>
+								<a href="${pageContext.request.contextPath}/register/register_requestResult"><img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Mypage.png" title="MyPage" /></a>
 							</div>
 							<div class="fl">
-								<a href="/member/logout?return_url=/index"><img
-									src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Logout.png"
-									title="LOGOUT" /></a>
+								<a href="${pageContext.request.contextPath}/member/logout?return_url=/index"><img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Logout.png" title="LOGOUT" /></a>
 							</div>
 							<div style="clear: both;"></div>
 						</c:otherwise>
