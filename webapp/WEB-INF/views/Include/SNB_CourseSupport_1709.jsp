@@ -60,6 +60,7 @@
                 <li><a href="/${pageContext.request.contextPath}course/kukka/Course_Kukka_RaspberryPiIoTService_2018" style="height:24px; padding-right:10px;" class="newdepth2 long">IoT를 활용한 자바 웹&amp;모바일 고급인력 양성과정</a></li>
                 <li class="dnone"><a href="${pageContext.request.contextPath}/Course/Kukka/Course_Kukka_FinTech_2018" style="height:24px; padding-right:10px;" class="newdepth2 long">금융 IT기반 핀테크 전문가 양성과정</a></li>
                 <li><a href="${pageContext.request.contextPath}/course/kukka/Course_Kukka_JavaBigData_2018" style="height:24px; letter-spacing:-1px;" class="newdepth2 long">JAVA 기반 빅데이터 분석을 위한 고급인력 양성과정</a></li>
+                <li><a href="${pageContext.request.contextPath}/course/kukka/Course_Kukka_Fintech_2018" style="height:24px; letter-spacing:-1px;" class="newdepth2 long">금융IT기반 핀테크융합 전문가 양성과정</a></li>
                 <!--<li><a href="/Course/Kukka/Course_Kukka_AWSCloudWeb_2018.asp" style="height:38px;" class="newdepth2 long">AWS를 활용한 클라우드 기반 웹 개발 고급인력 양성과정</a></li>-->
                 <!--<li><a href="/Course/Kukka/Course_Kukka_EmbeddedDrone_2018.asp" style="height:24px; padding-right:10px;" class="newdepth2 long">임베디드 시스템 기반 드론 제작 고급인력 양성과정</a></li>-->
                 <!--<li><a href="/Course/Kukka/Course_Kukka_RaspberryPiIoTEmbedded_2017.asp" style="height:38px;" class="newdepth2 long">라즈베리파이를 활용한 IoT임베디드 시스템 개발자 양성과정</a></li>-->

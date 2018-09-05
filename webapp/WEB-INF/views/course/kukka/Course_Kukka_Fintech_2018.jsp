@@ -17,15 +17,17 @@
     <c:import url="/WEB-INF/views/Include/Script.jsp"/>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- .btn_refundView 및 .btn_refundView2는 /JS/Common.js 에 이벤트핸들러 정의 -->
-    <link rel="stylesheet" type="text/css" href="/include/Common_CSS_Detail_720_1709.css" >
-    <link rel="stylesheet" type="text/css" href="/include/Common_CSS_Detail_720plus_1709.css" >
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/common_css/Common_CSS_Detail_720_1709.css" >
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/common_css/Common_CSS_Detail_720plus_1709.css" >
 
     <!-- #include virtual="/Include/HeaderScript1709.asp"-->
+    <c:import url="/WEB-INF/views/Include/HeaderScript1709.jsp"/>
     <script type="text/javascript">
         $(document).ready(function(){
             <!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"-->
+            <c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
             <!--#include virtual="/Include/HeaderScriptReady1709.inc"-->
-
+            <c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
             $(".snb_1709 a.newdepth1").eq(1).addClass("on");				// 국가기간전략산업직종
             $(".snb_1709 .newdepth2_wrap").eq(1).addClass("on");		// 국가기간전략산업직종
             $(".snb_1709 .newdepth2_wrap.no2").find("li a").eq(2).addClass("on");  // 라즈베리파이를 활용한 IoT 서비스 고급인력 양성과정
@@ -122,11 +124,11 @@
                     <h4 style="float:left; letter-spacing:0px;" >금융IT기반 핀테크융합 전문가 양성과정</h4>
                     <!-- 수강신청btn -->
                     <a href="https://pf.kakao.com/_SmhqV"  title="카카오톡 상담신청" style="float:right; margin:12px 0px 12px 12px;">
-                        <img src="/Images/Btns/btn_Kakao.png"/>
+                        <img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Kakao.png"/>
                     </a>
 
                     <a href="/Register/Request/register_kukka1.asp?app_CourseID=KUKA18_ED"  title="수강신청" style="float:right; margin:12px 0;">
-                        <img src="/Images/Btns/btn_ApplyCourse.png"/>
+                        <img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
                     </a>
 
 
@@ -404,17 +406,17 @@
                     <!-- con_wrap1709 -->
 
                     <div class="con_wrap1709">
-                        <img src="Images/proce.png" style="width:630px"/><br><br>
+                        <img src="${pageContext.request.contextPath}/assets/Images/proce.png" style="width:630px"/><br><br>
                     </div>
 
 
                     <div class="con_wrap1709" style="display: table; margin-left: auto; margin-right: auto;">
                         <a href="https://pf.kakao.com/_SmhqV"  title="카카오톡 상담신청" style="float:right; margin:12px 0px 12px 12px;">
-                            <img src="/Images/Btns/btn_Kakao.png"/>
+                            <img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Kakao.png"/>
                         </a>
 
                         <a href="/Register/Request/register_kukka1.asp?app_CourseID=KUKA18_ED"  title="수강신청" style="float:right; margin:12px 0;">
-                            <img src="/Images/Btns/btn_ApplyCourse.png"/>
+                            <img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
                         </a>
                     </div>
                     <br><br>
@@ -463,9 +465,9 @@
                     <h5>6. 교육시간</h5>
                     <p>
 -->
-                    <%
-                        '// < ! - -  #include virtual="/Include/CourseDateTime/Time/Time__KUKA18_RD.inc" - - >
-                    %>
+                    <%--<%--%>
+                        <%--'// < ! - -  #include virtual="/Include/CourseDateTime/Time/Time__KUKA18_RD.inc" - - >--%>
+                    <%--%>--%>
                     <!--08:50 ~ 18:00 (그룹스터디 포함 22:00까지)<br/>- 총 960시간(6개월)-->
                     <!--
                                                     </p>
@@ -488,9 +490,9 @@
                                                                 <th scope="col">교육기간</th>
                                                                 <td style="letter-spacing:-0.5px;">
                     -->
-                    <%
-                        '//												<!-- #include virtual="/Include/CourseDateTime/Date/Date__KUKA18_RD.inc" --> 6개월(120일) 총960시간
-                    %>
+                    <%--<%--%>
+                        <%--'//												<!-- #include virtual="/Include/CourseDateTime/Date/Date__KUKA18_RD.inc" --> 6개월(120일) 총960시간--%>
+                    <%--%>--%>
                     <!--
                                                                 </td>
                                                             </tr>
@@ -582,6 +584,7 @@
     <hr>
     <!-- Footer_Wrap -->
     <!-- #include virtual="/Include/FooterHTML1709.asp"-->
+    <c:import url="/WEB-INF/views/Include/FooterHTML1709.jsp"/>
     <!-- //Footer_Wrap -->
 </div>
 </body>

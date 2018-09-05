@@ -785,6 +785,9 @@
         <div class="divMiddle long twolines" href="/course/kukka/Course_Kukka_JavaBigData_2018">
             <div class="divMiddleInner twolines" style="width:200px;">JAVA 기반 빅데이터 분석을 위한 <br/>고급인력 양성과정</div>
         </div>
+        <div class="divMiddle long twolines" href="/course/kukka/Course_Kukka_Fintech_2018">
+            <div class="divMiddleInner twolines" style="width:200px;">금융IT기반 핀테크융합 전문가 양성과정 <br/>고급인력 양성과정</div>
+        </div>
 
         <!--
         <div class="divMiddle long twolines" href="/Course/Kukka/Course_Kukka_AWSCloudWeb_2018.asp">
