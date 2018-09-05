@@ -158,6 +158,7 @@
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/course/employ/Summary2_TaehaMechatronics.asp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/course/expert/Course_Expert_Embedded.jsp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/course/expert/Course_Expert_JavaExpert.jsp" charset="EUC-KR" />
+    <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/course/kukka/Course_Kukka_Fintech_2018.asp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/course/kukka/Course_Kukka_Introduction.asp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/course/kukka/Course_Kukka_JavaBigData_2018.asp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/course/kukka/Course_Kukka_RaspberryPiIoTService_2018.asp" charset="EUC-KR" />
@@ -174,8 +175,6 @@
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/job/WriteRecruit_Zipsearch.asp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/job/WriteRecruit_page2.asp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/job/dbconn.inc" charset="EUC-KR" />
-    <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/popup/Interview_InputForm.asp" charset="EUC-KR" />
-    <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/register/register_requestResult.jsp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/register/card_approvalv2.asp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/register/request/register_employment1.asp" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/webapp/WEB-INF/views/register/request/register_employment1.jsp" charset="EUC-KR" />
