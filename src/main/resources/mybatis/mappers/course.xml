@@ -7,7 +7,7 @@
      <![CDATA[
             select idx, BitProjectNum, x1, y1, x2, y2, TermNum, GroupNum from ProjectBP2Pamphlet where BitProjectNum = #{bpNum}
         ]]>
- </select>
+ 	</select>
 
     <select id="getProjectInfo" parameterType="BP2Vo" resultType="PamphletVo">
         <![CDATA[
