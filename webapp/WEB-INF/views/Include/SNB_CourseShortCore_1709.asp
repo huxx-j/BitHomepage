@@ -112,56 +112,49 @@
 				<!-- newwrap no1 : Programming -->
 				<li>
 					<a href="#this" class="newdepth2">[서울]비트교육센터</a>
-					<ul class="newdepth3_wrap no1" style="min-height:315px;">
+					<ul class="newdepth3_wrap no1" style="min-height:290px;">
+					
+						
 						<!-- newwrap no1 : CP -->
-						<li><a href="#" onclick="return onclickCP();" class="newdepth3 newwrap no1 plus">C Master</a></li>
-						<ul class="newdepth4_wrap no1">
-							<li><a href="/Course/ShortCourse/DetailPage/Course_C.asp" class="newdepth4">· 주중반</a></li>
-							<li><a href="/Course/ShortCourse/DetailPage/Course_C_Weekend.asp" class="newdepth4">· 주말반</a></li>
-						</ul>
+						<li><a href="/Course/ShortCourse/DetailPage/Course_C.asp" class="newdepth3">C Master</a></li>
 						
 						<!-- newwrap no2 : JP -->
-						<li><a href="#" onclick="return onclickJP();" class="newdepth3 newwrap no2 plus">JAVA 프로그래밍</a></li>
-						<ul class="newdepth4_wrap no2">
-							<li><a style="padding-right:1px;" href="/Course/ShortCourse/DetailPage/Course_java.asp" class="newdepth4">· 주중반</a></li>
-							<li><a style="padding-right:1px;" href="/Course/ShortCourse/DetailPage/Course_Java_Weekend.asp" class="newdepth4">· 주말반</a></li>
-						</ul>
-
+						<li><a href="/Course/ShortCourse/DetailPage/Course_java.asp" class="newdepth3">JAVA 프로그래밍</a></li>
+					
 						<!-- newwrap no3 : C++P -->
-						<li><a href="#" onclick="return onclickCppP();" class="newdepth3 newwrap no3 plus">C++ 프로그래밍</a></li>
-						<ul class="newdepth4_wrap no3">
-							<li><a href="/Course/ShortCourse/DetailPage/Course_cPlus.asp" class="newdepth4">· 주중반</a></li>
-							<li><a href="/Course/ShortCourse/DetailPage/Course_cPlus_Weekend.asp" class="newdepth4">· 주말반</a></li>
-						</ul>
+						<li><a href="/Course/ShortCourse/DetailPage/Course_cPlus.asp" class="newdepth3">C++ 프로그래밍</a></li>
+						
+						<!-- newwrap no4 : Python 프로그래밍 -->
+						<li><a href="/Course/ShortCourse/DetailPage/Course_Python.asp" class="newdepth3">Python 프로그래밍</a></li>
+						
+						<!-- newwrap no5 : C# 프로그래밍 -->
+						<li><a href="/Course/ShortCourse/DetailPage/Course_cSharp.asp" class="newdepth3">C# 프로그래밍</a></li>
+						
+						<!-- no7 : Go 프로그래밍 -->
+						<li><a href="/Course/ShortCourse/DetailPage/Course_Go.asp" class="newdepth3">Go 프로그래밍</a></li>
+						
+						<!-- no8 : SW 자율학습 지도 커뮤니티 -->
+						<li><a href="/Course/ShortCourse/DetailPage/Course_SelfLearning.asp" class="newdepth3">SW 자율학습 지도 커뮤니티</a></li>
+						
+						
+		</li>			
 						
 						<!-- newwrap no4 : 자료구조/알고리즘 -->
+						<!-- 
 						<li><a href="#" onclick="return onclickDS();" class="newdepth3 newwrap no4 plus">자료구조/알고리즘</a></li>
-						<ul class="newdepth4_wrap no4">
-							<li><a href="/Course/ShortCourse/DetailPage/Course_C2.asp" class="newdepth4">· 주말반</a></li>
-							<!--
-							<li><a href="/Course/ShortCourse/DetailPage/Course_AlgorithmIntermediate.asp" class="newdepth4">주말/중급 알고리즘</a></li>
-							<li><a href="/Course/ShortCourse/DetailPage/Course_AlgorithmAdvanced.asp" class="newdepth4">주말/고급 알고리즘</a></li>
-							-->
-						</ul>
+						 -->
+						
 						
 						<!-- newwrap no5 : Python 프로그래밍 -->
+						<!--
 						<li><a href="#" onclick="return onclickPythonP();" class="newdepth3 newwrap no5 plus">Python 프로그래밍</a></li>
 						<ul class="newdepth4_wrap no5">
 							<li><a href="/Course/ShortCourse/DetailPage/Course_Python.asp" class="newdepth4">· 주중반</a></li>
 							<li><a href="/Course/ShortCourse/DetailPage/Course_Python_Weekend.asp" class="newdepth4">· 주말반</a></li>
 						</ul>
-						
-						<!-- newwrap no6 : C# 프로그래밍 -->
-						<li><a href="#" onclick="return onclickCsharpP();" class="newdepth3 newwrap no6 plus">C# 프로그래밍</a></li>
-						<ul class="newdepth4_wrap no6">
-							<li><a href="/Course/ShortCourse/DetailPage/Course_cSharp.asp" class="newdepth4">· 주중반</a></li>
-						</ul>
-						
-						<!-- no7 : Go 프로그래밍 -->
-						<li><a href="/Course/ShortCourse/DetailPage/Course_Go.asp" class="newdepth3 no7">Go 프로그래밍</a></li>
-						
-						<!-- no8 : SW 자율학습 지도 커뮤니티 -->
-						<li><a href="/Course/ShortCourse/DetailPage/Course_SelfLearning.asp" class="newdepth3 no8">SW 자율학습 지도 커뮤니티</a></li>
+						 -->
+						 
+						 
 					</ul>
 				</li>
 				<li>

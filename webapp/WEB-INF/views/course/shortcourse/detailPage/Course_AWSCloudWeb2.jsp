@@ -129,6 +129,9 @@ int indexDepth3=2;
 								<div style="clear;both; height:10px;"></div>
 								-->
 								<!-- 수강신청btn -->
+								<a href="https://pf.kakao.com/_SmhqV" title="카카오톡 상담신청" style="float:right; margin:12px 5px;" class="btnApply">
+									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Kakao.png"/>
+								</a>
 								<a href="/register/request/register_shortCourse.asp<%-- ?cID=<%=strCourseID%> --%>" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
 								</a>

@@ -3,7 +3,7 @@
 
 <%!
 //(DEPRECATED) SubjectName = "[주중반] C 프로그래밍"
-String SubjectName = "[주중반] C Master";
+String SubjectName = "C Master (C 프로그래밍 + 자료구조)";
 String CourseID = "C2_core";
 //CourseID = "cVacation"
 //C Programming
@@ -12,10 +12,13 @@ String CourseID = "C2_core";
 <!DOCTYPE html>
 <!-- NOT REDIRECTABLE to Mobile -->
 <html lang="ko">
+<head>
 <link rel= "shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico">
 	<!-- #include virtual="/Include/Meta.asp"-->
 	<c:import url="/WEB-INF/views/Include/Meta.jsp"/>
 	<title>비트교육센터</title>
+	<!--#include virtual="/Include/config.asp"--> <!-- 4[CourseReview] (pre2) -->
+	<%-- <c:import url="/WEB-INF/views/Include/config.jsp"/> --%>
 	<!-- #include virtual="/Include/ContentStyle.asp"-->
 	<c:import url="/WEB-INF/views/Include/contentStyle.jsp"/>
 	<!-- #include virtual="/Include/Script.asp"-->
@@ -101,16 +104,12 @@ String CourseID = "C2_core";
 			   document.location = "http://www.bitacademy.com/Course/ShortCourse/DetailPage/M/Course_C.asp";
 	*/
 	</script>
-	<!-- #include virtual="/Include/Script_MoBon_1803.asp"-->
 	<c:import url="/WEB-INF/views/Include/Script_MoBon_1803.jsp"/>
 </head>
 
 <body>
 	<div id="Wrapper">
-		<!-- Header_Wrap -->
-		<!-- #include virtual="/Include/HeaderHTML1709.asp"-->
 		<c:import url="/WEB-INF/views/Include/HeaderHTML1709.jsp"/>
-		<!-- //Header_Wrap -->
 		<hr>
 		<div id="Container_Wrap">
 			<!-- Content_Wrap -->
@@ -156,7 +155,7 @@ String CourseID = "C2_core";
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>C Master
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>주중반
 						</p>
-						<h4>[주중반] C Master</h4>
+						<h4>C Master (C 프로그래밍 + 자료구조)</h4>
 					</div>
 					<!--<a href="/Register/Request/register_shortCourse.asp?cID=C2_core" class="btn mid green1 fl mar_l10">지원하기</a>-->
 					<!--<a href="/Register/Request/register_shortCourse.asp?cID=cVacation" class="btn mid green1 fl mar_l10">지원하기</a>-->
@@ -198,19 +197,22 @@ String CourseID = "C2_core";
 										</tr>
 										<tr>
 											<th>교육비용</th>
-											<td>394,440원 <span class="blueTxt">(재직자 환급 가능)</span></td>
+											<td>900,000원 <span class="blueTxt">(재직자 환급 가능)</span></td>
 											<th>교육비지원</th>
 											<td>고용보험 환급 <a href="#" id="btnOpenSaGn1" class="btnBlueBorder">자세히보기</a></td>
 										</tr>
 										<tr>
 											<th>교육정원</th>
-											<td>30명</td>
+											<td>15명</td>
 											<th>문의</th>
 											<td>최광원 070-4166-2491</td>
 										</tr>
 									</tbody>
 								</table> 
 								<!-- 수강신청btn -->
+								<a href="https://pf.kakao.com/_SmhqV" title="카카오톡 상담신청" style="float:right; margin:12px 5px;" class="btnApply">
+									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Kakao.png"/>
+								</a>
 								<a href="/register/request/register_shortCourse.asp?cID=<%=CourseID%>" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
 								</a>
@@ -222,47 +224,115 @@ String CourseID = "C2_core";
 						<!-- //con_wrap1709 -->
 						<div style="clear:both;"></div>
 
-						<div class="con_wrap1709 first">
+						<%-- <div class="con_wrap1709 first">
 							<h5>과정로드맵</h5>
 							<img src="${pageContext.request.contextPath}/assets/Images/C-Master.PNG" style="text-align:center; width:100%;"/>
 							<div style="clear;both; height:10px;"></div>
-						</div>
+						</div> --%>
 						
 						<!-- con_wrap1709 -->
 						<div class="con_wrap1709" style="z-index:1;"> <!-- otherwise, 환급내용 자세히보기 div와 z-index problem happens -->
-							<h5>과정소개</h5>
+							<h5>교육소개</h5>
 							<p>
-								본 과정은 기본프로그래밍에서부터 중급 이상의 프로그래머가 되기 위한 과정으로서 프로그램의 초석을 다지고자 하는 자에게 필요한 실습 위주의 과정입니다. <br/>
-								개별적 문법의 이해와 구현능력 향상, 조별 프로젝트를 통한 협력개발과 발표를 통해 다양한 개발환경에 사용 되는 자료구조 및 알고리즘에 대하여 학습하는 과정입니다. 
+								본 과정은 C언어를 통해 프로그래밍 마인드를 확립하고자 합니다. 기본 C 문법과 심화된 구조를 학습하고 다양한 자료구조를 이용한 프로그래밍 실습과 미니프로젝트를 수행을 통해 프로그래밍 능력을 한 단계 업그레이드 할 수 있는 과정입니다<br>
+								또한 C++, Java, C#의 기반이 되는 가장 기본언어이며, 하드웨어를 제어하는 임베디드 분야에서 사용되는 언어로 수많은 개발자들이 처음 시작하는 언어입니다.<br>
+								마지막으로 본 교육과정을 통해서 BCCPM(BIT Certified C Programming Master) 자격증 시험에 응시하여 취득 할 수 있습니다.
 							</p>
+								
 						</div>
 						<!-- //con_wrap1709 -->
 
 						<!-- con_wrap1709 -->
-						<div class="con_wrap1709">
+						<!-- <div class="con_wrap1709">
 							<h5>교육목표</h5>
 							<ul class="ul_dot_gray">
 								<li>기본 문법에서 고급 프로그래밍까지 단기간에 습득</li>
 								<li>기본 프로그래밍 지식을 토대로 한 체계적인 학습 </li>
 								<li>실습을 통한 효율적 프로그래밍 구현 능력 향상</li>
 							</ul>
-						</div>
+						</div> -->
 						<!-- //con_wrap1709 -->
-
+						<div class="con_wrap1709">
+							<h5>학습목표</h5>
+							<ul class="ul_dot_gray">
+								<li>C의 기본 개념을 이해하고 설명할 수 있다</li>
+								<li>C 개발도구를 사용하여 콘솔 프로그램을 개발할 수 있다</li>
+								<li>C의 문법체계를 이해할 수 있다 </li>
+								<li>비트가 인증하는 C 프로그래밍 자격증을 취득할 수 있다</li>
+							</ul>
+						</div>
 						<!-- con_wrap1709 -->
 						<div class="con_wrap1709">
 							<h5>교육대상</h5>
 							<ul class="ul_dot_gray">
-								<li>C 프로그래밍의 기본적인 사항부터 차근차근 체계적으로 학습하고 싶으신 분</li>
-								<li>컴퓨터 관련 및 전기/전자 전공자</li>
-								<li>임베디드 시스템 혹은 로봇공학에 흥미가 있는 분</li>
-								<li>윈도우 플랫폼 기반의 프로그램 개발을 희망하는 분</li>
-								<li>게임 프로그래밍을 배우고자 하는 분</li>
+								<li>C언어 기초문법 숙지 후 중급 이상으로 향상하고 싶은 분</li>
+								<li>C 프로그래밍 활용 능력을 키우고 싶은 분</li>
+								<li>C++ 프로그래밍의 선수지식을 얻고자 하는 분</li>
+								<li>BCCPM (BIT Certified C Programming Master) 자격증 취득하고자 하는 분</li>
 							</ul>
 						</div>
 						<!-- //con_wrap1709 -->
-
+						<div class="con_wrap1709">
+							<h5>교육기간</h5>
+							1개월 (20일 / 월요일 ~ 금요일)
+						</div>
+						<div class="con_wrap1709">
+							<h5>교육시간</h5>
+							19:00 ~ 22:00 (3시간 / 총 60시간)
+						</div>
+						<div class="con_wrap1709">
+							<h5>교육비</h5>
+							900,000원
+						</div>
+						<div class="con_wrap1709">
+							<div style="width: 180px; float: left;">
+								<h5>참고서적 제공</h5>
+								<img style="border: 1px solid rgb(86, 86, 86); border-image: none; width: 160px; margin-left: 15px;" src="${pageContext.request.contextPath}/assets/Images/열혈C프로그래밍.png">
+							</div>
+							<div style="width: 250px; margin-top: 27px; margin-left: 15px; float: left;">
+								<p style="margin-top: 239px;">
+									'윤성우의 열혈 C 프로그래밍' <br>윤성우 저 / 오렌지미디어
+								</p>
+							</div>
+							<div style="clear: both;"></div>
+						</div>
 						<!-- con_wrap1709 -->
+						<div class="con_wrap1709 divTable">
+							<h5>2018년 일정</h5>
+							
+							<div class="divTable">
+								<table style="box-shadow: none !important;">
+									<colgroup>
+										<col style="">
+										<col style="">
+										<col style="">
+										<col style="">
+										<col style="">
+										<col style="">
+									</colgroup>
+									<tbody>
+										<tr>
+											<td class="long c"><s>1월 3일</s></td>
+											<td class="long c"><s>2월 1일</s></td>
+											<td class="long c"><s>3월 3일</s></td>
+											<td class="long c"><s>4월 3일</s></td>
+											<td class="long c"><s>5월 2일</s></td>
+											<td class="long c"><s>6월 2일</s></td>
+										</tr>
+										<tr>
+											<td class="long c"><s>7월 3일</s></td>
+											<td class="long c"><s>8월 3일</s></td>
+											<td class="long c"><s>9월 3일</s></td>
+											<td class="long c">10월 1일</td>
+											<td class="long c">11월 1일</td>
+											<td class="long c">12월 3일</td>
+										</tr>
+									</tbody>
+								</table> 
+							</div>
+							
+							
+						</div>
 						<!--
 						<div class="con_wrap1709">
 							<div style="float:left; width:180px;">
@@ -283,128 +353,80 @@ String CourseID = "C2_core";
 						<div class="con_wrap1709 ">
 							<h5>교육내용</h5>
 							<div class="divTable">
-								<table style="width:100%;">
+								<table style="width: 100%;">
 									<colgroup>
-										<col style="width:13%">
-										<col style="width:37%">
-										<col style="width:50%">
+										<col style="width: 13%;">
+										<col style="width: 50%;">
 									</colgroup>
 									<thead>
 										<tr>
-											<th scope="col" class="c">교육일정</th>
-											<th scope="col" class="c">구분</th>
-											<th scope="col" class="c">교육내용</th>
+											<th class="c" scope="col">교육일정</th>
+											<th class="c" scope="col">교육내용</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-											<td scope="row" rowspan="2" class="c darker">1주</td>
+											<td class="c darker" scope="row">1주(15H)</td>
 											<td>
-												C언어 기본구조
-											</td>
-											<td>
-												<ul class="ul_dot_gray l">
-													<li>C 언어 특징, 컴파일러 사용법</li>
-													<li>데이터형, 변수 사용법 </li>
-													<li>기본 입출력 함수, 연산자 </li>
-													<li>조건문 </li>
-													<li>반복문</li>
-													<li>C 기본 문법에 대한 실습</li>
-												</ul>
+												Introduction to C Language, Types, Operators and Expressions, Control Flow, 실습
 											</td>
 										</tr>
 										<tr>
-											<td colspan="2">
-												<li>실습(Unit test)</li>
+											<td class="c darker" scope="row">2주(15H)</td>
+											<td>
+												Functions and Program Structures, Pointers and Arrays, 실습
+											</td>
+										</tr>
+										<tr>
+											<td class="c darker" scope="row">3주(15H)</td>
+											<td>
+												Structures, Mini Project, Input and Output, Interface to Unix System, 실습
+											</td>
+										</tr>
+										<tr>
+											<td class="c darker" scope="row">4주(14H)</td>
+											<td>
+												Stacks and Queues, Linked Lists, Tree, 실습
+											</td>
+										</tr>
+										<tr>
+											<td class="c darker" scope="row">1H</td>
+											<td>
+												BCCPM (BIT Certified C Programming Master) 자격증 시험 
 											</td>
 										</tr>
 										
-										<tr>
-											<td scope="row" rowspan="2" class="c darker">2주</td>
-											<td>
-												포인터와 배열
-											</td>
-											<td>
-												<ul class="ul_dot_gray l">
-													<li>1차원 배열 이론</li>
-													<li>2차원 배열 이론</li>
-													<li>함수의 이론</li>
-													<li>함수와 포인터의 관계</li>
-													<li>1차원 배열과 포인터</li>
-													<li>문자열과 포인터</li>
-													<li>2차원 배열과 포인터</li>
-													<li>메모리 관리와 동적할당</li>
-												</ul>
-											</td>
-										</tr>
-										<tr>
-											<td colspan="2">
-												<li>실습(Unit test)</li>
-											</td>
-										</tr>
-										
-										<tr>
-											<td scope="row" rowspan="2" class="c darker">3주</td>
-											<td>
-												C언어의 확장
-											</td>
-											<td>
-												<ul class="ul_dot_gray l">
-													<li>구조체 이론</li>
-													<li>구조체 배열과 포인터</li>
-													<li>매크로와 전처리기</li>
-													<li>파일입출력 이론 및 실습</li>
-												</ul>
-											</td>
-										</tr>
-										<tr>
-											<td colspan="2">
-												<li>실습(Unit test)</li>
-											</td>
-										</tr>
-										
-										<tr>
-											<td scope="row" rowspan="2" class="c darker">4주</td>
-											<td>
-												자료구조
-											</td>
-											<td>
-												<ul class="ul_dot_gray l">
-													<li>자료구조 개요 및 알고리즘의 이해</li>
-													<li>선형자료구조(배열, 연결 리스트)</li>
-													<li>선형 자료구조의 활용, 실습 프로젝트 I</li>
-													<li>스택과 큐, 실습 프로젝트 II</li>
-													<li>자료구조의 활용, 실습 프로젝트 III</li>
-													<li>트리, 실습 프로젝트 IV</li>
-													<li>STL과 일반화 프로그래밍</li>
-												</ul>
-											</td>
-										</tr>
-										<tr>
-											<td colspan="2">
-												<li>실습(Unit test)</li>
-											</td>
-										</tr>
 										
 									</tbody>
 								</table>
 							</div>
 							<!-- 폐강안내 문구 -->
 							<div style="float:right; margin-top:18px; font-size:15px;">
-								<p>※ 교육인원 미달 시 일정 변경 또는 폐강될 수 있음</p>
+								
 							</div>
-							<div style="clear:both;"></div>
+							<div style="clear: both;"></div>
 
 							<!--<p class="mar_t10"><span class="fb">문의</span> : 02.3486.3456 &nbsp;(bithrd@bit.kr)</p>-->
 						</div>
+						
 						<!-- con_wrap1709 -->
-
+						<!-- con_wrap1709 -->
+						<div class="con_wrap1709" style="z-index:1;"> <!-- otherwise, 환급내용 자세히보기 div와 z-index problem happens -->
+							<h5 style="float:left; font-size: 27px !important;">BCCPM</h5>&nbsp;
+							<h5 style="float:left; font-size: 23px !important;">(BIT Certified C Programming Master) </h5>&nbsp;
+							<h5 style="float:left; font-size: 27px !important;">자격증 안내</h5>
+							<div id="" style="float:left; margin-top:30px; margin-left:7px;"><a href="/course/license/Course_Licenses" class="btnBlueBorder">자세히보기</a></div>
+							
+							<div style="clear:both;"></div>
+							<p>C 프로그래밍을 수강했다면, 비트교육센터가 인증하는 C 프로그래밍 마스터 자격증을 취득해 보세요. </p>
+						</div>
+						<!-- //con_wrap1709 -->
 						<br/>
 						
 						<!-- con_wrap1709 고용보험환급 -->
 						<div class="con_wrap1709">
-							<h5 style="float:left;">고용보험 환급 </h5>
-							<div id="divBtnOpenSaGn2" style="float:left; margin-top:47px; margin-left:7px;"><a href="#" id="btnOpenSaGn2" class="btnBlueBorder">자세히보기</a></div>
+							<h5 style="float:left; font-size: 27px !important;">고용보험 환급 안내</h5>
+							<div id="divBtnOpenSaGn2" style="float:left; margin-top:42px; margin-left:7px;"><a href="#" id="btnOpenSaGn2" class="btnBlueBorder">자세히보기</a></div>
 							<div style="float:right; margin-top:22px; margin-right:3px;"><img id="imgBtnClose" src="${pageContext.request.contextPath}/assets/Images/Common/ico_Close_98_128.png" style="width:16px; display:none;"/></div>
 							<div style="clear:both;"></div>
 														
@@ -423,7 +445,7 @@ String CourseID = "C2_core";
 								
 								<div style="text-align:center;">
 									<a href="${pageContext.request.contextPath}/assets/Upload/company2.zip" class="mar_l10 btnBlueBorder" style="margin:10px auto;">사업주 위탁훈련 신청서류 다운로드</a>
-									<p style="font-size:1em !important; margin-top:-10px; margin-bottom:10px; ">※ 신청서류 작성 후 kang.i.y@bit.kr로 보내주시기 바랍니다.</p>
+									<p style="font-size:1em !important; margin-top:-10px; margin-bottom:10px; ">※ 신청서류 작성 후 bithrd@bit.kr로 보내주시기 바랍니다.</p>
 								</div>
 							
 								<div class="divTable">
@@ -435,26 +457,21 @@ String CourseID = "C2_core";
 											<th>기업부담금</th>
 										</tr>
 										<tr>
-											<td rowspan="2">우선지원 대상기업</td>
-											<td>50명 미만</td>
+											<td>우선지원 대상기업</td>
+											<td>-</td>
 											<td>394,440원</td>
-											<td>0원</td>
+											<td>505,560원</td>
 										</tr>
 										<tr>
-											<td>50명 이상</td>
-											<td>354,990원</td>
-											<td>39,450원</td>
-										</tr>
-										<tr>
-											<td rowspan="2">중견 또는 대기업</td>
+											<td rowspan="2">대기업</td>
 											<td>1,000명 미만</td>
 											<td>236,660원</td>
-											<td>157,780원</td>
+											<td>663,340원</td>
 										</tr>
 										<tr>
 											<td>1,000명 이상</td>
 											<td>157,770원</td>
-											<td>236,670원</td>
+											<td>742,230원</td>
 										</tr>
 									</table>
 								</div>
@@ -473,7 +490,7 @@ String CourseID = "C2_core";
 								
 								<div style="text-align:center;">
 									<a href="${pageContext.request.contextPath}/assets/Upload/employ2.zip" class="mar_l10 btnBlueBorder" style="margin:10px auto;">근로자 직무능력향상지원 신청서류 다운로드</a>
-									<p style="font-size:1em !important; margin-top:-10px; margin-bottom:10px; ">※ 신청서류 작성 후 kang.i.y@bit.kr로 보내주시기 바랍니다.</p>
+									<p style="font-size:1em !important; margin-top:-10px; margin-bottom:10px; ">※ 신청서류 작성 후 gwang@bit.kr로 보내주시기 바랍니다.</p>
 								</div>
 								<div class="divTable">
 									<table>
@@ -485,16 +502,16 @@ String CourseID = "C2_core";
 										<tr>
 											<td>우선지원 대상기업</td>
 											<td>비정규직, 이직 예정자<br/>무급 휴직자, 정규직</td>
-											<td>없음</td>
+											<td>505,560원</td>
 										</tr>
 										<tr>
 											<td rowspan="2">중견 또는 대기업</td>
 											<td>비정규직, 무급 휴직자</td>
-											<td>없음</td>
+											<td>505,560원</td>
 										</tr>
 										<tr>
 											<td>이직 예정자, 정규직</td>
-											<td>78,880원</td>
+											<td>584,440원</td>
 										</tr>
 									</table>
 								</div>

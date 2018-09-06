@@ -5,7 +5,7 @@
 <!--#include Virtual="/Include/javaScriptFun.asp"-->
 <!--#include virtual="/Include/Common_Defend_1709.asp"-->
 
-<%
+<%-- <%
 Response.CacheControl = "no-cache"
 Response.AddHeader "Pragma", "no-cache"
 Response.Expires = -1 
@@ -16,14 +16,14 @@ code = Request.QueryString("code")
 Studid = TRIM(session("Studid"))
 LoginID = TRIM(session("LoginID"))
 'response.write "Studid:"&Studid&"<br>"
-%>
+%> --%>
 
-<%
+<%-- <%
 Set Dbcon = Server.CreateObject("ADODB.Connection")
 Dbcon.Open Con_bit_db
-%>
+%> --%>
 
-<%
+<%-- <%
 	requestorName = Left( SQLClean( Request.Form("counselName") ) , 10 )
 	requestorPhone = Left( SQLClean( Request.Form("counselPhone") ) , 15 )
 	courseID = Request.Form("counselCourseID")
@@ -31,18 +31,17 @@ Dbcon.Open Con_bit_db
 	'//Response.Write requestorName & "<br/>"
 	'//Response.Write requestorPhone & "<br/>"
 	
-%>
+%> --%>
 
-<%
-%>
 
+<%-- 
 <%
 sql = "INSERT INTO db_bit.dbo.onlineRequestCounsel (CourseID, Name, Phone) " &_
 	  "VALUES ('" & courseID & "', '" & requestorName & "', '" & requestorPhone & "')"
 Set Rs = Dbcon.Execute(sql)
-%>
+%> --%>
 
-<%
+<%-- <%
 Dbcon.Close
 Set Dbcon = nothing
 
@@ -50,7 +49,7 @@ Set Dbcon = nothing
 '//set Rs = nothing
 
 %>
-
+ --%>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -68,8 +67,9 @@ Set Dbcon = nothing
 	<!-- #include virtual="/Include/HeaderScript1709.asp"-->
 	<script type="text/javascript">
 		$(document).ready(function(){
-			<!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"-->
-			<!--#include virtual="/Include/HeaderScriptReady1709.inc"-->
+		
+			<c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
+			<c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
 		});
 	</script>
 	<link rel="stylesheet" type="text/css" href="CommonStyle_DetailPage.css">

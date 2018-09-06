@@ -48,12 +48,17 @@
 			</ul>
 		</li>
 		<li>
-			<a href="#" onclick="return onclickKukka();" class="newdepth1">국가기간전략산업직종</a>
-			<ul class="newdepth2_wrap no2" style="min-height:132px;"><!--"170px;">-->
+			<a href="#" onclick="return onclickKukka();" class="newdepth1">국가기간전략산업직종.</a>
+			<ul class="newdepth2_wrap no2" style="min-height:150px;"><!--"170px;">-->
 				<li><a href="/Course/Kukka/Course_Kukka_Introduction.asp" style="height:26px;" class="newdepth2 long">국가기간전략산업직종훈련 소개</a></li>
 				<li style="display:none;"><a href="/Course/Kukka/Course_Kukka_Projects20180102.asp" style="height:14px;" class="newdepth2">프로젝트 발표회</a></li><!--  style="DISPLAY:NONE;" -->
-				<li><a href="/Course/Kukka/Course_Kukka_RaspberryPiIoTService_2018.asp" style="height:24px; padding-right:10px;" class="newdepth2 long">IoT를 활용한 자바 웹&amp;모바일 고급인력 양성과정</a></li>
-				<li class="dnone"><a href="/Course/Kukka/Course_Kukka_FinTech_2018.asp" style="height:24px; padding-right:10px;" class="newdepth2 long">금융 IT기반 핀테크 전문가 양성과정</a></li>
+				<li><a href="/Course/Kukka/Course_Kukka_EmbeddedService_2018.asp" style="height:24px; padding-right:10px;" class="newdepth2 long">임베디드기반 IoT SW개발 
+고급인력양성 과정</a></li>
+				
+				<!--
+				<li><a href="/Course/Kukka/Course_Kukka_Fintech_2018.asp" style="height:24px; padding-right:10px;" class="newdepth2 long">금융 IT기반 핀테크융합 전문가 양성과정</a></li>
+				-->
+				
 				<li><a href="/Course/Kukka/Course_Kukka_JavaBigData_2018.asp" style="height:24px; letter-spacing:-1px;" class="newdepth2 long">JAVA 기반 빅데이터 분석을 위한 고급인력 양성과정</a></li>
 				<!--<li><a href="/Course/Kukka/Course_Kukka_AWSCloudWeb_2018.asp" style="height:38px;" class="newdepth2 long">AWS를 활용한 클라우드 기반 웹 개발 고급인력 양성과정</a></li>-->
 				<!--<li><a href="/Course/Kukka/Course_Kukka_EmbeddedDrone_2018.asp" style="height:24px; padding-right:10px;" class="newdepth2 long">임베디드 시스템 기반 드론 제작 고급인력 양성과정</a></li>-->

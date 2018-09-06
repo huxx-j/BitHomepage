@@ -134,12 +134,7 @@ Response.CharSet  = "euc-kr" '한글
 						<div style="clear:both;"></div>
 						
 						
-						<div class="slot first extended" style="background:url('/WEB-INF/views/course/kukka/kukkaImages/Slots/2/MainPage_Slot__국비지원_라즈베리파이IoT서비스_extended.png')" href="/Course/Kukka/Course_Kukka_RaspberryPiIoTService_2018.asp">
-							<img class="slotIcon" src="Images/Icons/MainPage_SlotIcon__new.png"/>
-							<p class="courseName dnone">&nbsp;</p>
-							<p class="courseDescription dnone">&nbsp;</p>
-							<div class="insideSlot" style="background:url('/WEB-INF/views/course/kukka/kukkaImages/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
-						</div>
+						
 						<!--
 						<div class="slot" style="background:url('/Images/Slots/2/MainPage_Slot__국비지원_핀테크.png')" href="/Course/Kukka/Course_Kukka_FinTech_2018.asp">
 							<img class="slotIcon" src="Images/Icons/MainPage_SlotIcon__new.png"/>
@@ -148,26 +143,37 @@ Response.CharSet  = "euc-kr" '한글
 							<div class="insideSlot" style="background:url('/Images/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
 						</div>
 						-->
-						<div class="slot extended" style="background:url('/WEB-INF/views/course/kukka/kukkaImages/Slots/2/MainPage_Slot__국비지원_빅데이터_extended.png')" href="/Course/Kukka/Course_Kukka_JavaBigData_2018.asp">
+						<div class="slot  first extended" style="background:url('/Images/Slots/2/MainPage_Slot__국비지원_빅데이터_extended.png')" href="/Course/Kukka/Course_Kukka_JavaBigData_2018.asp">
 							<img class="slotIcon" src="Images/Icons/MainPage_SlotIcon__new.png"/>
 							<p class="courseName dnone">&nbsp;</p>
 							<p class="courseDescription dnone">&nbsp;</p>
-							<div class="insideSlot" style="background:url('/WEB-INF/views/course/kukka/kukkaImages/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
+							<div class="insideSlot" style="background:url('/Images/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
 						</div>
-<!--
-						<div class="slot" style="background:url('/Images/Slots/2/MainPage_Slot__4차산업_핀테크.png')" href="/Course/Industry4.0/Course_Industry40_FinTech_Expert.asp">
-							<img class="slotIcon" src="Images/Icons/MainPage_SlotIcon__recommend.png"/>
+
+						<div class="slot extended" style="background:url('/Images/Slots/2/MainPage_Slot__KUKA18_ED.GIF')" href="/Course/Kukka/Course_Kukka_EmbeddedService_2018.asp">
+							<img class="slotIcon" src="Images/Icons/MainPage_SlotIcon__new.png"/>
 							<p class="courseName dnone">&nbsp;</p>
 							<p class="courseDescription dnone">&nbsp;</p>
-							<div class="insideSlot" style="background:url('Images/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
+							<div class="insideSlot" style="background:url('/Images/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
 						</div>
--->
-						<div class="slot " style="background:url('/WEB-INF/views/course/kukka/kukkaImages/Slots/2/MainPage_Slot__전문가_자바.png')" href="/Course/Expert/Course_Expert_JavaExpert.asp">
-							<img class="slotIcon" src="/Images/Icons/MainPage_SlotIcon__recommend.png"/>
-							<p class="courseName dnone">자바 전문가과정</p>
-							<p class="courseDescription dnone">Java 언어를 기반으로 프론트엔드와 백엔드를 아우르는 전문가가 되기 위한 과정</p>
-							<div class="insideSlot" style="background:url('/WEB-INF/views/course/kukka/kukkaImages/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
+
+						<!--
+						<div class="slot extended" style="background:url('/Images/Slots/2/MainPage_Slot__KUKA18_FD_10.gif')" href="/Course/Kukka/Course_Kukka_Fintech_2018.asp"">
+							<img class="slotIcon" src="Images/Icons/MainPage_SlotIcon__new.png"/>
+							<p class="courseName dnone">&nbsp;</p>
+							<p class="courseDescription dnone">&nbsp;</p>
+							<div class="insideSlot" style="background:url('/Images/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
 						</div>
+						-->
+						
+						<div class="slot extended" style="background:url('/Images/Slots/2/MainPage_Slot__java.png.gif')" href="/Course/Expert/Course_Expert_JavaExpert.asp"">
+							<img class="slotIcon" src="Images/Icons/MainPage_SlotIcon__new.png"/>
+							<p class="courseName dnone">&nbsp;</p>
+							<p class="courseDescription dnone">&nbsp;</p>
+							<div class="insideSlot" style="background:url('/Images/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
+						</div>
+
+
 	
 <!-- // 잠시 숨김
 <div class="slot" style="background:url('/Images/Slots/2/MainPage_Slot__국비지원_AWS클라우드웹개발.png')" href="/Course/Kukka/Course_Kukka_AWSCloudWeb_2018.asp">
@@ -218,13 +224,16 @@ Response.CharSet  = "euc-kr" '한글
 					<div style="float:left; margin-top:10px;">
 						<img src="/Images/Titles/MainPage_Title__4차산업혁명.png" style="float:left; margin-bottom:2px; display:none;" alt="4차산업혁명"/>
 						<div style="clear:both;"></div>
-
-						<div class="slot first" style="background:url('/WEB-INF/views/course/kukka/kukkaImages/Slots/2/MainPage_Slot__전문가_임베디드시스템.png')" href="/Course/Expert/Course_Expert_Embedded.asp">
-							<img class="slotIcon" src="/Images/Icons/MainPage_SlotIcon__hot.png"/>
-							<p class="courseName dnone long">임베디드 시스템 전문가과정</p>
-							<p class="courseDescription dnone">ARM어셈블리, 리눅스커널, 디바이스드라이버 등을 심도 있게 배워 임베디드SW의 전문가가 되기 위한 과정</p>
-							<div class="insideSlot" style="background:url('/WEB-INF/views/course/kukka/kukkaImages/MainPage_SlotSelected.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
+					
+					
+					<div class="slot first extended" style="background:url('/Images/Slots/2/MainPage_Slot__embedded.gif')" href="/Course/Expert/Course_Expert_Embedded.asp">
+							<img class="slotIcon" src="Images/Icons/MainPage_SlotIcon__new.png"/>
+							<p class="courseName dnone">&nbsp;</p>
+							<p class="courseDescription dnone">&nbsp;</p>
+							<div class="insideSlot" style="background:url('/Images/MainPage_SlotSelected_280px.png'); opacity:0;  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'"></div>
 						</div>
+
+
 						
 						<!--
 						<div class="slot " style="background:url('/Images/Slots/2/MainPage_Slot__4차산업_IoT자율주행.png')" href="/Course/Industry4.0/Course_Industry40_IoTSelfDriving_Expert.asp">

@@ -225,17 +225,18 @@ Response.CharSet  = "euc-kr" '한글
 				<div class="mainDropdownMenu depth3 no1 fl">
 					<div class="divTop1"></div>
 					<div class="divTop2"></div>
-					<div class="divMiddle"><div class="divMiddleInner" style="width:150px;">C Master</div></div>
-					<div class="divMiddle"><div class="divMiddleInner" style="width:150px;">Java 프로그래밍</div></div>
-					<div class="divMiddle"><div class="divMiddleInner" style="width:150px;">C++ 프로그래밍</div></div>
-					<div class="divMiddle"><div class="divMiddleInner" style="width:150px;">자료구조/알고리즘</div></div>
-					<div class="divMiddle"><div class="divMiddleInner" style="width:150px;">Python 프로그래밍</div></div>
-					<div class="divMiddle"><div class="divMiddleInner" style="width:150px;">C# 프로그래밍</div></div>
+					<div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_C.asp"><div class="divMiddleInner" style="width:150px;  background-image: url();">C Master</div></div>
+					<div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_java.asp"><div class="divMiddleInner" style="width:150px;  background-image: url();">Java 프로그래밍</div></div>
+					<div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_cPlus.asp"><div class="divMiddleInner" style="width:150px;  background-image: url();">C++ 프로그래밍</div></div>
+					<div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_Python.asp"><div class="divMiddleInner" style="width:150px;  background-image: url();">Python 프로그래밍</div></div>
+					<div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_cSharp.asp"><div class="divMiddleInner" style="width:150px;  background-image: url();">C# 프로그래밍</div></div>
 					<div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_Go.asp"><div class="divMiddleInner" style="width:150px; background-image: url();">Go 프로그래밍</div></div>
-					<div class="divMiddle"><div class="divMiddleInner" style="width:150px; letter-spacing:-2px;">SW 자율학습 지도 커뮤니티</div></div>
+					<div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_Go.asp"><div class="divMiddleInner" style="width:150px; background-image: url();">SW 자율학습 지도 커뮤니티</div></div>
 					<div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
 					<div class="divBottom"></div>
 				</div>
+				
+				<!--
 				<div class="mainDropdownMenu depth4 no1 fl">
 					<div class="divTop1"></div>
 					<div class="divTop2"></div>
@@ -248,6 +249,7 @@ Response.CharSet  = "euc-kr" '한글
 					<div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
 					<div class="divBottom"></div>
 				</div>
+				
 				<div class="mainDropdownMenu depth4 no2 fl">
 					<div class="divTop1"></div>
 					<div class="divTop2"></div>
@@ -288,7 +290,7 @@ Response.CharSet  = "euc-kr" '한글
 					<div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_algorithmAdvanced.asp">
 						<div class="divMiddleInner" style="letter-spacing:-2px;">[주말반/고급] 문제해결을 위한 알고리즘</div>
 					</div>
-					-->
+					
 					<div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
 					<div class="divBottom"></div>
 				</div>
@@ -325,6 +327,7 @@ Response.CharSet  = "euc-kr" '한글
 					<div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
 					<div class="divBottom"></div>
 				</div>
+				-->
 				<!-- no2 : 대전캠퍼스 -->
 				<div class="mainDropdownMenu depth3 no2 fl">
 					<div class="divTop1"></div>
@@ -728,7 +731,7 @@ Response.CharSet  = "euc-kr" '한글
 						<div class="divMiddleInner" style="width:170px;">4차산업선도인력양성</div>
 					</div>
 					<div class="divMiddle"><!-- href="/Course/Kukka/Course_Kukka_2018.asp">-->
-						<div class="divMiddleInner" style="width:170px;">국가기간전략산업직종</div>
+						<div class="divMiddleInner" style="width:170px;">국가기간전략산업직종.</div>
 					</div>
 					<div class="divMiddle"><!-- href="/Course/Employ/Course_Employ.asp">-->
 						<div class="divMiddleInner" style="width:170px;">신입사원 채용교육</div>
@@ -773,12 +776,15 @@ Response.CharSet  = "euc-kr" '한글
 					<div class="divMiddle  " href="/Course/Kukka/Course_Kukka_Introduction.asp">
 						<div class="divMiddleInner" style="width:200px;">국가기간전략산업직종훈련 소개</div>
 					</div>
-					<div class="divMiddle long twolines" href="/Course/Kukka/Course_Kukka_RaspberryPiIoTService_2018.asp">
-						<div class="divMiddleInner twolines" style="width:200px;">IoT를 활용한 자바 웹&amp;모바일 고급인력 양성과정</div>
+					<div class="divMiddle long twolines" href="/Course/Kukka/Course_Kukka_EmbeddedService_2018.asp">
+            					<div class="divMiddleInner twolines" style="width:200px;">임베디드기반 IoT SW개발 고급인력양성 과정</div>
+        				</div>
+					
+					<!--
+					<div class="divMiddle long twolines" href="/Course/Kukka/Course_Kukka_Fintech_2018.asp">
+						<div class="divMiddleInner twolines" style="width:200px;">금융 IT기반 핀테크융합 전문가<br/> 양성과정</div>
 					</div>
-					<div class="dnone divMiddle long twolines" href="/Course/Kukka/Course_Kukka_FinTech_2018.asp">
-						<div class="divMiddleInner twolines" style="width:200px;">금융 IT기반 핀테크 전문가<br/> 양성과정</div>
-					</div>
+					-->
 					<div class="divMiddle long twolines" href="/Course/Kukka/Course_Kukka_JavaBigData_2018.asp">
 						<div class="divMiddleInner twolines" style="width:200px;">JAVA 기반 빅데이터 분석을 위한 <br/>고급인력 양성과정</div>
 					</div>
