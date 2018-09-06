@@ -9,22 +9,27 @@ Response.CharSet  = "euc-kr" '한글
 <!-- not REDIRECTABLE TO MOBILE -->
 
 <html lang="ko">
-<link rel= "shortcut icon" href="/images/favicon.ico">
+<link rel= "shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico">
 <head>
 	<!-- #include virtual="/Include/Meta.asp"-->
+	<c:import url="/WEB-INF/views/Include/Meta.jsp"/>
 	<title>비트교육센터</title>
 	<!-- #include virtual="/Include/ContentStyle.asp"-->
+	<c:import url="/WEB-INF/views/Include/contentStyle.jsp"/>
 	<!-- #include virtual="/Include/Script.asp"-->
+	<c:import url="/WEB-INF/views/Include/Script.jsp"/>
+	
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<!-- .btn_refundView 및 .btn_refundView2는 /JS/Common.js 에 이벤트핸들러 정의 -->
-	<link rel="stylesheet" type="text/css" href="/include/Common_CSS_Detail_720_1709.css" >
-	<link rel="stylesheet" type="text/css" href="/include/Common_CSS_Detail_720plus_1709.css" >
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/common_css/Common_CSS_Detail_720_1709.css" >
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/common_css/Common_CSS_Detail_720plus_1709.css" >
 	
 	<!-- #include virtual="/Include/HeaderScript1709.asp"-->
+	<c:import url="/WEB-INF/views/Include/HeaderScript1709.jsp"/>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			<!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"-->
-			<!--#include virtual="/Include/HeaderScriptReady1709.inc"-->
+			<c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
+			<c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
 
 			$(".snb_1709 a.newdepth1").eq(1).addClass("on");				// 국가기간전략산업직종
 			$(".snb_1709 .newdepth2_wrap").eq(1).addClass("on");		// 국가기간전략산업직종
@@ -43,10 +48,11 @@ Response.CharSet  = "euc-kr" '한글
 	*/
 	</script>
 	<!-- #include virtual="/Include/Script_MoBon_1803.asp"-->
+	<c:import url="/WEB-INF/views/Include/Script_MoBon_1803.jsp"/>
 </head>
 <style>
 	/* white and narrowSNB */
-	.moveTop { width:175px !important; background:#17538e url('/Images/Common/btn_moveTop.png') 50px center no-repeat; }
+	.moveTop { width:175px !important; background:#17538e url('${pageContext.request.contextPath}/assets/Images/Common/btn_moveTop.png') 50px center no-repeat; }
 	#Container_Wrap { min-height:initial; }
 	ul.newdepth3_wrap li.long { letter-spacing:-1px; }
 	ul.newdepth2_wrap li.long { letter-spacing:-1px; }
@@ -99,6 +105,7 @@ Response.CharSet  = "euc-kr" '한글
 	<div id="Wrapper">
 		<!-- Header_Wrap -->
 		<!-- #include virtual="/Include/HeaderHTML1709.asp"-->
+		<c:import url="/WEB-INF/views/Include/HeaderHTML1709.jsp"/>
 		<!-- //Header_Wrap -->
 		<hr>
 		<div id="Container_Wrap">
@@ -106,15 +113,16 @@ Response.CharSet  = "euc-kr" '한글
 			<div id="Content_Wrap">
 				<!-- SNB_Wrap-->
 				<!-- #include virtual = "/Include/SNB_CourseSupport_1709.asp"-->
+				<c:import url="/WEB-INF/views/Include/SNB_CourseSupport_1709.jsp"/>
 				<!-- //SNB_Wrap-->
 				<!-- Content -->
 				<div id="Content">
 					<div class="hGroup1709">
 						<p>
-							<img src="/Images/Icons/icn_Home.png"/>
-							<img src="/Images/Icons/icn_ArrowTriangleRight.png"/>무료취업과정
-							<img src="/Images/Icons/icn_ArrowTriangleRight.png"/>국가기간전략산업직종
-							<img src="/Images/Icons/icn_ArrowTriangleRight.png"/>임베디드기반 IoT SW개발 고급인력양성 과정
+							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_Home.png"/>
+							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>무료취업과정
+							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>국가기간전략산업직종
+							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>임베디드기반 IoT SW개발 고급인력양성 과정
 						</p>
 						<h4 style="float:left; letter-spacing:0px;" >임베디드기반 IoT SW개발 고급인력양성 과정</h4>
 						<!-- 수강신청btn -->
@@ -125,11 +133,11 @@ Response.CharSet  = "euc-kr" '한글
 -->
 
 						<a href="https://pf.kakao.com/_SmhqV"  title="카카오톡 상담신청" style="float:right; margin:12px 0px 12px 12px;">
-							<img src="/Images/Btns/btn_Kakao.png"/>
+							<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Kakao.png"/>
 						</a>
 
-						<a href="/Register/Request/register_kukka1.asp?app_CourseID=KUKA18_ED"  title="수강신청" style="float:right; margin:12px 0;">
-							<img src="/Images/Btns/btn_ApplyCourse.png"/>
+						<a href="/register/request/register_kukka1.asp?app_CourseID=KUKA18_ED"  title="수강신청" style="float:right; margin:12px 0;">
+							<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
 						</a>
 
 					
@@ -150,7 +158,7 @@ Response.CharSet  = "euc-kr" '한글
 										<tr>
 											<th>교육기간</th>
 											<td>
-												<!-- #include virtual="/Include/CourseDateTime/Date/Date__KUKA18_ED.inc" -->
+												2018.09.17 ~ 2019.03.22
 											</td>
 											<th>강의시간</th>
 											<td>
@@ -213,140 +221,140 @@ Response.CharSet  = "euc-kr" '한글
 									<tbody>
 										<tr>
 											<td scope="row" class="darker c">
-C Programming	
+												C Programming	
 											</td>
 											<td>
-	- 표준 C언어의 사용 및 활용 방법 이해<br>
-	- 컴파일, 전처리 및 파일 입출력 등의 기초 지식 습득<br>
-	- 배열과 포인터<br>
-	- 데이터 표현 및 모듈화 프로그래밍<br>
-	- 자료구조와 알고리즘
+												- 표준 C언어의 사용 및 활용 방법 이해<br>
+												- 컴파일, 전처리 및 파일 입출력 등의 기초 지식 습득<br>
+												- 배열과 포인터<br>
+												- 데이터 표현 및 모듈화 프로그래밍<br>
+												- 자료구조와 알고리즘
 											</td>
 										</tr>
 										<tr>
 											<td scope="row" class="darker c">
-임베디드 C
+												임베디드 C
 											</td>
 											<td>
-	- 임베디드 시스템에서의 프로그래밍 이해<br>
-	- C 기반의 임베디드 시스템 프로그래밍 이해 및 활용<br>
-	- 임베디드 보드를 활용한 펌웨어 프로그래밍
+												- 임베디드 시스템에서의 프로그래밍 이해<br>
+												- C 기반의 임베디드 시스템 프로그래밍 이해 및 활용<br>
+												- 임베디드 보드를 활용한 펌웨어 프로그래밍
 											</td>
 										</tr>
 										<tr>
 											<td scope="row" class="darker c">
-사물인터넷 서비스 및 플랫폼에 대한 이해
+												사물인터넷 서비스 및 플랫폼에 대한 이해
 											</td>
 											<td>
-	- 사물 인터넷의 개념 및 서비스 구조<br>
-	- 사물 인터넷 디바이스 개념 및 응용 서비스 사례 연구<br> 
-	- 사물 인터넷 플랫폼과 클라우드, 오픈소스 플랫폼 <br>
-	- 오픈소스 하드웨어에 대한 이해<br>
-	- 사물 인터넷과 임베디드 시스템  개론
+												- 사물 인터넷의 개념 및 서비스 구조<br>
+												- 사물 인터넷 디바이스 개념 및 응용 서비스 사례 연구<br> 
+												- 사물 인터넷 플랫폼과 클라우드, 오픈소스 플랫폼 <br>
+												- 오픈소스 하드웨어에 대한 이해<br>
+												- 사물 인터넷과 임베디드 시스템  개론
 											</td>
 										</tr>
 										<tr>
 											<td scope="row" class="darker c">
-ARM 구조및 어셈블리 <br>프로그래밍
+												ARM 구조및 어셈블리 <br>프로그래밍
 											</td>
 											<td>
-	- 임베디드 시스템 구조 이해<br>
-	- ARM 프로세서 이해<br>
-	- ARM 소프트웨어 개발<br>
-	- ARM 프로세서 제어
+												- 임베디드 시스템 구조 이해<br>
+												- ARM 프로세서 이해<br>
+												- ARM 소프트웨어 개발<br>
+												- ARM 프로세서 제어
 											</td>
 										</tr>
 										<tr>
 											<td scope="row" class="darker c">
-ARM 디바이스 프로그래밍
+												ARM 디바이스 프로그래밍
 
 											</td>
 											<td>
-	- 시스템 초기화 과정 이해<br>
-	- 메모리 시스템 이해<br>
-	- 디바이스에 대한 기초 개념 습득<br>
-	- 버스 인터페이스에대한 기초 개념 습득<br>
-	- 디바이스 제어 기법 습득<br>
-	- 멀티미디어 디바이스 제어
+												- 시스템 초기화 과정 이해<br>
+												- 메모리 시스템 이해<br>
+												- 디바이스에 대한 기초 개념 습득<br>
+												- 버스 인터페이스에대한 기초 개념 습득<br>
+												- 디바이스 제어 기법 습득<br>
+												- 멀티미디어 디바이스 제어
 											</td>
 										</tr>
 										<tr>
 											<td scope="row" class="darker c">
-RTOS 구조및 활용
+												RTOS 구조및 활용
 
 											</td>
 											<td>
-	- 실시간 시스템 소개<br>
-	- 태스크 운용<br>
-	- 태스크 통신(IPC)<br>
-	- ARM 프로세스<br>
-	- MicroC/OS-II 포팅
+												- 실시간 시스템 소개<br>
+												- 태스크 운용<br>
+												- 태스크 통신(IPC)<br>
+												- ARM 프로세스<br>
+												- MicroC/OS-II 포팅
 											</td>
 										</tr>
 										<tr>
 											<td scope="row" class="darker c">
-IoT 시스템 프로그래밍
+												IoT 시스템 프로그래밍
 
 											</td>
 											<td>
-	- 리눅스 입문 (명령어, 개발환경, 시스템 운용관리)<br>
-	- 임베디드 리눅스 시스템 개발 환경 이해<br>
-	- 임베디드 리눅스 시스템 보드 개발 환경
-
-											</td>
-										</tr>
-										<tr>
-											<td scope="row" class="darker c">
-IoT를 위한  OS 포팅
-											</td>
-											<td>
-	- 임베디드 리눅스 개요<br>
-	- 교차 개발 환경이해 및 구축<br>
-	- 부트로더<br>
-	- 커널 분석<br>
-	- 루트 파일 시스템<br>
-	- 시스템 패키징
+												- 리눅스 입문 (명령어, 개발환경, 시스템 운용관리)<br>
+												- 임베디드 리눅스 시스템 개발 환경 이해<br>
+												- 임베디드 리눅스 시스템 보드 개발 환경
 
 											</td>
 										</tr>
 										<tr>
 											<td scope="row" class="darker c">
-IoT 디바이스 드라이버 
+												IoT를 위한  OS 포팅
 											</td>
 											<td>
-	- 디바이스 드라이버 소개<br>
-	- 커널 모둘 빌드<br>
-	- 커널 서비스<br>
-	- 리눅스 디바이스 드라이버 개발 모델<br>
-	- 캐릭터 디바이스 드라이버 개발<br>
-	- 블록 디바이스 드라이버 개발
+												- 임베디드 리눅스 개요<br>
+												- 교차 개발 환경이해 및 구축<br>
+												- 부트로더<br>
+												- 커널 분석<br>
+												- 루트 파일 시스템<br>
+												- 시스템 패키징
 
 											</td>
 										</tr>
 										<tr>
 											<td scope="row" class="darker c">
-IoT통신 프로토콜 및<br> 
-네트워크 프로그래밍 
+												IoT 디바이스 드라이버 
+											</td>
+											<td>
+												- 디바이스 드라이버 소개<br>
+												- 커널 모둘 빌드<br>
+												- 커널 서비스<br>
+												- 리눅스 디바이스 드라이버 개발 모델<br>
+												- 캐릭터 디바이스 드라이버 개발<br>
+												- 블록 디바이스 드라이버 개발
+
+											</td>
+										</tr>
+										<tr>
+											<td scope="row" class="darker c">
+												IoT통신 프로토콜 및<br> 
+												네트워크 프로그래밍 
 
 											</td>
 											<td>
-	- 네트워크 통신의 개용<br>
-	- 네트워크 프로토콜 스택<br>
-	- 기타 데이터 통신<br>
-	- BSD소켓 프로그래밍
+												- 네트워크 통신의 개용<br>
+												- 네트워크 프로토콜 스택<br>
+												- 기타 데이터 통신<br>
+												- BSD소켓 프로그래밍
 											</td>
 										</tr>
 
 										<tr>
 											<td scope="row" class="darker c">
-Team Project
+												Team Project
 
 											</td>
-											<td>
-	- 지금까지 배운 모든 기술을 통해서 실무 현업에 맞는 프로젝트로 개발해 보는 단계로 4인 내외로 팀을 구성<br>
-	- 최신 프로젝트 주제를 선정하여 3개월 동안 팀원의 역할분담 및 상호 협조 하에 프로젝트 수행하며, 주제 선정<br> 
-	- 관련된 자료 수집, 필요기술 학습, 명세확정, 일정 수립, 개발환경구축 등 개발, 통합테스트 등을 거쳐 개발을 완료<br>
-	- 외부업체 관계자들의 참관 하에 최종 전시회를 갖도록 한다. <br>
+																						<td>
+												- 지금까지 배운 모든 기술을 통해서 실무 현업에 맞는 프로젝트로 개발해 보는 단계로 4인 내외로 팀을 구성<br>
+												- 최신 프로젝트 주제를 선정하여 3개월 동안 팀원의 역할분담 및 상호 협조 하에 프로젝트 수행하며, 주제 선정<br> 
+												- 관련된 자료 수집, 필요기술 학습, 명세확정, 일정 수립, 개발환경구축 등 개발, 통합테스트 등을 거쳐 개발을 완료<br>
+												- 외부업체 관계자들의 참관 하에 최종 전시회를 갖도록 한다. <br>
 											</td>
 										</tr>
 										
@@ -388,19 +396,20 @@ Team Project
 						<!-- con_wrap1709 -->
 
 						<div class="con_wrap1709">
-							<img src="Images/proce.png" style="width:630px"/><br><br>
+							<img src="${pageContext.request.contextPath}/assets/Images/proce.png" style="width:630px"/><br><br>
 						</div>
 
 						
 						<div class="con_wrap1709" style="text-align: center;">
 
-							<a href="/Register/Request/register_kukka1.asp?app_CourseID=KUKA18_ED" id = "jiwon" title = "신청하기" style = "margin-top:24px; margin-right:10px; font-size:20px;">지원하기</a>
-
-							<a href="https://pf.kakao.com/_SmhqV" id = "kakao" title = "카카오톡상담받기" style = " margin-top:24px; font-size:20px;">카카오톡 상담하기</a>
-
-							
+							<a href="/register/request/register_kukka1.asp?app_CourseID=KUKA18_ED"  title="수강신청" style="margin-top:24px; margin-right:10px; font-size:20px;">
+								<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
+							</a>
+							<a href="https://pf.kakao.com/_SmhqV"  title="카카오톡 상담신청" style="margin-top:24px; font-size:20px;">
+								<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Kakao.png"/>
+							</a>
 						</div>
-<br><br>
+						<br><br>
 
 
 
@@ -565,6 +574,7 @@ Team Project
 		<hr>
 		<!-- Footer_Wrap -->
 		<!-- #include virtual="/Include/FooterHTML1709.asp"-->
+		<c:import url="/WEB-INF/views/Include/FooterHTML1709.jsp"/>
 		<!-- //Footer_Wrap -->
 	</div>
 </body>

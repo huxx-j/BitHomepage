@@ -1,16 +1,25 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%-- <%
+Session.CodePage  = 949 '한글
+Response.CharSet  = "euc-kr" '한글
+%> --%>
 
-<%
+<%!
+String strCourseID = "DSci_AnalysisMLearn1";
+%>
+
+<%!
 String strSubject="R을 사용한 데이터 분석과 머신러닝 (초급)";
 //strSubject="R을 사용한 데이터 분석과 머신러닝 초급(빅데이터)"
 
 int indexDepth3=0;
 %>
+
 <!DOCTYPE html>
 <!-- NOT REDIRECTABLE to Mobile -->
 <html lang="ko">
-<link rel= "shortcut icon" href="/images/favicon.ico">
+<link rel= "shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico">
 <head>
 	<!-- #include virtual="/Include/Meta.asp"-->
 	<c:import url="/WEB-INF/views/Include/Meta.jsp"/>
@@ -76,8 +85,8 @@ int indexDepth3=0;
 					<div class="hGroup1709">
 						<!--
 						<p>
-							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_Home.png"/>
-							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>겨울방학특강
+							<img src="/Images/Icons/icn_Home.png"/>
+							<img src="/Images/Icons/icn_ArrowTriangleRight.png"/>겨울방학특강
 						</p>
 						-->
 						<p>
@@ -138,11 +147,15 @@ int indexDepth3=0;
 									</tbody>
 								</table> 
 								<!--
-								<a href="/Register/Request/register_shortCourse.asp?cID=" class="btn mid green1" title="수강신청" style="float:right; margin:5px 0;">수강신청</a>
+								<a href="/Register/Request/register_shortCourse.asp?cID=<%=strCourseID%>" class="btn mid green1" title="수강신청" style="float:right; margin:5px 0;">수강신청</a>
 								<div style="clear;both; height:10px;"></div>
 								-->
 								<!-- 수강신청btn -->
-								<a href="/register/request/register_shortCourse.asp?cID=" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
+								<a href="https://pf.kakao.com/_SmhqV" title="카카오톡 상담신청" style="float:right; margin:12px 5px;" class="btnApply">
+									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Kakao.png"/>
+								</a>
+								
+								<a href="/register/request/register_shortCourse?cID=<%=strCourseID%>" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
 								</a>
 								<div style="clear;both; height:10px;"></div>

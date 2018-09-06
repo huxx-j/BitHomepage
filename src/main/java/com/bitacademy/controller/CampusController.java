@@ -12,7 +12,7 @@ public class CampusController {
 
     ///////////대전////////////////
     @RequestMapping(value ="/localCampus_Daejeon_introduction", method = RequestMethod.GET)
-    public String localCampus_Daejeon_introduction(@RequestParam("beginwith")String beginwith,Model model) {
+    public String localCampus_Daejeon_introduction(@RequestParam(value="beginwith", defaultValue="111", required=false)String beginwith,Model model) {
         System.out.println(beginwith);
     	model.addAttribute("beginwith",beginwith);
     	return "course/localCampus/localCampus_Daejeon_introduction";
@@ -40,14 +40,15 @@ public class CampusController {
 
     ///////////부산////////////////
     @RequestMapping(value = "/localCampus_Busan_introduction", method = RequestMethod.GET)
-    public String localCampus_Busan_introduction(@RequestParam("beginwith")String beginwith,Model model) {
+    public String localCampus_Busan_introduction(@RequestParam(value="beginwith", defaultValue="111", required=false)String beginwith,Model model) {
         System.out.println(beginwith);
         model.addAttribute("beginwith",beginwith);
     	return "/course/localCampus/localCampus_Busan_introduction";
     }
 
-    @RequestMapping(value ="/Busan_javaHigh", method = RequestMethod.GET)
+    @RequestMapping(value ="/DetailPage/Busan_javaHigh", method = RequestMethod.GET)
     public String Busan_javaHigh() {
+    	System.out.println("자바고급");
         return "/course/localCampus/DetailPage/Busan_javaHigh";
     }
 
@@ -73,7 +74,7 @@ public class CampusController {
 
     ///////////군포////////////////
     @RequestMapping(value = "/localCampus_Gunpo_introduction", method = RequestMethod.GET)
-    public String localCampus_Gunpo_introduction(@RequestParam("beginwith")String beginwith,Model model) {
+    public String localCampus_Gunpo_introduction(@RequestParam(value="beginwith", defaultValue="111", required=false)String beginwith,Model model) {
     	System.out.println(beginwith);
         model.addAttribute("beginwith",beginwith);
     	return "/course/localCampus/localCampus_Gunpo_introduction";
@@ -94,7 +95,7 @@ public class CampusController {
         return "/course/localCampus/DetailPage/Gunpo_c2";
     }
 
-    @RequestMapping(value = "/Gunpo_windowNet", method = RequestMethod.GET)
+    @RequestMapping(value = "/DetailPage/Gunpo_windowNet", method = RequestMethod.GET)
     public String Gunpo_windowNet() {
         return "/course/localCampus/DetailPage/Gunpo_windowNet";
     }

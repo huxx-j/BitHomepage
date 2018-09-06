@@ -131,9 +131,9 @@ String SubjectName = "Spring Framework 과정";
 						<div class="con_wrap1709">
 							<h5>선수지식</h5>
 							<ul class="ul_dot_gray">
-								<li>JAVA Programming<a href="/course/shortcourse/detailPage/Course_java.asp" class="mar_l10 btnBlueBorder small">자세히보기</a></li>
-								<li>SQL &amp; JDBC<a href="/course/shortcourse/detailPage/Course_sqlJdbc.asp" class="mar_l10 btnBlueBorder small">자세히보기</a></li>
-								<li>Servlet &amp; JSP<a href="/course/shortcourse/detailPage/Course_servletJsp.asp" class="mar_l10 btnBlueBorder small">자세히보기</a></li>
+								<li>JAVA Programming<a href="/course/shortcourse/detailPage/Course_java" class="mar_l10 btnBlueBorder small">자세히보기</a></li>
+								<li>SQL &amp; JDBC<a href="/course/shortcourse/detailPage/Course_sqlJdbc" class="mar_l10 btnBlueBorder small">자세히보기</a></li>
+								<li>Servlet &amp; JSP<a href="/course/shortcourse/detailPage/Course_servletJsp" class="mar_l10 btnBlueBorder small">자세히보기</a></li>
 							</ul>
 						</div>
 						<!-- //con_wrap1709 -->

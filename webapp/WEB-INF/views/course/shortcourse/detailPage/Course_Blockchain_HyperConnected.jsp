@@ -1,5 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%-- <%
+Session.CodePage  = 949 '한글
+Response.CharSet  = "euc-kr" '한글
+%>
+ --%>
 <%!
 String strCourseID = "Bchain_HyperConnected";
 %>
@@ -13,7 +18,7 @@ int indexDepth3=2;
 <!DOCTYPE html>
 <!-- NOT REDIRECTABLE to Mobile -->
 <html lang="ko">
-	<link rel= "shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico">
+<link rel= "shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico">
 	<!-- #include virtual="/Include/Meta.asp"-->
 	<c:import url="/WEB-INF/views/Include/Meta.jsp"/>
 	<title>비트교육센터</title>
@@ -31,9 +36,7 @@ int indexDepth3=2;
 	<c:import url="/WEB-INF/views/Include/HeaderScript1709.jsp"/>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			/* <!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"--> */
 			 <c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
-			 /* <!--#include virtual="/Include/HeaderScriptReady1709.inc"--> */
 			 <c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
 						
 			/* page load 직후 SNB 셋팅 */
@@ -79,7 +82,7 @@ int indexDepth3=2;
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>단기핵심과정
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>Blockchain
 						</p>
-						 <h4><%=strSubject%></h4>
+						<h4><%=strSubject%></h4>
 					</div>
 
 					<section class="section">
@@ -122,11 +125,15 @@ int indexDepth3=2;
 									</tbody>
 								</table> 
 								<!--
-								<a href="/Register/Request/register_shortCourse.asp?cID=<%-- <%=strCourseID%> --%>" class="btn mid green1" title="수강신청" style="float:right; margin:5px 0;">수강신청</a>
+								<a href="/Register/Request/register_shortCourse.asp?cID=<%=strCourseID%>" class="btn mid green1" title="수강신청" style="float:right; margin:5px 0;">수강신청</a>
 								<div style="clear;both; height:10px;"></div>
 								-->
 								<!-- 수강신청btn -->
-								<a href="/register/request/register_shortCourse.asp<%-- ?cID=<%=strCourseID%> --%>" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
+								<a href="https://pf.kakao.com/_SmhqV" title="카카오톡 상담신청" style="float:right; margin:12px 5px;" class="btnApply">
+									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Kakao.png"/>
+								</a>
+								
+								<a href="/register/request/register_shortCourse.asp?cID=<%=strCourseID%>" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
 								</a>
 								<div style="clear;both; height:10px;"></div>
@@ -379,7 +386,7 @@ int indexDepth3=2;
 						</div>
 						<!-- //con_wrap1709 -->
 						
-</div>						
+					</div>						
 					</section>
 				</div>
 				<!--<a href="#this" class="moveTop">Top</a>-->

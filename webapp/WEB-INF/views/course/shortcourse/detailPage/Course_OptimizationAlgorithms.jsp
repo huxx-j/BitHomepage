@@ -1,5 +1,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%-- <%
+Session.CodePage  = 949 '한글
+Response.CharSet  = "euc-kr" '한글
+%> --%>
 
 <%!
 String CourseID = "OptimizationAlgorithms";
@@ -9,6 +13,7 @@ String SubjectName = "최적화 알고리즘을 통한 SW개발 역량 강화";
 <!DOCTYPE html>
 <html lang="ko">
 <link rel= "shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico">
+<head>
 	<!-- #include virtual="/Include/Meta.asp"-->
 	<c:import url="/WEB-INF/views/Include/Meta.jsp"/>
 	<title>비트교육센터</title>
@@ -16,19 +21,18 @@ String SubjectName = "최적화 알고리즘을 통한 SW개발 역량 강화";
 	<c:import url="/WEB-INF/views/Include/contentStyle.jsp"/>
 	<!-- #include virtual="/Include/Script.asp"-->
 	<c:import url="/WEB-INF/views/Include/Script.jsp"/>
-	
+
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src="Common_getIndex.js"></script>
+	<!-- .btn_refundView 및 .btn_refundView2는 /JS/Common.js 에 이벤트핸들러 정의 -->
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/common_css/Common_CSS_Detail_720_1709.css" >
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/common_css/Common_CSS_Detail_720plus_1709.css" >
 	<!-- #include virtual="/Include/HeaderScript1709.asp"-->
 	<c:import url="/WEB-INF/views/Include/HeaderScript1709.jsp"/>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			/* <!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"--> */
-			 <c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
-			 /* <!--#include virtual="/Include/HeaderScriptReady1709.inc"--> */
-			 <c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
+		
+			<c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
+			<c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
 
 			//elm_xPos = $(".btn_refundView").offset().left + $(".btn_refundView").width()/2;
 			ajaxLoad('#TabCon', '', '/Common/Tab/SupportInfo_01.asp');
@@ -118,6 +122,9 @@ String SubjectName = "최적화 알고리즘을 통한 SW개발 역량 강화";
 									</tbody>
 								</table>
 								<!-- 수강신청btn -->
+								<a href="https://pf.kakao.com/_SmhqV" title="카카오톡 상담신청" style="float:right; margin:12px 5px;" class="btnApply">
+									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Kakao.png"/>
+								</a>
 								<a href="/register/request/register_shortCourse.asp?cID=<%=CourseID%>" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
 								</a>
@@ -127,13 +134,12 @@ String SubjectName = "최적화 알고리즘을 통한 SW개발 역량 강화";
 						</div>
 						<!-- //con_wrap1709 -->
 
-							<img src="${pageContext.request.contextPath}/assets/Images/DetailPage_Course_OptimizationAlgorithms.png" class="mar_l10"/>
+						<img src="${pageContext.request.contextPath}/assets/Images/DetailPage_Course_OptimizationAlgorithms.png" class="mar_l10"/>
 
 						<!-- 고용보험환급안내-->
 						<div class="refundInfo_wrap dnone">
-							<!-- #include virtual="/Common/Tab/refundInfo_1234.asp"-->
-							<c:import url="/WEB-INF/views/common/tab/refundInfo_1234.jsp"/>
-														
+							<!-- #include virtual="/Common/Tab/refundInfo_1234.asp"-->	
+							<c:import url="/WEB-INF/views/common/tab/refundInfo_1234.jsp"/>						
 						</div>
 						<!-- //고용보험환급안내 -->
 

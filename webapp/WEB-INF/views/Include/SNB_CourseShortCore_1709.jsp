@@ -163,7 +163,7 @@
 				<li>
 					<a href="#this" class="newdepth2">[대전]대전캠퍼스</a>
 					<ul class="newdepth3_wrap no2">
-						<li><a href="/course/localCampus/localCampus_Daejeon_introduction" class="newdepth3">대전캠퍼스 소개</a></li>
+						<li><a href="/course/localCampus/localCampus_Daejeon_introduction?beginwith='no'" class="newdepth3">대전캠퍼스 소개</a></li>
 						<li><a href="/course/localCampus/DetailPage/Daejeon_c" class="newdepth3">C Programming</a></li>
 						<li><a href="/course/localCampus/DetailPage/Daejeon_cPlus" class="newdepth3">C++ Programming</a></li>
 						<li><a href="/course/localCampus/DetailPage/Daejeon_java" class="newdepth3">JAVA Programming</a></li>
@@ -227,7 +227,7 @@
 				<!-- newwrap no4 : Java -->
 				<li><a href="/course/shortcourse/detailPage/Course_servletJsp" class="newdepth2 no1">Servlet &amp; JSP 프로그래밍</a></li>
 				<li><a href="/course/shortcourse/detailPage/Course_spring" class="newdepth2 no2 ">Spring Framework 과정</a></li>
-				<li style="height:50px;"><a href="/Course/ShortCourse/DetailPage/Course_aiojava" class="newdepth2 no3">All-in-One Java Application 개발</a></li>
+				<li style="height:50px;"><a href="/course/shortcourse/detailPage/Course_aiojava" class="newdepth2 no3">All-in-One Java Application 개발</a></li>
 			</ul>
 		</li>			
 			

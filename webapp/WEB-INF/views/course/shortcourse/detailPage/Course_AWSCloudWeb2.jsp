@@ -1,6 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
+<%-- <%
+Session.CodePage  = 949 '한글
+Response.CharSet  = "euc-kr" '한글
+%>
+ --%>
 <%!
 String strCourseID = "AWSCloudWeb2";
 %>
@@ -34,9 +38,7 @@ int indexDepth3=2;
 	<c:import url="/WEB-INF/views/Include/HeaderScript1709.jsp"/>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			/* <!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"--> */
 			 <c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
-			 /* <!--#include virtual="/Include/HeaderScriptReady1709.inc"--> */
 			 <c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
 						
 			/* page load 직후 SNB 셋팅 */
@@ -125,14 +127,14 @@ int indexDepth3=2;
 									</tbody>
 								</table> 
 								<!--
-								<a href="/Register/Request/register_shortCourse.asp?cID=<%-- <%=strCourseID%> --%>" class="btn mid green1" title="수강신청" style="float:right; margin:5px 0;">수강신청</a>
+								<a href="/Register/Request/register_shortCourse.asp?cID=<%=strCourseID%>" class="btn mid green1" title="수강신청" style="float:right; margin:5px 0;">수강신청</a>
 								<div style="clear;both; height:10px;"></div>
 								-->
 								<!-- 수강신청btn -->
 								<a href="https://pf.kakao.com/_SmhqV" title="카카오톡 상담신청" style="float:right; margin:12px 5px;" class="btnApply">
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Kakao.png"/>
 								</a>
-								<a href="/register/request/register_shortCourse.asp<%-- ?cID=<%=strCourseID%> --%>" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
+								<a href="/register/request/register_shortCourse.asp?cID=<%=strCourseID%>" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
 								</a>
 								<div style="clear;both; height:10px;"></div>
@@ -142,7 +144,7 @@ int indexDepth3=2;
 						<!-- //con_wrap1709 -->
 						<div style="clear:both;"></div>
 
-							<img src="${pageContext.request.contextPath}/assets/Images/DetailPage_Course_DSCIENCE_AWSCloudWeb2_2.png" class="mar_l10"/> <!-- style="width:720px;"/>-->
+						<img src="${pageContext.request.contextPath}/assets/Images/DetailPage_Course_DSCIENCE_AWSCloudWeb2_2.png" class="mar_l10"/> <!-- style="width:720px;"/>-->
 
 						<div class="dnone">						
 						<!-- con_wrap1709 -->
@@ -385,7 +387,7 @@ int indexDepth3=2;
 						</div>
 						<!-- //con_wrap1709 -->
 						
-</div>						
+					</div>						
 					</section>
 				</div>
 				<!--<a href="#this" class="moveTop">Top</a>-->

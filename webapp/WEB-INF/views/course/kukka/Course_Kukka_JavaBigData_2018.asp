@@ -44,10 +44,50 @@ Response.CharSet  = "euc-kr" '한글
 </head>
 <style>
 	/* white and narrowSNB */
-	.moveTop { width:175px !important; background:#17538e url('/WEB-INF/views/course/kukka/kukkaImages/Common/btn_moveTop.png') 50px center no-repeat; }
+	.moveTop { width:175px !important; background:#17538e url('/Images/Common/btn_moveTop.png') 50px center no-repeat; }
 	#Container_Wrap { min-height:initial; }
 	ul.newdepth3_wrap li.long { letter-spacing:-1px; }
 	ul.newdepth2_wrap li.long { letter-spacing:-1px; }
+
+
+#kakao{
+
+    height: 26px;
+    padding: 0 10px;
+    font-weight: 600;
+    display: inline-block !important;
+    position: relative;
+    margin: 0px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+    border: 1px solid #1b499b;
+    color: #1b499b;
+    background-color: #ffeb33;
+
+}
+
+ 
+
+#jiwon{
+    height: 26px;
+    padding: 0 10px;
+    font-weight: 600;
+    display: inline-block !important;
+    position: relative;
+    margin: 0px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+
+}
+
+
 </style>
 
 <body>
@@ -71,13 +111,18 @@ Response.CharSet  = "euc-kr" '한글
 							<img src="/Images/Icons/icn_ArrowTriangleRight.png"/>국가기간전략산업직종
 							<img src="/Images/Icons/icn_ArrowTriangleRight.png"/>JAVA 기반 빅데이터 분석을 위한 고급인력 양성과정
 						</p>
-						<h4 style="float:left; letter-spacing:0px;" >JAVA 기반 빅데이터 분석을 위한<br/>고급인력 양성과정</h4>
-						<!-- 수강신청btn -->
-						<a href="/Register/Request/register_kukka1.asp" title="지원하기" style="float:right; margin-top:24px; font-size:20px;" class="btnBlueBorder">
-							<!--<img src="/Images/Btns/btn_ApplyCourse.png"/>-->
-							지원하기
+						<h4 style="float:left; letter-spacing:0px;" >JAVA 기반 빅데이터 분석을 위한 고급인력 양성과정
+						<!-- 수강신청btn --> 
+						
+						<a href="https://pf.kakao.com/_SmhqV"  title="카카오톡 상담신청" style="float:right; margin:12px 0px 12px 12px;">
+							<img src="/Images/Btns/btn_Kakao.png"/>
 						</a>
-						<div style="clear:both; height:10px;"></div>
+
+						<a href="/Register/Request/register_kukka1.asp?app_CourseID=KUKA18_ED"  title="수강신청" style="float:right; margin:12px 0;">
+							<img src="/Images/Btns/btn_ApplyCourse.png"/>
+						</a>						
+</h4>
+<div style="clear:both; height:10px;"></div>
 					</div>
 
 					<section>
@@ -103,19 +148,17 @@ Response.CharSet  = "euc-kr" '한글
 											</td>
 										</tr>
 										<tr>
-											<th>교육비용</th>
+											<th>교육비</th>
 											<td>무료</td>
-											<th>교육비지원</th>
-											<td>국비지원</td>
+											<th>훈련장려금</th>
+											<td>월 약 30만원</td>
 										</tr>
 										<tr>
 											<th>교육정원</th>
 											<td>25명</td>
 											<th>문의</th>
 											<td>
-												02-3486-3456<br/>
-												임지훈 선임 : <a class="email" href="mailto:acidstar@bit.kr">acidstar@bit.kr</a><br/>
-												강인영 사원 : <a class="email" href="mailto:kang.i.y@bit.kr">kang.i.y@bit.kr</a>
+												임지훈 매니저: 02-3486-1248
 											</td>
 										</tr>
 									</tbody>
@@ -125,7 +168,10 @@ Response.CharSet  = "euc-kr" '한글
 						</div>
 
 						<div class="con_wrap1709">
-							<img src="Images/DetailPage_JavaBigData1.png" style="width:720px"/>
+							<h5>과정소개</h5>
+							<p>
+								본 과정은 빅데이터 플랫폼 구축, 분석 기술을 자바 기반의 웹 분야와 융합 하여 하나의 새로운 비즈니스를 개발하는 능력을 배양하여 실무에 적용가능한 프로젝트를 수행하고 JAVA, 빅데이터 분야로 진출을 목적으로 하는 과정입니다. 
+							</p>							
 						</div>
 
 						<!-- con_wrap1709 -->
@@ -152,9 +198,9 @@ Response.CharSet  = "euc-kr" '한글
 Java Programming
 											</td>
 											<td>
-Java 개발환경 구축<br/>
-Java 기본 및 객체지향 프로그래밍 및 패키지 학습<br/>
-컬렉션 프레임워크, 정렬, 검색 알고리즘, Thread I/O 네트워킹
+-Java 개발환경 구축<br/>
+-Java 기본 및 객체지향 프로그래밍 및 패키지 학습<br/>
+-컬렉션 프레임워크, 정렬, 검색 알고리즘, Thread I/O 네트워킹
 											</td>
 										</tr>
 										<tr>
@@ -162,17 +208,17 @@ Java 기본 및 객체지향 프로그래밍 및 패키지 학습<br/>
 Java Web Programming
 											</td>
 											<td>
-환경설정<br/>
-JSP 구성요소<br/>
-JSP 지시문<br/>
-폼처리와 파일 업로드<br/>
-JSP 기본객체<br/>
-포워딩<br/>
-에러처리<br/>
-세션쿠키<br/>
-자바빈<br/>
-JDBC<br/>
-jQuery
+-환경설정<br/>
+-JSP 구성요소<br/>
+-JSP 지시문<br/>
+-폼처리와 파일 업로드<br/>
+-JSP 기본객체<br/>
+-포워딩<br/>
+-에러처리<br/>
+-세션쿠키<br/>
+-자바빈<br/>
+-JDBC<br/>
+-jQuery 
 
 											</td>
 										</tr>
@@ -181,13 +227,13 @@ jQuery
 Linux Admin
 											</td>
 											<td>
-리눅스 설치<br/>
-커널 컴파일 &amp; 리눅스 시스템<br/>
-리눅스 기본 명령어<br/>
-디렉토리 및 파일구조의 이해<br/>
-리눅스 쉘 소개<br/>
-VIM 에디터<br/>
-쉘 프로그래밍
+-리눅스 설치<br/>
+-커널 컴파일 & 리눅스 시스템<br/>
+-리눅스 기본 명령어<br/>
+-디렉토리 및 파일구조의 이해<br/>
+-리눅스 쉘 소개<br/>
+-VIM 에디터<br/>
+-쉘 프로그래밍 
 											</td>
 										</tr>
 										<tr>
@@ -195,26 +241,25 @@ VIM 에디터<br/>
 DBMS
 											</td>
 											<td>
-데이터베이스 개념과 오라클 설치<br/>
-SQL의 기본<br/>
-SQL Plus 명령어<br/>
-Select로 특정데이터 추출하기<br/>
-SQL 주요함수<br/>
-그룹함수<br/>
-조인<br/>
-서브쿼리<br/>
-테이블 구조 생성, 변경 및 삭제하는 DDL<br/>
-테이블의 내용추가, 수정, 삭제하는 DDL
-											</td>
+-데이터베이스 개념과 오라클 설치<br/>
+-SQL의 기본<br/>
+-SQL Plus 명령어<br/>
+-Select로 특정데이터 추출하기<br/>
+-SQL 주요함수<br/>
+-그룹함수<br/>
+-조인<br/>
+-서브쿼리<br/>
+-테이블 구조 생성, 변경 및 삭제하는 DDL<br/>
+-테이블의 내용추가, 수정, 삭제하는 DDL 											</td>
 										</tr>
 										<tr>
 											<td scope="row" class="darker c">
-J Unit
+J Unit 
 											</td>
 											<td>
-J Unit 개요<br/>
-테스트 주도 개발<br/>
-Test with J Unit
+-J Unit 개요<br/>
+-테스트 주도 개발<br/>
+-Test with J Unit<br/>
 											</td>
 										</tr>
 										<tr>
@@ -222,9 +267,9 @@ Test with J Unit
 TDD
 											</td>
 											<td>
-TDD 개요<br/>
-TDD 규칙<br/>
-TDD 사이클
+-TDD 개요<br/>
+-TDD 규칙<br/>
+-TDD 사이클
 											</td>
 										</tr>
 										<tr>
@@ -232,11 +277,11 @@ TDD 사이클
 Framework Programming
 											</td>
 											<td>
-Spring Framework의 내부구조와 동작원리<br/>
-Spring Framework을 이용한 설계 및 구현<br/>
-Spring MVC 방식 소개 및 실습<br/>
-iBatis를 이용한 JDBC 프로그래밍 및 iBatis 고급기법인 Caching,<br/>
-Grouping, ORM을 학습
+-Spring Framework의 내부구조와 동작원리<br/>
+-Spring Framework을 이용한 설계 및 구현<br/>
+-Spring MVC 방식 소개 및 실습<br/>
+-iBatis를 이용한 JDBC 프로그래밍 및 iBatis 고급기법인 Caching<br/>
+-Grouping, ORM을 학습
 											</td>
 										</tr>
 										<tr>
@@ -244,9 +289,9 @@ Grouping, ORM을 학습
 UML
 											</td>
 											<td>
-UML기본 개념 습득, 객체지향의 특성, UML 구성요소 학습<br/>
-클래스에 대한 기본 특성과 코드, 클래스 추출법 학습<br/>
-다이어그램의 종류와 각 다이어그램 변환에 대한 예시 학습 및 응용
+-UML기본 개념 습득, 객체지향의 특성, UML 구성요소 학습<br/>
+-클래스에 대한 기본 특성과 코드, 클래스 추출법 학습<br/>
+-다이어그램의 종류와 각 다이어그램 변환에 대한 예시 학습 및 응용
 											</td>
 										</tr>
 										<tr>
@@ -254,13 +299,13 @@ UML기본 개념 습득, 객체지향의 특성, UML 구성요소 학습<br/>
 Bigdata Programming 1
 											</td>
 											<td>
-통계의 이해<br/>
-함수 및 객체의 사용<br/>
-패키지<br/>
-외부 데이터 받기<br/>
-NoSQL 종류와 특징<br/>
-논리적 구조와 물리적 구조<br/>
-MongoDB를 위한 Data modeling
+-통계의 이해<br/>
+-함수 및 객체의 사용<br/>
+-패키지<br/>
+-외부 데이터 받기<br/>
+-NoSQL 종류와 특징<br/>
+-논리적 구조와 물리적 구조<br/>
+-MongoDB를 위한 Data modeling 
 											</td>
 										</tr>
 										<tr>
@@ -268,27 +313,27 @@ MongoDB를 위한 Data modeling
 Bigdata Programming 2
 											</td>
 											<td>
-빅데이터란?<br/>
-빅데이터의 예<br/>
-빅데이터 시스템의 구성<br/>
-Apache Hadoop의 특징<br/>
-Apache Architecture<br/>
-HDFS 개요<br/>
-MapReduce 프레임워크<br/>
-입출력 포맷<br/>
-Python Script<br/>
-Pig Programming
+-빅데이터란?<br/>
+-빅데이터의 예<br/>
+-빅데이터 시스템의 구성<br/>
+-Apache Hadoop의 특징<br/>
+-Apache Architecture<br/>
+-HDFS 개요<br/>
+-MapReduce 프레임워크<br/>
+-입출력 포맷<br/>
+-Python Script<br/>
+-Pig Programming 
 											</td>
 										</tr>
 										<tr>
 											<td scope="row" class="darker c">
-프로젝트
+Team Project
 											</td>
 											<td>
-프로젝트 주제 선정<br/>
-프로젝트 수행방법론<br/>
-프로젝트 수행<br/>
-프로젝트 관리 기법
+-지금까지 배운 모든 기술을 통해서 실무 현업에 맞는 프로젝트로 개발해 보는 단계로 4인 내외로 팀을 구성<br/>
+-최신 프로젝트 주제를 선정하여 3개월 동안 팀원의 역할분담 및 상호 협조 하에 프로젝트 수행하며, 주제 선정<br/> 
+-관련된 자료 수집, 필요기술 학습, 명세확정, 일정 수립, 개발환경구축 등 개발, 통합테스트 등을 거쳐 개발을 완료<br/>
+-외부업체 관계자들의 참관 하에 최종 전시회를 갖도록 한다.  
 											</td>
 										</tr>
 									</tbody>
@@ -299,15 +344,49 @@ Pig Programming
 						<!-- con_wrap1709 -->
 						
 						<div class="con_wrap1709">
-							<img src="Images/DetailPage_JavaBigData2.jpg" style="width:720px"/>
-							<img src="Images/DetailPage_JavaBigData3.png" style="width:720px"/>
+							<h5>교육특전/혜택</h5>
+							<p>
+								1. 교육비 무료 <br/>
+  								2. 훈련수당 지원 ( 약 30만원/월 ) <br/>
+  								3. 취업지원프로그램 제공
+							</p>							
 						</div>
 
-
-						<div class="con_wrap1709 dnone">
-							<!--<img src="Images/Course_Kukka_RaspberryPiIoTService.png" style="width:720px"/>-->
-							<img src="Images/DetailPage_국가기간_빅데이터.png" style="width:720px"/>
+						<div class="con_wrap1709 ">
+							<h5>수강대상 및 신청방법</h5>
+								
+							<p>
+								<b>-수강대상</b><br>								
+								 Java, 빅데이이터 분야에 관심있는 미취업자, 졸업예정자, 내일배움카드 발급 가능자
+							</p>
+							<br><br>
+							<p>
+								<b>-신청방법</b><br>								
+								1. 비트교육센터 회원가입 → 온라인 신청 → 레벨테스트 및 면담<br>
+   								2. 주거지관할 고용센터 방문 후, 내일배움카드 신청
+							</p>
+							
 						</div>
+						<br><br>	
+						<!-- con_wrap1709 -->
+
+						<div class="con_wrap1709">
+							<img src="Images/proce.png" style="width:630px"/><br><br>
+						</div>
+
+						
+						<div class="con_wrap1709" style="display: table; margin-left: auto; margin-right: auto;">
+							<a href="https://pf.kakao.com/_SmhqV"  title="카카오톡 상담신청" style="float:right; margin:12px 0px 12px 12px;">
+								<img src="/Images/Btns/btn_Kakao.png"/>
+							</a>
+
+							<a href="/Register/Request/register_kukka1.asp?app_CourseID=KUKA18_ED"  title="수강신청" style="float:right; margin:12px 0;">
+								<img src="/Images/Btns/btn_ApplyCourse.png"/>
+							</a>
+						</div>
+						<!---
+						<br><br>
+
 
 					</section>
 				</div>

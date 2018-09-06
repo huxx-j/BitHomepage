@@ -3,9 +3,8 @@
 
 <%!
 String CourseID = "JAVA_core";
-String SubjectName = "[주중반] JAVA 프로그래밍";
+String SubjectName = "JAVA 프로그래밍";
 //SubjectName = "JAVA 프로그래밍"
-
 %>
 <!DOCTYPE html>
 <!-- REDIRECTABLE TO MOBILE -->
@@ -28,9 +27,7 @@ String SubjectName = "[주중반] JAVA 프로그래밍";
 	<c:import url="/WEB-INF/views/Include/HeaderScript1709.jsp"/>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			/* <!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"--> */
 			 <c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
-			 /* <!--#include virtual="/Include/HeaderScriptReady1709.inc"--> */
 			 <c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
 			
 			/********************* 고용보험환급 div, btn 관련. *******************************************************/
@@ -78,8 +75,8 @@ String SubjectName = "[주중반] JAVA 프로그래밍";
 			})
 */
 			//$(".snb_1709 a.newdepth1").eq(4).addClass("on");								// Java Programming ON
-			ajaxLoad('#TabCon', '', '/Common/Tab/Language_SupportInfo_01.asp');
-			ajaxLoad('#TabCon2', '', '/Common/Tab/Language_SupportInfo_02.asp');
+			ajaxLoad('#TabCon', '', '/common/tab/Language_SupportInfo_01.asp');
+			ajaxLoad('#TabCon2', '', '/common/tab/Language_SupportInfo_02.asp');
 			//elm_xPos = $(".btn_refundView").offset().left + $(".btn_refundView").width()/2;
 			//elm_xPos2 = $(".btn_refundView2").offset().left + $(".btn_refundView2").width()/2;
 
@@ -139,9 +136,8 @@ String SubjectName = "[주중반] JAVA 프로그래밍";
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>Programming
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>[서울]비트교육센터
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>Java 프로그래밍
-							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>주중반
 						</p>
-						<h4>[주중반] JAVA 프로그래밍</h4>
+						<h4>JAVA 프로그래밍</h4>
 					</div>
 					<section class="section">
 						<!-- con_wrap1709 -->
@@ -195,7 +191,11 @@ String SubjectName = "[주중반] JAVA 프로그래밍";
 									</tbody>
 								</table> 
 								<!-- 수강신청btn -->
-								<a href="/register/request/register_shortCourse.asp<%-- ?cID=<%=CourseID%> --%>" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
+								<a href="https://pf.kakao.com/_SmhqV" title="카카오톡 상담신청" style="float:right; margin:12px 5px;" class="btnApply">
+									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Kakao.png"/>
+								</a>
+								
+								<a href="/register/request/register_shortCourse.asp?cID=<%=CourseID%>" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
 								</a>
 								<div style="clear;both; height:10px;"></div>
@@ -383,7 +383,7 @@ String SubjectName = "[주중반] JAVA 프로그래밍";
 								
 								<div style="text-align:center;">
 									<a href="${pageContext.request.contextPath}/assets/Upload/company2.zip" class="btnBlueBorder" style="margin:10px auto;">사업주 위탁훈련 신청서류 다운로드</a>
-									<p style="font-size:1em !important; margin-top:-10px; margin-bottom:10px; ">※ 신청서류 작성 후 kang.i.y@bit.kr로 보내주시기 바랍니다.</p>
+									<p style="font-size:1em !important; margin-top:-10px; margin-bottom:10px; ">※ 신청서류 작성 후 gwang@bit.kr로 보내주시기 바랍니다.</p>
 								</div>
 								
 								<div class="divTable">
@@ -456,7 +456,7 @@ String SubjectName = "[주중반] JAVA 프로그래밍";
 								
 								<div style="text-align:center;">
 									<a href="${pageContext.request.contextPath}/assets/Upload/employ2.zip" class="btnBlueBorder" style="margin:10px auto;">근로자 직무능력향상지원 신청서류 다운로드</a>
-									<p style="font-size:1em !important; margin-top:-10px; margin-bottom:10px; ">※ 신청서류 작성 후 kang.i.y@bit.kr로 보내주시기 바랍니다.</p>
+									<p style="font-size:1em !important; margin-top:-10px; margin-bottom:10px; ">※ 신청서류 작성 후 gwang@bit.kr로 보내주시기 바랍니다.</p>
 								</div>
 								<div class="divTable">
 									<table>

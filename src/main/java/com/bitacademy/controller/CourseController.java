@@ -138,9 +138,15 @@ public class CourseController {
     }
     @RequestMapping(value = "kukka/Course_Support", method = RequestMethod.GET)
     public String Course_Support() {
-    	System.out.println("국비지원 컨트롤러 옴");
         return "course/kukka/Course_Support";
+        
     }
+    @RequestMapping(value = "kukka/Course_Kukka_EmbeddedService_2018", method = RequestMethod.GET)
+    public String Course_Kukka_EmbeddedService_2018() {
+        return "course/kukka/Course_Kukka_EmbeddedService_2018";
+        
+    }
+    
     
 
     @ResponseBody

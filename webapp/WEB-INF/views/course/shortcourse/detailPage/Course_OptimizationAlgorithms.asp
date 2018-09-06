@@ -112,6 +112,9 @@ SubjectName = "최적화 알고리즘을 통한 SW개발 역량 강화"
 									</tbody>
 								</table>
 								<!-- 수강신청btn -->
+								<a href="https://pf.kakao.com/_SmhqV" title="카카오톡 상담신청" style="float:right; margin:12px 5px;" class="btnApply">
+									<img src="/Images/Btns/btn_Kakao.png"/>
+								</a>
 								<a href="/Register/Request/register_shortCourse.asp?cID=<%=CourseID%>" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
 									<img src="/Images/Btns/btn_ApplyCourse.png"/>
 								</a>

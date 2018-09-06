@@ -1,40 +1,44 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%-- <%
+Session.CodePage  = 949 '한글
+Response.CharSet  = "euc-kr" '한글
+%> --%>
 
-<%!
-//(DEPRECATED) SubjectName = "[주중반] C 프로그래밍"
-String SubjectName = "C Master (C 프로그래밍 + 자료구조)";
+<%
+//(DEPRECATED) SubjectName = "C 프로그래밍"
+String SubjectName = "C 프로그래밍";
 String CourseID = "C2_core";
 //CourseID = "cVacation"
-//C Programming
+// C Programming
 %>
 
 <!DOCTYPE html>
 <!-- NOT REDIRECTABLE to Mobile -->
 <html lang="ko">
-<head>
 <link rel= "shortcut icon" href="${pageContext.request.contextPath}/assets/Images/favicon.ico">
+<head>
 	<!-- #include virtual="/Include/Meta.asp"-->
 	<c:import url="/WEB-INF/views/Include/Meta.jsp"/>
 	<title>비트교육센터</title>
 	<!--#include virtual="/Include/config.asp"--> <!-- 4[CourseReview] (pre2) -->
-	<%-- <c:import url="/WEB-INF/views/Include/config.jsp"/> --%>
+	
 	<!-- #include virtual="/Include/ContentStyle.asp"-->
 	<c:import url="/WEB-INF/views/Include/contentStyle.jsp"/>
 	<!-- #include virtual="/Include/Script.asp"-->
 	<c:import url="/WEB-INF/views/Include/Script.jsp"/>
-	
+
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<!-- .btn_refundView 및 .btn_refundView2는 /JS/Common.js 에 이벤트핸들러 정의 -->
 	<script src="Common_getIndex.js"></script>
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/common_css/Common_CSS_Detail_720_1709.css" >
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/common_css/Common_CSS_Detail_720plus_1709.css" >
 	<!-- #include virtual="/Include/HeaderScript1709.asp"-->
 	<c:import url="/WEB-INF/views/Include/HeaderScript1709.jsp"/>
+	
 	<script type="text/javascript">
 		$(document).ready(function(){
-			/* <!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"--> */
 			 <c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
-			 /* <!--#include virtual="/Include/HeaderScriptReady1709.inc"--> */
 			 <c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
 			
 			/********************* 고용보험환급 div, btn 관련. *******************************************************/
@@ -109,7 +113,9 @@ String CourseID = "C2_core";
 
 <body>
 	<div id="Wrapper">
+		<!-- Header_Wrap -->
 		<c:import url="/WEB-INF/views/Include/HeaderHTML1709.jsp"/>
+		<!-- //Header_Wrap -->
 		<hr>
 		<div id="Container_Wrap">
 			<!-- Content_Wrap -->
@@ -153,7 +159,6 @@ String CourseID = "C2_core";
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>Programming
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>[서울]비트교육센터
 							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>C Master
-							<img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>주중반
 						</p>
 						<h4>C Master (C 프로그래밍 + 자료구조)</h4>
 					</div>
@@ -213,9 +218,11 @@ String CourseID = "C2_core";
 								<a href="https://pf.kakao.com/_SmhqV" title="카카오톡 상담신청" style="float:right; margin:12px 5px;" class="btnApply">
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Kakao.png"/>
 								</a>
+								
 								<a href="/register/request/register_shortCourse.asp?cID=<%=CourseID%>" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
 								</a>
+								
 								<div style="clear;both; height:10px;"></div>
 																
 							</div>
@@ -224,12 +231,6 @@ String CourseID = "C2_core";
 						<!-- //con_wrap1709 -->
 						<div style="clear:both;"></div>
 
-						<%-- <div class="con_wrap1709 first">
-							<h5>과정로드맵</h5>
-							<img src="${pageContext.request.contextPath}/assets/Images/C-Master.PNG" style="text-align:center; width:100%;"/>
-							<div style="clear;both; height:10px;"></div>
-						</div> --%>
-						
 						<!-- con_wrap1709 -->
 						<div class="con_wrap1709" style="z-index:1;"> <!-- otherwise, 환급내용 자세히보기 div와 z-index problem happens -->
 							<h5>교육소개</h5>
@@ -238,20 +239,10 @@ String CourseID = "C2_core";
 								또한 C++, Java, C#의 기반이 되는 가장 기본언어이며, 하드웨어를 제어하는 임베디드 분야에서 사용되는 언어로 수많은 개발자들이 처음 시작하는 언어입니다.<br>
 								마지막으로 본 교육과정을 통해서 BCCPM(BIT Certified C Programming Master) 자격증 시험에 응시하여 취득 할 수 있습니다.
 							</p>
-								
 						</div>
 						<!-- //con_wrap1709 -->
 
 						<!-- con_wrap1709 -->
-						<!-- <div class="con_wrap1709">
-							<h5>교육목표</h5>
-							<ul class="ul_dot_gray">
-								<li>기본 문법에서 고급 프로그래밍까지 단기간에 습득</li>
-								<li>기본 프로그래밍 지식을 토대로 한 체계적인 학습 </li>
-								<li>실습을 통한 효율적 프로그래밍 구현 능력 향상</li>
-							</ul>
-						</div> -->
-						<!-- //con_wrap1709 -->
 						<div class="con_wrap1709">
 							<h5>학습목표</h5>
 							<ul class="ul_dot_gray">
@@ -261,6 +252,8 @@ String CourseID = "C2_core";
 								<li>비트가 인증하는 C 프로그래밍 자격증을 취득할 수 있다</li>
 							</ul>
 						</div>
+						<!-- //con_wrap1709 -->
+
 						<!-- con_wrap1709 -->
 						<div class="con_wrap1709">
 							<h5>교육대상</h5>
@@ -271,37 +264,42 @@ String CourseID = "C2_core";
 								<li>BCCPM (BIT Certified C Programming Master) 자격증 취득하고자 하는 분</li>
 							</ul>
 						</div>
-						<!-- //con_wrap1709 -->
+						
+						<!-- con_wrap1709 -->
 						<div class="con_wrap1709">
 							<h5>교육기간</h5>
 							1개월 (20일 / 월요일 ~ 금요일)
 						</div>
+						
 						<div class="con_wrap1709">
 							<h5>교육시간</h5>
 							19:00 ~ 22:00 (3시간 / 총 60시간)
 						</div>
+						
 						<div class="con_wrap1709">
 							<h5>교육비</h5>
 							900,000원
 						</div>
+						
 						<div class="con_wrap1709">
-							<div style="width: 180px; float: left;">
+							<div style="float:left; width:180px;">
 								<h5>참고서적 제공</h5>
-								<img style="border: 1px solid rgb(86, 86, 86); border-image: none; width: 160px; margin-left: 15px;" src="${pageContext.request.contextPath}/assets/Images/열혈C프로그래밍.png">
+								<img src="${pageContext.request.contextPath}/assets/Images/열혈C프로그래밍.png" style="margin-left:15px; width:160px;  border:solid 1px #565656;"/>
 							</div>
-							<div style="width: 250px; margin-top: 27px; margin-left: 15px; float: left;">
-								<p style="margin-top: 239px;">
-									'윤성우의 열혈 C 프로그래밍' <br>윤성우 저 / 오렌지미디어
+							<div style="float:left; width:250px; margin-top:27px; margin-left:15px;">
+								<p style="margin-top:239px;">
+									'윤성우의 열혈 C 프로그래밍' <Br/>윤성우 저 / 오렌지미디어
 								</p>
 							</div>
-							<div style="clear: both;"></div>
+							<div style="clear:both;"></div>
 						</div>
-						<!-- con_wrap1709 -->
+						<!-- //con_wrap1709 -->
+
 						<div class="con_wrap1709 divTable">
 							<h5>2018년 일정</h5>
 							
 							<div class="divTable">
-								<table style="box-shadow: none !important;">
+								<table style="box-shadow:none !important;">
 									<colgroup>
 										<col style="">
 										<col style="">
@@ -333,6 +331,8 @@ String CourseID = "C2_core";
 							
 							
 						</div>
+						
+						<!-- con_wrap1709 -->
 						<!--
 						<div class="con_wrap1709">
 							<div style="float:left; width:180px;">
@@ -353,44 +353,44 @@ String CourseID = "C2_core";
 						<div class="con_wrap1709 ">
 							<h5>교육내용</h5>
 							<div class="divTable">
-								<table style="width: 100%;">
+								<table style="width:100%;">
 									<colgroup>
-										<col style="width: 13%;">
-										<col style="width: 50%;">
+										<col style="width:13%">
+										<col style="width:50%">
 									</colgroup>
 									<thead>
 										<tr>
-											<th class="c" scope="col">교육일정</th>
-											<th class="c" scope="col">교육내용</th>
+											<th scope="col" class="c">교육일정</th>
+											<th scope="col" class="c">교육내용</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-											<td class="c darker" scope="row">1주(15H)</td>
+											<td scope="row" class="c darker">1주(15H)</td>
 											<td>
 												Introduction to C Language, Types, Operators and Expressions, Control Flow, 실습
 											</td>
 										</tr>
 										<tr>
-											<td class="c darker" scope="row">2주(15H)</td>
+											<td scope="row" class="c darker">2주(15H)</td>
 											<td>
 												Functions and Program Structures, Pointers and Arrays, 실습
 											</td>
 										</tr>
 										<tr>
-											<td class="c darker" scope="row">3주(15H)</td>
+											<td scope="row" class="c darker">3주(15H)</td>
 											<td>
 												Structures, Mini Project, Input and Output, Interface to Unix System, 실습
 											</td>
 										</tr>
 										<tr>
-											<td class="c darker" scope="row">4주(14H)</td>
+											<td scope="row" class="c darker">4주(14H)</td>
 											<td>
 												Stacks and Queues, Linked Lists, Tree, 실습
 											</td>
 										</tr>
 										<tr>
-											<td class="c darker" scope="row">1H</td>
+											<td scope="row" class="c darker">1H</td>
 											<td>
 												BCCPM (BIT Certified C Programming Master) 자격증 시험 
 											</td>
@@ -404,12 +404,12 @@ String CourseID = "C2_core";
 							<div style="float:right; margin-top:18px; font-size:15px;">
 								
 							</div>
-							<div style="clear: both;"></div>
+							<div style="clear:both;"></div>
 
 							<!--<p class="mar_t10"><span class="fb">문의</span> : 02.3486.3456 &nbsp;(bithrd@bit.kr)</p>-->
 						</div>
-						
 						<!-- con_wrap1709 -->
+
 						<!-- con_wrap1709 -->
 						<div class="con_wrap1709" style="z-index:1;"> <!-- otherwise, 환급내용 자세히보기 div와 z-index problem happens -->
 							<h5 style="float:left; font-size: 27px !important;">BCCPM</h5>&nbsp;
@@ -421,9 +421,11 @@ String CourseID = "C2_core";
 							<p>C 프로그래밍을 수강했다면, 비트교육센터가 인증하는 C 프로그래밍 마스터 자격증을 취득해 보세요. </p>
 						</div>
 						<!-- //con_wrap1709 -->
+						
 						<br/>
 						
 						<!-- con_wrap1709 고용보험환급 -->
+						
 						<div class="con_wrap1709">
 							<h5 style="float:left; font-size: 27px !important;">고용보험 환급 안내</h5>
 							<div id="divBtnOpenSaGn2" style="float:left; margin-top:42px; margin-left:7px;"><a href="#" id="btnOpenSaGn2" class="btnBlueBorder">자세히보기</a></div>
@@ -526,9 +528,9 @@ String CourseID = "C2_core";
 						
 						<%-- <%
 						'<div class="btn_wrap c">
-						'	<a href="/register/request/register_shortCourse.asp?cID=C2_core"><img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/></a>
-						'	<!--<a href="/register/request/register_shortCourse.asp?cID=C2_core" class="btn mid green1">수강신청</a>-->
-						'	<!--<a href="/register/request/register_shortCourse.asp?cID=cVacation" class="btn mid green1">지원하기</a>-->
+						'	<a href="/Register/Request/register_shortCourse.asp?cID=C2_core"><img src="/Images/Btns/btn_ApplyCourse.png"/></a>
+						'	<!--<a href="/Register/Request/register_shortCourse.asp?cID=C2_core" class="btn mid green1">수강신청</a>-->
+						'	<!--<a href="/Register/Request/register_shortCourse.asp?cID=cVacation" class="btn mid green1">지원하기</a>-->
 						'</div>
 						%> --%>
 					</section>

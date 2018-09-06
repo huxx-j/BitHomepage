@@ -127,9 +127,8 @@ CourseID = "CP2_core"
 							<img src="/Images/Icons/icn_ArrowTriangleRight.png"/>Programming
 							<img src="/Images/Icons/icn_ArrowTriangleRight.png"/>[서울]비트교육센터
 							<img src="/Images/Icons/icn_ArrowTriangleRight.png"/>C++ 프로그래밍
-							<img src="/Images/Icons/icn_ArrowTriangleRight.png"/>주중반
 						</p>
-						<h4>[주중반] C++ 프로그래밍</h4>
+						<h4>C++ 프로그래밍</h4>
 					</div>
 					<section class="section">
 						<!-- con_wrap1709 -->
@@ -172,11 +171,15 @@ CourseID = "CP2_core"
 											<th>교육정원</th>
 											<td>30명</td>
 											<th>문의</th>
-											<td>02-3486-1780 &nbsp;(<a href="mailto:kang.i.y@bit.kr" class="email">kang.i.y@bit.kr</a>)</td>
+											<td>최광원 070-4166-2491</td>
 										</tr>
 									</tbody>
 								</table> 
 								<!-- 수강신청btn -->
+								<a href="https://pf.kakao.com/_SmhqV" title="카카오톡 상담신청" style="float:right; margin:12px 5px;" class="btnApply">
+									<img src="/Images/Btns/btn_Kakao.png"/>
+								</a>
+								
 								<a href="/Register/Request/register_shortCourse.asp?cID=<%=CourseID%>" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
 									<img src="/Images/Btns/btn_ApplyCourse.png"/>
 								</a>

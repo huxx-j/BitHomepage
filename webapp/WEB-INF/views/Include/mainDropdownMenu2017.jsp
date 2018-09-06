@@ -1,4 +1,9 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%-- <%
+Session.CodePage  = 949 '한글
+Response.CharSet  = "euc-kr" '한글
+%> --%>
 		<!-- main dropdown menu -->
 			<style>
 				.mainDropdownMenu.depth0 { z-index:30; }
@@ -32,14 +37,14 @@
 				.mainDropdownMenu.depth0.no5 .depth2.no3 { min-width:145px; }
 				.mainDropdownMenu.depth0.no5 .depth2.no4 { min-width:145px; }
 				.mainDropdownMenu.depth0.no6 { min-width:124px; }
-
+				
 				.mainDropdownMenu.depth0.no1 { left:0px; }
 				.mainDropdownMenu.depth0.no2 { left:119px; }
 				.mainDropdownMenu.depth0.no3 { left:237px; }
 				.mainDropdownMenu.depth0.no4 { left:362px; }
 				.mainDropdownMenu.depth0.no5 { left:482px; }
 				/*.mainDropdownMenu.depth0.no6 { left:535px; }*/
-
+				
 				.mainDropdownMenu {
 					display:none;
 					font-size:15px;
@@ -59,10 +64,10 @@
 					border-bottom:1px solid #a5a5a4;
 					*/
 				} /* top:142px; top:-20px;*/
-
+				
 				.mainDropdownMenu.depth1 {
 					position:relative;
-				}
+				} 
 				.mainDropdownMenu.depth2 {
 					position:relative;
 					left:-1px;
@@ -73,13 +78,13 @@
 					left:-1px;
 					top:0px;
 				}
-
+				
 				.mainDropdownMenu .divTop1 {
 					height:8px;
 				}
 				.mainDropdownMenu .divTop2 {
 					height:8px;
-				}
+				} 
 				.mainDropdownMenu .divBlank {
 					padding-left:15px;
 					padding-right:15px;
@@ -94,14 +99,14 @@
 					cursor:pointer;
 				}
 				.mainDropdownMenu .divMiddle .divMiddleInner {
-					margin-left:15px;
+					margin-left:15px; 
 				}
 				.mainDropdownMenu .divMiddle .divMiddleInner.on {
 					/* background-color:#1b499b; */
 					background:#1b499b url('${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowRightOnBlue.png') no-repeat 208px 9px;
-					color:#ffffff !important;
+					color:#ffffff !important;				
 				}
-
+				
 
 				.mainDropdownMenu.depth2 .divMiddle .divMiddleInner.on { /* all the depth2 */
 					background:#1b499b;
@@ -119,21 +124,21 @@
 					background:#1b499b;
 				}
 				.mainDropdownMenu.depth0.no1 .depth2.no1 .divMiddle .divMiddleInner.on { /* 단기핵심과정(Programming)-서울,대전,... */
-					background:#1b499b url('${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowRightOnBlue.png') no-repeat 170px 7px;
+					background:#1b499b url('${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowRightOnBlue.png') no-repeat 170px 7px; 
 				}
 				.mainDropdownMenu.depth0.no1 .depth3.no1 .divMiddle .divMiddleInner.on { /* 단기핵심과정(Programming)-서울-Java,... */
-					background:#1b499b url('${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowRightOnBlue.png') no-repeat 160px 7px;
+					background:#1b499b url('${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowRightOnBlue.png') no-repeat 160px 7px; 
 				}
 				.mainDropdownMenu.depth0.no1 .depth1 .divMiddle .divMiddleInner.on { /* 단기핵심과정 - all the depth1 */
-					background:#1b499b url('${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowRightOnBlue.png') no-repeat 198px 7px;
+					background:#1b499b url('${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowRightOnBlue.png') no-repeat 198px 7px; 
 				}
 				.mainDropdownMenu.depth0.no1 .depth2.no1 .divMiddle .divMiddleInner.on { /* 단기핵심과정 - all the depth2.no1 : Programming */
-					background:#1b499b url('${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowRightOnBlue.png') no-repeat 173px 7px;
+					background:#1b499b url('${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowRightOnBlue.png') no-repeat 173px 7px; 
 				}
 				.mainDropdownMenu.depth0.no4 .depth1 .divMiddle .divMiddleInner.on { /* 국비지원무료과정 - all the depth1 */
-					background:#1b499b url('${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowRightOnBlue.png') no-repeat 180px 7px;
+					background:#1b499b url('${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowRightOnBlue.png') no-repeat 180px 7px; 
 				}
-
+				
 				.mainDropdownMenu .divMiddleInner {
 					padding-left:15px;
 					padding-right:15px;
@@ -144,30 +149,30 @@
 					height:56px;
 				}
 				.mainDropdownMenu.depth1 .divMiddle {
-				}
+				} 
 				.mainDropdownMenu.depth2 .divBlank {
-					border-left:1px solid #e5e5e4;
+					border-left:1px solid #e5e5e4; 
 					height:33px;
 				}
 				.mainDropdownMenu.depth2 .divMiddle {
 					/* padding-left:15px; */
-					border-left:1px solid #e5e5e4;
+					border-left:1px solid #e5e5e4; 
 				}
 				.mainDropdownMenu.depth3 .divBlank {
-					border-left:1px solid #e5e5e4;
+					border-left:1px solid #e5e5e4; 
 					height:33px;
 				}
 				.mainDropdownMenu.depth3 .divMiddle {
 					/* padding-left:15px; */
-					border-left:1px solid #e5e5e4;
+					border-left:1px solid #e5e5e4; 
 				}
 				.mainDropdownMenu.depth4 .divBlank {
-					border-left:1px solid #e5e5e4;
+					border-left:1px solid #e5e5e4; 
 					height:33px;
 				}
 				.mainDropdownMenu.depth4 .divMiddle {
 					/* padding-left:15px; */
-					border-left:1px solid #e5e5e4;
+					border-left:1px solid #e5e5e4; 
 				}
 				.mainDropdownMenu .divMiddle.long {
 					letter-spacing:-1px;
@@ -232,7 +237,7 @@
 					<div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
 					<div class="divBottom"></div>
 				</div>
-
+				
 				<!--
 				<div class="mainDropdownMenu depth4 no1 fl">
 					<div class="divTop1"></div>
@@ -246,7 +251,7 @@
 					<div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
 					<div class="divBottom"></div>
 				</div>
-
+				
 				<div class="mainDropdownMenu depth4 no2 fl">
 					<div class="divTop1"></div>
 					<div class="divTop2"></div>
@@ -287,7 +292,7 @@
 					<div class="divMiddle" href="/Course/ShortCourse/DetailPage/Course_algorithmAdvanced.asp">
 						<div class="divMiddleInner" style="letter-spacing:-2px;">[주말반/고급] 문제해결을 위한 알고리즘</div>
 					</div>
-
+					
 					<div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
 					<div class="divBottom"></div>
 				</div>
@@ -521,7 +526,7 @@
 					<div class="divTop1"></div>
 					<div class="divTop2"></div>
 					<div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
-					<div class="divMiddle" href="/course/shortcourse/detailPageCourse_Agile4Developer">
+					<div class="divMiddle" href="/course/shortcourse/detailPage/Course_Agile4Developer">
 						<div class="divMiddleInner" style="width:240px;">Agile 소프트웨어 개발 실무</div>
 					</div>
 					<div class="divMiddle" href="/course/shortcourse/detailPage/Course_ArchitectureBasic">
@@ -686,7 +691,7 @@
 					<div class="divMiddle" href="/course/localCampus/localCampus_Gimhae_introduction">
 						<div class="divMiddleInner" style="width:140px;">김해캠퍼스 소개</div>
 					</div>
-					<div class="divMiddle twolines" href="javascript:alert('준비중입니다.(문의 02-3486-3456)'); // /Course/localCampus/DetailPage/Gimhae_BigData.asp">
+					<div class="divMiddle twolines" href="javascript:alert('준비중입니다.(문의 02-3486-3456)'); // /course/localCampus/DetailPage/Gimhae_BigData">
 						<div class="divMiddleInner twolines" style="width:140px;">빅데이터 엔지니어링 실무적용 고급과정</div>
 					</div>
 					<div class="divBottom"></div>
@@ -694,20 +699,20 @@
 				<!-- // no4 : 김해포캠퍼스(고급과정) -->
 				<div style="clar:both;"></div>
 			</div>
-
+			
 			<!-- depth0 no3 : 전문가과정 -->
 			<div class="mainDropdownMenu depth0 no3" >
 				<!--<img src="Images/Icons/MainPage_Menubar__triangle.png" style="position:relative; top:-13px; left:-50px;"/>-->
 				<div class="mainDropdownMenu depth1 no3 fl" >
 					<div class="divTop1"></div>
 					<div class="divTop2"></div>
-					<div class="divMiddle" href="/course/dxpert/Course_Expert_JavaExpert">
+					<div class="divMiddle" href="/course/expert/Course_Expert_JavaExpert">
 						<div class="divMiddleInner" style="width:180px;">자바 전문가과정</div>
 					</div>
 					<div class="divMiddle" href="javascript:alert('준비중입니다. (문의 02-3486-3456)');">
 						<div class="divMiddleInner" style="width:180px;">윈도우 닷넷 전문가과정</div>
 					</div>
-					<div class="divMiddle" href="/course/dxpert/Course_Expert_Embedded.asp">
+					<div class="divMiddle" href="/course/expert/Course_Expert_Embedded">
 						<div class="divMiddleInner" style="width:180px;">임베디드 시스템 전문가과정</div>
 					</div>
 					<div class="divMiddle" href="javascript:alert('준비중입니다. (문의 02-3486-3456)');">
@@ -717,7 +722,7 @@
 				</div>
 				<div style="clar:both;"></div>
 			</div>
-
+			
 			<!-- depth0 no4 : 국비지원무료과정 -->
 			<div class="mainDropdownMenu depth0 no4" >
 				<!--<img src="Images/Icons/MainPage_Menubar__triangle.png" style="position:relative; top:-13px; left:-93px;"/>-->
@@ -733,7 +738,7 @@
 					<div class="divMiddle"><!-- href="/Course/Employ/Course_Employ.asp">-->
 						<div class="divMiddleInner" style="width:170px;">신입사원 채용교육</div>
 					</div>
-					<div class="dnone divMiddle" href="/Course/Chung/Course_Chung_2018.asp">
+					<div class="dnone divMiddle" href="/course/chung/Course_Chung_2018">
 						<div class="divMiddleInner" style="width:170px; background-image: url();">청년취업아카데미</div>
 					</div>
 					<div class="dnone divMiddle">
@@ -744,7 +749,7 @@
 				<div class="mainDropdownMenu depth2 no1 fl dnone">
 					<div class="divTop1"></div>
 					<div class="divTop2"></div>
-					<div class="divMiddle long" href="/course/Industry4.0/Course_Industry40_FinTech_Expert">
+					<div class="divMiddle long" href="/course/industry4.0/Course_Industry40_FinTech_Expert">
 						<div class="divMiddleInner" style="width:220px;">AI기반 핀테크 융합 전문가과정</div>
 					</div>
 					<div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div><div class="divBlank"></div>
@@ -776,7 +781,7 @@
 					<div class="divMiddle long twolines" href="/course/kukka/Course_Kukka_EmbeddedService_2018">
             					<div class="divMiddleInner twolines" style="width:200px;">임베디드기반 IoT SW개발 고급인력양성 과정</div>
         				</div>
-
+					
 					<!--
 					<div class="divMiddle long twolines" href="/Course/Kukka/Course_Kukka_Fintech_2018.asp">
 						<div class="divMiddleInner twolines" style="width:200px;">금융 IT기반 핀테크융합 전문가<br/> 양성과정</div>
@@ -785,34 +790,6 @@
 					<div class="divMiddle long twolines" href="/course/kukka/Course_Kukka_JavaBigData_2018">
 						<div class="divMiddleInner twolines" style="width:200px;">JAVA 기반 빅데이터 분석을 위한 <br/>고급인력 양성과정</div>
 					</div>
-    <div class="mainDropdownMenu depth2 no2 fl">
-        <div class="divTop1"></div>
-        <div class="divTop2"></div>
-        <!--
-        <div style="DISPLAY:NONE;" class="divMiddle  " href="/Course/Kukka/Course_Kukka_Projects2070929.asp">
-            <div class="divMiddleInner" style="width:200px;">프로젝트 발표회</div>
-        </div>
-        -->
-        <div class="divMiddle  " href="/course/kukka/Course_Kukka_Introduction">
-            <div class="divMiddleInner" style="width:200px;">국가기간전략산업직종훈련 소개</div>
-        </div>
-        <div class="divMiddle long twolines" href="/course/kukka/Course_Kukka_RaspberryPiIoTService_2018">
-            <div class="divMiddleInner twolines" style="width:200px;">IoT를 활용한 자바 웹&amp;모바일 고급인력 양성과정</div>
-        </div>
-
-        <div class="dnone divMiddle long twolines" href="/course/kukka/Course_Kukka_EmbeddedService_2018">
-            <div class="divMiddleInner twolines" style="width:200px;">IoT Software개발 고급인력 양성과정</div>
-        </div>
-
-        <div class="dnone divMiddle long twolines" href="/course/kukka/Course_Kukka_FinTech_2018">
-            <div class="divMiddleInner twolines" style="width:200px;">금융 IT기반 핀테크 전문가<br/> 양성과정</div>
-        </div>
-        <div class="divMiddle long twolines" href="/course/kukka/Course_Kukka_JavaBigData_2018">
-            <div class="divMiddleInner twolines" style="width:200px;">JAVA 기반 빅데이터 분석을 위한 <br/>고급인력 양성과정</div>
-        </div>
-        <div class="divMiddle long twolines" href="/course/kukka/Course_Kukka_Fintech_2018">
-            <div class="divMiddleInner twolines" style="width:200px;">금융IT기반 핀테크융합 전문가 양성과정 <br/>고급인력 양성과정</div>
-        </div>
 
 					<!--
 					<div class="divMiddle long twolines" href="/Course/Kukka/Course_Kukka_AWSCloudWeb_2018.asp">
@@ -906,6 +883,7 @@
 				</div>
 				<div style="clar:both;"></div>
 			</div>
-
+			
 			<div style="clar:both;"></div>
 			<!--//main dropdown menu -->
+			
