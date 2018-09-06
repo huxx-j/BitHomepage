@@ -38,16 +38,32 @@ public class UserVo {
     private String acquireYear;
     private String acquireMon;
     private String liceName;
-    private String licence_no;
+    private String license_no;
     private String userCareer_no;
     private String userTraining_no;
 
-    public String getLicence_no() {
-        return licence_no;
+    public String getUserCareer_no() {
+        return userCareer_no;
     }
 
-    public void setLicence_no(String licence_no) {
-        this.licence_no = licence_no;
+    public void setUserCareer_no(String userCareer_no) {
+        this.userCareer_no = userCareer_no;
+    }
+
+    public String getUserTraining_no() {
+        return userTraining_no;
+    }
+
+    public void setUserTraining_no(String userTraining_no) {
+        this.userTraining_no = userTraining_no;
+    }
+
+    public String getlicense_no() {
+        return license_no;
+    }
+
+    public void setlicense_no(String license_no) {
+        this.license_no = license_no;
     }
 
     public String getLiceName() {

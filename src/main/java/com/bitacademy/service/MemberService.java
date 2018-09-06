@@ -157,9 +157,10 @@ public class MemberService {
             userModVo.setSchoolArray(sArray);
             // 2. end
         }
-        if (list.size()<4) {
+        int size = list.size();
+        if (size<4) {
             UserModVo dummyVo = new UserModVo();
-            for (int i = 0; i<=(4-list.size()); i++){
+            for (int i = 0; i<(4-size); i++){
                 list.add(dummyVo);
             }
         }

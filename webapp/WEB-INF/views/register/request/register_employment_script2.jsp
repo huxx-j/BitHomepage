@@ -5,40 +5,45 @@
 
         function submit_it(nextProc)
         {
-            if(ExpertApp.Motivetext.value.length<2)
-            {
+            if(form2.Motivetext.value.length<2) {
                 alert("지원동기를 입력하여 주십시요")
-                ExpertApp.Motivetext.focus();
+                form2.Motivetext.focus();
                 return;
             }
 
+            if(form2.hopetext.value.length<2) {
+                alert("수료 후 계획을 입력하여 주십시요")
+                form2.hopetext.focus();
+                return;
+            }
 
-            if(ExpertApp.Studytext.value.length<2)
-            {
+            if(form2.Studytext.value.length<2) {
                 alert("학습내용을 입력하여 주십시요")
-                ExpertApp.Studytext.focus();
+                form2.Studytext.focus();
                 return;
             }
 
-            str="";
-            if(ExpertApp.Newchkbox0.checked==true || ExpertApp.Newchkbox1.checked==true){
-                str=str+"Y";
-            }
-            if(ExpertApp.Magchkbox0.checked==true || ExpertApp.Magchkbox1.checked==true){
-                str=str+"Y";
-            }
-            if(ExpertApp.Etcchkbox0.checked==true || ExpertApp.Etcchkbox1.checked==true || ExpertApp.Etcchkbox2.checked==true || ExpertApp.Etcchkbox3.checked==true || ExpertApp.Etcchkbox4.checked==true || ExpertApp.Etcchkbox5.checked==true){
-                str=str+"Y";
-            }
-
-            if(str=="" && ExpertApp.Name.value=="" && ExpertApp.EtcName.value==""){
-                alert("지원경로를 입력하여 주십시요")
+            if(form2.tooltext.value.length<2) {
+                alert("사용언어/툴을 입력하여 주십시요")
+                form2.tooltext.focus();
                 return;
             }
 
-
-            document.ExpertApp.submit();
-
+            var str1="";
+            var str2="";
+            if($('input:checkbox[name="appWaychkbox"]:checked').length != 0){
+                console.log($('input:checkbox[name="appWaychkbox"]:checked').length);
+                str1="Y";
+            }
+            if(form2.etcText.value.length>2){
+                console.log("2 > "+form2.etcText.value.length);
+                str2="Y";
+            }
+            if(str1=="" && str2==""){
+                alert("지원경로를 입력하여 주십시요");
+                return;
+            }
+            document.form2.submit();
         }
 
     function chknext(obj)

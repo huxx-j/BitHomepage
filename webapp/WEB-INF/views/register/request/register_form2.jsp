@@ -32,6 +32,37 @@
             $(".snb_1709 a.newdepth1").eq(0).addClass("on");								// 신규지원
             $(".snb_1709 .newdepth2_wrap").eq(0).addClass("on");						// 신규지원SUB OPEN
             $(".snb_1709 .newdepth2_wrap.no1 .newdepth2").eq(5).addClass("on");  	// 국가기간전략산업직종 ON
+
+            $.ajax({
+                url: "${pageContext.request.contextPath}/register/getAppWayList",
+                type: "post",
+                data: {"idx": ${idx}},
+                dataType: "json",
+                success: function (wayList) {
+                    $('input:checkbox[name="appWaychkbox"]').each(function () {
+                        for (var i = 0; i < wayList.length; i++){
+                            if (this.value == wayList[i]){
+                                this.checked = true;
+                            }
+                        }
+                    })
+                },
+                error: function (XHR, status, error) {
+                    console.error(status + " : " + error);
+                }
+            });
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth()+1; //January is 0!
+            var yyyy = today.getFullYear();
+            if(dd<10) {
+                dd='0'+dd
+            }
+            if(mm<10) {
+                mm='0'+mm
+            }
+            today = '작성일 : ' + yyyy + ' 년 ' + mm + ' 월 ' + dd + ' 일';
+            $("#today").text(today)
         });
     </script>
     <style>
@@ -45,9 +76,11 @@
     <c:import url="/WEB-INF/views/Include/Script_MoBon_1803.jsp"/>
 </head>
 <body onLoad="MM_preloadImages('/image/register/menu_06_01.gif','/image/register/menu_07_01.gif','/image/register/menu_08_01.gif','/image/register/menu_09_01.gif','/image/register/menu_01_01.gif','/image/register/menu_02_01.gif','/image/register/menu_03_01.gif','/image/register/menu_04_01.gif','/image/register/menu_05_01.gif');SelectSubject();">
-<form name="ExpertApp" method="POST" action="${pageContext.request.contextPath}/register/request/register_kukka_Insert2">
+<form name="form2" method="POST" action="${pageContext.request.contextPath}/register/request/register_form2_submit">
     <input type="hidden" name="nextProc" value="">
-    <input type="hidden" name="idx" value="<%--<%=idx%>--%>">
+    <input type="hidden" name="idx" value="${idx}">
+    <input type="hidden" name="cID_r" value="${cID}">
+    <input type="hidden" name="user_no" value="${sessionScope.authUser.user_no}">
     <div id="Wrapper">
         <!-- Header_Wrap -->
         <!-- #include virtual = "/Include/HeaderHTML1709.asp"-->
@@ -82,7 +115,7 @@
                                         <th scope="col" class="tit">지원동기</th>
                                     </tr>
                                     <tr>
-                                        <td><textarea onBlur="chklen_motive(this)" name="Motivetext" rows="5" style="width:100%; padding:0; border:0; resize: none"><%--<%=app_AppliMotive%>--%></textarea></td>
+                                        <td><textarea onBlur="chklen_motive(this)" name="Motivetext" rows="5" style="width:100%; padding:0; border:0; resize: none">${vo.motive}</textarea></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -96,12 +129,12 @@
                                     <tbody>
                                     <tr>
                                         <td class="l" colspan="2">
-                                            <input name="hopeChkBox" type="checkbox" value="1" ${hope.hope[0] eq "1" ? "checked" : ""}> 취업
-                                            <input name="hopeChkBox" type="checkbox" value="2" ${hope.hope[1] eq "2" ? "checked" : ""}>해외취업
-                                            <input name="hopeChkBox" type="checkbox" value="3" ${hope.hope[2] eq "3" ? "checked" : ""}>복직혹은 복학
-                                            <input name="hopeChkBox" type="checkbox" value="4" ${hope.hope[3] eq "4" ? "checked" : ""}>대학원진학
-                                            <input name="hopeChkBox" type="checkbox" value="5" ${hope.hope[4] eq "5" ? "checked" : ""}>병역특례
-                                            <input name="hopeChkBox" type="checkbox" value="6" ${hope.hope[5] eq "6" ? "checked" : ""}>기타
+                                            <input name="hopeChkBox" type="checkbox" value="1" ${vo.hope[0] eq "1" ? "checked" : ""}>취업
+                                            <input name="hopeChkBox" type="checkbox" value="2" ${vo.hope[1] eq "2" ? "checked" : ""}>해외취업
+                                            <input name="hopeChkBox" type="checkbox" value="3" ${vo.hope[2] eq "3" ? "checked" : ""}>복직혹은 복학
+                                            <input name="hopeChkBox" type="checkbox" value="4" ${vo.hope[3] eq "4" ? "checked" : ""}>대학원진학
+                                            <input name="hopeChkBox" type="checkbox" value="5" ${vo.hope[4] eq "5" ? "checked" : ""}>병역특례
+                                            <input name="hopeChkBox" type="checkbox" value="6" ${vo.hope[5] eq "6" ? "checked" : ""}>기타
                                         </td>
                                     </tr>
                                     <tr>
@@ -109,7 +142,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <textarea onBlur="chklen_plan(this)" name="hopetext" rows="5" style="width:100%; height:110px; padding:0;border:0; resize: none">${hope.afterPlan}</textarea>
+                                            <textarea onBlur="chklen_plan(this)" name="hopetext" rows="5" style="width:100%; height:110px; padding:0;border:0; resize: none">${vo.afterPlan}</textarea>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -132,7 +165,7 @@
                                     <tbody>
                                     <tr>
                                         <td rowspan="3">
-                                            <textarea onBlur="chklen_study(this)" name="Studytext" rows="5" style="width:100%; height:110px; padding:0;border:0; resize: none;"><%--<%=StudyContent%>--%></textarea>
+                                            <textarea onBlur="chklen_study(this)" name="Studytext" rows="5" style="width:100%; height:110px; padding:0;border:0; resize: none;">${vo.learningContent}</textarea>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -148,14 +181,14 @@
                                         <col width="100%">
                                     </colgroup>
                                     <thead>
-                                    <tr>
-                                        <th style="width:40px;" scope="row" class="tit">사용언어/툴</th>
-                                    </tr>
+                                        <tr>
+                                            <th style="width:40px;" scope="row" class="tit">사용언어/툴</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
                                         <td>
-                                            <textarea onBlur="chklen_study(this)" name="tooltext" rows="5" style="width:100%; height:50px; padding:0;border:0; resize: none;"><%--<%=StudyContent%>--%></textarea>
+                                            <textarea onBlur="chklen_study(this)" name="tooltext" rows="5" style="width:100%; height:50px; padding:0;border:0; resize: none;">${vo.proLang}</textarea>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -171,40 +204,40 @@
                                     <tr>
                                         <th style="width:40px;" scope="row" rowspan="2" class="tit">소개</th>
                                         <td>비트교육센터 수료자</td>
-                                        <td>성명 <input type="text" name="name" value="<%--<%=AppWayCompName%>--%>" maxlength=10 size="8"></td>
-                                        <td>관계 <input type="text" name="relation" size="13" value="<%--<%=AppWayCompRelation%>--%>"></td>
-                                        <td>직업 <input type="text" name="office" size="13" value="<%--<%=AppWayOfficeName%>--%>"></td>
+                                        <td>성명 <input type="text" name="name" value="${vo.applyWayName eq null or vo.applyWayName eq '' ? '' : vo.applyWayName}" maxlength=10 size="8"></td>
+                                        <td>관계 <input type="text" name="relation" size="13" value="${vo.applyWayRelation eq null or vo.applyWayRelation eq '' ? '' : vo.applyWayRelation}"></td>
+                                        <td>직업 <input type="text" name="office" size="13" value="${vo.applyWayJob eq null or vo.applyWayJob eq '' ? '' : vo.applyWayJob}"></td>
                                     </tr>
                                     <tr>
                                         <td>기타</td>
-                                        <td>성명 <input type="text" name="etcName" value="<%--<%=AppWayEtcName%>--%>" size="8"  maxlength="10"></td>
-                                        <td>관계 <input type="text" name="etcRelation" value="<%--<%=AppWayEtcRelation%>--%>" size="13"  maxlength="10"></td>
-                                        <td>직업 <input type="text" name="etcPos" value="<%--<%=AppWayEtcPosition%>--%>" size="13"  maxlength="10"></td>
+                                        <td>성명 <input type="text" name="etcName" value="${vo.applyWayEtcName eq null or vo.applyWayEtcName eq '' ? '' : vo.applyWayEtcName}" size="8"  maxlength="10"></td>
+                                        <td>관계 <input type="text" name="etcRelation" value="${vo.applyWayEtcRelation eq null or vo.applyWayEtcRelation eq '' ? '' : vo.applyWayEtcRelation}" size="13"  maxlength="10"></td>
+                                        <td>직업 <input type="text" name="etcPos" value="${vo.applyWayEtcJob eq null or vo.applyWayEtcJob eq '' ? '' : vo.applyWayEtcJob}" size="13"  maxlength="10"></td>
                                     </tr>
                                     <tr>
                                         <th scope="row" rowspan="2" class="tit">광고</th>
                                         <td colspan="4">
-                                            <input type="checkbox" value='010101' name="appWaychkbox" >비트교육센터 홈페이지 &emsp;
-                                            <input type="checkbox" value='010102' name="appWaychkbox">후견인 제도 &emsp;
-                                            <input type="checkbox" value='010103' name="appWaychkbox">학교 포스터 &emsp;
-                                            <input type="checkbox" value='010104' name="appWaychkbox">노동부 고용센터 &emsp;
-                                            <input type="checkbox" value='010105' name="appWaychkbox">사람인
+                                            <input type="checkbox" value='bit_home' name="appWaychkbox" >비트교육센터 홈페이지 &emsp;
+                                            <input type="checkbox" value='bit_hu' name="appWaychkbox">후견인 제도 &emsp;
+                                            <input type="checkbox" value='sch_post' name="appWaychkbox">학교 포스터 &emsp;
+                                            <input type="checkbox" value='nodongbu' name="appWaychkbox">노동부 고용센터 &emsp;
+                                            <input type="checkbox" value='saramin' name="appWaychkbox">사람인
                                         </td>
                                     </tr>
                                     <tr>
                                         <td colspan="4">
-                                            <input type="checkbox" value='010201' name="appWaychkbox" >Facebook &emsp;
-                                            <input type="checkbox" value='010202' name="appWaychkbox">네이버 지식인 &emsp;
-                                            <input type="checkbox" value='010203' name="appWaychkbox">네이버 키워드 &emsp;
-                                            <input type="checkbox" value='010204' name="appWaychkbox">네이버 블로그 &emsp;
-                                            <input type="checkbox" value='010205' name="appWaychkbox">잡코리아
+                                            <input type="checkbox" value='facebook' name="appWaychkbox" >Facebook &emsp;
+                                            <input type="checkbox" value='naver_in' name="appWaychkbox">네이버 지식인 &emsp;
+                                            <input type="checkbox" value='naver_key' name="appWaychkbox">네이버 키워드 &emsp;
+                                            <input type="checkbox" value='naver_blog' name="appWaychkbox">네이버 블로그 &emsp;
+                                            <input type="checkbox" value='jobkorea' name="appWaychkbox">잡코리아
                                         </td>
                                     </tr>
 
                                     <tr>
                                         <th scope="row" class="tit">기타</th>
                                         <td colspan="4">
-                                            <input type="text" style="width: 100%;"  value='<%--<%=Rs("AdvertiseID")%>--%>' name="etcText<%--<%=i%>--%>" <%--<%IF  Etcchk(i)=Rs("AdvertiseID") then%> Checked <%end if%>--%>><%--<%=Rs("AdvertisementName")%>--%>
+                                            <input type="text" style="width: 100%;"  value="" name="etcText">
                                         </td>
                                     </tr>
                                     </tbody>
@@ -214,8 +247,8 @@
                         <!-- // from /Register/Include/register_info_02.asp -->
 
                         <div class="mar_t20 c">
-                            <p class="fs16">작성일 : <%--<% Response.Write Year(date)&" 년 "&Month(date)&" 월 "&Day(date)&" 일 " %>--%></p>
-                            <p class="fs16">작성자 : <%--<%=TRIM(session("NameHan"))%>--%></p>
+                            <p class="fs16" id="today">작성일 : </p>
+                            <p class="fs16">작성자 : ${sessionScope.authUser.nameHan}</p>
                         </div>
                         <div class="btn_wrap c pd_t30 pd_b30">
                             <a href="javascript:submit_it(1)" title="" class="btnGreenBorder big">지원하기</a>

@@ -107,34 +107,34 @@
 
     function submit_it() {
         var str;
-        if(applyForm.curriculum_no != null && applyForm.curriculum_no.value=="0"){
+        if(applyForm.curriculum_no != null && applyForm.curriculum_no.value=="-"){
             //alert("지원과정(1순위)을 선택하여 주십시요");
             alert("지원과정을 선택하세요.");
             applyForm.curriculum_no.focus();
             return;
         }
 
-        if(applyForm.applyType != null && applyForm.applyType.value=="0"){
+        if(applyForm.applyType != null && applyForm.applyType.value=="-"){
             //alert("지원종류를 선택하여 주십시요");
             alert("지원종류를 선택하세요.");
             applyForm.applyType.focus();
             return;
         }
 
-        if(applyForm.testLang != null && applyForm.testLang.value=="0"){
+        if(applyForm.testLang != null && applyForm.testLang.value=="-"){
             //alert("지원종류를 선택하여 주십시요");
             alert("지원종류를 선택하세요.");
             applyForm.testLang.focus();
             return;
         }
 
-        if(applyForm.startDate != null && applyForm.startDate.value=="0"){
+        if(applyForm.startDate != null && applyForm.startDate.value=="-"){
             //alert("전형일시를 선택하여 주십시요");
             alert("전형일자를 선택하세요.");
             applyForm.startDate.focus();
             return;
         }
-        if(applyForm.testDate != null && applyForm.testDate.value=="0"){
+        if(applyForm.testDate != null && applyForm.testDate.value=="-"){
             //alert("전형일시를 선택하여 주십시요");
             alert("전형일자를 선택하세요.");
             applyForm.startDate.focus();
@@ -162,7 +162,7 @@
             return;
         }
 
-        if(applyForm.Bigo_0 != null && applyForm.Bigo_0.value=="0"){
+        if(applyForm.Bigo_0 != null && applyForm.Bigo_0.value=="-"){
             //alert("학력정보를 확인하여 주십시요")
             alert("학력정보를 확인해주세요.");
             applyForm.Bigo_0.focus();
@@ -193,14 +193,14 @@
 
     <%--function SelectDateCheck()--%>
     <%--{--%>
-    <%--if(document.applyForm.totselectdate.value=='0'){--%>
-    <%--<%	if day(date)<7 then --%>
-    <%--showdate=right(DateAdd("d",+1,date),2)&"일"--%>
-    <%--else--%>
-    <%--showdate=mid(dateadd("m",+1,date),6,2)&"월" --%>
-    <%--end if%>--%>
-    <%--alert(" 다음 전형일시는 <%=showdate%>부터 게시됩니다     ");--%>
-    <%--}--%>
+        <%--if(document.applyForm.totselectdate.value=='0'){--%>
+            <%--<%	if day(date)<7 then --%>
+                    <%--showdate=right(DateAdd("d",+1,date),2)&"일"--%>
+                <%--else--%>
+                    <%--showdate=mid(dateadd("m",+1,date),6,2)&"월" --%>
+                <%--end if%>--%>
+            <%--alert(" 다음 전형일시는 <%=showdate%>부터 게시됩니다     ");--%>
+        <%--}--%>
     <%--}--%>
 
     function SelectSubject() {

@@ -61,9 +61,10 @@ public class RegisterService {
             trainingVo.setStartYear(startYear);
             trainingVo.setStartMon(startMon);
         }
-        if (list.size()<4) {
+        int size = list.size();
+        if (size<4) {
             TrainingVo dummyVo = new TrainingVo();
-            for (int i = 0; i<=(4-list.size()); i++){
+            for (int i = 0; i<(4-size); i++){
                 list.add(dummyVo);
             }
         }
@@ -94,9 +95,10 @@ public class RegisterService {
             careerVo.setStartYear(startYear);
             careerVo.setStartMon(startMon);
         }
-        if (list.size()<4) {
+        int size = list.size();
+        if (size<4) {
             CareerVo dummyVo = new CareerVo();
-            for (int i = 0; i<=(4-list.size()); i++){
+            for (int i = 0; i<(4-size); i++){
                 list.add(dummyVo);
             }
         }
@@ -109,9 +111,10 @@ public class RegisterService {
 
     public List<UserVo> register_form_Licence(int user_no) {
         List<UserVo> list = registerDao.register_form_Licence(user_no);
-        if (list.size()<2) {
+        int size = list.size();
+        if (size<2) {
             UserVo dummyVo = new UserVo();
-            for (int i = 0; i<=(2-list.size()); i++){
+            for (int i = 0; i<(2-size); i++){
                 list.add(dummyVo);
             }
         }
@@ -126,7 +129,7 @@ public class RegisterService {
     }
 
     @Transactional
-    public void register_form_submit(LongApplyVo longApplyVo, String cID) {
+    public int register_form_submit(LongApplyVo longApplyVo, String cID) {
         UserModVo userModVo = new UserModVo();
         if (!cID.equals("presentation")) {
             // 2. 학력등록정보 데이터 조합 및 저장
@@ -220,16 +223,22 @@ public class RegisterService {
                 memberDao.member_school_modify_ok(userModVo);
             }
         }
+        //2. 학력정보 입력
 
         longApplyVo.setcID(cID);
         if (longApplyVo.getHopeExpert() == null || longApplyVo.getHopeExpert().equals("")){
             longApplyVo.setHopeExpert("0");
         }
-        int app_no = registerDao.register_form_submit(longApplyVo); //ApplyInfo Table에 저장하고 Applicant_no를 리턴
+        int app_no = registerDao.register_form_submit(longApplyVo); //ApplyInfo Table에 코스에 대한 기본정보 저장하고 Applicant_no를 리턴
+
+        //여기서부터 문제인듯....
+        System.out.println(cID);
+
         // 학원교육, 직장근무경력, 외국어, 병역, 자격/면허 등록
         if (cID.equals("industry40") || cID.equals("employment") || cID.equals("kuka") || cID.equals("expert") || cID.equals("chung")) {
+            System.out.println("if안");
             registerDao.register_form_submit_user(longApplyVo); //외국어, 병역, 프로젝트내용 저장
-            //자격증 정보 저장
+            //자격증 정보를 Licence table에 저장
             if (longApplyVo.getlName_0() != null && !longApplyVo.getlName_0().equals("") && !longApplyVo.getlName_0().equals(" ")) {
                 longApplyVo.setLicense_no(longApplyVo.getLicense_no_0());
                 longApplyVo.setLiceName(longApplyVo.getlName_0());
@@ -242,7 +251,7 @@ public class RegisterService {
                 longApplyVo.setAcquireDate(longApplyVo.getlDteFr_1()+"-"+longApplyVo.getlDayFr_1());
                 registerDao.register_form_submit_licence(longApplyVo);
             }
-            //학원교육
+            //학원교육을 UserTraining Table에 저장
             if (longApplyVo.getEdName_0() != null && !longApplyVo.getEdName_0().equals("") && !longApplyVo.getEdName_0().equals(" ")) {
                 longApplyVo.setUserTraining_no(longApplyVo.getUserTraining_no_0());
                 longApplyVo.setStartDate(longApplyVo.getEdDteFr_0()+"-"+longApplyVo.getEdDayFr_0());
@@ -279,12 +288,12 @@ public class RegisterService {
                 longApplyVo.setContent(longApplyVo.getEdContents_3());
                 registerDao.register_form_submit_edu(longApplyVo);
             }
-            //직장근무경력
+                //직장근무경력을 UserCareer 테이블에 저장
             if (longApplyVo.getCarrName_0() != null && !longApplyVo.getCarrName_0().equals("") && !longApplyVo.getCarrName_0().equals(" ")) {
                 longApplyVo.setUserCareer_no(longApplyVo.getUserCareer_no_0());
                 longApplyVo.setStartDate(longApplyVo.getCarrDteFr_0()+"-"+longApplyVo.getCarrDayFr_0());
                 longApplyVo.setEndDate(longApplyVo.getCarrDteEnd_0()+"-"+longApplyVo.getCarrDayEnd_0());
-                longApplyVo.setCompName(longApplyVo.getName());
+                longApplyVo.setCompName(longApplyVo.getCarrName_0());
                 longApplyVo.setDevPart(longApplyVo.getCarrOp_0());
                 longApplyVo.setRole(longApplyVo.getCarrDegree_0());
                 longApplyVo.setDepartment(longApplyVo.getCarrDep_0());
@@ -296,7 +305,7 @@ public class RegisterService {
                 longApplyVo.setUserCareer_no(longApplyVo.getUserCareer_no_1());
                 longApplyVo.setStartDate(longApplyVo.getCarrDteFr_1()+"-"+longApplyVo.getCarrDayFr_1());
                 longApplyVo.setEndDate(longApplyVo.getCarrDteEnd_1()+"-"+longApplyVo.getCarrDayEnd_1());
-                longApplyVo.setCompName(longApplyVo.getName());
+                longApplyVo.setCompName(longApplyVo.getCarrName_1());
                 longApplyVo.setDevPart(longApplyVo.getCarrOp_1());
                 longApplyVo.setRole(longApplyVo.getCarrDegree_1());
                 longApplyVo.setDepartment(longApplyVo.getCarrDep_1());
@@ -308,7 +317,7 @@ public class RegisterService {
                 longApplyVo.setUserCareer_no(longApplyVo.getUserCareer_no_2());
                 longApplyVo.setStartDate(longApplyVo.getCarrDteFr_2()+"-"+longApplyVo.getCarrDayFr_2());
                 longApplyVo.setEndDate(longApplyVo.getCarrDteEnd_2()+"-"+longApplyVo.getCarrDayEnd_2());
-                longApplyVo.setCompName(longApplyVo.getName());
+                longApplyVo.setCompName(longApplyVo.getCarrName_2());
                 longApplyVo.setDevPart(longApplyVo.getCarrOp_2());
                 longApplyVo.setRole(longApplyVo.getCarrDegree_2());
                 longApplyVo.setDepartment(longApplyVo.getCarrDep_2());
@@ -320,7 +329,7 @@ public class RegisterService {
                 longApplyVo.setUserCareer_no(longApplyVo.getUserCareer_no_3());
                 longApplyVo.setStartDate(longApplyVo.getCarrDteFr_3()+"-"+longApplyVo.getCarrDayFr_3());
                 longApplyVo.setEndDate(longApplyVo.getCarrDteEnd_3()+"-"+longApplyVo.getCarrDayEnd_3());
-                longApplyVo.setCompName(longApplyVo.getName());
+                longApplyVo.setCompName(longApplyVo.getCarrName_3());
                 longApplyVo.setDevPart(longApplyVo.getCarrOp_3());
                 longApplyVo.setRole(longApplyVo.getCarrDegree_3());
                 longApplyVo.setDepartment(longApplyVo.getCarrDep_3());
@@ -349,5 +358,57 @@ public class RegisterService {
         } else if (cID.equals("presentation")) {
 
         }
+        return app_no;
+    }
+
+    public CourseVo register_form_course_info(String cID) {
+
+        return registerDao.register_form_course_info(cID);
+    }
+
+    public ExtraApplyVo register_form2(int app_no) {
+//        List<String> list = registerDao.register_form2_appway(app_no);
+//        String[] wayArray = new String[list.size()];
+//        wayArray = (String[])list.toArray(wayArray);
+        ExtraApplyVo extraApplyVo = registerDao.register_form2(app_no);
+//        extraApplyVo.setWayArray(wayArray);
+        return extraApplyVo;
+    }
+
+    public String[] getAppWayList(int app_no) {
+        List<String> list = registerDao.register_form2_appway(app_no);
+        String[] wayArray = new String[list.size()];
+        wayArray = (String[])list.toArray(wayArray);
+        return wayArray;
+    }
+
+    public void register_form2_submit(ExtraApplyVo extraApplyVo) {
+        //1. ApplyInfo 테이블에 저장 및 업데이트
+        String hopeChkBox = extraApplyVo.getHopeChkBox();
+        String hope = "";
+        for (int i = 0; i < 6; i++){
+            if(hopeChkBox.contains(String.valueOf(i+1))){
+                hope += String.valueOf(i+1);
+            } else {
+                hope += "0";
+            }
+        }
+        extraApplyVo.setHope_in(hope);
+        registerDao.register_form2_submit(extraApplyVo);
+        // 1. end
+
+        //2. Users 테이블에 업데이트
+        registerDao.register_form2_submit_user(extraApplyVo);
+        //2. end
+
+        //3. ApplyWay 테이블 삭제 및 저장
+        registerDao.register_form2_submit_appway_del(extraApplyVo.getIdx());
+        String[] appWayCodeArray = extraApplyVo.getAppWaychkbox().split(",");
+        for (int i = 0; i < appWayCodeArray.length; i++) {
+            extraApplyVo.setAppWayCode(appWayCodeArray[i]);
+            registerDao.register_form2_submit_appway_in(extraApplyVo);
+        }
+        //3. end
+
     }
 }

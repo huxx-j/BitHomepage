@@ -2,7 +2,7 @@ package com.bitacademy.vo;
 
 public class LongApplyVo {
     //1. Apply Table
-    private String applicant_no;
+    private int applicant_no;
     private String user_no;
     private String curriculum_no;
     private String applyDate;
@@ -232,6 +232,7 @@ public class LongApplyVo {
     private String milReason;
     private String milEnrollDate;
     private String milDischargeDate;
+    private String milIncompletReason;
     //6. end
 
     //7. 자격면허
@@ -287,7 +288,8 @@ public class LongApplyVo {
     public LongApplyVo() {
     }
 
-    public LongApplyVo(String user_no, String curriculum_no, String applyDate, String applyType, String testDate, String testLang, String testScore, String testResult, String coment, String deposit, String depositAmount, String cardPayDate, String cardPayAmount, String totalPay, String depositDate, String cardPayState, String hope, String note, String state, String gisuFlag, String afterPlan, String motive, String dteFr_0, String dayFr_0, String dteEnd_0, String dayEnd_0, String school_0, String schoolclassify_0, String schLocation_0, String schDegree_0, String schDepartment_0, String schSubDepartment_0, String num_0, String bigo_0, String dteFr_1, String dayFr_1, String dteEnd_1, String dayEnd_1, String school_1, String schoolclassify_1, String schLocation_1, String schDegree_1, String schDepartment_1, String schSubDepartment_1, String num_1, String bigo_1, String dteFr_2, String dayFr_2, String dteEnd_2, String dayEnd_2, String school_2, String schoolclassify_2, String schLocation_2, String schDegree_2, String schDepartment_2, String schSubDepartment_2, String num_2, String bigo_2, String dteFr_3, String dayFr_3, String dteEnd_3, String dayEnd_3, String school_3, String schoolclassify_3, String schLocation_3, String schDegree_3, String schDepartment_3, String schSubDepartment_3, String num_3, String bigo_3, String thesis, String edDteFr_0, String edDayFr_0, String edDteEnd_0, String edDayEnd_0, String edName_0, String edEtcName_0, String edCourseName_0, String edContents_0, String num2_0, String edDteFr_1, String edDayFr_1, String edDteEnd_1, String edDayEnd_1, String edName_1, String edEtcName_1, String edCourseName_1, String edContents_1, String num2_1, String edDteFr_2, String edDayFr_2, String edDteEnd_2, String edDayEnd_2, String edName_2, String edEtcName_2, String edCourseName_2, String edContents_2, String num2_2, String edDteFr_3, String edDayFr_3, String edDteEnd_3, String edDayEnd_3, String edName_3, String edEtcName_3, String edCourseName_3, String edContents_3, String num2_3, String carrDteFr_0, String carrDayFr_0, String carrDteEnd_0, String carrDayEnd_0, String carrName_0, String carrDep_0, String carrOp_0, String carrDegree_0, String carrYearpay_0, String carrRetire_0, String carrNum_0, String carrDteFr_1, String carrDayFr_1, String carrDteEnd_1, String carrDayEnd_1, String carrName_1, String carrDep_1, String carrOp_1, String carrDegree_1, String carrYearpay_1, String carrRetire_1, String carrNum_1, String carrDteFr_2, String carrDayFr_2, String carrDteEnd_2, String carrDayEnd_2, String carrName_2, String carrDep_2, String carrOp_2, String carrDegree_2, String carrYearpay_2, String carrRetire_2, String carrNum_2, String carrDteFr_3, String carrDayFr_3, String carrDteEnd_3, String carrDayEnd_3, String carrName_3, String carrDep_3, String carrOp_3, String carrDegree_3, String carrYearpay_3, String carrRetire_3, String carrNum_3, String eread, String ewrite, String espeak, String langScoreType1, String langScore1, String secLang2, String secread, String secwrite, String secspeak, String langScoreType2, String langScore2, String milYearFr, String milMonFr, String milYearTo, String milMonTo, String milArm, String milRank, String milReason, String lDteFr_0, String lDayFr_0, String lName_0, String lDteFr_1, String lDayFr_1, String lName_1, String hopeExpert, String motivetext, String hopeChkBox, String hopetext, String studytext, String tooltext, String name, String relation, String office, String etcName, String etcRelation, String etcPos, String appWaychkbox) {
+    public LongApplyVo(int applicant_no, String user_no, String curriculum_no, String applyDate, String applyType, String testDate, String testLang, String testScore, String testResult, String coment, String deposit, String depositAmount, String cardPayDate, String cardPayAmount, String totalPay, String depositDate, String cardPayState, String hope, String note, String state, String gisuFlag, String afterPlan, String motive, String dteFr_0, String dayFr_0, String dteEnd_0, String dayEnd_0, String school_0, String schoolclassify_0, String schLocation_0, String schDegree_0, String schDepartment_0, String schSubDepartment_0, String num_0, String bigo_0, String userScholarship_no_0, String dteFr_1, String dayFr_1, String dteEnd_1, String dayEnd_1, String school_1, String schoolclassify_1, String schLocation_1, String schDegree_1, String schDepartment_1, String schSubDepartment_1, String num_1, String bigo_1, String userScholarship_no_1, String dteFr_2, String dayFr_2, String dteEnd_2, String dayEnd_2, String school_2, String schoolclassify_2, String schLocation_2, String schDegree_2, String schDepartment_2, String schSubDepartment_2, String num_2, String bigo_2, String userScholarship_no_2, String dteFr_3, String dayFr_3, String dteEnd_3, String dayEnd_3, String school_3, String schoolclassify_3, String schLocation_3, String schDegree_3, String schDepartment_3, String schSubDepartment_3, String num_3, String bigo_3, String userScholarship_no_3, String thesis, String edDteFr_0, String edDayFr_0, String edDteEnd_0, String edDayEnd_0, String edName_0, String edEtcName_0, String edCourseName_0, String edContents_0, String num2_0, String userTraining_no_0, String edDteFr_1, String edDayFr_1, String edDteEnd_1, String edDayEnd_1, String edName_1, String edEtcName_1, String edCourseName_1, String edContents_1, String num2_1, String userTraining_no_1, String edDteFr_2, String edDayFr_2, String edDteEnd_2, String edDayEnd_2, String edName_2, String edEtcName_2, String edCourseName_2, String edContents_2, String num2_2, String userTraining_no_2, String edDteFr_3, String edDayFr_3, String edDteEnd_3, String edDayEnd_3, String edName_3, String edEtcName_3, String edCourseName_3, String edContents_3, String num2_3, String userTraining_no_3, String userTraining_no, String eduCenterName, String eduCourseName, String content, String carrDteFr_0, String carrDayFr_0, String carrDteEnd_0, String carrDayEnd_0, String carrName_0, String carrDep_0, String carrOp_0, String carrDegree_0, String carrYearpay_0, String carrRetire_0, String carrNum_0, String userCareer_no_0, String carrDteFr_1, String carrDayFr_1, String carrDteEnd_1, String carrDayEnd_1, String carrName_1, String carrDep_1, String carrOp_1, String carrDegree_1, String carrYearpay_1, String carrRetire_1, String carrNum_1, String userCareer_no_1, String carrDteFr_2, String carrDayFr_2, String carrDteEnd_2, String carrDayEnd_2, String carrName_2, String carrDep_2, String carrOp_2, String carrDegree_2, String carrYearpay_2, String carrRetire_2, String carrNum_2, String userCareer_no_2, String carrDteFr_3, String carrDayFr_3, String carrDteEnd_3, String carrDayEnd_3, String carrName_3, String carrDep_3, String carrOp_3, String carrDegree_3, String carrYearpay_3, String carrRetire_3, String carrNum_3, String userCareer_no_3, String userCareer_no, String startDate, String endDate, String compName, String devPart, String role, String department, String yearSal, String retireReason, String eread, String ewrite, String espeak, String langScoreType1, String langScore1, String secLang2, String secread, String secwrite, String secspeak, String langScoreType2, String langScore2, String lang1, String lang2, String lang1Score, String lang2Score, String milYearFr, String milMonFr, String milYearTo, String milMonTo, String milArm, String milRank, String milReason, String milEnrollDate, String milDischargeDate, String lDteFr_0, String lDayFr_0, String lName_0, String license_no_0, String lDteFr_1, String lDayFr_1, String lName_1, String license_no_1, String license_no, String liceName, String acquireDate, String hopeExpert, String motivetext, String hopeChkBox, String hopetext, String studytext, String tooltext, String name, String relation, String office, String etcName, String etcRelation, String etcPos, String appWaychkbox, String cID) {
+        this.applicant_no = applicant_no;
         this.user_no = user_no;
         this.curriculum_no = curriculum_no;
         this.applyDate = applyDate;
@@ -322,6 +324,7 @@ public class LongApplyVo {
         this.schSubDepartment_0 = schSubDepartment_0;
         this.num_0 = num_0;
         this.bigo_0 = bigo_0;
+        this.userScholarship_no_0 = userScholarship_no_0;
         this.dteFr_1 = dteFr_1;
         this.dayFr_1 = dayFr_1;
         this.dteEnd_1 = dteEnd_1;
@@ -334,6 +337,7 @@ public class LongApplyVo {
         this.schSubDepartment_1 = schSubDepartment_1;
         this.num_1 = num_1;
         this.bigo_1 = bigo_1;
+        this.userScholarship_no_1 = userScholarship_no_1;
         this.dteFr_2 = dteFr_2;
         this.dayFr_2 = dayFr_2;
         this.dteEnd_2 = dteEnd_2;
@@ -346,6 +350,7 @@ public class LongApplyVo {
         this.schSubDepartment_2 = schSubDepartment_2;
         this.num_2 = num_2;
         this.bigo_2 = bigo_2;
+        this.userScholarship_no_2 = userScholarship_no_2;
         this.dteFr_3 = dteFr_3;
         this.dayFr_3 = dayFr_3;
         this.dteEnd_3 = dteEnd_3;
@@ -358,6 +363,7 @@ public class LongApplyVo {
         this.schSubDepartment_3 = schSubDepartment_3;
         this.num_3 = num_3;
         this.bigo_3 = bigo_3;
+        this.userScholarship_no_3 = userScholarship_no_3;
         this.thesis = thesis;
         this.edDteFr_0 = edDteFr_0;
         this.edDayFr_0 = edDayFr_0;
@@ -368,6 +374,7 @@ public class LongApplyVo {
         this.edCourseName_0 = edCourseName_0;
         this.edContents_0 = edContents_0;
         this.num2_0 = num2_0;
+        this.userTraining_no_0 = userTraining_no_0;
         this.edDteFr_1 = edDteFr_1;
         this.edDayFr_1 = edDayFr_1;
         this.edDteEnd_1 = edDteEnd_1;
@@ -377,6 +384,7 @@ public class LongApplyVo {
         this.edCourseName_1 = edCourseName_1;
         this.edContents_1 = edContents_1;
         this.num2_1 = num2_1;
+        this.userTraining_no_1 = userTraining_no_1;
         this.edDteFr_2 = edDteFr_2;
         this.edDayFr_2 = edDayFr_2;
         this.edDteEnd_2 = edDteEnd_2;
@@ -386,6 +394,7 @@ public class LongApplyVo {
         this.edCourseName_2 = edCourseName_2;
         this.edContents_2 = edContents_2;
         this.num2_2 = num2_2;
+        this.userTraining_no_2 = userTraining_no_2;
         this.edDteFr_3 = edDteFr_3;
         this.edDayFr_3 = edDayFr_3;
         this.edDteEnd_3 = edDteEnd_3;
@@ -395,6 +404,11 @@ public class LongApplyVo {
         this.edCourseName_3 = edCourseName_3;
         this.edContents_3 = edContents_3;
         this.num2_3 = num2_3;
+        this.userTraining_no_3 = userTraining_no_3;
+        this.userTraining_no = userTraining_no;
+        this.eduCenterName = eduCenterName;
+        this.eduCourseName = eduCourseName;
+        this.content = content;
         this.carrDteFr_0 = carrDteFr_0;
         this.carrDayFr_0 = carrDayFr_0;
         this.carrDteEnd_0 = carrDteEnd_0;
@@ -406,6 +420,7 @@ public class LongApplyVo {
         this.carrYearpay_0 = carrYearpay_0;
         this.carrRetire_0 = carrRetire_0;
         this.carrNum_0 = carrNum_0;
+        this.userCareer_no_0 = userCareer_no_0;
         this.carrDteFr_1 = carrDteFr_1;
         this.carrDayFr_1 = carrDayFr_1;
         this.carrDteEnd_1 = carrDteEnd_1;
@@ -417,6 +432,7 @@ public class LongApplyVo {
         this.carrYearpay_1 = carrYearpay_1;
         this.carrRetire_1 = carrRetire_1;
         this.carrNum_1 = carrNum_1;
+        this.userCareer_no_1 = userCareer_no_1;
         this.carrDteFr_2 = carrDteFr_2;
         this.carrDayFr_2 = carrDayFr_2;
         this.carrDteEnd_2 = carrDteEnd_2;
@@ -428,6 +444,7 @@ public class LongApplyVo {
         this.carrYearpay_2 = carrYearpay_2;
         this.carrRetire_2 = carrRetire_2;
         this.carrNum_2 = carrNum_2;
+        this.userCareer_no_2 = userCareer_no_2;
         this.carrDteFr_3 = carrDteFr_3;
         this.carrDayFr_3 = carrDayFr_3;
         this.carrDteEnd_3 = carrDteEnd_3;
@@ -439,6 +456,16 @@ public class LongApplyVo {
         this.carrYearpay_3 = carrYearpay_3;
         this.carrRetire_3 = carrRetire_3;
         this.carrNum_3 = carrNum_3;
+        this.userCareer_no_3 = userCareer_no_3;
+        this.userCareer_no = userCareer_no;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.compName = compName;
+        this.devPart = devPart;
+        this.role = role;
+        this.department = department;
+        this.yearSal = yearSal;
+        this.retireReason = retireReason;
         this.eread = eread;
         this.ewrite = ewrite;
         this.espeak = espeak;
@@ -450,6 +477,10 @@ public class LongApplyVo {
         this.secspeak = secspeak;
         this.langScoreType2 = langScoreType2;
         this.langScore2 = langScore2;
+        this.lang1 = lang1;
+        this.lang2 = lang2;
+        this.lang1Score = lang1Score;
+        this.lang2Score = lang2Score;
         this.milYearFr = milYearFr;
         this.milMonFr = milMonFr;
         this.milYearTo = milYearTo;
@@ -457,12 +488,19 @@ public class LongApplyVo {
         this.milArm = milArm;
         this.milRank = milRank;
         this.milReason = milReason;
+        this.milEnrollDate = milEnrollDate;
+        this.milDischargeDate = milDischargeDate;
         this.lDteFr_0 = lDteFr_0;
         this.lDayFr_0 = lDayFr_0;
         this.lName_0 = lName_0;
+        this.license_no_0 = license_no_0;
         this.lDteFr_1 = lDteFr_1;
         this.lDayFr_1 = lDayFr_1;
         this.lName_1 = lName_1;
+        this.license_no_1 = license_no_1;
+        this.license_no = license_no;
+        this.liceName = liceName;
+        this.acquireDate = acquireDate;
         this.hopeExpert = hopeExpert;
         this.motivetext = motivetext;
         this.hopeChkBox = hopeChkBox;
@@ -476,6 +514,15 @@ public class LongApplyVo {
         this.etcRelation = etcRelation;
         this.etcPos = etcPos;
         this.appWaychkbox = appWaychkbox;
+        this.cID = cID;
+    }
+
+    public String getMilIncompletReason() {
+        return milIncompletReason;
+    }
+
+    public void setMilIncompletReason(String milIncompletReason) {
+        this.milIncompletReason = milIncompletReason;
     }
 
     public String getUserTraining_no() {
@@ -772,11 +819,11 @@ public class LongApplyVo {
         this.lang2Score = lang2Score;
     }
 
-    public String getApplicant_no() {
+    public int getApplicant_no() {
         return applicant_no;
     }
 
-    public void setApplicant_no(String applicant_no) {
+    public void setApplicant_no(int applicant_no) {
         this.applicant_no = applicant_no;
     }
 

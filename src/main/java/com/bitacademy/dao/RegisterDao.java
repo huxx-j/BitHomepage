@@ -51,7 +51,7 @@ public class RegisterDao {
 
     public int register_form_submit(LongApplyVo longApplyVo) {
         sqlSession.insert("apply.register_form_submit", longApplyVo);
-        return Integer.parseInt(longApplyVo.getApplicant_no());
+        return longApplyVo.getApplicant_no();
     }
 
     public void register_form_submit_user(LongApplyVo longApplyVo) {
@@ -68,5 +68,33 @@ public class RegisterDao {
 
     public void register_form_submit_edu(LongApplyVo longApplyVo) {
         sqlSession.insert("apply.register_form_submit_edu", longApplyVo);
+    }
+
+    public CourseVo register_form_course_info(String cID) {
+        return null;
+    }
+
+    public ExtraApplyVo register_form2(int app_no) {
+        return sqlSession.selectOne("apply.register_form2", app_no);
+    }
+
+    public List<String> register_form2_appway(int app_no) {
+        return sqlSession.selectList("apply.register_form2_appway", app_no);
+    }
+
+    public int register_form2_submit(ExtraApplyVo extraApplyVo) {
+        return sqlSession.update("apply.register_form2_submit", extraApplyVo);
+    }
+
+    public int register_form2_submit_user(ExtraApplyVo extraApplyVo) {
+        return sqlSession.update("apply.register_form2_submit_user", extraApplyVo);
+    }
+
+    public int register_form2_submit_appway_del(int idx) {
+        return sqlSession.delete("apply.register_form2_submit_appway_del", idx);
+    }
+
+    public int register_form2_submit_appway_in(ExtraApplyVo extraApplyVo) {
+        return sqlSession.insert("apply.register_form2_submit_appway_in", extraApplyVo);
     }
 }

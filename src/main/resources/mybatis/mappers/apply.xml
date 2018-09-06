@@ -98,28 +98,28 @@
     </select>
 
     <insert id="register_form_submit" parameterType="LongApplyVo">
-        <selectKey keyProperty="Applicant_no" resultType="Int" order="AFTER">
+        <selectKey keyProperty="applicant_no" resultType="Int" order="AFTER">
             <![CDATA[
-                    select LAST_INSERT_ID() from dual
-            ]]>
+                        select LAST_INSERT_ID() from dual
+                ]]>
         </selectKey>
-        <![CDATA[
-                insert into ApplyInfo (Applicant_no, User_no, Curriculum_no, ApplyDate,
-                                         ApplyType, TestDate, TestLang, HopeExpert)
-                        values (#{applicant_no}, #{user_no}, #{curriculum_no}, #{applyDate},
-                                 #{applyType}, #{testDate}, #{testLang}, #{hopeExpert})
-                ON DUPLICATE KEY UPDATE User_no = #{user_no}, Curriculum_no = #{curriculum_no},
-                                          ApplyDate = #{applyDate}, ApplyType = #{applyType},
-                                          TestDate = #{testDate}, TestLang = #{testLang}, HopeExpert=#{hopeExpert}
-        ]]>
+            <![CDATA[
+                    insert into ApplyInfo (Applicant_no, User_no, Curriculum_no, ApplyDate,
+                                             ApplyType, TestDate, TestLang, HopeExpert)
+                            values (#{applicant_no}, #{user_no}, #{curriculum_no}, #{applyDate},
+                                     #{applyType}, #{testDate}, #{testLang}, #{hopeExpert})
+                    ON DUPLICATE KEY UPDATE User_no = #{user_no}, Curriculum_no = #{curriculum_no},
+                                              ApplyDate = #{applyDate}, ApplyType = #{applyType},
+                                              TestDate = #{testDate}, TestLang = #{testLang}, HopeExpert=#{hopeExpert}
+            ]]>
     </insert>
 
     <update id="register_form_submit_user" parameterType="LongApplyVo">
         <![CDATA[
-                update Users set Thesis=#{Thesis},Lang1=#{Lang1},LangScore1=#{Lang1Score},
-                                  Lang2=#{Lang2},LangScore2=#{Lang2Score},MillArm=#{MilArm},MillRank=#{MilRank},
-                                  MillEnrollDate=#{MilEnrollDate},MillDischargeDate=#{MilDischargeDate},
-                                  MillIncompletReason=#{MilIncompletReason}
+                update Users set Thesis=#{thesis},Lang1=#{lang1},LangScore1=#{lang1Score},
+                                  Lang2=#{lang2},LangScore2=#{lang2Score},MillArm=#{milArm},MillRank=#{milRank},
+                                  MillEnrollDate=#{milEnrollDate},MillDischargeDate=#{milDischargeDate},
+                                  MillIncompletReason=#{milReason}
                 where User_no=#{user_no}
         ]]>
     </update>
@@ -136,11 +136,10 @@
         <![CDATA[
                 insert into UserCareer(UserCareer_no, User_no, StartDate, EndDate,
                                         CompName, Department, DevPart, Role, YearSal, RetireReason)
-                        values (${userCareer_no}, ${user_no}, ${startDate}, ${endDate},
-                                 ${compName}, ${department}, ${devPart}, ${role}, ${yearSal}, ${retireReason})
+                        values (#{userCareer_no}, #{user_no}, #{startDate}, #{endDate},
+                                 #{compName}, #{department}, #{devPart}, #{role}, #{yearSal}, #{retireReason})
                 ON DUPLICATE KEY UPDATE StartDate=#{startDate}, EndDate=#{endDate},
-                                        CompName=#{compName}, Department=#{department}, DevPart=#{devPart}, Role=#{role},
-                                        YearSal=#{yearSal}, RetireReason=#{retireReason}
+                                        CompName=#{compName}, Department=#{department}, DevPart=#{devPart}, Role=#{role}, YearSal=#{yearSal}, RetireReason=#{retireReason}
         ]]>
     </insert>
 
@@ -152,6 +151,52 @@
                                 #{endDate}, #{eduCenterName}, #{eduCourseName}, #{content})
                 ON DUPLICATE KEY UPDATE StartDate=#{startDate}, EndDate=#{endDate},
                                 EduCenterName=#{eduCenterName}, EduCourseName=#{eduCourseName}, Content=#{content}
+        ]]>
+    </insert>
+
+    <select id="register_form2" parameterType="Int" resultType="ExtraApplyVo">
+        <![CDATA[
+                select a.Motive, a.AfterPlan, a.Hope, a.ApplyWayName, a.ApplyWayRelation, a.ApplyWayJob,
+                        a.ApplyWayEtcName, a.ApplyWayEtcRelation, a.ApplyWayEtcJob,u.ProLang, u.LearningContent
+                from ApplyInfo a, Users u
+                where Applicant_no=#{app_no}
+                      and a.User_no= u.User_no
+        ]]>
+    </select>
+
+    <select id="register_form2_appway" parameterType="Int" resultType="String">
+        <![CDATA[
+                select AppWayCode from ApplyWay where Applicant_no=#{app_no}
+        ]]>
+    </select>
+
+    <update id="register_form2_submit" parameterType="ExtraApplyVo">
+        <![CDATA[
+                update ApplyInfo set Motive=#{motivetext}, AfterPlan=#{hopetext}, Hope=#{hope_in}, ApplyWayName=#{name},
+                                        ApplyWayRelation=#{relation}, ApplyWayJob=#{office}, ApplyWayEtcName=#{etcName},
+                                        ApplyWayEtcRelation=#{etcRelation}, ApplyWayEtcJob=#{etcPos}
+                where Applicant_no = #{idx}
+
+        ]]>
+    </update>
+
+    <update id="register_form2_submit_user" parameterType="ExtraApplyVo">
+        <![CDATA[
+                update Users set ProLang=#{tooltext}, LearningContent=#{studytext}
+                where User_no=#{user_no}
+        ]]>
+    </update>
+
+    <delete id="register_form2_submit_appway_del" parameterType="Int">
+        <![CDATA[
+                delete from ApplyWay where Applicant_no=#{idx}
+        ]]>
+    </delete>
+
+    <insert id="register_form2_submit_appway_in" parameterType="ExtraApplyVo">
+        <![CDATA[
+                insert into ApplyWay(Applicant_no, AppWayCode)
+                        values (#{idx}, #{appWayCode})
         ]]>
     </insert>
 </mapper>
