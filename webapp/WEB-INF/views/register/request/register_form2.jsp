@@ -100,7 +100,21 @@
                             <img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>수강신청
                             <img src="${pageContext.request.contextPath}/assets/Images/Icons/icn_ArrowTriangleRight.png"/>신규지원
                         </p>
-                        <h4>국가기간 전략산업 직종훈련 <span style="font-size:0.8em;">(국비지원무료과정)</span></h4>
+                        <c:if test="${cID eq 'kuka'}">
+                            <h4>국가기간 전략산업 직종훈련 <span style="font-size:0.8em;">(국비지원무료과정)</span></h4>
+                        </c:if>
+                        <c:if test="${cID eq 'industry40'}">
+                            <h4>4차산업 선도인력 양성</h4>
+                        </c:if>
+                        <c:if test="${cID eq 'employment'}">
+                            <h4>신입사원채용교육</h4>
+                        </c:if>
+                        <c:if test="${cID eq 'expert'}">
+                            <h4>전문가과정</h4>
+                        </c:if>
+                        <c:if test="${cID eq 'chung'}">
+                            <h4>청년취업아카데미</h4>
+                        </c:if>
                     </div>
 
                     <div class="con_wrap1709">
@@ -181,9 +195,9 @@
                                         <col width="100%">
                                     </colgroup>
                                     <thead>
-                                        <tr>
-                                            <th style="width:40px;" scope="row" class="tit">사용언어/툴</th>
-                                        </tr>
+                                    <tr>
+                                        <th style="width:40px;" scope="row" class="tit">사용언어/툴</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
