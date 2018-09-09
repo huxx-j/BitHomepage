@@ -153,7 +153,7 @@ Response.CharSet  = "euc-kr" '한글
 								<a href="https://pf.kakao.com/_SmhqV" title="카카오톡 상담신청" style="float:right; margin:12px 5px;" class="btnApply">
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_Kakao.png"/>
 								</a>
-								<a href="/Register/Request/register_localCampus.asp" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
+								<a href="/register/request/register_form?cID=bitcam" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
 								</a>
 								<div style="clear;both; height:10px;"></div>

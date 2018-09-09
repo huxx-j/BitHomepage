@@ -349,7 +349,7 @@
 						<!-- con_wrap1709 -->
 						<div class="con_wrap1709">
 							<h5>단기과정</h5>
-							<h5 class="small"><a href="/course/localCampus/detailPage/Daejeon_C.jsp">C Programming</a></h5>
+							<h5 class="small"><a href="/course/localCampus/DetailPage/Daejeon_c">C Programming</a></h5>
 							<div class="divTable">
 								<table>
 									<colgroup>
@@ -470,7 +470,7 @@
 									</tbody>
 								</table>
 								<!-- 수강신청btn -->
-								<a href="/register/request/register_localCampus" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
+								<a href="/register/request/register_form?cID=bitcam" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
 								</a>
 								<div style="clear;both; height:10px;"></div>
@@ -520,7 +520,7 @@
 									</tbody>
 								</table>
 								<!-- 수강신청btn -->
-								<a href="/register/request/register_localCampus.asp" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
+								<a href="/register/request/register_form?cID=bitcam" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
 								</a>
 								<div style="clear;both; height:10px;"></div>

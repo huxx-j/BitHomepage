@@ -28,9 +28,7 @@
 	<c:import url="/WEB-INF/views/Include/HeaderScript1709.jsp"/>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			 /* <!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"--> */
 			 <c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
-			 /* <!--#include virtual="/Include/HeaderScriptReady1709.inc"--> */
 			 <c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
 			
 			ajaxLoad('#TabCon', '', '/Common/Tab/SupportInfo_01.asp');
@@ -93,7 +91,7 @@
 						<!-- con_wrap1709 -->
 						<div class="con_wrap1709">
 							<h5>단기과정</h5>
-							<h5 class="small"><a href="/course/localCampus/DetailPage/Gimhae_C.asp">C Programming</a></h5>
+							<h5 class="small"><a href="/course/localCampus/DetailPage/Gimhae_c">C Programming</a></h5>
 							<div class="divTable">
 								<table>
 									<colgroup>
@@ -134,7 +132,7 @@
 									</tbody>
 								</table>
 							</div>
-							<h5 class="small"><a href="/course/localCampus/DetailPage/Gimhae_Java.asp">Java Programming</a></h5>
+							<h5 class="small"><a href="/course/localCampus/DetailPage/Gimhae_java">Java Programming</a></h5>
 							<div class="divTable">
 								<table>
 									<colgroup>
@@ -173,7 +171,7 @@
 									</tbody>
 								</table>
 							</div>
-							<h5 class="small"><a href="/course/localCampus/DetailPage/Gimhae_DS.asp">자료구조/알고리즘</a></h5>
+							<h5 class="small"><a href="/course/localCampus/DetailPage/Gimhae_DS">자료구조/알고리즘</a></h5>
 							<div class="divTable">
 								<table>
 									<colgroup>
@@ -214,7 +212,7 @@
 									</tbody>
 								</table>
 								<!-- 수강신청btn -->
-								<a href="/register/request/register_localCampus.asp" title="수강신청" style="float:right; margin:12px 0;" class="btnApply" >
+								<a href="/register/request/register_form?cID=bitcam" title="수강신청" style="float:right; margin:12px 0;" class="btnApply" >
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
 								</a>
 								<div style="clear;both; height:10px;"></div>
@@ -227,7 +225,7 @@
 							<h5>
 								고급과정
 							</h5>
-							<h5 class="small"><a href="javascript:alert('준비중입니다.(문의 02-3486-7588)'); // /course/localCampus/DetailPage/Gimhae_Bigdata.asp">빅데이터 엔지니어링 실무적용 고급과정</a></h5>
+							<h5 class="small"><a href="javascript:alert('준비중입니다.(문의 02-3486-7588)'); // /course/localCampus/DetailPage/Gimhae_Bigdata">빅데이터 엔지니어링 실무적용 고급과정</a></h5>
 							<div class="divTable">
 								<table>
 									<colgroup>
@@ -262,7 +260,7 @@
 									</tbody>
 								</table>
 								<!-- 수강신청btn -->
-								<a href="javascript:alert('준비중입니다.(문의 02-3486-7588)'); // /register/request/register_localCampus.asp" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
+								<a href="javascript:alert('준비중입니다.(문의 02-3486-7588)'); // /register/request/register_form?cID=bitcam" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
 								</a>
 								<div style="clear;both; height:10px;"></div>

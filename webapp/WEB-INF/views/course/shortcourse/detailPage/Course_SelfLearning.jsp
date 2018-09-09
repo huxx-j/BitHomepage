@@ -131,7 +131,7 @@
 						
 						<div class="con_wrap1709" style="text-align:center; margin-top:50px;">
 							<!-- 수강신청btn -->
-							<a href="/register/request/register_shortCourse.asp<%-- ?cID=<%=CourseID%> --%>" title="수강신청" style="margin:22px 0;" class="btnApply c">
+							<a href="/register/request/register_form?cID=short" title="수강신청" style="margin:22px 0;" class="btnApply c">
 								<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
 							</a>
 							<div style="clear:both; "></div>

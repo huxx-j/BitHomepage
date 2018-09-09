@@ -22,9 +22,7 @@
 	<c:import url="/WEB-INF/views/Include/HeaderScript1709.jsp"/>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			/* <!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"--> */
 			 <c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
-			 /* <!--#include virtual="/Include/HeaderScriptReady1709.inc"--> */
 			 <c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
 
 			/* page load 직후 SNB 셋팅 */
@@ -111,7 +109,7 @@
 									</tbody>
 								</table>
 								<!-- 수강신청btn -->
-								<a href="/register/request/register_localCampus.asp" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
+								<a href="/register/request/register_form?cID=bitcam" title="수강신청" style="float:right; margin:12px 0;" class="btnApply">
 									<img src="${pageContext.request.contextPath}/assets/Images/Btns/btn_ApplyCourse.png"/>
 								</a>
 								<div style="clear;both; height:10px;"></div>

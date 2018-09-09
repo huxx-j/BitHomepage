@@ -31,9 +31,7 @@ String CourseID = "JX";
 	
 	<script type="text/javascript">
 		$(document).ready(function(){
-			 /* <!--#include virtual="/Include/Common_eventHandlers_SNB_1709.inc"--> */
 			 <c:import url="/WEB-INF/views/Include/Common_eventHandlers_SNB_1709.jsp"/>
-			 /* <!--#include virtual="/Include/HeaderScriptReady1709.inc"--> */
 			 <c:import url="/WEB-INF/views/Include/HeaderScriptReady1709.jsp"/>
 
 			// DetailPage :: slots handlers
@@ -136,7 +134,7 @@ String CourseID = "JX";
 								<div style="clear;both; height:10px;"></div>
 								-->
 								<!-- 수강신청btn -->
-								<a href="/register/request/register_employment1.asp" title="지원하기" style="float:right; margin-top:24px; font-size:20px;" class="btnBlueBorder">
+								<a href="/register/request/register_form?cID=expert" title="지원하기" style="float:right; margin-top:24px; font-size:20px;" class="btnBlueBorder">
 									<!--<img src="/Images/Btns/btn_ApplyCourse.png"/>-->
 									지원하기
 								</a>
